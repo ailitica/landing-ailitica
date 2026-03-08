@@ -278,7 +278,7 @@ section:not(#hero) + section::before {
   display:grid; grid-template-columns:repeat(4,1fr); gap:12px;
 }
 
-.flip-card { height:210px; perspective:1000px; cursor:none; }
+.flip-card { height:270px; perspective:1000px; cursor:none; }
 .flip-inner {
   position:relative; width:100%; height:100%;
   transform-style:preserve-3d;
@@ -303,24 +303,51 @@ section:not(#hero) + section::before {
 }
 .flip-back {
   transform:rotateY(180deg);
-  justify-content:center;
+  justify-content:flex-start;
+  padding:24px 24px;
 }
 
+/* frontal — número pequeño + título + teaser */
 .flip-num {
-  font-family:var(--font-d); font-size:44px; font-weight:300;
-  line-height:1; letter-spacing:-.04em;
-  color:var(--accent); opacity:.15; margin-bottom:auto;
+  font-family:var(--font-d); font-size:11px; font-weight:400;
+  letter-spacing:.22em; color:var(--accent); opacity:.5;
+  margin-bottom:10px;
 }
 .flip-title {
-  font-family:var(--font-d); font-size:18px; font-weight:400;
-  color:var(--text-primary); letter-spacing:-.01em;
+  font-family:var(--font-d); font-size:20px; font-weight:300;
+  color:var(--text-primary); letter-spacing:-.02em; line-height:1.15;
+  margin-bottom:10px;
 }
-.flip-micro {
+.flip-teaser {
+  font-size:12.5px; color:var(--text-secondary); line-height:1.6;
+  font-style:italic; opacity:.8; margin-top:2px;
+}
+.flip-hint {
+  display:flex; align-items:center; gap:6px; margin-top:auto;
+  font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent); opacity:.35;
+}
+.flip-hint::after {
+  content:''; flex:1; height:1px;
+  background:linear-gradient(to right,rgba(74,179,255,.3),transparent);
+}
+
+/* reverso — label + titular + divider + texto */
+.flip-blabel {
   font-size:9px; letter-spacing:.2em; text-transform:uppercase;
   color:var(--accent); opacity:.5; margin-bottom:10px;
 }
+.flip-headline {
+  font-family:var(--font-d); font-size:15px; font-weight:400;
+  color:var(--text-primary); line-height:1.35; margin-bottom:14px;
+  letter-spacing:-.01em;
+}
+.flip-divider {
+  width:100%; height:1px; margin-bottom:14px;
+  background:linear-gradient(to right,rgba(74,179,255,.25),transparent);
+}
 .flip-desc {
-  font-size:12.5px; line-height:1.65; color:var(--text-secondary);
+  font-size:13px; line-height:1.7; color:var(--text-secondary);
 }
 
 /* ════ VALOR — flip grid 3 col ═════════════════════════════════ */
@@ -520,11 +547,9 @@ footer {
   #hero { padding-top:120px; }
   /* Flip cards: taller on mobile so text fits */
   .flip-grid { grid-template-columns:1fr 1fr; gap:10px; }
-  .flip-card { height:200px; }
-  .flip-num { font-size:36px; }
-  .flip-title { font-size:16px; }
-  .flip-desc { font-size:11.5px; line-height:1.6; }
-  .flip-micro { font-size:8px; margin-bottom:8px; }
+  .flip-card { height:240px; }
+  .flip-title { font-size:17px; }
+  .flip-teaser { font-size:11.5px; }
   .flip-front, .flip-back { padding:18px 16px; }
   /* Valor cards: single col, taller */
   .valor-grid { grid-template-columns:1fr; }
@@ -634,10 +659,14 @@ footer {
             <div class="flip-front">
               <div class="flip-num">01</div>
               <div class="flip-title">Visión</div>
+              <p class="flip-teaser">¿Dónde está realmente el cuello de botella de tu empresa?</p>
+              <div class="flip-hint">descubrir</div>
             </div>
             <div class="flip-back">
-              <p class="flip-micro">Qué hacemos</p>
-              <p class="flip-desc">Analizamos tu empresa, tu sector y tu pipeline. Identificamos exactamente dónde la IA libera capacidad humana y genera ventaja competitiva real.</p>
+              <p class="flip-blabel">Lo que hacemos</p>
+              <p class="flip-headline">Mapeamos tu pipeline completo e identificamos dónde la IA libera capacidad humana real.</p>
+              <div class="flip-divider"></div>
+              <p class="flip-desc">Analizamos tu sector, tus procesos y tu equipo. El resultado: un diagnóstico exacto, sin suposiciones.</p>
             </div>
           </div>
         </div>
@@ -647,10 +676,14 @@ footer {
             <div class="flip-front">
               <div class="flip-num">02</div>
               <div class="flip-title">Diseño</div>
+              <p class="flip-teaser">Tu empresa no es genérica. Tu solución tampoco debería serlo.</p>
+              <div class="flip-hint">descubrir</div>
             </div>
             <div class="flip-back">
-              <p class="flip-micro">Qué hacemos</p>
-              <p class="flip-desc">Diseñamos la arquitectura de agentes específica para tu contexto. Cada solución es única. Sin templates genéricos. Sin ruido innecesario.</p>
+              <p class="flip-blabel">Lo que hacemos</p>
+              <p class="flip-headline">Arquitectura de agentes construida exclusivamente para tu contexto.</p>
+              <div class="flip-divider"></div>
+              <p class="flip-desc">Sin templates. Sin ruido. Cada decisión de diseño tiene una razón específica ligada a tu negocio.</p>
             </div>
           </div>
         </div>
@@ -660,10 +693,14 @@ footer {
             <div class="flip-front">
               <div class="flip-num">03</div>
               <div class="flip-title">Despliegue</div>
+              <p class="flip-teaser">La IA ejecuta. Tú validas, activas y decides.</p>
+              <div class="flip-hint">descubrir</div>
             </div>
             <div class="flip-back">
-              <p class="flip-micro">Qué hacemos</p>
-              <p class="flip-desc">Integramos los agentes en tus sistemas actuales. El humano valida, activa y decide en todo momento. La IA ejecuta con precisión.</p>
+              <p class="flip-blabel">Lo que hacemos</p>
+              <p class="flip-headline">Integración en tus sistemas actuales con el humano siempre al mando.</p>
+              <div class="flip-divider"></div>
+              <p class="flip-desc">Los agentes se conectan a lo que ya usas. Sin interrupciones. Sin aprendizaje traumático.</p>
             </div>
           </div>
         </div>
@@ -673,10 +710,14 @@ footer {
             <div class="flip-front">
               <div class="flip-num">04</div>
               <div class="flip-title">Crece</div>
+              <p class="flip-teaser">El sistema que construimos hoy, más valioso mañana.</p>
+              <div class="flip-hint">descubrir</div>
             </div>
             <div class="flip-back">
-              <p class="flip-micro">Qué hacemos</p>
-              <p class="flip-desc">Los agentes evolucionan contigo. Monitorizamos, ajustamos y ampliamos el sistema a medida que crecen tus necesidades y oportunidades.</p>
+              <p class="flip-blabel">Lo que hacemos</p>
+              <p class="flip-headline">Monitorizamos, ajustamos y expandimos el sistema a medida que tu empresa escala.</p>
+              <div class="flip-divider"></div>
+              <p class="flip-desc">No es un proyecto cerrado. Es una relación continua orientada a ventaja competitiva real.</p>
             </div>
           </div>
         </div>
