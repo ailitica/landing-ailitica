@@ -1,0 +1,43 @@
+[
+  {
+    "slug": "que-es-un-agente-de-ia",
+    "title": "Qué es un agente de IA (y por qué importa más de lo que crees)",
+    "date": "2025-03-08",
+    "category": "Fundamentos",
+    "keywords": "agente de IA, agente inteligente, automatización empresarial, inteligencia artificial empresas",
+    "excerpt": "Un agente de IA no es un chatbot. Es un sistema que toma decisiones, ejecuta acciones y aprende del resultado. Explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa hoy.",
+    "lead": "Un agente de IA no es un chatbot. Es un sistema que percibe su entorno, toma decisiones y ejecuta acciones de forma autónoma, con el humano como árbitro final. La diferencia parece técnica. Las consecuencias son estratégicas.",
+    "readtime": "5 min",
+    "featured": true,
+    "body": [
+      { "type": "h2", "text": "La confusión que frena a muchas empresas" },
+      { "type": "p",  "text": "Cuando la mayoría de directivos escuchan \"inteligencia artificial\", piensan en un chatbot que responde preguntas o en una herramienta que genera texto. Eso es comprensible: es lo que más han visto. Pero es también la razón por la que tantas implementaciones de IA decepcionan." },
+      { "type": "p",  "text": "Un chatbot espera. Un **agente actúa**. Esta distinción, aparentemente técnica, tiene implicaciones enormes para lo que la IA puede hacer por tu empresa." },
+      { "type": "h2", "text": "Qué hace exactamente un agente de IA" },
+      { "type": "p",  "text": "Un agente de IA es un sistema diseñado para perseguir un objetivo ejecutando acciones en secuencia, tomando decisiones en cada paso basándose en el contexto disponible. No espera instrucciones para cada tarea. Observa, razona y actúa." },
+      { "type": "ol", "items": [
+        "Consulta tu CRM para identificar los presupuestos pendientes",
+        "Recupera el historial de cada cliente",
+        "Redacta un mensaje personalizado para cada caso",
+        "Te presenta los borradores para que los valides",
+        "Los envía una vez aprobados y registra el resultado"
+      ]},
+      { "type": "callout", "text": "**El humano no desaparece.** El agente ejecuta el trabajo de bajo valor. Tú validas las decisiones que importan. Esa es exactamente la división correcta." },
+      { "type": "h2", "text": "Por qué esto cambia lo que puede hacer tu empresa" },
+      { "type": "p",  "text": "La diferencia entre automatizar una tarea y desplegar un agente es la diferencia entre *ahorrar minutos* y *liberar capacidad estratégica*." },
+      { "type": "p",  "text": "Una automatización tradicional hace siempre lo mismo si se dan las condiciones A. Un agente puede manejar las condiciones A, B, C y las variantes que no habías previsto, porque razona sobre el contexto en lugar de seguir un script fijo." },
+      { "type": "h2", "text": "Lo que no es un agente de IA" },
+      { "type": "ul", "items": [
+        "No es un sistema que reemplaza el juicio humano en decisiones importantes",
+        "No es una solución genérica que funciona igual en todas las empresas",
+        "No es algo que se despliega una vez y no necesita atención",
+        "No es magia: funciona dentro de los límites de los datos y sistemas disponibles"
+      ]},
+      { "type": "h2", "text": "El primer paso no es técnico" },
+      { "type": "p",  "text": "Antes de pensar en qué agente necesitas, la pregunta relevante es: *¿dónde está perdiendo tiempo tu equipo en tareas que no requieren su criterio?*" },
+      { "type": "p",  "text": "Esa pregunta, respondida con honestidad, define el punto de entrada. El agente viene después. La arquitectura, después. La implementación, después." },
+      { "type": "hr" },
+      { "type": "p",  "text": "En Ailitica ese es exactamente nuestro punto de partida en cada proyecto. Si quieres explorar dónde puede liberar capacidad tu empresa, empieza por ahí." }
+    ]
+  }
+]
