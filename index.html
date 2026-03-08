@@ -752,42 +752,7 @@ footer {
   .footer-links { flex-wrap:wrap; justify-content:center; }
   .footer-social { justify-content:center; }
 }
-/* ── Language switcher ─── */
-.lang-switcher {
-  display:flex; align-items:center; gap:2px;
-  border:1px solid var(--border); border-radius:50px;
-  padding:4px 6px; background:var(--accent-soft);
-  margin-right:10px;
-}
-.lang-btn {
-  background:none; border:none; cursor:none;
-  font-family:var(--font-d); font-size:11px; letter-spacing:.06em;
-  text-transform:uppercase; color:var(--text-dim);
-  padding:4px 9px; border-radius:50px;
-  transition:color .2s, background .2s;
-  text-decoration:none; display:inline-block;
-}
-.lang-btn.active { color:var(--accent); background:rgba(74,179,255,.15); }
-.lang-btn:hover:not(.active) { color:var(--text-secondary); }
-.lang-sep { width:1px; height:10px; background:var(--border); flex-shrink:0; opacity:.5; }
-  
 </style>
-<script>
-(function(){
-  var pref = sessionStorage.getItem('ailitica_lang_manual');
-  if(pref) return;
-  var saved = localStorage.getItem('ailitica_lang');
-  if(saved === 'en') { location.replace('/index_en.html'); return; }
-  if(saved === 'es') return;
-  var lang = (navigator.language || 'es').toLowerCase();
-  if(!lang.startsWith('es')) {
-    localStorage.setItem('ailitica_lang','en');
-    location.replace('/index_en.html');
-  } else {
-    localStorage.setItem('ailitica_lang','es');
-  }
-})();
-</script>
 </head>
 <body>
 
@@ -806,11 +771,6 @@ footer {
     <li><a href="#equipo">Equipo</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
-  <div class="lang-switcher">
-    <a href="/index.html" class="lang-btn active" hreflang="es">ES</a>
-    <span class="lang-sep"></span>
-    <a href="/index_en.html" class="lang-btn" hreflang="en">EN</a>
-  </div>
   <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Conectar</button>
   <button class="hamburger" id="hamburger" aria-label="Menú">
     <span></span><span></span><span></span>
