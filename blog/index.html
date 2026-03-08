@@ -67,8 +67,8 @@ nav.scrolled {
   padding:16px var(--col-pad);
 }
 .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
-.nav-logo .logo-icon { width:auto; height:28px; opacity:.85; }
-.nav-logo .logo-text { height:42px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
 .nav-links { display:flex; gap:36px; list-style:none; }
 .nav-links a {
   color:var(--text-secondary); text-decoration:none;
@@ -344,11 +344,11 @@ footer {
   <p class="footer-copy">© 2025 Ailitica. Todos los derechos reservados.</p>
   <div class="footer-links">
     <a href="../">Inicio</a>
-    <a href="/cdn-cgi/l/email-protection#cca4a3a0ad8cada5a0a5b8a5afade2afa3a1"><span class="__cf_email__" data-cfemail="234b4c4f4263424a4f4a574a40420d404c4e">[email&#160;protected]</span></a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Cursor
 const cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', e => {
@@ -425,4 +425,15 @@ async function loadPosts() {
       </a>
     `).join('');
 
-    // Observa
+    // Observar las nuevas cards para el reveal
+    grid.querySelectorAll('.r').forEach(el => ro.observe(el));
+
+  } catch(e) {
+    grid.innerHTML = '<p class="posts-loading">Error cargando artículos.</p>';
+  }
+}
+
+loadPosts();
+</script>
+</body>
+</html>
