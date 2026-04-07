@@ -4,37 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ── SEO del artículo — editar por post ──────────────────────── -->
-<title>Qué es un agente de IA (y por qué importa más de lo que crees) — Ailitica</title>
-<meta name="description" content="Un agente de IA no es un chatbot. Es un sistema que toma decisiones, ejecuta acciones y aprende del resultado. Explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa hoy.">
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Qué es un agente de IA y qué puede hacer por tu empresa — Ailitica</title>
+<meta name="description" content="Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma. Te explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa.">
 <meta name="author" content="Ailitica">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ailitica.com/blog/que-es-un-agente-de-ia.html">
 
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ailitica.com/blog/que-es-un-agente-de-ia.html">
-<meta property="og:title" content="Qué es un agente de IA (y por qué importa más de lo que crees)">
-<meta property="og:description" content="Un agente de IA no es un chatbot. Es un sistema que toma decisiones, ejecuta acciones y aprende del resultado.">
+<meta property="og:title" content="Qué es un agente de IA y qué puede hacer por tu empresa">
+<meta property="og:description" content="Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma. Te explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa.">
 <meta property="og:image" content="https://ailitica.com/og-image.png">
 <meta property="og:site_name" content="Ailitica">
 <meta property="article:published_time" content="2025-03-08">
+<meta property="article:modified_time" content="2026-04-07">
 <meta property="article:author" content="Ailitica">
 <meta property="article:section" content="Fundamentos">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ailitica">
-<meta name="twitter:title" content="Qué es un agente de IA (y por qué importa más de lo que crees)">
-<meta name="twitter:description" content="Un agente de IA no es un chatbot. Es un sistema que toma decisiones, ejecuta acciones y aprende del resultado. Qué son, cómo funcionan y qué pueden hacer por tu empresa.">
+<meta name="twitter:title" content="Qué es un agente de IA y qué puede hacer por tu empresa">
+<meta name="twitter:description" content="Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma. Qué son, cómo funcionan y qué pueden hacer por tu empresa.">
 <meta name="twitter:image" content="https://ailitica.com/og-image.png">
 
-<!-- Schema.org Article — fundamental para ChatGPT/Gemini/Claude -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Qué es un agente de IA (y por qué importa más de lo que crees)",
-  "description": "Un agente de IA no es un chatbot. Es un sistema que toma decisiones, ejecuta acciones y aprende del resultado. Explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa hoy.",
+  "headline": "Qué es un agente de IA y qué puede hacer por tu empresa",
+  "description": "Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma. Te explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa.",
   "datePublished": "2025-03-08",
-  "dateModified": "2025-03-08",
+  "dateModified": "2026-04-07",
   "author": {
     "@type": "Organization",
     "name": "Ailitica",
@@ -48,7 +48,7 @@
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/que-es-un-agente-de-ia.html" },
   "articleSection": "Fundamentos",
   "inLanguage": "es",
-  "keywords": "agente de IA, agente inteligente, automatización empresarial, inteligencia artificial empresas"
+  "keywords": "agente de IA, qué es un agente de IA, agente inteligente, automatización empresarial, inteligencia artificial empresas, IA para empresas"
 }
 </script>
 
@@ -73,7 +73,7 @@
   --font-d: 'Google Sans', sans-serif;
   --font-b: 'Google Sans Text','Google Sans',sans-serif;
   --col-pad: clamp(36px, 5vw, 80px);
-  --article-w: min(680px, 72vw); /* artículo más estrecho que la home para legibilidad */
+  --article-w: min(680px, 72vw);
 }
 
 html { scroll-behavior:smooth; }
@@ -166,7 +166,6 @@ nav.scrolled {
   display:flex; flex-direction:column; align-items:flex-start;
 }
 
-/* Breadcrumb */
 .breadcrumb {
   display:flex; align-items:center; gap:8px; margin-bottom:40px;
   font-family:var(--font-d); font-size:11px; letter-spacing:.08em;
@@ -177,7 +176,6 @@ nav.scrolled {
 .breadcrumb span { color:var(--text-dim); }
 .breadcrumb .current { color:var(--text-secondary); }
 
-/* Header del artículo */
 .article-header {
   width:var(--article-w); max-width:100%; margin-bottom:56px;
   opacity:0; animation:fadeUp .9s ease .2s forwards;
@@ -207,13 +205,11 @@ nav.scrolled {
   padding-left:20px; margin-top:8px;
 }
 
-/* Cuerpo del artículo */
 .article-body {
   width:var(--article-w); max-width:100%;
   opacity:0; animation:fadeUp .9s ease .4s forwards;
 }
 
-/* Tipografía del cuerpo */
 .article-body h2 {
   font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
   font-weight:300; line-height:1.25; letter-spacing:-.02em;
@@ -231,8 +227,9 @@ nav.scrolled {
 }
 .article-body p strong { color:var(--text-primary); font-weight:400; }
 .article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
 
-/* Callout destacado */
 .callout {
   background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
   border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
@@ -240,7 +237,6 @@ nav.scrolled {
 .callout p { margin-bottom:0; }
 .callout p strong { color:var(--accent); }
 
-/* Lista */
 .article-body ul, .article-body ol {
   padding-left:0; margin-bottom:20px; list-style:none;
 }
@@ -262,12 +258,10 @@ nav.scrolled {
   color:var(--accent); opacity:.6;
 }
 
-/* Separador */
 .article-body hr {
   border:none; border-top:1px solid var(--border-soft); margin:40px 0;
 }
 
-/* CTA al final del artículo */
 .article-cta {
   width:var(--article-w); max-width:100%; margin-top:64px;
   background:var(--glass-bg); backdrop-filter:blur(24px);
@@ -295,7 +289,6 @@ nav.scrolled {
 }
 .btn-primary:hover { opacity:.85; transform:translateY(-1px); }
 
-/* Volver al blog */
 .back-link {
   display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
   font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
@@ -390,17 +383,82 @@ footer {
       <div class="meta-dot"></div>
       <span class="article-readtime">5 min lectura</span>
     </div>
-    <h1 class="article-title">Qué es un agente de IA<br><em>(y por qué importa más de lo que crees)</em></h1>
-    <p class="article-lead">Un agente de IA no es un chatbot. Es un sistema que percibe su entorno, toma decisiones y ejecuta acciones de forma autónoma, con el humano como árbitro final. La diferencia parece técnica. Las consecuencias son estratégicas.</p>
+    <h1 class="article-title">Qué es un agente de IA<br><em>(y qué puede hacer por tu empresa)</em></h1>
+    <p class="article-lead">Un agente de IA no es un chatbot. Es un sistema que percibe su entorno, toma decisiones y ejecuta acciones de forma autónoma, con el humano como árbitro final. La diferencia parece técnica. Las consecuencias para tu empresa son estratégicas.</p>
   </header>
 
-  <div class="article-body" id="article-body"><!-- contenido generado --></div>
+  <div class="article-body">
+
+    <h2>La confusión que frena a muchas empresas</h2>
+
+    <p>Cuando la mayoría de directivos escuchan "inteligencia artificial", piensan en un chatbot que responde preguntas o en una herramienta que genera texto. Es comprensible: es lo que más han visto. Pero también es la razón por la que tantas implementaciones de IA decepcionan.</p>
+
+    <p>Un chatbot espera. Un <strong>agente de IA actúa</strong>. Esta distinción, aparentemente técnica, tiene implicaciones enormes para lo que la inteligencia artificial puede hacer por tu empresa. Y merece la pena entenderla bien antes de tomar cualquier decisión.</p>
+
+    <p>Según <a href="https://www.gartner.com/en/articles/intelligent-agent-in-ai" target="_blank" rel="noopener">Gartner</a>, los agentes de IA serán una de las tecnologías con mayor impacto empresarial en los próximos años. Sin embargo, para muchas empresas el concepto sigue siendo confuso. Vamos a aclararlo.</p>
+
+    <h2>Qué hace exactamente un agente de IA</h2>
+
+    <p>Un agente de IA es un sistema diseñado para perseguir un objetivo ejecutando acciones en secuencia, tomando decisiones en cada paso basándose en el contexto disponible. No espera instrucciones para cada tarea. Observa, razona y actúa.</p>
+
+    <p>Para entenderlo mejor, piensa en un ejemplo concreto. Imagina que necesitas hacer seguimiento de presupuestos pendientes. Un agente de IA puede hacer esto:</p>
+
+    <ol>
+      <li>Consultar tu CRM para identificar los presupuestos pendientes de respuesta</li>
+      <li>Recuperar el historial de cada cliente para entender el contexto</li>
+      <li>Redactar un mensaje personalizado para cada caso</li>
+      <li>Presentarte los borradores para que los valides antes de enviar</li>
+      <li>Enviarlos una vez aprobados y registrar el resultado</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>El humano no desaparece.</strong> El agente ejecuta el trabajo repetitivo. Tú validas las decisiones que importan. Esa es exactamente la división correcta: criterio humano donde se necesita, ejecución automatizada donde no.</p>
+    </div>
+
+    <h2>Por qué un agente de IA cambia lo que puede hacer tu empresa</h2>
+
+    <p>La diferencia entre automatizar una tarea puntual y desplegar un agente de IA es la diferencia entre <em>ahorrar minutos</em> y <em>liberar capacidad estratégica</em>.</p>
+
+    <p>Una <a href="/blog/automatizacion-de-procesos-empresariales.html">automatización de procesos</a> tradicional hace siempre lo mismo si se dan las condiciones previstas. Un agente puede manejar las condiciones A, B, C y las variantes que no habías previsto, porque razona sobre el contexto en lugar de seguir un script fijo.</p>
+
+    <p>En la práctica, esto significa que un agente de IA puede encargarse de tareas que antes solo podía hacer una persona: clasificar documentos con matices, responder emails que no siguen un patrón exacto, o coordinar procesos que cambian según el caso.</p>
+
+    <p>El resultado es que tu equipo deja de invertir horas en trabajo operativo para dedicar ese tiempo a lo que realmente necesita su criterio profesional.</p>
+
+    <h2>Lo que un agente de IA no es</h2>
+
+    <p>Tanto como saber qué es un agente de IA, conviene tener claro qué no es. Hay expectativas que conviene ajustar desde el principio:</p>
+
+    <ul>
+      <li><strong>No reemplaza el juicio humano</strong> en decisiones importantes. Lo amplifica, pero la última palabra siempre es de la persona</li>
+      <li><strong>No es una solución genérica</strong> que funciona igual en todas las empresas. Cada empresa tiene sus procesos, sus datos y sus necesidades</li>
+      <li><strong>No se despliega y se olvida.</strong> Como cualquier sistema, necesita supervisión, ajuste y evolución</li>
+      <li><strong>No es magia.</strong> Funciona dentro de los límites de los datos y sistemas disponibles. Si la información de entrada es mala, el resultado también lo será</li>
+    </ul>
+
+    <p>Estas limitaciones no le restan valor. Al contrario: entenderlas es lo que permite usar los agentes de IA donde realmente aportan y evitar inversiones que no tienen sentido.</p>
+
+    <h2>Cómo saber si tu empresa necesita un agente de IA</h2>
+
+    <p>Antes de pensar en qué agente necesitas, la pregunta relevante es: <strong>dónde está perdiendo tiempo tu equipo en tareas que no requieren su criterio</strong>.</p>
+
+    <p>Si la respuesta incluye tareas como consolidar información de varias fuentes, responder consultas recurrentes, preparar informes que siguen siempre la misma estructura o coordinar procesos entre departamentos, es muy probable que un agente de IA pueda liberar capacidad real.</p>
+
+    <p>No hace falta empezar por algo grande. De hecho, los mejores resultados suelen venir de empezar por un proceso concreto, acotado y donde el equipo sienta el beneficio desde el primer día.</p>
+
+    <p>Si quieres una guía paso a paso para identificar ese punto de entrada, hemos escrito sobre <a href="/blog/como-empezar-con-ia-en-tu-empresa.html">cómo empezar con IA en tu empresa</a> sin necesidad de ser técnico.</p>
+
+    <hr>
+
+    <p>Si quieres entender qué podría hacer un agente de IA por tu empresa en concreto, cuéntanos tu caso. Te lo explicamos sin compromiso: <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong></p>
+
+  </div>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>
-    <h2 class="article-cta-title">¿Dónde están las horas perdidas en tu empresa?</h2>
-    <p class="article-cta-text">Una conversación de 30 minutos suele ser suficiente para identificar los dos o tres procesos con mayor potencial de automatización. Sin compromiso, sin tecnicismos.</p>
-    <a href="../#contacto" class="btn-primary">Empieza la conversación</a>
+    <h2 class="article-cta-title">Cada empresa tiene su propio punto de entrada</h2>
+    <p class="article-cta-text">Una conversación breve suele ser suficiente para entender si un agente de IA tiene sentido para tu caso. Sin compromiso, sin tecnicismos.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
   </div>
 
 </article>
@@ -418,7 +476,7 @@ footer {
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     </a>
   </div>
-  <p class="footer-copy">© 2025 Ailitica. Todos los derechos reservados.</p>
+  <p class="footer-copy">&copy; 2026 Ailitica. Todos los derechos reservados.</p>
   <div class="footer-links">
     <a href="./">Blog</a>
     <a href="../">Inicio</a>
@@ -459,46 +517,6 @@ function closeMobileMenu() {
   hamburger.classList.remove('open');
   document.body.style.overflow = '';
 }
-</script>
-
-<script>
-// ── Render del artículo desde posts.json ────────────────────────
-// n8n escribe en posts.json; este script renderiza el body automáticamente.
-// Para artículos generados por n8n como HTML estático, este bloque
-// puede quedar vacío (el HTML ya viene pre-renderizado).
-
-const SLUG = document.location.pathname.split('/').pop().replace('.html','');
-
-async function renderArticle() {
-  try {
-    const res   = await fetch('./posts.json');
-    const posts = await res.json();
-    const post  = posts.find(p => p.slug === SLUG);
-    if (!post || !post.body) return;
-
-    function md(text) {
-      return text
-        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*(.+?)\*/g,   '<em>$1</em>');
-    }
-
-    const bodyEl = document.getElementById('article-body');
-    bodyEl.innerHTML = post.body.map(block => {
-      switch (block.type) {
-        case 'h2':      return `<h2>${block.text}</h2>`;
-        case 'h3':      return `<h3>${block.text}</h3>`;
-        case 'p':       return `<p>${md(block.text)}</p>`;
-        case 'hr':      return `<hr>`;
-        case 'callout': return `<div class="callout"><p>${md(block.text)}</p></div>`;
-        case 'ul':      return `<ul>${block.items.map(i=>`<li>${md(i)}</li>`).join('')}</ul>`;
-        case 'ol':      return `<ol>${block.items.map(i=>`<li>${md(i)}</li>`).join('')}</ol>`;
-        default: return '';
-      }
-    }).join('\n');
-  } catch(e) { console.warn('No se pudo cargar posts.json', e); }
-}
-
-renderArticle();
 </script>
 
 </body>

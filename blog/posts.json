@@ -12,186 +12,24 @@
   },
   {
     "slug": "automatizacion-de-procesos-empresariales",
-    "title": "Automatización de procesos empresariales: qué es, cómo funciona y por dónde empezar",
+    "title": "Automatización de procesos empresariales: qué es y por dónde empezar",
     "date": "2025-03-10",
-    "category": "Estrategia",
+    "category": "Automatización",
     "keywords": "automatización de procesos empresariales, automatización empresarial, automatizar procesos, IA para empresas, eficiencia operativa, agentes de IA",
-    "excerpt": "Automatizar procesos empresariales no es solo ahorrar tiempo. Es decidir qué merece la atención de tu equipo y qué no. Explicamos cómo identificar qué automatizar y cómo hacerlo sin riesgo.",
-    "lead": "Automatizar procesos empresariales no significa sustituir personas. Significa que las personas dejen de hacer lo que no requiere su criterio, para concentrarse en lo que sí lo requiere. La diferencia parece sutil. Las consecuencias para una empresa de 50 personas son enormes.",
+    "excerpt": "Automatizar procesos empresariales libera a tu equipo de tareas repetitivas. Te explicamos qué es, cómo identificar qué automatizar primero y qué papel juega la IA.",
+    "lead": "Automatizar procesos empresariales no significa sustituir personas. Significa que las personas dejen de hacer lo que no requiere su criterio, para concentrarse en lo que sí lo requiere. La diferencia parece sutil. Las consecuencias para una empresa son enormes.",
     "readtime": "6 min",
-    "featured": true,
-    "body": [
-      {
-        "type": "h2",
-        "text": "Por qué la automatización de procesos empresariales ha dejado de ser opcional"
-      },
-      {
-        "type": "p",
-        "text": "Hace cinco años, automatizar procesos era una ventaja competitiva. Hoy es el estándar mínimo para competir. Las empresas que no lo hacen no compiten en igualdad de condiciones: compiten con una mano atada."
-      },
-      {
-        "type": "p",
-        "text": "El problema no es la tecnología. La tecnología existe, es accesible y funciona. El problema es saber **qué automatizar primero**, cómo hacerlo sin interrumpir el negocio y asegurarse de que el resultado mejora la vida de las personas que trabajan en la empresa, no la complica."
-      },
-      {
-        "type": "h2",
-        "text": "Qué es exactamente la automatización de procesos empresariales"
-      },
-      {
-        "type": "p",
-        "text": "La automatización de procesos empresariales consiste en usar tecnología para ejecutar tareas repetitivas, de coordinación o de gestión de datos sin intervención humana constante. El humano define las reglas, supervisa el resultado y toma las decisiones que requieren criterio. La tecnología ejecuta el resto."
-      },
-      {
-        "type": "p",
-        "text": "En la práctica, esto puede significar cosas muy distintas según la empresa:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Un sistema que clasifica y responde correos de soporte según el tipo de consulta",
-          "Un agente que consolida datos de ventas de tres fuentes distintas y genera el informe semanal",
-          "Un proceso que revisa contratos entrantes, extrae las cláusulas relevantes y las compara con un modelo estándar",
-          "Un flujo que coordina la onboarding de un nuevo cliente desde la firma hasta la primera entrega"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Lo que tienen en común: son tareas que antes consumían horas de personas cualificadas y que ahora se ejecutan solas, en segundos, con mayor consistencia."
-      },
-      {
-        "type": "h2",
-        "text": "La pregunta que lo cambia todo: ¿qué merece la atención de tu equipo?"
-      },
-      {
-        "type": "p",
-        "text": "Antes de hablar de tecnología, hay una pregunta estratégica que muy pocas empresas se hacen con honestidad: *¿qué tareas de tu equipo requieren realmente su criterio, su experiencia y su juicio?*"
-      },
-      {
-        "type": "p",
-        "text": "La respuesta suele sorprender. En la mayoría de empresas de 20 a 200 personas, entre el 30% y el 50% del tiempo de las personas más valiosas se consume en tareas que no requieren su criterio: consolidar información, coordinarse internamente, preparar formatos, responder preguntas recurrentes, mover datos de un sistema a otro."
-      },
-      {
-        "type": "callout",
-        "text": "**La automatización no reduce el equipo. Amplifica lo que el equipo puede hacer.** Un equipo de 10 personas con los procesos correctos automatizados puede operar con la capacidad efectiva de 15 o 20."
-      },
-      {
-        "type": "h2",
-        "text": "Cómo identificar qué procesos automatizar primero"
-      },
-      {
-        "type": "p",
-        "text": "No todos los procesos son igual de buenos candidatos para automatizar. Los mejores puntos de entrada tienen tres características:"
-      },
-      {
-        "type": "ol",
-        "items": [
-          "**Alta frecuencia** — se repite muchas veces al día o a la semana",
-          "**Bajo criterio** — sigue un patrón predecible la mayoría de las veces",
-          "**Alto coste de atención** — consume tiempo de personas que podrían estar haciendo algo más valioso"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Los procesos con estas tres características son los que generan el mayor retorno inmediato. Son también los más fáciles de automatizar bien, porque el margen de error es bajo y el impacto es visible desde el primer día."
-      },
-      {
-        "type": "h2",
-        "text": "Los errores más comunes al automatizar procesos empresariales"
-      },
-      {
-        "type": "p",
-        "text": "Después de trabajar con docenas de empresas en proyectos de automatización, estos son los errores que aparecen una y otra vez:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "**Automatizar el proceso equivocado.** Empezar por lo más visible, no por lo más costoso. El proceso que más se ve no siempre es el que más tiempo consume.",
-          "**Comprar una solución genérica.** Las herramientas estándar funcionan para casos estándar. Los procesos de tu empresa no son estándar.",
-          "**No implicar al equipo desde el principio.** Las personas que ejecutan el proceso saben más sobre él que cualquier consultor externo. No incluirlas es el error más caro.",
-          "**Medir mal el éxito.** Una demo impresionante no es éxito. El éxito es tiempo recuperado, errores reducidos, capacidad liberada para trabajo de alto valor.",
-          "**Pensar que es un proyecto de una sola vez.** Un proceso automatizado necesita mantenimiento, ajuste y evolución. Las empresas que lo tratan como un proyecto cerrado acaban con automatizaciones que se quedan obsoletas."
-        ]
-      },
-      {
-        "type": "h2",
-        "text": "El papel de la inteligencia artificial en la automatización empresarial"
-      },
-      {
-        "type": "p",
-        "text": "Durante años, automatizar procesos significaba crear reglas fijas: si ocurre A, ejecuta B. Esto funciona bien para procesos completamente predecibles. Pero la realidad empresarial rara vez es completamente predecible."
-      },
-      {
-        "type": "p",
-        "text": "La inteligencia artificial cambia esto. Los agentes de IA pueden manejar variabilidad: leer un email y entender su contexto aunque no siga un formato exacto, revisar un documento y extraer la información relevante aunque la estructura cambie, coordinar un flujo de trabajo y adaptarse cuando algo no sale según el plan."
-      },
-      {
-        "type": "p",
-        "text": "Esto no significa que la IA reemplace el juicio humano en las decisiones importantes. Significa que puede gestionar la variabilidad operativa que antes requería atención humana constante, dejando al humano libre para las decisiones que sí requieren su criterio."
-      },
-      {
-        "type": "h2",
-        "text": "Por dónde empezar si tu empresa nunca ha automatizado nada"
-      },
-      {
-        "type": "p",
-        "text": "El primer paso no es técnico. Es un ejercicio de observación: durante una semana, pide a tu equipo que anote en qué tareas repetitivas pasan más tiempo. No las que más les molestan — las que más tiempo consumen."
-      },
-      {
-        "type": "p",
-        "text": "Con esa lista, busca los tres procesos con más horas consumidas que no requieren criterio experto. Esos son tu punto de entrada."
-      },
-      {
-        "type": "p",
-        "text": "El segundo paso es entender qué sistemas están involucrados en esos procesos: de dónde viene la información, dónde tiene que llegar y qué transformación necesita en el medio. Con esa imagen clara, la solución técnica suele ser más sencilla de lo que parecía."
-      },
-      {
-        "type": "hr"
-      },
-      {
-        "type": "p",
-        "text": "En Ailitica empezamos cada proyecto exactamente así: identificando dónde está el tiempo perdido antes de hablar de tecnología. Si quieres explorar qué podría liberar en tu empresa, empieza con una conversación."
-      }
-    ]
+    "featured": false
   },
   {
     "slug": "que-es-un-agente-de-ia",
-    "title": "Qué es un agente de IA (y por qué importa más de lo que crees)",
+    "title": "Qué es un agente de IA (y qué puede hacer por tu empresa)",
     "date": "2025-03-08",
     "category": "Fundamentos",
-    "keywords": "agente de IA, agente inteligente, automatización empresarial, inteligencia artificial empresas",
-    "excerpt": "Un agente de IA no es un chatbot. Es un sistema que toma decisiones, ejecuta acciones y aprende del resultado. Explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa hoy.",
-    "lead": "Un agente de IA no es un chatbot. Es un sistema que percibe su entorno, toma decisiones y ejecuta acciones de forma autónoma, con el humano como árbitro final. La diferencia parece técnica. Las consecuencias son estratégicas.",
+    "keywords": "agente de IA, qué es un agente de IA, agente inteligente, automatización empresarial, inteligencia artificial empresas, IA para empresas",
+    "excerpt": "Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma. Te explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa.",
+    "lead": "Un agente de IA no es un chatbot. Es un sistema que percibe su entorno, toma decisiones y ejecuta acciones de forma autónoma, con el humano como árbitro final. La diferencia parece técnica. Las consecuencias para tu empresa son estratégicas.",
     "readtime": "5 min",
-    "featured": false,
-    "body": [
-      { "type": "h2", "text": "La confusión que frena a muchas empresas" },
-      { "type": "p",  "text": "Cuando la mayoría de directivos escuchan \"inteligencia artificial\", piensan en un chatbot que responde preguntas o en una herramienta que genera texto. Eso es comprensible: es lo que más han visto. Pero es también la razón por la que tantas implementaciones de IA decepcionan." },
-      { "type": "p",  "text": "Un chatbot espera. Un **agente actúa**. Esta distinción, aparentemente técnica, tiene implicaciones enormes para lo que la IA puede hacer por tu empresa." },
-      { "type": "h2", "text": "Qué hace exactamente un agente de IA" },
-      { "type": "p",  "text": "Un agente de IA es un sistema diseñado para perseguir un objetivo ejecutando acciones en secuencia, tomando decisiones en cada paso basándose en el contexto disponible. No espera instrucciones para cada tarea. Observa, razona y actúa." },
-      { "type": "ol", "items": [
-        "Consulta tu CRM para identificar los presupuestos pendientes",
-        "Recupera el historial de cada cliente",
-        "Redacta un mensaje personalizado para cada caso",
-        "Te presenta los borradores para que los valides",
-        "Los envía una vez aprobados y registra el resultado"
-      ]},
-      { "type": "callout", "text": "**El humano no desaparece.** El agente ejecuta el trabajo de bajo valor. Tú validas las decisiones que importan. Esa es exactamente la división correcta." },
-      { "type": "h2", "text": "Por qué esto cambia lo que puede hacer tu empresa" },
-      { "type": "p",  "text": "La diferencia entre automatizar una tarea y desplegar un agente es la diferencia entre *ahorrar minutos* y *liberar capacidad estratégica*." },
-      { "type": "p",  "text": "Una automatización tradicional hace siempre lo mismo si se dan las condiciones A. Un agente puede manejar las condiciones A, B, C y las variantes que no habías previsto, porque razona sobre el contexto en lugar de seguir un script fijo." },
-      { "type": "h2", "text": "Lo que no es un agente de IA" },
-      { "type": "ul", "items": [
-        "No es un sistema que reemplaza el juicio humano en decisiones importantes",
-        "No es una solución genérica que funciona igual en todas las empresas",
-        "No es algo que se despliega una vez y no necesita atención",
-        "No es magia: funciona dentro de los límites de los datos y sistemas disponibles"
-      ]},
-      { "type": "h2", "text": "El primer paso no es técnico" },
-      { "type": "p",  "text": "Antes de pensar en qué agente necesitas, la pregunta relevante es: *¿dónde está perdiendo tiempo tu equipo en tareas que no requieren su criterio?*" },
-      { "type": "p",  "text": "Esa pregunta, respondida con honestidad, define el punto de entrada. El agente viene después. La arquitectura, después. La implementación, después." },
-      { "type": "hr" },
-      { "type": "p",  "text": "En Ailitica ese es exactamente nuestro punto de partida en cada proyecto. Si quieres explorar dónde puede liberar capacidad tu empresa, empieza por ahí." }
-    ]
+    "featured": false
   }
 ]
