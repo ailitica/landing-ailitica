@@ -178,10 +178,11 @@ nav.scrolled {
 }
 
 .breadcrumb {
-  display:flex; align-items:center; gap:8px; margin-bottom:16px;
-  font-family:var(--font-d); font-size:11px; letter-spacing:.08em;
+  display:flex; align-items:center; gap:6px; margin-bottom:12px;
+  font-family:var(--font-d); font-size:11px; letter-spacing:.04em;
   width:var(--article-w); max-width:100%;
 }
+.breadcrumb .current { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .breadcrumb a { color:var(--text-dim); text-decoration:none; transition:color .2s; }
 .breadcrumb a:hover { color:var(--text-secondary); }
 .breadcrumb span { color:var(--text-dim); }
@@ -422,9 +423,9 @@ footer {
 <article class="article-wrap" aria-label="Artículo">
 
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <a href="../">Inicio</a>
+    <a href="https://ailitica.com/">Inicio</a>
     <span aria-hidden="true">›</span>
-    <a href="./">Blog</a>
+    <a href="https://ailitica.com/blog/">Blog</a>
     <span aria-hidden="true">›</span>
     <span class="current">Cómo empezar con IA en tu empresa</span>
   </nav>
