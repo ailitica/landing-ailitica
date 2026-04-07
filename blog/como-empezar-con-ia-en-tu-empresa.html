@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Cómo empezar con IA en tu empresa: guía práctica — Ailitica</title>
+<meta name="description" content="No necesitas ser técnico para dar el primer paso con IA. Te explicamos cómo identificar por dónde empezar y qué evitar en el camino.">
+<meta name="author" content="Ailitica">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/como-empezar-con-ia-en-tu-empresa.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/como-empezar-con-ia-en-tu-empresa.html">
+<meta property="og:title" content="Cómo empezar con IA en tu empresa: guía práctica">
+<meta property="og:description" content="No necesitas ser técnico para dar el primer paso con IA. Te explicamos cómo identificar por dónde empezar y qué evitar en el camino.">
+<meta property="og:image" content="https://ailitica.com/og-image.png">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-04-07">
+<meta property="article:author" content="Ailitica">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Cómo empezar con IA en tu empresa: guía práctica">
+<meta name="twitter:description" content="No necesitas ser técnico para dar el primer paso con IA. Te explicamos cómo identificar por dónde empezar y qué evitar en el camino.">
+<meta name="twitter:image" content="https://ailitica.com/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo empezar con IA en tu empresa: guía práctica",
+  "description": "No necesitas ser técnico para dar el primer paso con IA. Te explicamos cómo identificar por dónde empezar y qué evitar en el camino.",
+  "datePublished": "2026-04-07",
+  "dateModified": "2026-04-07",
+  "author": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "url": "https://ailitica.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/como-empezar-con-ia-en-tu-empresa.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "keywords": "cómo empezar con IA en mi empresa, primeros pasos IA empresa, guía IA para empresas, IA para directivos, implementar inteligencia artificial en empresa"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(680px, 72vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:flex-start;
+}
+
+.breadcrumb {
+  display:flex; align-items:center; gap:8px; margin-bottom:40px;
+  font-family:var(--font-d); font-size:11px; letter-spacing:.08em;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.breadcrumb a { color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.breadcrumb a:hover { color:var(--text-secondary); }
+.breadcrumb span { color:var(--text-dim); }
+.breadcrumb .current { color:var(--text-secondary); }
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.png" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <a class="back-link" href="./">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Volver al blog
+  </a>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">7 de abril de 2026</span>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">5 min lectura</span>
+    </div>
+    <h1 class="article-title">Cómo empezar con IA en tu empresa<br><em>(guía para quien no sabe por dónde)</em></h1>
+    <p class="article-lead">Sabes que la inteligencia artificial puede hacer algo por tu empresa. Lo lees cada semana, lo escuchas en cada evento. Pero cuando intentas dar el primer paso, la pregunta es siempre la misma: cómo empezar sin perder tiempo ni dinero en algo que no funcione.</p>
+  </header>
+
+  <div class="article-body">
+
+    <p>No necesitas ser técnico para dar el primer paso. Necesitas entender tres cosas: dónde está el problema real, qué preguntas hacerte antes de elegir nada y qué esperar de los primeros meses. Vamos a ello.</p>
+
+    <h2>Por qué tantas empresas se quedan en la fase de "ya veremos"</h2>
+
+    <p>La mayoría de directivos reconocen que la IA puede ayudar a su empresa. Sin embargo, muy pocos pasan de esa convicción a una acción concreta. El motivo no es falta de interés. Es falta de un punto de entrada claro.</p>
+
+    <p>Sucede lo mismo que con la automatización hace diez años: todo el mundo sabía que era importante, pero nadie sabía por dónde empezar. El resultado era parálisis. Y mientras tanto, las tareas repetitivas seguían consumiendo horas del equipo.</p>
+
+    <p>En nuestra experiencia, lo que frena a los directivos no es el presupuesto ni la tecnología. Es la sensación de que <em>primero hay que entenderlo todo</em> antes de hacer nada. Eso no es cierto. Los primeros pasos con IA en una empresa son más sencillos de lo que parecen, siempre que sepas dónde mirar.</p>
+
+    <h2>El primer paso no es elegir una herramienta</h2>
+
+    <p>Este es el error más frecuente. Un directivo lee sobre ChatGPT, Copilot o cualquier otra herramienta, la prueba unos días y concluye que "la IA todavía no está lista para mi sector". El problema no era la herramienta. Era empezar por la herramienta.</p>
+
+    <p>El primer paso real es observar. Concretamente, observar <strong>dónde pierde tiempo tu equipo en tareas que no requieren su criterio profesional</strong>. Consolidar datos de varias fuentes, responder las mismas preguntas por email, preparar informes recurrentes, mover información de un sistema a otro.</p>
+
+    <p>Esas tareas tienen algo en común: siguen patrones, se repiten y consumen horas de personas que podrían estar haciendo trabajo de mayor valor. Ahí es donde la IA entra con sentido. No como una solución mágica, sino como una forma de liberar capacidad real.</p>
+
+    <p>Si ya te interesa profundizar en este concepto, te será útil entender <a href="/blog/que-es-un-agente-de-ia.html">qué es exactamente un agente de IA y qué puede hacer</a> por una empresa como la tuya.</p>
+
+    <h2>Tres preguntas para saber por dónde empezar con IA en tu empresa</h2>
+
+    <p>Antes de hablar con ningún proveedor ni probar ninguna herramienta, responde estas tres preguntas con tu equipo:</p>
+
+    <ol>
+      <li><strong>¿Qué tareas se repiten cada semana y siguen siempre el mismo patrón?</strong> Haz una lista real. Pide a cada responsable de área que anote durante cinco días las tareas repetitivas en las que más tiempo invierte.</li>
+      <li><strong>¿Dónde está el cuello de botella?</strong> No busques la tarea más molesta. Busca la que más retrasa al resto. Muchas veces un proceso manual de 20 minutos genera esperas de horas en otros equipos.</li>
+      <li><strong>¿Qué pasaría si esa tarea se ejecutara sola, con tu supervisión?</strong> Si la respuesta es "ganaríamos tiempo y no perderíamos calidad", tienes un candidato para automatizar con IA.</li>
+    </ol>
+
+    <p>Según un <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener">estudio de McKinsey</a>, alrededor del 60% de las ocupaciones tienen al menos un 30% de actividades que podrían automatizarse con la tecnología actual. El potencial está ahí. La clave es identificar tu punto de entrada.</p>
+
+    <h2>Lo que funciona (y lo que no) en los primeros pasos con IA</h2>
+
+    <p>Después de acompañar a empresas en este proceso, hay patrones claros sobre lo que funciona y lo que no.</p>
+
+    <p><strong>Funciona:</strong></p>
+
+    <ul>
+      <li>Empezar por un proceso concreto y acotado, no por "implementar IA en toda la empresa"</li>
+      <li>Elegir una tarea donde el equipo sienta el dolor: eso genera compromiso desde el primer día</li>
+      <li>Definir un criterio de éxito medible antes de empezar: tiempo recuperado, errores reducidos, capacidad liberada</li>
+      <li>Involucrar al equipo que ejecuta el proceso, porque nadie conoce los matices mejor que ellos</li>
+    </ul>
+
+    <p><strong>No funciona:</strong></p>
+
+    <ul>
+      <li>Comprar una herramienta genérica y esperar que resuelva un problema específico</li>
+      <li>Delegar la decisión a "alguien de IT" sin que la dirección entienda qué se está haciendo y por qué</li>
+      <li>Medir el éxito con demos bonitas en lugar de resultados reales</li>
+      <li>Intentar <a href="/blog/automatizacion-de-procesos-empresariales.html">automatizar los procesos que más tiempo consumen</a> sin antes entender cómo funcionan de verdad</li>
+    </ul>
+
+    <p>La IA para directivos no empieza con tecnología. Empieza con una decisión clara sobre qué merece la atención del equipo y qué no.</p>
+
+    <h2>Qué esperar de los primeros 90 días</h2>
+
+    <p><strong>Semanas 1-2:</strong> Diagnóstico. Se mapea el proceso elegido, se identifican los pasos manuales y se define el resultado esperado. No hay código todavía. Hay comprensión.</p>
+
+    <p><strong>Semanas 3-6:</strong> Diseño y primera versión. Se construye la solución, se prueba con datos reales y el equipo la valida. El humano decide, la IA ejecuta. Así desde el principio.</p>
+
+    <p><strong>Semanas 7-12:</strong> Ajuste y consolidación. Se corrigen los casos que la primera versión no cubría, se mide el impacto real y se decide si ampliar a otros procesos.</p>
+
+    <p>Al final de esos 90 días, la empresa tiene algo tangible: un proceso que antes consumía horas ahora se ejecuta en minutos, con mayor consistencia y con el equipo libre para dedicarse a lo que realmente necesita su criterio.</p>
+
+    <p>No es magia. Es método.</p>
+
+    <hr>
+
+    <p>Cada empresa tiene su punto de entrada. Si quieres saber cuál es el tuyo, cuéntanos tu caso y te decimos por dónde empezaríamos: <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong></p>
+
+  </div>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Por dónde empezaría tu empresa?</h2>
+    <p class="article-cta-text">Cada empresa tiene su propio punto de entrada con la IA. Una conversación breve suele ser suficiente para identificarlo. Sin compromiso, sin tecnicismos.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+  </div>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.png" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>
