@@ -30,6 +30,18 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ailitica.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ailitica.com/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "Qué es un agente de IA y qué puede hacer por tu empresa"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Qué es un agente de IA y qué puede hacer por tu empresa",
   "description": "Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma. Te explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa.",
@@ -332,6 +344,46 @@ footer {
   .footer-links { flex-wrap:wrap; justify-content:center; }
   .footer-social { justify-content:center; }
 }
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
 </style>
 </head>
 <body>
@@ -370,10 +422,13 @@ footer {
 
 <article class="article-wrap" aria-label="Artículo">
 
-  <a class="back-link" href="./">
-    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    Volver al blog
-  </a>
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <a href="../">Inicio</a>
+    <span aria-hidden="true">›</span>
+    <a href="./">Blog</a>
+    <span aria-hidden="true">›</span>
+    <span class="current">Qué es un agente de IA</span>
+  </nav>
 
   <header class="article-header">
     <div class="article-meta">
@@ -460,6 +515,24 @@ footer {
     <p class="article-cta-text">Una conversación breve suele ser suficiente para entender si un agente de IA tiene sentido para tu caso. Sin compromiso, sin tecnicismos.</p>
     <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
   </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/automatizacion-de-procesos-empresariales.html">
+        <span class="related-card-cat">Automatización</span>
+        <span class="related-card-title">Automatización de procesos empresariales: qué es y por dónde empezar</span>
+        <span class="related-card-excerpt">Automatizar procesos empresariales libera a tu equipo de tareas repetitivas.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/como-empezar-con-ia-en-tu-empresa.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Cómo empezar con IA en tu empresa (guía para quien no sabe por dónde)</span>
+        <span class="related-card-excerpt">No necesitas ser técnico para dar el primer paso con IA.</span>
+        <span class="related-card-readtime">5 min lectura</span>
+      </a>
+    </div>
+  </section>
 
 </article>
 
