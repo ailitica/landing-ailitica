@@ -8,7 +8,44 @@
     "excerpt": "No necesitas ser técnico para dar el primer paso con IA. Te explicamos cómo identificar por dónde empezar y qué evitar en el camino.",
     "lead": "Sabes que la inteligencia artificial puede hacer algo por tu empresa. Lo lees cada semana, lo escuchas en cada evento. Pero cuando intentas dar el primer paso, la pregunta es siempre la misma: cómo empezar sin perder tiempo ni dinero en algo que no funcione.",
     "readtime": "5 min",
+    "image": "img/como-empezar-con-ia.png",
     "featured": true
+  },
+  {
+    "slug": "chatbot-vs-agente-de-ia",
+    "title": "Chatbot vs agente de IA: la diferencia que cambia lo que puede hacer tu empresa",
+    "date": "2026-04-07",
+    "category": "Fundamentos",
+    "keywords": "diferencia entre chatbot y agente de IA, chatbot vs agente inteligente, tipos de IA para empresas",
+    "excerpt": "No es lo mismo un chatbot que un agente de IA. Te explicamos la diferencia y por qué importa a la hora de decidir qué necesita tu empresa.",
+    "lead": "Un chatbot responde preguntas. Un agente de IA toma decisiones y ejecuta acciones. La diferencia parece técnica, pero cambia completamente lo que la inteligencia artificial puede hacer por tu empresa.",
+    "readtime": "6 min",
+    "image": "img/chatbot-vs-agente-ia.png",
+    "featured": false
+  },
+  {
+    "slug": "agentes-de-ia-para-pymes",
+    "title": "Agentes de IA para pymes: qué pueden hacer y por dónde empezar",
+    "date": "2026-04-07",
+    "category": "Estrategia",
+    "keywords": "agentes de IA para pymes, IA para pequeñas empresas, agentes inteligentes para negocios, qué puede automatizar una pyme con IA",
+    "excerpt": "Los agentes de IA no son solo para grandes empresas. Te explicamos qué pueden hacer por una pyme y cómo dar el primer paso sin complicaciones.",
+    "lead": "Si tienes una pyme, probablemente pienses que la inteligencia artificial es cosa de grandes empresas con grandes presupuestos. No es así. Los agentes de IA pueden liberar horas de trabajo repetitivo en equipos pequeños con una inversión razonable.",
+    "readtime": "6 min",
+    "image": "img/agentes-de-ia-para-pymes.png",
+    "featured": false
+  },
+  {
+    "slug": "como-elegir-proveedor-de-ia",
+    "title": "Cómo elegir un proveedor de IA (sin depender de demos bonitas)",
+    "date": "2026-04-07",
+    "category": "Estrategia",
+    "keywords": "cómo elegir proveedor de inteligencia artificial, elegir proveedor IA, consultoría IA empresas, partner tecnológico IA, proveedor agentes IA",
+    "excerpt": "El mercado de IA está lleno de ruido. Te damos las preguntas clave para distinguir un buen proveedor de uno que solo hace demos bonitas.",
+    "lead": "Elegir un proveedor de inteligencia artificial no debería ser un acto de fe. Hay señales claras que distinguen a quien entiende tu negocio de quien solo quiere venderte tecnología.",
+    "readtime": "6 min",
+    "image": "img/como-elegir-proveedor-de-ia.png",
+    "featured": false
   },
   {
     "slug": "automatizacion-de-procesos-empresariales",
@@ -19,6 +56,7 @@
     "excerpt": "Automatizar procesos empresariales libera a tu equipo de tareas repetitivas. Te explicamos qué es, cómo identificar qué automatizar primero y qué papel juega la IA.",
     "lead": "Automatizar procesos empresariales no significa sustituir personas. Significa que las personas dejen de hacer lo que no requiere su criterio, para concentrarse en lo que sí lo requiere. La diferencia parece sutil. Las consecuencias para una empresa son enormes.",
     "readtime": "6 min",
+    "image": "img/automatizacion-procesos.png",
     "featured": false
   },
   {
@@ -30,6 +68,7 @@
     "excerpt": "Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma. Te explicamos qué son, cómo funcionan y qué pueden hacer por tu empresa.",
     "lead": "Un agente de IA no es un chatbot. Es un sistema que percibe su entorno, toma decisiones y ejecuta acciones de forma autónoma, con el humano como árbitro final. La diferencia parece técnica. Las consecuencias para tu empresa son estratégicas.",
     "readtime": "5 min",
+    "image": "img/que-es-un-agente-de-ia.png",
     "featured": false
   }
 ]
