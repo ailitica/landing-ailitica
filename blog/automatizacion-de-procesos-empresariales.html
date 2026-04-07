@@ -85,7 +85,7 @@
   --font-d: 'Google Sans', sans-serif;
   --font-b: 'Google Sans Text','Google Sans',sans-serif;
   --col-pad: clamp(36px, 5vw, 80px);
-  --article-w: min(680px, 72vw);
+  --article-w: min(800px, 80vw);
 }
 
 html { scroll-behavior:smooth; }
@@ -179,9 +179,9 @@ nav.scrolled {
 }
 
 .breadcrumb {
-  display:flex; align-items:center; gap:8px; margin-bottom:40px;
+  display:flex; align-items:center; gap:8px; margin-bottom:16px;
   font-family:var(--font-d); font-size:11px; letter-spacing:.08em;
-  opacity:0; animation:fadeUp .7s ease .1s forwards;
+  width:var(--article-w); max-width:100%;
 }
 .breadcrumb a { color:var(--text-dim); text-decoration:none; transition:color .2s; }
 .breadcrumb a:hover { color:var(--text-secondary); }
