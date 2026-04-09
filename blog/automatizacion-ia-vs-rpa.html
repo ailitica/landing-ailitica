@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Automatización con IA vs RPA: qué necesita tu empresa realmente — Ailitica</title>
+<meta name="description" content="RPA automatiza pasos fijos. La IA entiende contexto y gestiona variabilidad. Te explicamos cuándo usar cada enfoque y cómo combinarlos con sentido.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/automatizacion-ia-vs-rpa.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/automatizacion-ia-vs-rpa.html">
+<meta property="og:title" content="Automatización con IA vs RPA: qué necesita tu empresa realmente">
+<meta property="og:description" content="RPA automatiza pasos fijos. La IA entiende contexto y gestiona variabilidad. Te explicamos cuándo usar cada enfoque y cómo combinarlos con sentido.">
+<meta property="og:image" content="https://ailitica.com/og-image.png">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-04-09">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Automatización">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Automatización con IA vs RPA: qué necesita tu empresa realmente">
+<meta name="twitter:description" content="RPA automatiza pasos fijos. La IA entiende contexto y gestiona variabilidad. Te explicamos cuándo usar cada enfoque y cómo combinarlos con sentido.">
+<meta name="twitter:image" content="https://ailitica.com/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Automatización con IA vs RPA: qué necesita tu empresa realmente",
+  "description": "RPA automatiza pasos fijos. La IA entiende contexto y gestiona variabilidad. Te explicamos cuándo usar cada enfoque y cómo combinarlos con sentido.",
+  "datePublished": "2026-04-09",
+  "dateModified": "2026-04-09",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/automatizacion-ia-vs-rpa.html" },
+  "articleSection": "Automatización",
+  "inLanguage": "es",
+  "keywords": "automatización con IA vs RPA, diferencia RPA e IA, automatización tradicional vs IA, RPA empresas, agentes de IA automatización"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.png" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Automatización</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">9 de abril de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">6 min lectura</span>
+    </div>
+    <h1 class="article-title">Automatización con IA vs RPA:<br><em>qué necesita tu empresa realmente</em></h1>
+    <p class="article-lead">RPA y automatización con IA resuelven problemas distintos. Confundirlos lleva a comprar tecnología cara para un problema que no era el correcto. En este artículo te explicamos la diferencia, cuándo usar cada enfoque y por qué la combinación de ambos suele ser la opción más inteligente.</p>
+  </header>
+
+  <div class="article-body">
+
+    <p>Cuando una empresa decide que quiere automatizar, la primera pregunta suele ser: ¿RPA o inteligencia artificial? Es una pregunta razonable, pero está mal formulada. La pregunta correcta es: ¿qué tipo de problema quiero resolver? La respuesta a eso determina la herramienta, no al revés.</p>
+
+    <p>Vamos a desmontar las dos tecnologías, ver en qué se diferencian de verdad y, sobre todo, entender cuándo cada una tiene sentido.</p>
+
+    <h2>Qué es RPA y para qué sirve bien</h2>
+
+    <p>RPA son las siglas de Robotic Process Automation. A pesar del nombre, no hay robots físicos de por medio. Se trata de software que imita las acciones de una persona sobre una interfaz: hacer clic, leer datos de una pantalla, copiarlos en otro sistema, rellenar formularios.</p>
+
+    <p>Lo que hace bien RPA es ejecutar procesos muy definidos, paso a paso, sin variación. Si el proceso siempre sigue exactamente la misma secuencia, RPA lo automatiza con fiabilidad y a coste razonable.</p>
+
+    <p><strong>Un ejemplo concreto:</strong> una empresa de logística recibe cada tarde un fichero Excel con los pedidos del día. Alguien lo abre, copia los datos fila a fila en el ERP y archiva el fichero. Siempre igual. RPA puede hacer exactamente eso sin intervención humana, todos los días, en segundos.</p>
+
+    <p>Según datos de <a href="https://www.gartner.com/en/information-technology/glossary/robotic-process-automation-rpa" target="_blank" rel="noopener">Gartner</a>, RPA es una de las categorías de software empresarial de mayor crecimiento de los últimos años, precisamente porque resuelve bien ese tipo de tareas estructuradas que existen en cualquier empresa.</p>
+
+    <p>Donde RPA falla es cuando el proceso cambia. Si el fichero viene con columnas en distinto orden un día, o si el proveedor empieza a enviarlo en PDF en lugar de Excel, el bot se rompe. No sabe adaptarse. Solo sigue instrucciones fijas.</p>
+
+    <h2>Qué añade la automatización con IA</h2>
+
+    <p>La automatización con IA no reemplaza a RPA. Amplía lo que es posible automatizar. La diferencia fundamental es que la IA puede entender contexto, manejar variabilidad y tomar decisiones sencillas.</p>
+
+    <p>Volviendo al ejemplo anterior: si en lugar de un Excel estructurado el proveedor envía un email con el pedido en texto libre —"necesito 40 unidades del producto A y 12 del B para el jueves"—, RPA no puede hacer nada con eso. Un agente de IA sí puede. Lee el email, extrae los datos relevantes, los estructura y los introduce en el ERP.</p>
+
+    <p><strong>Otro ejemplo:</strong> una empresa de servicios recibe 200 consultas al día por email. El 70% son preguntas repetitivas sobre precios, plazos o procesos estándar. Un agente de IA puede clasificar esas consultas, responder las rutinarias con la información correcta y escalar las complejas al equipo humano con un resumen del contexto. RPA no podría hacer eso porque cada email es diferente.</p>
+
+    <p>Si quieres entender mejor cómo funcionan estos sistemas, en el artículo sobre <a href="/blog/que-es-un-agente-de-ia.html">qué es un agente de IA</a> explicamos la arquitectura con más detalle.</p>
+
+    <h2>Cuándo RPA es suficiente</h2>
+
+    <p>RPA es la opción correcta cuando se dan estas condiciones al mismo tiempo:</p>
+
+    <ul>
+      <li>El proceso sigue siempre los mismos pasos, en el mismo orden, con los mismos tipos de datos</li>
+      <li>La información de entrada está estructurada (Excel, formulario, base de datos)</li>
+      <li>No hay excepciones frecuentes ni decisiones que dependen del contexto</li>
+      <li>El volumen es alto y el coste de la tarea manual es claro</li>
+    </ul>
+
+    <p>Ejemplos típicos: conciliación bancaria, procesamiento de nóminas, migración de datos entre sistemas, generación de informes periódicos a partir de plantillas fijas, validación de campos en formularios.</p>
+
+    <p>En estos casos, añadir IA no aporta valor. Solo añade coste y complejidad innecesaria. <em>Automatización con sentido</em> significa elegir la herramienta adecuada al problema, no la más avanzada.</p>
+
+    <h2>Cuándo necesitas IA</h2>
+
+    <p>La automatización con IA es la opción correcta cuando el proceso implica alguna de estas características:</p>
+
+    <ul>
+      <li>Datos no estructurados: emails, PDFs, contratos, mensajes, imágenes, notas de voz</li>
+      <li>Variabilidad en la entrada: cada caso llega de forma diferente aunque el resultado esperado sea similar</li>
+      <li>Decisiones simples que dependen del contexto: clasificar, priorizar, derivar, resumir</li>
+      <li>Interacción con personas en lenguaje natural</li>
+    </ul>
+
+    <p>Ejemplos donde la IA añade valor real: clasificación y respuesta de emails de soporte, extracción de datos de contratos o facturas en formato libre, resumen automático de reuniones, análisis de feedback de clientes, generación de borradores de documentos a partir de datos estructurados.</p>
+
+    <p>La IA no elimina la supervisión humana. La hace más eficiente. El equipo sigue validando, decidiendo y actuando. Lo que cambia es cuánto tiempo dedican a tareas que no necesitan su criterio profesional.</p>
+
+    <h2>La combinación que más funciona en la práctica</h2>
+
+    <p>En la mayoría de los procesos empresariales reales, la solución óptima no es ni RPA puro ni IA pura. Es una combinación de ambos.</p>
+
+    <p>Un agente de IA puede encargarse de leer, interpretar y estructurar la información variable —el email, el PDF, el formulario mal rellenado— y luego RPA ejecuta los pasos mecánicos sobre los sistemas existentes: introduce los datos en el ERP, genera el documento, envía la notificación.</p>
+
+    <p><strong>Un caso concreto:</strong> una empresa de seguros recibe solicitudes de siniestro por email. El agente de IA lee el email, extrae el tipo de siniestro, el importe reclamado y los documentos adjuntos, clasifica la urgencia y rellena el formulario interno. Después, RPA toma ese formulario ya completado y lo registra en el sistema de gestión, avisa al ajustador correspondiente y genera el acuse de recibo automático. El ajustador recibe el caso ya preparado y puede dedicar su tiempo a evaluar, no a introducir datos.</p>
+
+    <p>Este tipo de arquitectura —IA para entender, RPA para ejecutar— es el que libera más capacidad real en los equipos. La clave está en saber dónde poner cada pieza, y eso requiere entender el proceso antes de diseñar la solución. Si quieres profundizar en los fundamentos, el artículo sobre <a href="/blog/automatizacion-de-procesos-empresariales.html">automatización de procesos empresariales</a> explica cómo mapear el punto de entrada correcto.</p>
+
+    <h2>Una comparativa directa de coste y complejidad</h2>
+
+    <p>RPA tiene un coste de implementación relativamente bajo si el proceso está bien definido. El mantenimiento es el punto débil: cada vez que el sistema fuente cambia (nueva versión del ERP, nuevo formato de fichero), el bot hay que revisarlo. En entornos con muchos cambios, ese mantenimiento se convierte en una carga.</p>
+
+    <p>La automatización con IA tiene un coste de implementación mayor y requiere más trabajo de diseño inicial. A cambio, es más resistente a la variabilidad. Un agente bien diseñado gestiona casos que no ha visto antes porque entiende el objetivo, no solo los pasos.</p>
+
+    <p>En términos de plazos: un proyecto RPA acotado puede estar funcionando en semanas. Un agente de IA bien integrado requiere entre uno y tres meses para estar estable, dependiendo de la complejidad. Ninguna de las dos es rápida si se hace bien.</p>
+
+    <h2>El error más común: elegir la herramienta antes de entender el proceso</h2>
+
+    <p>Hay un patrón que se repite con frecuencia: una empresa lee sobre RPA, decide implantarlo y después busca los procesos donde aplicarlo. O a la inversa: se entusiasma con los agentes de IA y quiere automatizarlo todo con IA aunque muchos de sus procesos fueran candidatos perfectos para RPA.</p>
+
+    <p>El orden correcto es siempre el mismo: primero el proceso, luego la herramienta. Antes de evaluar tecnología, hay que mapear qué tareas consume el equipo, dónde está la variabilidad, qué tipo de datos entran y qué decisiones se toman. Solo desde ahí se puede elegir con criterio.</p>
+
+    <p>La tecnología no define el problema. El problema define la tecnología.</p>
+
+    <div class="callout">
+      <p><strong>Regla práctica:</strong> si puedes describir el proceso en una lista de pasos numerados y cada paso siempre es igual, empieza por RPA. Si en algún paso hay que "leer el contexto" o "depende de lo que diga el documento", ahí entra la IA.</p>
+    </div>
+
+    <hr>
+
+    <p>Si quieres entender qué tipo de automatización encaja en tu empresa, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>.</p>
+
+  </div>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿RPA, IA o los dos?</h2>
+    <p class="article-cta-text">Cada empresa tiene procesos distintos. En una conversación breve podemos ayudarte a identificar qué enfoque tiene más sentido en tu caso y por dónde empezar.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/automatizacion-de-procesos-empresariales.html">
+        <span class="related-card-cat">Automatización</span>
+        <span class="related-card-title">Automatización de procesos empresariales: qué es y por dónde empezar</span>
+        <span class="related-card-excerpt">Antes de elegir ninguna herramienta, hay que entender el proceso. Aquí explicamos cómo identificar los candidatos correctos.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/que-es-un-agente-de-ia.html">
+        <span class="related-card-cat">Fundamentos</span>
+        <span class="related-card-title">Qué es un agente de IA (y qué puede hacer por tu empresa)</span>
+        <span class="related-card-excerpt">Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma dentro de un proceso.</span>
+        <span class="related-card-readtime">5 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.png" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>

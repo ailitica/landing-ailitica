@@ -12,6 +12,18 @@
     "featured": true
   },
   {
+    "slug": "automatizacion-ia-vs-rpa",
+    "title": "Automatización con IA vs RPA: qué necesita tu empresa realmente",
+    "date": "2026-04-09",
+    "category": "Automatización",
+    "keywords": "automatización con IA vs RPA, diferencia RPA e IA, automatización tradicional vs IA, RPA empresas, agentes de IA automatización",
+    "excerpt": "RPA automatiza pasos fijos. La IA entiende contexto y gestiona variabilidad. Te explicamos cuándo usar cada enfoque y cómo combinarlos con sentido.",
+    "lead": "RPA y automatización con IA resuelven problemas distintos. Confundirlos lleva a comprar tecnología cara para un problema que no era el correcto. En este artículo te explicamos la diferencia, cuándo usar cada enfoque y por qué la combinación de ambos suele ser la opción más inteligente.",
+    "readtime": "6 min",
+    "image": "",
+    "featured": false
+  },
+  {
     "slug": "chatbot-vs-agente-de-ia",
     "title": "Chatbot vs agente de IA: la diferencia que cambia lo que puede hacer tu empresa",
     "date": "2026-04-07",
