@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://ailitica.com/blog/ia-para-directivos.html">
 <meta property="og:title" content="Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico">
 <meta property="og:description" content="No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.">
-<meta property="og:image" content="https://ailitica.com/og-image.png">
+<meta property="og:image" content="https://ailitica.com/blog/img/ia-para-directivos.png">
 <meta property="og:site_name" content="Ailitica">
 <meta property="article:published_time" content="2026-04-14">
 <meta property="article:author" content="Andoni Arrizabalaga">
@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@ailitica">
 <meta name="twitter:title" content="Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico">
 <meta name="twitter:description" content="No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.">
-<meta name="twitter:image" content="https://ailitica.com/og-image.png">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/ia-para-directivos.png">
 
 <script type="application/ld+json">
 {
@@ -319,6 +319,17 @@ footer {
   .footer-social { justify-content:center; }
 }
 
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
 /* ── Artículos relacionados ── */
 .related-articles {
   width:var(--article-w); max-width:100%; margin-top:48px;
@@ -395,6 +406,10 @@ footer {
 </div>
 
 <article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/ia-para-directivos.png" alt="Directiva revisando en una pizarra los conceptos clave de inteligencia artificial aplicada a la toma de decisiones empresariales" width="1456" height="816" loading="eager">
+  </figure>
 
   <header class="article-header">
     <div class="article-meta">
