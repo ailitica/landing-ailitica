@@ -12,6 +12,18 @@
     "featured": true
   },
   {
+    "slug": "estrategia-de-ia-para-tu-empresa",
+    "title": "Estrategia de IA para tu empresa: cómo diseñar un plan que funcione de verdad",
+    "date": "2026-04-14",
+    "category": "Estrategia",
+    "keywords": "estrategia de inteligencia artificial para empresas, plan de IA, consultoría IA empresas, hoja de ruta IA, cómo implementar IA en empresa",
+    "excerpt": "La mayoría de estrategias de IA fracasan porque empiezan por la tecnología. Te explicamos cómo diseñar un plan de IA con sentido: diagnóstico, arquitectura, despliegue y crecimiento.",
+    "lead": "Casi todas las empresas que han intentado adoptar IA tienen la misma historia: contrataron una herramienta, pasaron semanas configurándola y al final no cambió demasiado. El problema no era la herramienta. Era que no había un plan detrás.",
+    "readtime": "7 min",
+    "image": "",
+    "featured": false
+  },
+  {
     "slug": "automatizacion-ia-vs-rpa",
     "title": "Automatización con IA vs RPA: qué necesita tu empresa realmente",
     "date": "2026-04-09",

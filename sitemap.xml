@@ -67,6 +67,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://ailitica.com/blog/diagnostico-antes-de-implementar-ia-empresa.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://ailitica.com/blog/estrategia-de-ia-para-tu-empresa.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- Páginas legales -->
   <url>
     <loc>https://ailitica.com/terminos.html</loc>
