@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico — Ailitica</title>
+<meta name="description" content="No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/ia-para-directivos.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/ia-para-directivos.html">
+<meta property="og:title" content="Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico">
+<meta property="og:description" content="No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.">
+<meta property="og:image" content="https://ailitica.com/og-image.png">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-04-14">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico">
+<meta name="twitter:description" content="No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.">
+<meta name="twitter:image" content="https://ailitica.com/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico",
+  "description": "No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.",
+  "datePublished": "2026-04-14",
+  "dateModified": "2026-04-14",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/ia-para-directivos.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "keywords": "IA para directivos que no son técnicos, IA explicada para empresarios, guía IA para CEOs, inteligencia artificial para directivos, IA empresas sin conocimientos técnicos"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:flex-start;
+}
+
+/* Header del artículo */
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+/* Cuerpo del artículo */
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+/* CTA */
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.png" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">14 de abril de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">7 min lectura</span>
+    </div>
+    <h1 class="article-title">Inteligencia artificial para directivos:<br><em>lo que necesitas saber sin ser técnico</em></h1>
+    <p class="article-lead">No necesitas saber qué es un modelo de lenguaje, ni cómo funciona el machine learning, ni qué significa entrenar una IA. Lo que sí necesitas saber, como directivo que tiene que tomar decisiones, es qué puede hacer la inteligencia artificial por tu empresa, qué no puede hacer y qué preguntas tienes que hacerte antes de dar el primer paso.</p>
+  </header>
+
+  <div class="article-body">
+
+    <p>Hay dos tipos de artículos sobre inteligencia artificial para directivos. Los que explican cómo funciona la tecnología por dentro —redes neuronales, grandes modelos de lenguaje, entrenamiento supervisado— y los que explican qué puede hacer esa tecnología por tu empresa concreta. Este artículo es del segundo tipo.</p>
+
+    <p>No necesitas entender el mecanismo para tomar buenas decisiones sobre él. No entiendes el protocolo TCP/IP, pero sabes si tu equipo necesita mejor conectividad. No entiendes cómo funciona el motor de búsqueda de Google, pero sabes si tu empresa necesita aparecer bien posicionada. Con la IA pasa lo mismo.</p>
+
+    <p>Lo que sí necesitas entender es esto: qué problemas resuelve, qué problemas no resuelve y dónde está el límite entre lo que la IA puede decidir sola y lo que necesita tu criterio.</p>
+
+    <h2>Tres tipos de trabajo que la IA puede hacer por tu empresa hoy</h2>
+
+    <p>La inteligencia artificial es buena en tres tipos de trabajo, y esos tres tipos aparecen en casi cualquier empresa, sin importar el sector.</p>
+
+    <p><strong>El primero es el trabajo repetitivo con patrón claro.</strong> Si un proceso siempre sigue los mismos pasos, con los mismos tipos de datos, se puede automatizar. Consolidar datos de ventas de varias fuentes en un informe semanal. Generar borradores de documentos a partir de una plantilla. Clasificar y responder las consultas más frecuentes por email. Estas tareas consumen horas de personas que podrían estar haciendo trabajo de mayor valor. Un agente bien configurado las ejecuta en segundos, con consistencia, sin necesidad de que nadie las supervise cada vez.</p>
+
+    <p><strong>El segundo es el trabajo con información variable.</strong> Aquí la IA añade algo que el software tradicional no puede: entender contexto. Un email que llega redactado de forma diferente cada día pero siempre pide lo mismo. Un PDF de proveedor que tiene los datos en sitios distintos según quién lo generó. Un contrato con cláusulas que hay que identificar y extraer. La IA lee, interpreta y estructura esa información variable. El humano revisa el resultado.</p>
+
+    <p><strong>El tercero es la síntesis.</strong> Tener cinco reuniones grabadas y necesitar un resumen de los puntos de acción. Recibir feedback de cincuenta clientes y querer identificar los temas recurrentes. Revisar diez informes y extraer las cifras clave. Este tipo de trabajo puede ocupar horas de un analista. Un agente bien configurado lo hace en minutos y entrega el resultado listo para que el directivo decida.</p>
+
+    <h2>Qué no puede hacer la IA (los límites reales)</h2>
+
+    <p>Es tan importante saber qué puede hacer como saber qué no puede hacer. Hay cuatro límites que cualquier directivo debería tener claros antes de tomar ninguna decisión sobre IA.</p>
+
+    <p><strong>La IA no puede diseñar la estrategia de tu empresa.</strong> Puede ayudarte a analizar datos, a sintetizar información o a explorar escenarios, pero la decisión de hacia dónde va la empresa requiere criterio, valores y conocimiento del mercado y del contexto que ningún sistema tiene por sí solo. La IA amplifica el criterio directivo; no lo sustituye.</p>
+
+    <p><strong>La IA no construye relaciones.</strong> Tu cliente no va a confiar más en tu empresa porque un agente le responda más rápido. La confianza se construye con personas, con consistencia y con resultados a lo largo del tiempo. Lo que la IA puede hacer es liberar tiempo de tu equipo para que esas relaciones reciban la atención que merecen.</p>
+
+    <p><strong>La IA no sabe lo que no le has dicho.</strong> Un agente bien diseñado hace bien lo que se le ha configurado para hacer. Si aparece un caso nuevo que no estaba en el diseño, o si el contexto cambia de forma significativa, necesita supervisión. Por eso los proyectos de IA bien construidos siempre tienen puntos de revisión humana definidos desde el principio.</p>
+
+    <p><strong>La IA no toma decisiones éticas.</strong> Qué información se puede usar, qué procesos son apropiados, dónde está el límite entre eficiencia y privacidad. Esas decisiones las toma el directivo. La IA ejecuta dentro de los límites que tú defines. Si los límites no están bien definidos, el problema no es la IA: es que el criterio no estaba claro.</p>
+
+    <h2>El papel del directivo en cualquier proyecto de IA</h2>
+
+    <p>En cualquier proyecto de IA bien diseñado, el directivo tiene un papel que no se delega: definir qué significa éxito y validar que la IA lo está consiguiendo.</p>
+
+    <p>Esto no significa revisar cada output. Significa definir las métricas correctas antes de empezar. Si el objetivo es reducir el tiempo que el equipo de operaciones dedica a generar informes, hay que medir cuánto tiempo dedican ahora y cuánto dedican cuando el agente esté funcionando. Sin esa referencia, es imposible saber si el proyecto está dando resultado.</p>
+
+    <p>El directivo también decide cuándo expandir. Cuando el primer proceso está funcionando bien y el equipo ha ganado confianza en la tecnología, aparece la pregunta de qué viene después. Esa decisión requiere conocer las prioridades del negocio y el apetito real del equipo para cambiar la forma de trabajar. No es una decisión técnica: es una decisión de gestión.</p>
+
+    <div class="callout">
+      <p><strong>Principio clave:</strong> En un proyecto de IA bien construido, la IA propone y el humano aprueba. El criterio directivo no desaparece; se reenfoca. El equipo deja de ejecutar tareas mecánicas para centrarse en revisar, decidir y mejorar.</p>
+    </div>
+
+    <h2>Cuatro preguntas que vale la pena responder antes de hablar con ningún proveedor</h2>
+
+    <p>Antes de evaluar ninguna herramienta, hay cuatro preguntas que merece la pena responder desde la dirección.</p>
+
+    <p><strong>¿Qué tarea repite tu equipo cada semana con el mismo patrón?</strong> La primera candidata a automatizarse no es la más compleja, sino la más frecuente y predecible. Si algo se hace igual todos los lunes, o todos los días, es un candidato natural. La frecuencia multiplica el impacto.</p>
+
+    <p><strong>¿Dónde está el cuello de botella que retrasa a otros equipos?</strong> Hay procesos que bloquean a varios equipos al mismo tiempo. Si el equipo comercial espera datos del equipo de operaciones antes de poder avanzar, y ese dato siempre tarda lo mismo en prepararse de la misma forma, ahí hay una oportunidad concreta.</p>
+
+    <p><strong>¿La información que entra es siempre del mismo formato?</strong> Si los datos llegan siempre en un Excel con las mismas columnas, el proceso es candidato para automatización más sencilla. Si los datos llegan en emails, PDFs o formularios con formatos variables, necesitas una solución que entienda esa variabilidad. La respuesta a esta pregunta determina qué tipo de solución tiene sentido.</p>
+
+    <p><strong>¿Qué pasa si el sistema comete un error?</strong> No todos los procesos son iguales en este sentido. Un error en la clasificación de emails internos tiene un coste bajo. Un error en la validación de un contrato o en la gestión de un dato regulado tiene un coste alto. Empezar por procesos donde el coste del error es bajo permite aprender sin exposición y construir confianza en la tecnología antes de avanzar hacia procesos más críticos.</p>
+
+    <h2>De la eficiencia a la ventaja competitiva</h2>
+
+    <p>Según el <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener">McKinsey Global Institute</a>, las empresas que obtienen mayor valor de la IA son las que empiezan con una pregunta de negocio clara, no con una tecnología elegida. La pregunta <em>¿dónde está perdiendo tiempo mi equipo?</em> produce mejores proyectos que la pregunta <em>¿qué podemos hacer con IA?</em></p>
+
+    <p>El indicador real de un proyecto de IA bien ejecutado no es cuántas automatizaciones se han construido. Es lo que tu equipo puede hacer ahora que antes no podía. Un equipo de análisis que antes dedicaba dos días a la semana a consolidar datos ahora dedica esas horas a analizar y a tomar decisiones. Un equipo de atención al cliente que antes respondía consultas rutinarias ahora las delega al agente y dedica su tiempo a los casos que realmente necesitan su criterio profesional.</p>
+
+    <p>Esa capacidad liberada es la que, acumulada en el tiempo, genera una ventaja competitiva real. No porque la tecnología sea más avanzada que la de la competencia, sino porque el equipo está dedicando su energía a lo que hace única a la empresa.</p>
+
+    <hr>
+
+    <p>Si quieres entender qué podría hacer la IA concretamente por tu empresa, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Te lo explicamos sin compromiso y sin tecnicismos.</p>
+
+    <p>Si quieres profundizar en cómo estructurar la exploración inicial, el artículo sobre <a href="/blog/como-empezar-con-ia-en-tu-empresa.html">cómo empezar con IA en tu empresa</a> recorre el proceso paso a paso. Y si ya tienes claro el punto de entrada y quieres construir un plan completo, el artículo sobre <a href="/blog/estrategia-de-ia-para-tu-empresa.html">estrategia de IA para tu empresa</a> describe el marco de las cuatro fases con detalle.</p>
+
+  </div>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Qué podría hacer la IA por tu empresa?</h2>
+    <p class="article-cta-text">Una conversación de 30 minutos suele ser suficiente para identificar los procesos con mayor potencial en tu empresa. Sin tecnicismos, sin compromisos, con ejemplos concretos de tu sector.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Escríbenos</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/como-empezar-con-ia-en-tu-empresa.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Cómo empezar con IA en tu empresa (guía para quien no sabe por dónde)</span>
+        <span class="related-card-excerpt">El primer paso no es elegir una herramienta. Es saber cuál es tu punto de entrada real. Aquí explicamos cómo encontrarlo.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/estrategia-de-ia-para-tu-empresa.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Estrategia de IA para tu empresa: cómo diseñar un plan que funcione de verdad</span>
+        <span class="related-card-excerpt">La mayoría de estrategias de IA fracasan porque empiezan por la tecnología. Te explicamos el marco de cuatro fases para diseñar un plan con sentido.</span>
+        <span class="related-card-readtime">7 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.png" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>
