@@ -15,16 +15,16 @@
 <meta property="og:url" content="https://ailitica.com/blog/ia-para-directivos.html">
 <meta property="og:title" content="Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico">
 <meta property="og:description" content="No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.">
-<meta property="og:image" content="https://ailitica.com/blog/img/ia-para-directivos.png">
+<meta property="og:image" content="https://ailitica.com/og-image.png">
 <meta property="og:site_name" content="Ailitica">
-<meta property="article:published_time" content="2026-04-14">
+<meta property="article:published_time" content="2026-04-16">
 <meta property="article:author" content="Andoni Arrizabalaga">
 <meta property="article:section" content="Estrategia">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ailitica">
 <meta name="twitter:title" content="Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico">
 <meta name="twitter:description" content="No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.">
-<meta name="twitter:image" content="https://ailitica.com/blog/img/ia-para-directivos.png">
+<meta name="twitter:image" content="https://ailitica.com/og-image.png">
 
 <script type="application/ld+json">
 {
@@ -32,8 +32,8 @@
   "@type": "Article",
   "headline": "Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico",
   "description": "No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.",
-  "datePublished": "2026-04-14",
-  "dateModified": "2026-04-14",
+  "datePublished": "2026-04-16",
+  "dateModified": "2026-04-16",
   "author": {
     "@type": "Person",
     "name": "Andoni Arrizabalaga",
@@ -163,10 +163,10 @@ nav.scrolled {
 /* ── Artículo ── */
 .article-wrap {
   padding:140px var(--col-pad) 100px;
-  display:flex; flex-direction:column; align-items:center;
+  display:flex; flex-direction:column; align-items:flex-start;
 }
 
-
+/* Header del artículo */
 .article-header {
   width:var(--article-w); max-width:100%; margin-bottom:56px;
   opacity:0; animation:fadeUp .9s ease .2s forwards;
@@ -201,6 +201,7 @@ nav.scrolled {
   padding-left:20px; margin-top:8px;
 }
 
+/* Cuerpo del artículo */
 .article-body {
   width:var(--article-w); max-width:100%;
   opacity:0; animation:fadeUp .9s ease .4s forwards;
@@ -223,8 +224,6 @@ nav.scrolled {
 }
 .article-body p strong { color:var(--text-primary); font-weight:400; }
 .article-body p em { color:var(--accent); font-style:normal; }
-.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
-.article-body a:hover { border-color:var(--accent); }
 
 .callout {
   background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
@@ -258,6 +257,7 @@ nav.scrolled {
   border:none; border-top:1px solid var(--border-soft); margin:40px 0;
 }
 
+/* CTA */
 .article-cta {
   width:var(--article-w); max-width:100%; margin-top:64px;
   background:var(--glass-bg); backdrop-filter:blur(24px);
@@ -284,16 +284,6 @@ nav.scrolled {
   text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
 }
 .btn-primary:hover { opacity:.85; transform:translateY(-1px); }
-
-.back-link {
-  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
-  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
-  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
-  transition:color .2s, gap .2s;
-  opacity:0; animation:fadeUp .7s ease .1s forwards;
-}
-.back-link:hover { color:var(--accent); gap:4px; }
-.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
 
 /* ── Footer ── */
 footer {
@@ -327,17 +317,6 @@ footer {
   footer { flex-direction:column; gap:20px; text-align:center; }
   .footer-links { flex-wrap:wrap; justify-content:center; }
   .footer-social { justify-content:center; }
-}
-
-/* ── Hero image ── */
-.article-hero {
-  width:var(--article-w); max-width:100%; margin-bottom:40px;
-  border-radius:var(--radius-sm); overflow:hidden;
-  opacity:0; animation:fadeUp .9s ease .15s forwards;
-}
-.article-hero img {
-  width:100%; height:auto; display:block;
-  aspect-ratio:16/9; object-fit:cover;
 }
 
 /* ── Artículos relacionados ── */
@@ -417,15 +396,11 @@ footer {
 
 <article class="article-wrap" aria-label="Artículo">
 
-  <figure class="article-hero">
-    <img src="img/ia-para-directivos.png" alt="Directivo frente a una pantalla con visualización abstracta de inteligencia artificial, simbolizando la toma de decisiones informada sobre IA sin conocimiento técnico" width="1456" height="816" loading="eager">
-  </figure>
-
   <header class="article-header">
     <div class="article-meta">
       <span class="article-category">Estrategia</span>
       <div class="meta-dot"></div>
-      <span class="article-date">14 de abril de 2026</span>
+      <span class="article-date">16 de abril de 2026</span>
       <div class="meta-dot"></div>
       <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
       <div class="meta-dot"></div>
