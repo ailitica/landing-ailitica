@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Qué procesos automatizar primero con IA: los tres candidatos más frecuentes — Ailitica</title>
+<meta name="description" content="La pregunta que más recibimos no es qué puede hacer la IA, sino por cuál proceso empezar. Describimos los tres candidatos que aparecen en casi todos los primeros proyectos que funcionan.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/que-procesos-automatizar-primero.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/que-procesos-automatizar-primero.html">
+<meta property="og:title" content="Qué procesos automatizar primero con IA: los tres candidatos más frecuentes">
+<meta property="og:description" content="La pregunta que más recibimos no es qué puede hacer la IA, sino por cuál proceso empezar. Describimos los tres candidatos que aparecen en casi todos los primeros proyectos que funcionan.">
+<meta property="og:image" content="https://ailitica.com/og-image.png">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-04-16">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Automatización">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Qué procesos automatizar primero con IA: los tres candidatos más frecuentes">
+<meta name="twitter:description" content="La pregunta que más recibimos no es qué puede hacer la IA, sino por cuál proceso empezar. Describimos los tres candidatos que aparecen en casi todos los primeros proyectos que funcionan.">
+<meta name="twitter:image" content="https://ailitica.com/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Qué procesos automatizar primero con IA: los tres candidatos más frecuentes",
+  "description": "La pregunta que más recibimos no es qué puede hacer la IA, sino por cuál proceso empezar. Describimos los tres candidatos que aparecen en casi todos los primeros proyectos que funcionan.",
+  "datePublished": "2026-04-16",
+  "dateModified": "2026-04-16",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/que-procesos-automatizar-primero.html" },
+  "articleSection": "Automatización",
+  "inLanguage": "es",
+  "keywords": "qué procesos automatizar con IA, procesos automatización IA empresa, por dónde empezar automatización IA, primeros procesos IA, candidatos automatización inteligencia artificial"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:flex-start;
+}
+
+/* Header del artículo */
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+/* Cuerpo del artículo */
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; transition:opacity .2s; }
+.article-body a:hover { opacity:.75; }
+
+/* Callout destacado */
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+/* Lista */
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+/* Separador */
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+/* CTA al final del artículo */
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.png" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Automatización</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">16 de abril de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">6 min lectura</span>
+    </div>
+    <h1 class="article-title">Qué procesos automatizar primero con IA:<br><em>los tres candidatos más frecuentes</em></h1>
+    <p class="article-lead">La pregunta que más nos llega de empresas que quieren dar el primer paso con la IA no es "¿qué puede hacer la IA?". Es esta otra: "¿por cuál proceso empezamos?". En este artículo respondemos con los tres tipos de procesos que aparecen en casi todos los primeros proyectos que funcionan.</p>
+  </header>
+
+  <div class="article-body">
+
+    <p>El primer proyecto de IA en una empresa no es solo un piloto técnico. Es la prueba que convence al equipo de que esto funciona, que genera aprendizajes sobre cómo trabaja realmente la organización y que sienta las bases para todo lo que viene después. Un primer proyecto mal elegido puede paralizar una iniciativa durante meses. Uno bien elegido puede cambiar cómo el equipo entiende su trabajo.</p>
+
+    <p>Por eso la elección del primer proceso es más estratégica de lo que parece. No se trata de elegir el más ambicioso ni el más visible: se trata de elegir el que tiene las características que hacen que un primer proyecto funcione bien.</p>
+
+    <p>A continuación describimos los tres tipos de procesos que aparecen con más frecuencia cuando una empresa empieza a automatizar con IA y que, en nuestra experiencia, producen los mejores resultados en la primera fase.</p>
+
+    <h2>Candidato 1: Consolidación de datos y generación de informes recurrentes</h2>
+
+    <p>Si hay un proceso que aparece en casi todas las empresas con las que hablamos, es este: alguien dedica horas cada semana a abrir varias fuentes —una hoja de cálculo de ventas, el CRM, un informe de operaciones, quizás un archivo financiero— y consolidar esos datos en un informe que siempre tiene el mismo formato.</p>
+
+    <p>El proceso es tedioso, repetitivo y propenso a errores. Una fórmula mal copiada, un dato que no se actualizó, una fuente que cambió de columnas. Cualquier persona que lo ejecuta sabe que hay mejores formas de dedicar su tiempo.</p>
+
+    <p>Un agente bien configurado puede extraer esos datos automáticamente de cada fuente, consolidarlos en el formato del informe y entregarlo en el canal que corresponda —correo, Slack, carpeta compartida— en minutos. Sin intervención humana. La persona que antes hacía eso ahora revisa el resultado y, si es correcto, lo aprueba y lo envía.</p>
+
+    <p>Los casos más frecuentes en empresas de tamaño mediano son:</p>
+
+    <ul>
+      <li>Informes de ventas semanales consolidados de CRM y hoja de cálculo</li>
+      <li>Dashboards operativos que combinan datos de varios sistemas internos</li>
+      <li>Resúmenes de actividad por cliente para el equipo comercial</li>
+      <li>Reportes de cierre que agregan datos de contabilidad y operaciones</li>
+    </ul>
+
+    <p>El criterio de selección es simple: si el mismo informe se genera más de una vez al mes con el mismo proceso, es candidato.</p>
+
+    <h2>Candidato 2: Clasificación y gestión de correo o solicitudes entrantes</h2>
+
+    <p>El segundo tipo de proceso es el de la gestión de entrada: correos, formularios, tickets, solicitudes. Un buzón que recibe decenas de mensajes al día y donde alguien tiene que leer, clasificar y decidir qué hacer con cada uno.</p>
+
+    <p>En muchas empresas este trabajo consume horas de personas cualificadas. Alguien de operaciones que revisa solicitudes de clientes para determinar si son urgentes o pueden esperar. Un equipo de soporte que clasifica tickets antes de asignarlos. Una persona de compras que recibe confirmaciones de proveedores y las tiene que registrar en el sistema.</p>
+
+    <p>La IA puede leer el contenido de cada mensaje, entender de qué trata —aunque esté redactado de forma diferente cada vez— y clasificarlo según las categorías que defina la empresa. Puede responder automáticamente a las consultas más frecuentes con respuestas predefinidas. Puede extraer datos clave de los mensajes —número de pedido, importe, fecha— y registrarlos en el sistema correspondiente sin que nadie lo haga manualmente.</p>
+
+    <p>Lo que hace que este proceso sea un buen candidato es su combinación de <strong>alto volumen y patrón reconocible</strong>. Si los mensajes siempre piden lo mismo aunque estén redactados de forma diferente, la IA puede entender la intención y actuar en consecuencia. El humano se queda con los casos ambiguos o los que requieren criterio profesional.</p>
+
+    <h2>Candidato 3: Generación de documentos a partir de datos estructurados</h2>
+
+    <p>El tercer candidato es el más sencillo técnicamente, pero el que más horas libera en ciertos equipos: generar documentos que siempre tienen la misma estructura pero cuyos datos cambian en cada caso.</p>
+
+    <p>Presupuestos con el mismo formato pero diferentes líneas y precios. Contratos que siguen la misma plantilla con datos del cliente, fechas y condiciones variables. Informes de visita comercial con la misma estructura pero con los datos de cada reunión. Fichas de producto que siguen el mismo esquema pero con especificaciones distintas.</p>
+
+    <p>En todos estos casos, el proceso consiste en coger datos que ya existen en algún sistema y rellenar una plantilla. Es exactamente el tipo de tarea para la que la IA está diseñada.</p>
+
+    <p>Un agente puede conectarse al CRM, extraer los datos del cliente y del acuerdo comercial, y generar el documento en el formato correcto, listo para que la persona responsable lo revise y lo envíe. Lo que antes tardaba veinte minutos por documento tarda segundos.</p>
+
+    <h2>Qué tienen en común los tres candidatos</h2>
+
+    <p>Los tres procesos comparten cuatro características que los hacen buenos candidatos para una primera automatización:</p>
+
+    <ol>
+      <li><strong>Alta frecuencia.</strong> Ocurren varias veces a la semana o varias veces al día. Cada mejora en el proceso se multiplica rápidamente en tiempo recuperado.</li>
+      <li><strong>Patrón estable.</strong> Aunque los datos concretos cambian en cada ejecución, el proceso siempre sigue los mismos pasos. Eso hace que sea predecible y que un agente pueda ejecutarlo con consistencia.</li>
+      <li><strong>Criterio humano acotado.</strong> La parte que requiere juicio profesional es pequeña y está al final del proceso. El humano revisa y aprueba el resultado; no ejecuta el proceso completo.</li>
+      <li><strong>Coste del error manejable.</strong> Si el agente comete un error en la primera versión, la consecuencia es detectable y corregible antes de que tenga efecto real. Eso permite aprender y ajustar sin exposición.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>La frecuencia multiplica el impacto.</strong> Un proceso de 10 minutos que se repite 5 veces al día ahorra más horas a la semana que un proceso de 2 horas que ocurre una vez al mes. Cuando evalúes candidatos, piensa primero en frecuencia, después en duración.</p>
+    </div>
+
+    <p>Según el <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener">McKinsey Global Institute</a>, las tareas con mayor potencial de automatización con IA en el corto plazo son precisamente las que combinan alta repetitividad con procesamiento de información estructurada o semiestructurada. Que es, esencialmente, lo que describen estos tres candidatos.</p>
+
+    <h2>Un proceso que parece buen candidato pero rara vez lo es en la primera fase</h2>
+
+    <p>Es útil mencionar también qué conviene no automatizar primero: los procesos donde el criterio profesional marca una diferencia real en cada caso individual.</p>
+
+    <p>Un proceso que requiere evaluar situaciones complejas una a una, donde el razonamiento del operador es lo que produce el resultado correcto, no es el mejor punto de entrada. No porque no se pueda automatizar eventualmente, sino porque la primera fase sirve para ganar confianza y medir impacto, y esos procesos requieren una inversión mayor en diseño, entrenamiento y supervisión antes de que el agente sea fiable.</p>
+
+    <p>Lo mismo aplica a procesos que van a cambiar pronto. Si hay una reorganización interna o un cambio regulatorio en los próximos meses, espera a que el proceso se estabilice antes de automatizarlo. Automatizar algo que va a cambiar genera trabajo adicional, no ahorro.</p>
+
+    <p>Para entender mejor en qué se diferencia la automatización con IA del software tradicional —y cuándo tiene sentido cada enfoque—, el artículo sobre <a href="/blog/automatizacion-ia-vs-rpa.html">automatización con IA vs RPA</a> explica las claves con ejemplos concretos.</p>
+
+    <h2>Del candidato al primer proyecto</h2>
+
+    <p>Una vez identificado el proceso candidato, el siguiente paso es documentarlo con el nivel de detalle necesario para que un agente pueda ejecutarlo: qué datos entran, de qué fuente, qué transformaciones se hacen, qué sale al final y quién revisa el resultado.</p>
+
+    <p>Ese ejercicio de documentación, antes de escribir ningún código, suele revelar cosas que nadie había observado antes: excepciones en el proceso que nunca se habían formalizado, datos que se usan de forma diferente según quién haga la tarea, pasos que se hacen "por si acaso" y que nunca han sido necesarios. Todo eso es información que mejora el diseño del agente desde el principio.</p>
+
+    <p>El artículo sobre <a href="/blog/como-empezar-con-ia-en-tu-empresa.html">cómo empezar con IA en tu empresa</a> describe ese proceso de diagnóstico con más detalle, incluyendo las preguntas que conviene responder antes de hablar con ningún proveedor.</p>
+
+    <hr>
+
+    <p>Si quieres identificar cuál es el primer candidato en tu empresa, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Una conversación de 30 minutos suele ser suficiente para tener claridad sobre el punto de entrada con mejor relación impacto-esfuerzo.</p>
+
+  </div>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Cuál es el primer proceso en tu empresa?</h2>
+    <p class="article-cta-text">Cada empresa tiene su propio punto de entrada. Una conversación de 30 minutos suele ser suficiente para identificarlo. Sin tecnicismos, sin compromiso.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Escríbenos</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/automatizacion-de-procesos-empresariales.html">
+        <span class="related-card-cat">Automatización</span>
+        <span class="related-card-title">Automatización de procesos empresariales: qué es y por dónde empezar</span>
+        <span class="related-card-excerpt">Automatizar procesos libera a tu equipo de tareas repetitivas para que se concentre en lo que requiere su criterio. Aquí explicamos cómo identificar qué automatizar primero.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/automatizacion-ia-vs-rpa.html">
+        <span class="related-card-cat">Automatización</span>
+        <span class="related-card-title">Automatización con IA vs RPA: qué necesita tu empresa realmente</span>
+        <span class="related-card-excerpt">RPA automatiza pasos fijos. La IA entiende contexto y gestiona variabilidad. Te explicamos cuándo usar cada enfoque y cómo combinarlos con sentido.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.png" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>
