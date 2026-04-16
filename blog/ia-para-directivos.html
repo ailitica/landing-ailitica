@@ -358,6 +358,17 @@ footer {
 @media (max-width:560px) {
   .related-grid { grid-template-columns:1fr; }
 }
+
+/* -- Hero image -- */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
 </style>
 </head>
 <body>
