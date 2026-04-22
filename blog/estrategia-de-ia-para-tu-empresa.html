@@ -575,7 +575,7 @@ footer {
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     </a>
   </div>
-  <p class="footer-copy">&copy; 2026 Ailitica. Todos los derechos reservados.</p>
+  <p class="footer-copy">&copy; <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
   <div class="footer-links">
     <a href="./">Blog</a>
     <a href="../">Inicio</a>
@@ -618,5 +618,6 @@ function closeMobileMenu() {
 }
 </script>
 
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
 </body>
 </html>

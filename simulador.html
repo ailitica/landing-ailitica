@@ -715,7 +715,7 @@
       <a class="mobileLink" href="https://ailitica.com/simulador.html">Simulador</a>
       <a class="mobileCta" href="https://ailitica.com/contacto">Contáctanos</a>
 
-      <div id="mobileMenuFooter">Copyright © 2025 Ailítica S.L.</div>
+      <div id="mobileMenuFooter">Copyright © <span class="cy"></span> Ailítica S.L.</div>
     </div>
   </aside>
 
@@ -906,7 +906,7 @@
 
       <div class="footer-text">
         <div class="footer-copy">
-          Copyright © 2025 Ailítica S.L.
+          Copyright © <span class="cy"></span> Ailítica S.L.
         </div>
         <div class="footer-links">
           <a href="terminos.html">Términos y condiciones</a>
@@ -1057,6 +1057,7 @@
 
     window.onload = calcular;
   </script>
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
 
 </body>
 </html>

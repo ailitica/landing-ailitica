@@ -790,7 +790,7 @@
       <a class="mobileLink" href="https://ailitica.com">Home</a>
       <a class="mobileLink" href="simulador.html">Simulador</a>
       <a class="mobileCta" href="contacto.html">Contáctanos</a>
-      <div id="mobileMenuFooter">Copyright © 2025 Ailítica S.L.</div>
+      <div id="mobileMenuFooter">Copyright © <span class="cy"></span> Ailítica S.L.</div>
     </div>
   </aside>
 
@@ -1002,7 +1002,7 @@
       </div>
 
       <div class="footer-text">
-        <div class="footer-copy">Copyright © 2025 Ailítica S.L.</div>
+        <div class="footer-copy">Copyright © <span class="cy"></span> Ailítica S.L.</div>
         <div class="footer-links">
           <a href="terminos.html">Términos y condiciones</a>
           <a href="cookies.html">Política de cookies</a>
@@ -1365,6 +1365,7 @@
       });
     }
   </script>
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
 </body>
 </html>
 

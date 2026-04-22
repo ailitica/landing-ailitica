@@ -250,7 +250,7 @@ footer {
     <img class="logo-icon" src="icon.png" alt="">
     <img class="logo-text" src="ailitica.webp" alt="Ailitica">
   </a>
-  <p class="footer-copy">© 2025 Ailitica. Todos los derechos reservados.</p>
+  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
   <div class="footer-links">
     <a href="/terminos">Términos y condiciones</a>
     <a href="/cookies">Política de cookies</a>
@@ -266,5 +266,6 @@ document.addEventListener('mousemove', e => {
   cursor.style.top  = e.clientY + 'px';
 });
 </script>
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
 </body>
 </html>
