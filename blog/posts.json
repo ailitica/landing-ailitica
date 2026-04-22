@@ -1,5 +1,29 @@
 [
   {
+    "slug": "ia-con-criterio-humano",
+    "title": "IA con criterio humano: por qué el agente decide mejor cuando no decide solo",
+    "date": "2026-04-24",
+    "category": "Estrategia",
+    "keywords": "IA con criterio humano, human in the loop, supervisión humana IA empresa, agentes IA con validación, automatización con criterio",
+    "excerpt": "Los proyectos de IA que funcionan en empresas serias dejan al humano la decisión que importa. Te explicamos cómo se diseña una IA con criterio humano y por qué este enfoque evita los errores más caros.",
+    "lead": "Los proyectos de IA que funcionan en empresas serias tienen un patrón común: dejan al humano la decisión que importa. Automatizar no es eliminar al equipo de la ecuación, sino liberarlo de lo que no requiere su juicio.",
+    "readtime": "6 min",
+    "image": "img/ia-con-criterio-humano.webp",
+    "featured": false
+  },
+  {
+    "slug": "cuanto-cuesta-automatizar-ia",
+    "title": "Cuánto cuesta automatizar con IA en una empresa (rangos reales, sin humo)",
+    "date": "2026-04-22",
+    "category": "Estrategia",
+    "keywords": "cuanto cuesta automatizar con IA en una empresa, precio automatización IA, coste agentes de IA empresa, inversión IA pymes, ROI automatización inteligencia artificial",
+    "excerpt": "La pregunta sobre el coste de automatizar con IA tiene una respuesta seria, aunque incómoda: depende. Pero depende de tres variables concretas que puedes evaluar antes de pedir un solo presupuesto.",
+    "lead": "La pregunta sobre el coste de automatizar con IA tiene una respuesta seria, aunque incómoda: depende. Pero depende de tres variables concretas que puedes evaluar antes de pedir un solo presupuesto. En este artículo te damos los rangos reales que vemos en el mercado y cómo usarlos para decidir con criterio.",
+    "readtime": "7 min",
+    "image": "img/cuanto-cuesta-automatizar-ia.webp",
+    "featured": true
+  },
+  {
     "slug": "ia-para-directivos",
     "title": "Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico",
     "date": "2026-04-14",

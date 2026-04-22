@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>IA con criterio humano: por qué el humano sigue decidiendo — Ailitica</title>
+<meta name="description" content="IA con criterio humano: por qué los agentes de IA funcionan mejor cuando no deciden solos. Cómo diseñar automatizaciones donde el humano valida, decide y activa.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/ia-con-criterio-humano.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/ia-con-criterio-humano.html">
+<meta property="og:title" content="IA con criterio humano: por qué el humano sigue decidiendo">
+<meta property="og:description" content="IA con criterio humano: por qué los agentes de IA funcionan mejor cuando no deciden solos. Cómo diseñar automatizaciones donde el humano valida, decide y activa.">
+<meta property="og:image" content="https://ailitica.com/blog/img/ia-con-criterio-humano.webp">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-04-24">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="IA con criterio humano: por qué el humano sigue decidiendo">
+<meta name="twitter:description" content="IA con criterio humano: por qué los agentes de IA funcionan mejor cuando no deciden solos. Cómo diseñar automatizaciones donde el humano valida, decide y activa.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/ia-con-criterio-humano.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "IA con criterio humano: por qué el humano sigue decidiendo",
+  "description": "IA con criterio humano: por qué los agentes de IA funcionan mejor cuando no deciden solos. Cómo diseñar automatizaciones donde el humano valida, decide y activa.",
+  "datePublished": "2026-04-24",
+  "dateModified": "2026-04-24",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/ia-con-criterio-humano.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "keywords": "IA con criterio humano, human in the loop, supervisión humana IA empresa, agentes IA con validación, automatización con criterio"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/ia-con-criterio-humano.webp" alt="Persona revisando en pantalla la propuesta de decisión preparada por un agente de IA, ilustrando IA con criterio humano" width="1456" height="816" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">24 de abril de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">6 min lectura</span>
+    </div>
+    <h1 class="article-title">IA con criterio humano: <em>por qué el agente decide mejor cuando no decide solo</em></h1>
+    <p class="article-lead">Los proyectos de IA que funcionan en empresas serias tienen un patrón común: dejan al humano la decisión que importa. Automatizar no es eliminar al equipo de la ecuación, sino liberarlo de lo que no requiere su juicio. Te explicamos cómo se diseña una IA con criterio humano y por qué este enfoque evita los errores más caros.</p>
+  </header>
+
+  <div class="article-body">
+
+    <h2>Qué significa IA con criterio humano</h2>
+
+    <p>Una <strong>IA con criterio humano</strong> es una automatización donde el agente hace el trabajo pesado (analizar, consultar, preparar opciones) y la persona responsable revisa y aprueba las decisiones que tienen impacto real. No es una versión descafeinada de la automatización. Es, en nuestra experiencia, la única que funciona bien en entornos profesionales.</p>
+
+    <p>El término técnico que verás en la literatura es <em>human in the loop</em>. La idea es simple: en cada paso donde el error tenga consecuencias, la IA propone y el humano decide. En los demás, la IA actúa sin pedir permiso.</p>
+
+    <p>El resto del artículo explica por qué esto no es una concesión al miedo, sino una decisión de diseño deliberada que mejora los resultados.</p>
+
+    <h2>Por qué la autonomía total rara vez es lo que la empresa necesita</h2>
+
+    <p>Cuando una empresa escucha hablar de agentes de IA, suele imaginar un sistema completamente autónomo: un agente que responde correos, cierra ventas y resuelve incidencias sin supervisión. Esa imagen vende bien en conferencias, pero es la opción con más problemas en la vida real.</p>
+
+    <p>Los motivos son concretos. Un agente que actúa solo sobre un cliente externo puede cometer un error que dañe la relación de forma permanente. Un agente que ejecuta acciones financieras sin validación puede generar una pérdida difícil de revertir. Un agente que responde con datos desactualizados genera confianza falsa que luego hay que limpiar.</p>
+
+    <p>Además, hay una cuestión de responsabilidad legal. En sectores regulados, delegar decisiones en un sistema sin supervisión puede infringir normativa. El <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">AI Act europeo</a> exige control humano sobre sistemas de riesgo, y varias decisiones empresariales caen en esa categoría.</p>
+
+    <h2>Qué hace un agente sin supervisión y qué hace con ella</h2>
+
+    <p>Para entender la diferencia, veamos qué tipo de tareas puede ejecutar un agente por su cuenta y cuáles merecen pasar por un humano antes.</p>
+
+    <h3>Tareas donde el agente puede actuar solo</h3>
+
+    <ul>
+      <li>Clasificar correos entrantes y asignarlos a una cola</li>
+      <li>Extraer datos de documentos y rellenar formularios internos</li>
+      <li>Generar informes periódicos a partir de datos ya validados</li>
+      <li>Responder a consultas cerradas con información pública (horarios, precios de catálogo)</li>
+      <li>Monitorizar sistemas y generar alertas si detecta anomalías</li>
+    </ul>
+
+    <h3>Tareas donde el humano valida antes de ejecutar</h3>
+
+    <ul>
+      <li>Enviar cualquier comunicación personalizada a un cliente</li>
+      <li>Aprobar gastos, facturas o movimientos financieros</li>
+      <li>Cambiar datos sensibles en sistemas de producción</li>
+      <li>Resolver reclamaciones o incidencias que afecten a la relación comercial</li>
+      <li>Tomar decisiones que dependan de contexto no recogido en los datos</li>
+    </ul>
+
+    <p>La línea entre ambos grupos la define una pregunta sencilla: <strong>si el agente se equivoca, cuánto cuesta arreglarlo</strong>. Si la respuesta es "cinco minutos", puede actuar solo. Si la respuesta es "un cliente perdido" o "una factura mal emitida", la validación humana se paga sola.</p>
+
+    <h2>Cómo se diseña la supervisión humana en la práctica</h2>
+
+    <p>Una IA con criterio humano no es un agente que se detiene todo el tiempo a preguntar. Sería insoportable para el equipo. Es un agente que identifica los puntos donde la intervención humana añade valor y estructura su trabajo alrededor de ellos.</p>
+
+    <h3>Batching de propuestas</h3>
+
+    <p>El agente prepara diez, veinte o cincuenta propuestas en paralelo y las presenta en un panel. La persona responsable las revisa en bloque, aprueba las que van bien y corrige las que no. Una revisión de diez propuestas bien preparadas lleva cinco minutos. La misma persona tardaría horas en prepararlas desde cero.</p>
+
+    <h3>Umbral de confianza</h3>
+
+    <p>El agente puede ejecutar automáticamente cuando su nivel de confianza supera un umbral definido, y escalar a humano cuando no lo alcanza. Un buen agente sabe cuándo no sabe. Ese autoconocimiento es lo que permite liberar al equipo de casos rutinarios sin perder control sobre los excepcionales.</p>
+
+    <h3>Revisión por muestreo</h3>
+
+    <p>Cuando el volumen es muy alto, en lugar de revisar todo, el humano revisa una muestra aleatoria para detectar patrones de error. Si la muestra está limpia, el agente sigue. Si aparecen fallos, se ajusta antes de seguir procesando.</p>
+
+    <div class="callout">
+      <p><strong>El principio de fondo.</strong> La IA no sustituye al juicio humano; lo concentra. Antes, el equipo usaba su criterio en cien decisiones pequeñas al día. Ahora lo usa en diez decisiones que importan. Las otras noventa las ejecuta el agente con el patrón ya aprendido.</p>
+    </div>
+
+    <h2>Los dos errores más frecuentes al diseñar supervisión humana</h2>
+
+    <p>En nuestra experiencia, cuando un proyecto de IA con supervisión no funciona, casi siempre es por uno de estos dos motivos.</p>
+
+    <h3>Demasiada supervisión: el cuello de botella</h3>
+
+    <p>El agente consulta al humano en cada paso y el humano se convierte en cuello de botella. El proyecto termina siendo más lento que antes y el equipo rechaza la herramienta. La solución pasa por identificar qué pasos no necesitan validación y automatizarlos por completo, dejando la intervención solo donde aporta.</p>
+
+    <h3>Supervisión mal diseñada: la validación ciega</h3>
+
+    <p>El humano recibe una avalancha de propuestas sin contexto suficiente y acaba aprobando todo sin mirar. La supervisión se convierte en un sello de goma que no aporta criterio real. La solución pasa por dar al humano exactamente la información que necesita para decidir, ni más ni menos, y por diseñar paneles que faciliten comparar rápido en lugar de leer largo.</p>
+
+    <h2>Un ejemplo concreto</h2>
+
+    <p>Una empresa de servicios profesionales recibe cada semana decenas de peticiones de presupuesto. Cada una requiere revisar el tipo de cliente, cruzar con proyectos anteriores, estimar horas y aplicar tarifa. El equipo dedicaba cuatro tardes al mes solo a esto.</p>
+
+    <p>El agente que se diseñó no envía ningún presupuesto. Lo que hace es preparar la propuesta: analiza la petición, consulta el histórico del cliente, calcula horas según plantillas y deja un borrador listo con los datos relevantes a la vista. El responsable comercial revisa, ajusta lo que hace falta y envía. Lo que antes ocupaba cuatro tardes ahora se despacha en una mañana.</p>
+
+    <p>El agente no toma la decisión comercial. La prepara. Y eso es suficiente para que el equipo recupere tres tardes al mes para lo que de verdad necesita su criterio: hablar con clientes, cerrar acuerdos y entender el mercado.</p>
+
+    <h2>Por qué este enfoque conviene a tu empresa</h2>
+
+    <p>La IA con criterio humano no es un enfoque tímido ni una moda. Es la forma más rentable de introducir automatización en un entorno profesional, por tres razones concretas.</p>
+
+    <p><strong>Reduce el riesgo de implantación.</strong> Los errores del agente no llegan al cliente porque alguien los ve antes. Eso permite iterar y mejorar sin coste reputacional.</p>
+
+    <p><strong>Acelera la adopción interna.</strong> El equipo acepta mejor una herramienta que le ayuda que una que le sustituye. Cuando el agente prepara y la persona decide, la herramienta se percibe como apoyo, no como amenaza.</p>
+
+    <p><strong>Mejora con el tiempo.</strong> Cada decisión humana sobre una propuesta del agente es información de entrenamiento. El sistema aprende qué aprueba y qué corrige el equipo, y las propuestas futuras mejoran sin esfuerzo adicional.</p>
+
+    <p>Si estás evaluando dar el primer paso con IA, puedes leer también <a href="/blog/como-empezar-con-ia-en-tu-empresa.html">cómo empezar con IA en tu empresa</a>, donde explicamos por dónde conviene arrancar sin asumir riesgos innecesarios.</p>
+
+    <hr>
+
+    <p>Si quieres diseñar un agente que trabaje con tu equipo en lugar de reemplazarlo, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Analizamos tu proceso y te proponemos dónde automatizar y dónde dejar la decisión en manos humanas.</p>
+
+  </div>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">Diseña una IA que amplifique a tu equipo</h2>
+    <p class="article-cta-text">Analizamos qué parte de tu proceso puede automatizarse sin supervisión y dónde conviene dejar la última palabra a una persona. El resultado: un agente que libera horas reales sin renunciar al control.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/chatbot-vs-agente-de-ia.html">
+        <span class="related-card-cat">Fundamentos</span>
+        <span class="related-card-title">Chatbot vs agente de IA: la diferencia que cambia lo que puede hacer tu empresa</span>
+        <span class="related-card-excerpt">Un chatbot sigue un guion. Un agente percibe, decide y actúa, con el humano como árbitro.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/ia-para-directivos.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico</span>
+        <span class="related-card-excerpt">No necesitas entender la IA por dentro para tomar buenas decisiones sobre ella.</span>
+        <span class="related-card-readtime">7 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>

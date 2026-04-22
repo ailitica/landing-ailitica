@@ -12,7 +12,7 @@
   <!-- Blog index -->
   <url>
     <loc>https://ailitica.com/blog/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -96,6 +96,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://ailitica.com/blog/cuanto-cuesta-automatizar-ia.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ailitica.com/blog/ia-con-criterio-humano.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog index lastmod actualizado abajo -->
   <!-- Páginas legales -->
   <url>
     <loc>https://ailitica.com/terminos.html</loc>
