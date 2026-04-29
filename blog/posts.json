@@ -20,7 +20,7 @@
     "excerpt": "Los proyectos de IA que funcionan en empresas serias dejan al humano la decisión que importa. Te explicamos cómo se diseña una IA con criterio humano y por qué este enfoque evita los errores más caros.",
     "lead": "Los proyectos de IA que funcionan en empresas serias tienen un patrón común: dejan al humano la decisión que importa. Automatizar no es eliminar al equipo de la ecuación, sino liberarlo de lo que no requiere su juicio.",
     "readtime": "6 min",
-    "image": "img/ia-con-criterio-humano.webp",
+    "image": "img/ia-con-criterio-humano.png",
     "featured": false
   },
   {
@@ -32,7 +32,7 @@
     "excerpt": "La pregunta sobre el coste de automatizar con IA tiene una respuesta seria, aunque incómoda: depende. Pero depende de tres variables concretas que puedes evaluar antes de pedir un solo presupuesto.",
     "lead": "La pregunta sobre el coste de automatizar con IA tiene una respuesta seria, aunque incómoda: depende. Pero depende de tres variables concretas que puedes evaluar antes de pedir un solo presupuesto. En este artículo te damos los rangos reales que vemos en el mercado y cómo usarlos para decidir con criterio.",
     "readtime": "7 min",
-    "image": "img/cuanto-cuesta-automatizar-ia.webp",
+    "image": "img/cuanto-cuesta-automatizar-ia.png",
     "featured": true
   },
   {
@@ -44,7 +44,7 @@
     "excerpt": "Antes de elegir cualquier herramienta de IA, hay una pregunta que importa más. Un caso real muestra por qué el diagnóstico decide cómo implementar IA en una empresa.",
     "lead": "Cuando una empresa llega pidiendo un chatbot, lo fácil es ponerse a construir. Pero saber cómo implementar IA en una empresa de verdad exige algo previo: entender qué necesitan antes de proponer nada.",
     "readtime": "5 min",
-    "image": "img/diagnostico-implementar-ia-empresa.webp",
+    "image": "img/diagnostico-implementar-ia-empresa.png",
     "featured": false
   },
   {
@@ -103,7 +103,7 @@
     "excerpt": "RPA automatiza pasos fijos. La IA entiende contexto y gestiona variabilidad. Te explicamos cuándo usar cada enfoque y cómo combinarlos con sentido.",
     "lead": "RPA y automatización con IA resuelven problemas distintos. Confundirlos lleva a comprar tecnología cara para un problema que no era el correcto. En este artículo te explicamos la diferencia, cuándo usar cada enfoque y por qué la combinación de ambos suele ser la opción más inteligente.",
     "readtime": "6 min",
-    "image": "img/automatizacion-ia-vs-rpa_logo.webp",
+    "image": "img/automatizacion-ia-vs-rpa.webp",
     "featured": false
   },
   {
@@ -127,7 +127,7 @@
     "excerpt": "Los agentes de IA no son solo para grandes empresas. Te explicamos qué pueden hacer por una pyme y cómo dar el primer paso sin complicaciones.",
     "lead": "Si tienes una pyme, probablemente pienses que la inteligencia artificial es cosa de grandes empresas con grandes presupuestos. No es así. Los agentes de IA pueden liberar horas de trabajo repetitivo en equipos pequeños con una inversión razonable.",
     "readtime": "6 min",
-    "image": "img/agentes-de-ia-para-pymes_logo.webp",
+    "image": "img/agentes-de-ia-para-pymes.webp",
     "featured": false,
     "dateModified": "2026-04-29"
   },
