@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Cuándo NO usar IA en tu empresa: 6 señales claras — Ailitica</title>
+<meta name="description" content="Cuándo no usar IA en empresa: 6 señales que te dicen que la inteligencia artificial no es la respuesta correcta. Antídoto al hype, criterio antes de invertir.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/cuando-no-usar-ia-empresa.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/cuando-no-usar-ia-empresa.html">
+<meta property="og:title" content="Cuándo NO usar IA en tu empresa: 6 señales claras">
+<meta property="og:description" content="Cuándo no usar IA en empresa: 6 señales que te dicen que la inteligencia artificial no es la respuesta correcta. Antídoto al hype, criterio antes de invertir.">
+<meta property="og:image" content="https://ailitica.com/blog/img/cuando-no-usar-ia-empresa.webp">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-05-02">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Cuándo NO usar IA en tu empresa: 6 señales claras">
+<meta name="twitter:description" content="Cuándo no usar IA en empresa: 6 señales que te dicen que la inteligencia artificial no es la respuesta correcta. Antídoto al hype, criterio antes de invertir.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/cuando-no-usar-ia-empresa.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cuándo NO usar IA en tu empresa: 6 señales claras",
+  "description": "Cuándo no usar IA en empresa: 6 señales que te dicen que la inteligencia artificial no es la respuesta correcta. Antídoto al hype, criterio antes de invertir.",
+  "datePublished": "2026-05-02",
+  "dateModified": "2026-05-02",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/cuando-no-usar-ia-empresa.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "keywords": "cuando no usar IA en empresa, límites de la inteligencia artificial, casos donde no usar IA, criterio humano vs IA, errores al implementar IA en empresa"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/cuando-no-usar-ia-empresa.webp" alt="Cartel de stop sobrio sobre escritorio de trabajo, ilustrando los límites donde la inteligencia artificial no es la respuesta correcta para una empresa" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">2 de mayo de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">7 min lectura</span>
+    </div>
+    <h1 class="article-title">Cuándo NO usar IA en tu empresa: <em>6 señales claras</em></h1>
+    <p class="article-lead">El proveedor que te diga que la inteligencia artificial puede hacerlo todo, está vendiendo, no ayudando. Hay procesos donde meter IA es invertir mal, y el directivo que los detecta a tiempo se ahorra una decisión cara. Estas son las 6 señales que te dicen que tu caso no es uno de ellos.</p>
+  </header>
+
+  <div class="article-body">
+
+    <h2>Por qué este artículo va a contracorriente del mercado</h2>
+
+    <p>Casi todo lo que se publica sobre inteligencia artificial empresarial empuja en la misma dirección: automatiza más, automatiza antes, automatiza todo. Es comprensible: el mercado está creciendo y los proveedores quieren vender. Pero un directivo que decide bien no se mueve por la inercia del sector. Se mueve por lo que conviene a su empresa.</p>
+
+    <p>En nuestra experiencia diseñando agentes de IA para empresas, la conversación más útil que tenemos con un cliente nuevo no es sobre dónde meter IA. Es sobre dónde no meterla. Identificar antes lo que no se debe automatizar evita inversiones caras que después hay que desmontar.</p>
+
+    <p>Estas son las 6 señales que, si aparecen en un proceso, nos hacen recomendar un enfoque distinto. A veces es <strong>esperar seis meses</strong>. A veces es <em>resolverlo de otra forma</em> antes. A veces es <strong>no meter IA nunca en ese sitio concreto</strong> y mantenerlo como está.</p>
+
+    <h2>Señal 1: el proceso requiere un juicio ético complejo</h2>
+
+    <p>Hay decisiones donde el coste de equivocarse no se mide en euros. Se mide en personas afectadas, en confianza rota, en consecuencias que ningún algoritmo puede compensar después. Despidos, expedientes disciplinarios, decisiones médicas sin protocolo claro, evaluaciones de desempeño que afectan a la carrera de alguien.</p>
+
+    <p>Un agente puede preparar la información para esa decisión. Puede resumir el historial, contrastar con casos similares, ordenar los datos. Pero la decisión final tiene que llevar el peso de un juicio humano consciente. No por miedo a la tecnología, sino porque la responsabilidad de esa decisión necesita un responsable identificable.</p>
+
+    <p>El <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">AI Act europeo</a> recoge este principio para sistemas de alto riesgo, pero la lógica vale para cualquier empresa: si el resultado afecta a derechos, dignidad o futuro de personas, la decisión sigue siendo humana. La IA acompaña, no sustituye.</p>
+
+    <h2>Señal 2: el coste del error es asimétrico y existencial</h2>
+
+    <p>En muchos procesos, equivocarse cuesta una pequeña pérdida y se recupera al día siguiente. En otros, una sola equivocación puede comprometer a la empresa. Un contrato legal mal redactado que vincula durante años. Una autorización médica errónea con consecuencias clínicas. Una transferencia financiera incorrecta que genera responsabilidad regulatoria.</p>
+
+    <p>Un agente de IA tiene una tasa de acierto alta, pero nunca del 100%. En procesos con coste de error simétrico (acertar y equivocarse cuestan parecido), la mejora estadística que aporta la IA compensa los fallos. En procesos con coste de error asimétrico (un solo fallo te tumba), la lógica cambia: el equipo humano tiene que ser la última línea de control, aunque el agente prepare el 99% del trabajo previo.</p>
+
+    <p>La pregunta correcta no es "qué porcentaje acierta el agente". Es <strong>qué pasa el día que se equivoca</strong>. Si la respuesta es "rehacemos en cinco minutos", adelante. Si la respuesta es "abrimos un expediente, llamamos al cliente y revisamos protocolos", la IA se queda fuera de la ejecución, aunque pueda quedarse en la preparación.</p>
+
+    <h2>Señal 3: el volumen del proceso es muy bajo</h2>
+
+    <p>Esta señal es la que más sorprende a quien empieza a explorar IA. Pero es la más mecánica: si un proceso ocurre cinco veces al mes, automatizarlo con un agente de IA casi nunca sale a cuenta.</p>
+
+    <p>Construir un agente bien hecho lleva semanas de diagnóstico, diseño, integración y validación. Mantenerlo cuesta cada mes. Para que esa inversión se justifique, el agente tiene que liberar horas reales y de forma continua. Si el proceso se ejecuta poco, las horas que liberas son pocas, y la cuenta no cierra.</p>
+
+    <p>Un buen criterio de partida: si el proceso lleva menos de 20 horas al mes de trabajo humano repetitivo, probablemente no es candidato a IA. Lo que sí es candidato es lo que tu equipo hace decenas o cientos de veces, con patrón estable, donde una herramienta amplifica el tiempo recuperado. Si quieres entender mejor qué procesos sí cumplen estas condiciones, conviene leer <a href="/blog/que-procesos-automatizar-primero.html">qué procesos automatizar primero con IA</a>.</p>
+
+    <div class="callout">
+      <p><strong>La regla del diagnóstico.</strong> Antes de invertir en automatizar un proceso con IA, mide cuántas horas mensuales libera de verdad. Si la respuesta es menos del coste mensual de mantenimiento del agente, la IA no es la palanca correcta. Hay alternativas más sencillas (plantilla, formulario estructurado, macro) que resuelven mejor el caso pequeño.</p>
+    </div>
+
+    <h2>Señal 4: los datos están podridos y nadie los va a limpiar</h2>
+
+    <p>Un agente de IA es una capa de inteligencia sobre los datos que tiene a su alcance. Si los datos son inconsistentes, están desactualizados o tienen huecos sistemáticos, las decisiones del agente heredan todos esos problemas, y los aplican a escala.</p>
+
+    <p>Eso es peor que el escenario sin IA. Sin IA, los errores de los datos los detecta una persona que conoce el contexto y los corrige sobre la marcha. Con IA, el agente ejecuta con seguridad sobre datos malos, las decisiones se toman rápido y los errores se acumulan invisibles hasta que alguien encuentra la pila de problemas en producción.</p>
+
+    <p>La señal es clara: si nadie en la empresa ha asumido la responsabilidad de mantener los datos limpios, ese proceso no está listo para IA. Lo que está listo para IA es un proceso con datos validados, dueño identificado y proceso de corrección activo. Si tu situación no es esa, el primer proyecto no es el agente, es el saneamiento. Y eso lo puede hacer el equipo actual, sin IA.</p>
+
+    <h2>Señal 5: el proceso cambia más rápido de lo que la IA puede aprender</h2>
+
+    <p>Hay procesos estables: los pasos son los mismos hoy que hace un año. Hay procesos en flujo continuo: los pasos cambian cada trimestre porque cambia la regulación, el catálogo, el cliente o la forma de trabajar del equipo. Los primeros son candidatos naturales a IA. Los segundos no.</p>
+
+    <p>Un agente entrenado sobre un proceso que se reescribe cada poco tiempo se queda obsoleto antes de generar valor. Lo que el agente aprendió sobre la versión anterior ya no aplica, y el coste de retrain es continuo. La automatización se convierte en un mantenimiento sin descanso, en lugar de en una palanca de eficiencia.</p>
+
+    <p>La pregunta práctica: si dibujas el proceso hoy y dentro de seis meses, ¿el dibujo se parece? Si la respuesta es sí, el proceso es estable y la IA puede ayudar. Si la respuesta es no, primero estabilízalo, después automatiza. La estabilización no es opcional, es una condición previa.</p>
+
+    <h2>Señal 6: el equipo no está listo para colaborar con IA</h2>
+
+    <p>Esta señal es la más subestimada y la que más proyectos tumba. Una herramienta de IA solo aporta valor si el equipo que la usa la integra en su trabajo diario. Y eso requiere preparación: formación mínima, gobernanza clara, protocolo de revisión, cultura de colaboración con la herramienta.</p>
+
+    <p>Si el equipo entra en el proyecto sin esa preparación, lo más probable es que pase una de estas dos cosas. La primera: rechazo activo. Nadie usa el agente, todo el mundo sigue haciendo el trabajo a mano y la inversión se queda sin retorno. La segunda, peor: aceptación pasiva. El equipo aprueba todo lo que propone el agente sin revisar, y la IA empieza a tomar decisiones reales sin supervisión real.</p>
+
+    <p>La señal de alerta es concreta: si en la empresa no hay nadie identificado como responsable de la gobernanza del agente, ni hay protocolo para detectar errores, ni se ha hablado del cambio con el equipo antes de empezar, el proyecto no es viable hoy. Hay que preparar el terreno antes. Lo bueno es que esa preparación es rápida, sale barata y multiplica el éxito de cualquier proyecto posterior.</p>
+
+    <h2>Cómo usar estas 6 señales en tu próxima decisión</h2>
+
+    <p>Si estás evaluando un proyecto de IA en este momento, recorre las seis señales y marca cuáles aparecen en tu caso. La regla práctica que aplicamos:</p>
+
+    <ul>
+      <li><strong>Cero señales:</strong> proceso candidato sólido. Adelante con el diagnóstico técnico.</li>
+      <li><strong>Una o dos señales:</strong> caso revisable. Con ajustes (más datos limpios, formación previa, redefinición del scope) puede convertirse en candidato.</li>
+      <li><strong>Tres o más señales:</strong> aviso serio. Casi siempre conviene parar, resolver primero las condiciones y volver al proyecto en seis meses.</li>
+    </ul>
+
+    <p>Decir "no hoy" a un proyecto de IA no es renunciar. Es decir "no a este proyecto en estas condiciones" para poder decir "sí" a uno mejor en mejores condiciones. La empresa que entiende esa distinción gasta menos y consigue más.</p>
+
+    <h2>El criterio que aplica Ailitica</h2>
+
+    <p>Cuando un cliente potencial llega con un proyecto y aparecen tres o más señales, no construimos. Lo decimos. Y proponemos lo que sí tiene sentido hacer primero: limpiar datos, estabilizar el proceso, formar al equipo, redefinir el scope. A veces eso significa que pasamos seis meses sin facturar a ese cliente. Lo asumimos.</p>
+
+    <p>El motivo es directo: vivimos del trabajo a largo plazo. Si vendemos un proyecto que no debería existir, el cliente paga, no consigue resultados y no vuelve. Si decimos no hoy, el cliente vuelve cuando esté listo, y entonces el proyecto rinde. Esa es la única forma honesta de hacer este trabajo.</p>
+
+    <p>Para entender cómo se diseña un proyecto de IA cuando sí cumple las condiciones, puedes leer <a href="/blog/ia-con-criterio-humano.html">IA con criterio humano</a> (cómo se reparte el trabajo entre el agente y el equipo) y <a href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">cómo implementar IA en una empresa: el diagnóstico que lo cambia todo</a> (qué se mira antes de construir).</p>
+
+    <hr>
+
+    <p>Si tienes un proyecto en mente y quieres saber, sin compromiso, si tu caso está dentro o fuera de estas 6 señales, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Te decimos lo que vemos y, si la respuesta es "ahora no", también lo decimos.</p>
+
+  </div>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">Comprueba si tu caso está dentro o fuera de estas 6 señales</h2>
+    <p class="article-cta-text">Te decimos en una conversación corta si tu proceso es candidato sólido a IA, si conviene esperar o si hay una alternativa más sencilla. Sin compromiso y sin venderte humo.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/ia-con-criterio-humano.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">IA con criterio humano: por qué el agente decide mejor cuando no decide solo</span>
+        <span class="related-card-excerpt">Cuándo conviene que la IA proponga y el humano decida, y cómo se diseña esa supervisión.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/que-procesos-automatizar-primero.html">
+        <span class="related-card-cat">Automatización</span>
+        <span class="related-card-title">Qué procesos automatizar primero con IA: los tres candidatos más frecuentes</span>
+        <span class="related-card-excerpt">Los procesos donde la IA sí encaja y por dónde conviene empezar para que la inversión rinda.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
