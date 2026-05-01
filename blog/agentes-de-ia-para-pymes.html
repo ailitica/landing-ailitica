@@ -79,7 +79,6 @@
   ]
 }
 </script>
-<!-- FAQ slot — Eco rellena via task B4 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,26 +86,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Los agentes de IA son solo para grandes empresas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "No. Las pymes son donde más impacto tienen, porque cada hora liberada del equipo se nota directamente en capacidad y margen. Una pyme suele tener procesos más sencillos de automatizar y menos burocracia interna que ralentice el proyecto."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Qué puede automatizar una pyme con un agente de IA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Tareas administrativas repetitivas: respuesta a emails frecuentes, consolidación de datos de varias fuentes, generación de informes recurrentes, clasificación de documentos, seguimiento comercial básico. Cualquier proceso que siga patrones y consuma horas del equipo."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Cuánto cuesta un agente de IA para una pyme?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Un agente acotado para una pyme suele costar entre 3.000 € y 12.000 € en su primera versión, según complejidad e integraciones. La inversión se amortiza típicamente entre el mes 4 y el 9 si se elige bien el proceso a automatizar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesita una pyme tener todo digitalizado antes de implementar IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No del todo. Necesita los datos del proceso concreto a automatizar accesibles, no toda la empresa al día. Empezar por un proceso acotado evita el bloqueo de querer ordenar todo antes de hacer nada."
       }
     }
   ]
@@ -466,6 +473,37 @@ footer {
   .tldr { padding:18px 20px; margin:24px 0 4px; }
 }
 
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+
 </style>
 </head>
 <body>
@@ -611,6 +649,28 @@ footer {
     <p>Cada empresa tiene su punto de entrada. Cuéntanos tu caso y te decimos por dónde empezaríamos: <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong></p>
 
   </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Los agentes de IA son solo para grandes empresas?</summary>
+        <p>No. Las pymes son donde más impacto tienen, porque cada hora liberada del equipo se nota directamente en capacidad y margen. Una pyme suele tener procesos más sencillos de automatizar y menos burocracia interna que ralentice el proyecto.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué puede automatizar una pyme con un agente de IA?</summary>
+        <p>Tareas administrativas repetitivas: respuesta a emails frecuentes, consolidación de datos de varias fuentes, generación de informes recurrentes, clasificación de documentos, seguimiento comercial básico. Cualquier proceso que siga patrones y consuma horas del equipo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta un agente de IA para una pyme?</summary>
+        <p>Un agente acotado para una pyme suele costar entre 3.000 € y 12.000 € en su primera versión, según complejidad e integraciones. La inversión se amortiza típicamente entre el mes 4 y el 9 si se elige bien el proceso a automatizar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Necesita una pyme tener todo digitalizado antes de implementar IA?</summary>
+        <p>No del todo. Necesita los datos del proceso concreto a automatizar accesibles, no toda la empresa al día. Empezar por un proceso acotado evita el bloqueo de querer ordenar todo antes de hacer nada.</p>
+      </details>
+    </div>
+  </section>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>

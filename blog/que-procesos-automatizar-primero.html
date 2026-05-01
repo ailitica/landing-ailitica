@@ -78,7 +78,6 @@
   ]
 }
 </script>
-<!-- FAQ slot — Eco rellena via task B4 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,26 +85,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Qué procesos automatizar primero con IA en una empresa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Los tres candidatos más frecuentes: la consolidación de datos repetitiva, la respuesta a consultas y peticiones que se repiten con patrón, y la generación de informes o documentos recurrentes. Aparecen en casi todas las empresas y dan retorno rápido."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Cómo elegir el mejor proceso para empezar a automatizar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Busca un proceso que se repita cada semana, que consuma horas reales del equipo, que siga un patrón claro y que tenga datos accesibles. Si además es un cuello de botella que retrasa a otros equipos, mejor todavía."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Conviene empezar automatizando el proceso más complejo o el más sencillo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "El más sencillo de los que aporten valor real. Un proceso pequeño y bien acotado da retorno rápido y enseña al equipo a trabajar con IA. Empezar por lo complejo suele acabar en parálisis o en proyectos que no se cierran."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué procesos NO conviene automatizar primero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los que tienen datos desordenados o inexistentes, los que cambian cada semana sin patrón, y los que requieren mucho criterio humano por caso. Esos procesos pueden automatizarse después, cuando hay madurez y datos limpios."
       }
     }
   ]
@@ -460,6 +467,37 @@ footer {
   .tldr { padding:18px 20px; margin:24px 0 4px; }
 }
 
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+
 </style>
 </head>
 <body>
@@ -609,6 +647,28 @@ footer {
     <p>Si quieres identificar cuál es el primer candidato en tu empresa, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Una conversación de 30 minutos suele ser suficiente para tener claridad sobre el punto de entrada con mejor relación impacto-esfuerzo.</p>
 
   </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué procesos automatizar primero con IA en una empresa?</summary>
+        <p>Los tres candidatos más frecuentes: la consolidación de datos repetitiva, la respuesta a consultas y peticiones que se repiten con patrón, y la generación de informes o documentos recurrentes. Aparecen en casi todas las empresas y dan retorno rápido.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo elegir el mejor proceso para empezar a automatizar?</summary>
+        <p>Busca un proceso que se repita cada semana, que consuma horas reales del equipo, que siga un patrón claro y que tenga datos accesibles. Si además es un cuello de botella que retrasa a otros equipos, mejor todavía.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Conviene empezar automatizando el proceso más complejo o el más sencillo?</summary>
+        <p>El más sencillo de los que aporten valor real. Un proceso pequeño y bien acotado da retorno rápido y enseña al equipo a trabajar con IA. Empezar por lo complejo suele acabar en parálisis o en proyectos que no se cierran.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué procesos NO conviene automatizar primero?</summary>
+        <p>Los que tienen datos desordenados o inexistentes, los que cambian cada semana sin patrón, y los que requieren mucho criterio humano por caso. Esos procesos pueden automatizarse después, cuando hay madurez y datos limpios.</p>
+      </details>
+    </div>
+  </section>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>

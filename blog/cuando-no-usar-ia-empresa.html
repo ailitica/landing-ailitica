@@ -79,7 +79,6 @@
   ]
 }
 </script>
-<!-- FAQ slot — Eco rellena via task B4 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,26 +86,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Cuándo NO conviene usar IA en una empresa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Cuando el proceso ya funciona bien con reglas fijas, cuando no hay datos suficientes, cuando el coste de un error es altísimo y no hay validación humana, o cuando se busca IA por moda y no por necesidad real."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Qué señales indican que la IA no es la solución correcta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Seis señales: el problema es de proceso, no de tecnología; los datos están mal o no existen; el equipo no entiende qué se quiere automatizar; nadie va a validar lo que la IA decida; el caso es demasiado raro o crítico; o se busca IA por hype."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Es mejor automatizar con IA o con reglas fijas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Reglas fijas si el proceso es predecible y nunca cambia. IA si hay variabilidad, criterios cambiantes o información poco estructurada. Forzar IA donde basta una regla simple solo añade coste y opacidad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La IA puede empeorar un proceso de empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, si se aplica sin diagnóstico. Automatizar un proceso roto solo lo hace más rápido y menos transparente. Antes de meter IA, hay que asegurarse de que el proceso tiene sentido y de que existe quien valide los resultados."
       }
     }
   ]
@@ -466,6 +473,37 @@ footer {
   .tldr { padding:18px 20px; margin:24px 0 4px; }
 }
 
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+
 </style>
 </head>
 <body>
@@ -613,6 +651,28 @@ footer {
     <p>Si tienes un proyecto en mente y quieres saber, sin compromiso, si tu caso está dentro o fuera de estas 6 señales, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Te decimos lo que vemos y, si la respuesta es "ahora no", también lo decimos.</p>
 
   </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cuándo NO conviene usar IA en una empresa?</summary>
+        <p>Cuando el proceso ya funciona bien con reglas fijas, cuando no hay datos suficientes, cuando el coste de un error es altísimo y no hay validación humana, o cuando se busca IA por moda y no por necesidad real.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué señales indican que la IA no es la solución correcta?</summary>
+        <p>Seis señales: el problema es de proceso, no de tecnología; los datos están mal o no existen; el equipo no entiende qué se quiere automatizar; nadie va a validar lo que la IA decida; el caso es demasiado raro o crítico; o se busca IA por hype.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Es mejor automatizar con IA o con reglas fijas?</summary>
+        <p>Reglas fijas si el proceso es predecible y nunca cambia. IA si hay variabilidad, criterios cambiantes o información poco estructurada. Forzar IA donde basta una regla simple solo añade coste y opacidad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿La IA puede empeorar un proceso de empresa?</summary>
+        <p>Sí, si se aplica sin diagnóstico. Automatizar un proceso roto solo lo hace más rápido y menos transparente. Antes de meter IA, hay que asegurarse de que el proceso tiene sentido y de que existe quien valide los resultados.</p>
+      </details>
+    </div>
+  </section>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>

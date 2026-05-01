@@ -78,7 +78,6 @@
   ]
 }
 </script>
-<!-- FAQ slot — Eco rellena via task B4 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,26 +85,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Qué es un diagnóstico antes de implementar IA en una empresa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Es el análisis del proceso real que se quiere automatizar antes de elegir tecnología. Identifica dónde se pierde tiempo, qué decisiones se toman, qué casos son frecuentes y cuáles son excepciones. Sin este paso, la implementación va a ciegas."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Por qué es importante el diagnóstico antes de elegir una herramienta de IA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Porque el 80% del éxito de un proyecto de IA depende de elegir bien qué automatizar y cómo. La herramienta es la última decisión, no la primera. Saltarse el diagnóstico es la causa más común de proyectos de IA que se quedan en demo."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Cuánto tiempo lleva un diagnóstico de IA en una empresa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Entre una y tres semanas, dependiendo del tamaño del proceso. Implica conversaciones con quien ejecuta hoy el proceso, revisión de datos reales y un mapeo de los pasos manuales. Es una inversión pequeña que ahorra meses después."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede una empresa hacer su propio diagnóstico de IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede empezar a hacerlo. Anotar durante una semana las tareas repetitivas, identificar el cuello de botella y describir qué decisiones requieren criterio humano. Esa información es el 60% del diagnóstico. El resto es traducirla a una arquitectura concreta."
       }
     }
   ]
@@ -465,6 +472,37 @@ footer {
   .tldr { padding:18px 20px; margin:24px 0 4px; }
 }
 
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+
 </style>
 </head>
 <body>
@@ -596,6 +634,28 @@ footer {
     <p>Si quieres entender dónde puede ayudar la IA en tu empresa, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Analizamos tu pipeline y te mostramos dónde tiene sentido antes de proponer nada.</p>
 
   </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué es un diagnóstico antes de implementar IA en una empresa?</summary>
+        <p>Es el análisis del proceso real que se quiere automatizar antes de elegir tecnología. Identifica dónde se pierde tiempo, qué decisiones se toman, qué casos son frecuentes y cuáles son excepciones. Sin este paso, la implementación va a ciegas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Por qué es importante el diagnóstico antes de elegir una herramienta de IA?</summary>
+        <p>Porque el 80% del éxito de un proyecto de IA depende de elegir bien qué automatizar y cómo. La herramienta es la última decisión, no la primera. Saltarse el diagnóstico es la causa más común de proyectos de IA que se quedan en demo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo lleva un diagnóstico de IA en una empresa?</summary>
+        <p>Entre una y tres semanas, dependiendo del tamaño del proceso. Implica conversaciones con quien ejecuta hoy el proceso, revisión de datos reales y un mapeo de los pasos manuales. Es una inversión pequeña que ahorra meses después.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puede una empresa hacer su propio diagnóstico de IA?</summary>
+        <p>Puede empezar a hacerlo. Anotar durante una semana las tareas repetitivas, identificar el cuello de botella y describir qué decisiones requieren criterio humano. Esa información es el 60% del diagnóstico. El resto es traducirla a una arquitectura concreta.</p>
+      </details>
+    </div>
+  </section>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>

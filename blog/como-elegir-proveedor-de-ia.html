@@ -78,7 +78,6 @@
   ]
 }
 </script>
-<!-- FAQ slot — Eco rellena via task B4 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,26 +85,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Cómo elegir un buen proveedor de IA para mi empresa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Busca uno que empiece preguntando por tu proceso, no enseñando su demo. El proveedor adecuado quiere entender tu negocio antes de proponer tecnología. Si la primera reunión es una demo bonita sin preguntas, mala señal."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Qué preguntas hacer a un proveedor de IA antes de contratarlo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Tres claves: cómo mide el éxito de un proyecto, qué pasa con los datos que ve durante el desarrollo, y qué ocurre si la solución deja de funcionar. Las respuestas vagas a estas tres son banderas rojas."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Es mejor un proveedor de IA grande o uno pequeño y especializado?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Depende del proyecto. Los grandes funcionan mejor en despliegues amplios y multinacionales. Los pequeños y especializados aportan más en proyectos donde hace falta entender el negocio en profundidad y adaptarse rápido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto debo desconfiar de las demos en proveedores de IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mucho. Una demo se prepara con datos cuidados y casos favorables. Pide en su lugar un piloto pequeño con datos reales tuyos. Si el proveedor se niega, no es el proveedor adecuado."
       }
     }
   ]
@@ -465,6 +472,37 @@ footer {
   .tldr { padding:18px 20px; margin:24px 0 4px; }
 }
 
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+
 </style>
 </head>
 <body>
@@ -611,6 +649,28 @@ footer {
     <p>La elección de un proveedor de IA es una decisión que merece tiempo y las preguntas correctas. Si quieres un punto de vista externo antes de comprometerte con nadie, cuéntanos tu caso: <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong></p>
 
   </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cómo elegir un buen proveedor de IA para mi empresa?</summary>
+        <p>Busca uno que empiece preguntando por tu proceso, no enseñando su demo. El proveedor adecuado quiere entender tu negocio antes de proponer tecnología. Si la primera reunión es una demo bonita sin preguntas, mala señal.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué preguntas hacer a un proveedor de IA antes de contratarlo?</summary>
+        <p>Tres claves: cómo mide el éxito de un proyecto, qué pasa con los datos que ve durante el desarrollo, y qué ocurre si la solución deja de funcionar. Las respuestas vagas a estas tres son banderas rojas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Es mejor un proveedor de IA grande o uno pequeño y especializado?</summary>
+        <p>Depende del proyecto. Los grandes funcionan mejor en despliegues amplios y multinacionales. Los pequeños y especializados aportan más en proyectos donde hace falta entender el negocio en profundidad y adaptarse rápido.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto debo desconfiar de las demos en proveedores de IA?</summary>
+        <p>Mucho. Una demo se prepara con datos cuidados y casos favorables. Pide en su lugar un piloto pequeño con datos reales tuyos. Si el proveedor se niega, no es el proveedor adecuado.</p>
+      </details>
+    </div>
+  </section>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>

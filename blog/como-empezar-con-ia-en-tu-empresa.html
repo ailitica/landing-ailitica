@@ -78,7 +78,6 @@
   ]
 }
 </script>
-<!-- FAQ slot — Eco rellena via task B4 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,26 +85,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Por dónde empezar con IA en una empresa que parte de cero?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Por observación, no por herramienta. Identifica una tarea repetitiva y acotada que consuma horas del equipo y siga un patrón claro. Ese es tu punto de entrada. Elegir la herramienta es el último paso, no el primero."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Cuánto tarda una empresa en ver resultados al empezar con IA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Con un proyecto bien acotado, los primeros resultados aparecen entre la semana 6 y la 12. Las dos primeras semanas son diagnóstico, las cuatro siguientes son construcción y validación, y las últimas son ajuste y medición de impacto."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Necesito un equipo técnico para empezar con IA en mi empresa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "No. Necesitas alguien que entienda el proceso a automatizar y un socio tecnológico que se encargue del diseño y despliegue. La dirección decide qué automatizar y por qué. La parte técnica se contrata o se externaliza."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es mejor empezar con IA con una herramienta genérica como ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para uso individual sí. Para automatizar un proceso de la empresa, no. Las herramientas genéricas resuelven tareas puntuales, pero no se integran con tus sistemas ni siguen tus reglas. Para eso hace falta un agente diseñado a medida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta empezar con IA en una pyme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un primer proyecto acotado puede ir desde unos 3.000 € hasta 15.000 €, según complejidad y nivel de integración. Lo importante no es el coste, sino el retorno: cuántas horas libera y qué capacidad nueva genera."
       }
     }
   ]
@@ -465,6 +480,37 @@ footer {
   .tldr { padding:18px 20px; margin:24px 0 4px; }
 }
 
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+
 </style>
 </head>
 <body>
@@ -600,6 +646,32 @@ footer {
     <p>Cada empresa tiene su punto de entrada. Si quieres saber cuál es el tuyo, cuéntanos tu caso y te decimos por dónde empezaríamos: <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong></p>
 
   </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Por dónde empezar con IA en una empresa que parte de cero?</summary>
+        <p>Por observación, no por herramienta. Identifica una tarea repetitiva y acotada que consuma horas del equipo y siga un patrón claro. Ese es tu punto de entrada. Elegir la herramienta es el último paso, no el primero.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tarda una empresa en ver resultados al empezar con IA?</summary>
+        <p>Con un proyecto bien acotado, los primeros resultados aparecen entre la semana 6 y la 12. Las dos primeras semanas son diagnóstico, las cuatro siguientes son construcción y validación, y las últimas son ajuste y medición de impacto.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Necesito un equipo técnico para empezar con IA en mi empresa?</summary>
+        <p>No. Necesitas alguien que entienda el proceso a automatizar y un socio tecnológico que se encargue del diseño y despliegue. La dirección decide qué automatizar y por qué. La parte técnica se contrata o se externaliza.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Es mejor empezar con IA con una herramienta genérica como ChatGPT?</summary>
+        <p>Para uso individual sí. Para automatizar un proceso de la empresa, no. Las herramientas genéricas resuelven tareas puntuales, pero no se integran con tus sistemas ni siguen tus reglas. Para eso hace falta un agente diseñado a medida.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta empezar con IA en una pyme?</summary>
+        <p>Un primer proyecto acotado puede ir desde unos 3.000 € hasta 15.000 €, según complejidad y nivel de integración. Lo importante no es el coste, sino el retorno: cuántas horas libera y qué capacidad nueva genera.</p>
+      </details>
+    </div>
+  </section>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>

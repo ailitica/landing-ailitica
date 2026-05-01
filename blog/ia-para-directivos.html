@@ -78,7 +78,6 @@
   ]
 }
 </script>
-<!-- FAQ slot — Eco rellena via task B4 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,26 +85,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Qué necesita saber un directivo sobre IA sin ser técnico?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Tres cosas: qué tipo de problemas resuelve bien (los repetitivos con patrón claro), qué problemas no resuelve (los que requieren criterio profundo o datos que no existen) y qué preguntas hacer a un proveedor antes de contratar."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Un directivo tiene que entender cómo funciona la IA por dentro?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "No. Tiene que entender qué pueden hacer los agentes de IA, qué riesgos implican y cómo medir si están aportando valor. La parte técnica es trabajo del proveedor; la decisión estratégica es del directivo."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Qué decisiones sobre IA son responsabilidad de la dirección?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Qué procesos se automatizan, en qué orden, con qué presupuesto y qué nivel de validación humana se mantiene. La dirección no toca código, pero define los límites dentro de los que la IA puede operar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el mayor riesgo de la IA para un directivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delegarla a un equipo técnico sin supervisión estratégica. Eso lleva a herramientas instaladas que nadie usa, datos sensibles mal gestionados o procesos automatizados sin criterio de éxito. La IA necesita dirección, no solo despliegue."
       }
     }
   ]
@@ -455,6 +462,37 @@ footer {
   .tldr { padding:18px 20px; margin:24px 0 4px; }
 }
 
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+
 </style>
 </head>
 <body>
@@ -584,6 +622,28 @@ footer {
     <p>Si quieres profundizar en cómo estructurar la exploración inicial, el artículo sobre <a href="/blog/como-empezar-con-ia-en-tu-empresa.html">cómo empezar con IA en tu empresa</a> recorre el proceso paso a paso. Y si ya tienes claro el punto de entrada y quieres construir un plan completo, el artículo sobre <a href="/blog/estrategia-de-ia-para-tu-empresa.html">estrategia de IA para tu empresa</a> describe el marco de las cuatro fases con detalle. El directivo decide: <a href="/blog/ia-con-criterio-humano.html">por que la decision sigue siendo humana</a> explica la frontera.</p>
 
   </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué necesita saber un directivo sobre IA sin ser técnico?</summary>
+        <p>Tres cosas: qué tipo de problemas resuelve bien (los repetitivos con patrón claro), qué problemas no resuelve (los que requieren criterio profundo o datos que no existen) y qué preguntas hacer a un proveedor antes de contratar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Un directivo tiene que entender cómo funciona la IA por dentro?</summary>
+        <p>No. Tiene que entender qué pueden hacer los agentes de IA, qué riesgos implican y cómo medir si están aportando valor. La parte técnica es trabajo del proveedor; la decisión estratégica es del directivo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué decisiones sobre IA son responsabilidad de la dirección?</summary>
+        <p>Qué procesos se automatizan, en qué orden, con qué presupuesto y qué nivel de validación humana se mantiene. La dirección no toca código, pero define los límites dentro de los que la IA puede operar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuál es el mayor riesgo de la IA para un directivo?</summary>
+        <p>Delegarla a un equipo técnico sin supervisión estratégica. Eso lleva a herramientas instaladas que nadie usa, datos sensibles mal gestionados o procesos automatizados sin criterio de éxito. La IA necesita dirección, no solo despliegue.</p>
+      </details>
+    </div>
+  </section>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>

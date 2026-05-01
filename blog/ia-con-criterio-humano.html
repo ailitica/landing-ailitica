@@ -78,7 +78,6 @@
   ]
 }
 </script>
-<!-- FAQ slot — Eco rellena via task B4 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,26 +85,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Qué significa IA con criterio humano?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Es diseñar agentes de IA donde el humano valida, decide o activa las acciones que tienen impacto real. La IA hace el trabajo pesado: leer, consolidar, proponer. El humano confirma. Es la forma de obtener velocidad sin perder control."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Por qué los agentes de IA funcionan mejor cuando no deciden solos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Porque la IA es excelente procesando volumen pero falla en los matices que importan a un cliente o a una decisión crítica. Cuando el humano valida lo importante, la IA acelera lo repetitivo y se evitan errores caros."
       }
     },
     {
       "@type": "Question",
-      "name": "",
+      "name": "¿Cómo se diseña un agente de IA con supervisión humana?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": ""
+        "text": "Definiendo qué decisiones puede tomar solo (las reversibles y de bajo impacto) y cuáles requieren validación humana (las que afectan al cliente, a contratos o a dinero). El agente prepara, el humano firma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La validación humana ralentiza los procesos automatizados con IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo si se diseña mal. Una validación bien planteada toma segundos por caso y se hace en lote. La velocidad real del proceso sigue siendo de minutos en lugar de horas, pero con una capa de control que evita errores."
       }
     }
   ]
@@ -465,6 +472,37 @@ footer {
   .tldr { padding:18px 20px; margin:24px 0 4px; }
 }
 
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+
 </style>
 </head>
 <body>
@@ -628,6 +666,28 @@ footer {
     <p>Si quieres diseñar un agente que trabaje con tu equipo en lugar de reemplazarlo, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Analizamos tu proceso y te proponemos dónde automatizar y dónde dejar la decisión en manos humanas.</p>
 
   </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué significa IA con criterio humano?</summary>
+        <p>Es diseñar agentes de IA donde el humano valida, decide o activa las acciones que tienen impacto real. La IA hace el trabajo pesado: leer, consolidar, proponer. El humano confirma. Es la forma de obtener velocidad sin perder control.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Por qué los agentes de IA funcionan mejor cuando no deciden solos?</summary>
+        <p>Porque la IA es excelente procesando volumen pero falla en los matices que importan a un cliente o a una decisión crítica. Cuando el humano valida lo importante, la IA acelera lo repetitivo y se evitan errores caros.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo se diseña un agente de IA con supervisión humana?</summary>
+        <p>Definiendo qué decisiones puede tomar solo (las reversibles y de bajo impacto) y cuáles requieren validación humana (las que afectan al cliente, a contratos o a dinero). El agente prepara, el humano firma.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿La validación humana ralentiza los procesos automatizados con IA?</summary>
+        <p>Solo si se diseña mal. Una validación bien planteada toma segundos por caso y se hace en lote. La velocidad real del proceso sigue siendo de minutos en lugar de horas, pero con una capa de control que evita errores.</p>
+      </details>
+    </div>
+  </section>
 
   <div class="article-cta">
     <p class="article-cta-label">Siguiente paso</p>
