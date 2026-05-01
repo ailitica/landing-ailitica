@@ -31,7 +31,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico",
-  "description": "No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.",
+  "description": "No necesitas saber qué es un modelo de lenguaje, ni cómo funciona el machine learning, ni qué significa entrenar una IA. Lo que sí necesitas saber, como directivo que tiene que tomar decisiones, es qué puede hacer la inteligencia artificial por tu empresa, qué no puede hacer y qué preguntas tienes que hacerte antes de dar el primer paso.",
   "datePublished": "2026-04-16",
   "dateModified": "2026-04-16",
   "author": {
@@ -51,6 +51,67 @@
   "keywords": "IA para directivos que no son técnicos, IA explicada para empresarios, guía IA para CEOs, inteligencia artificial para directivos, IA empresas sin conocimientos técnicos"
 }
 </script>
+<!-- GEO:BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://ailitica.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ailitica.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico",
+      "item": "https://ailitica.com/blog/ia-para-directivos.html"
+    }
+  ]
+}
+</script>
+<!-- FAQ slot — Eco rellena via task B4 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    }
+  ]
+}
+</script>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -369,6 +430,31 @@ footer {
   width:100%; height:auto; display:block;
   aspect-ratio:16/9; object-fit:cover;
 }
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
 </style>
 </head>
 <body>
@@ -418,7 +504,11 @@ footer {
       <span class="article-readtime">7 min lectura</span>
     </div>
     <h1 class="article-title">Inteligencia artificial para directivos:<br><em>lo que necesitas saber sin ser técnico</em></h1>
-    <p class="article-lead">No necesitas saber qué es un modelo de lenguaje, ni cómo funciona el machine learning, ni qué significa entrenar una IA. Lo que sí necesitas saber, como directivo que tiene que tomar decisiones, es qué puede hacer la inteligencia artificial por tu empresa, qué no puede hacer y qué preguntas tienes que hacerte antes de dar el primer paso.</p>
+    <!-- GEO:TLDR -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">No necesitas saber qué es un modelo de lenguaje, ni cómo funciona el machine learning, ni qué significa entrenar una IA. Lo que sí necesitas saber, como directivo que tiene que tomar decisiones, es qué puede hacer la inteligencia artificial por tu empresa, qué no puede hacer y qué preguntas tienes que hacerte antes de dar el primer paso.</p>
+    </aside>
   </header>
   <figure class="article-hero">
     <img src="img/ia-para-directivos.png" alt="Inteligencia artificial para directivos" width="1456" height="816" loading="eager">

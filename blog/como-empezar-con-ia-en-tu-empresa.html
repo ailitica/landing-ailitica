@@ -31,7 +31,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Cómo empezar con IA en tu empresa: guía práctica",
-  "description": "No necesitas ser técnico para dar el primer paso con IA. Te explicamos cómo identificar por dónde empezar y qué evitar en el camino.",
+  "description": "Sabes que la inteligencia artificial puede hacer algo por tu empresa. Lo lees cada semana, lo escuchas en cada evento. Pero cuando intentas dar el primer paso, la pregunta es siempre la misma: cómo empezar sin perder tiempo ni dinero en algo que no funcione.",
   "datePublished": "2026-04-07",
   "dateModified": "2026-04-07",
   "author": {
@@ -51,6 +51,67 @@
   "keywords": "cómo empezar con IA en mi empresa, primeros pasos IA empresa, guía IA para empresas, IA para directivos, implementar inteligencia artificial en empresa"
 }
 </script>
+<!-- GEO:BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://ailitica.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ailitica.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cómo empezar con IA en tu empresa (guía para quien no sabe por dónde)",
+      "item": "https://ailitica.com/blog/como-empezar-con-ia-en-tu-empresa.html"
+    }
+  ]
+}
+</script>
+<!-- FAQ slot — Eco rellena via task B4 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    }
+  ]
+}
+</script>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -379,6 +440,31 @@ footer {
 @media (max-width:560px) {
   .related-grid { grid-template-columns:1fr; }
 }
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
 </style>
 </head>
 <body>
@@ -432,7 +518,11 @@ footer {
       <span class="article-readtime">5 min lectura</span>
     </div>
     <h1 class="article-title">Cómo empezar con IA en tu empresa<br><em>(guía para quien no sabe por dónde)</em></h1>
-    <p class="article-lead">Sabes que la inteligencia artificial puede hacer algo por tu empresa. Lo lees cada semana, lo escuchas en cada evento. Pero cuando intentas dar el primer paso, la pregunta es siempre la misma: cómo empezar sin perder tiempo ni dinero en algo que no funcione.</p>
+    <!-- GEO:TLDR -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Sabes que la inteligencia artificial puede hacer algo por tu empresa. Lo lees cada semana, lo escuchas en cada evento. Pero cuando intentas dar el primer paso, la pregunta es siempre la misma: cómo empezar sin perder tiempo ni dinero en algo que no funcione.</p>
+    </aside>
   </header>
 
   <div class="article-body">

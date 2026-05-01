@@ -31,7 +31,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "IA con criterio humano: por qué el humano sigue decidiendo",
-  "description": "IA con criterio humano: por qué los agentes de IA funcionan mejor cuando no deciden solos. Cómo diseñar automatizaciones donde el humano valida, decide y activa.",
+  "description": "Los proyectos de IA que funcionan en empresas serias tienen un patrón común: dejan al humano la decisión que importa. Automatizar no es eliminar al equipo de la ecuación, sino liberarlo de lo que no requiere su juicio. Te explicamos cómo se diseña una IA con criterio humano y por qué este enfoque evita los errores más caros.",
   "datePublished": "2026-04-24",
   "dateModified": "2026-04-24",
   "author": {
@@ -51,6 +51,67 @@
   "keywords": "IA con criterio humano, human in the loop, supervisión humana IA empresa, agentes IA con validación, automatización con criterio"
 }
 </script>
+<!-- GEO:BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://ailitica.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ailitica.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "IA con criterio humano: por qué el agente decide mejor cuando no decide solo",
+      "item": "https://ailitica.com/blog/ia-con-criterio-humano.html"
+    }
+  ]
+}
+</script>
+<!-- FAQ slot — Eco rellena via task B4 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    }
+  ]
+}
+</script>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -379,6 +440,31 @@ footer {
 @media (max-width:560px) {
   .related-grid { grid-template-columns:1fr; }
 }
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
 </style>
 </head>
 <body>
@@ -432,7 +518,11 @@ footer {
       <span class="article-readtime">6 min lectura</span>
     </div>
     <h1 class="article-title">IA con criterio humano: <em>por qué el agente decide mejor cuando no decide solo</em></h1>
-    <p class="article-lead">Los proyectos de IA que funcionan en empresas serias tienen un patrón común: dejan al humano la decisión que importa. Automatizar no es eliminar al equipo de la ecuación, sino liberarlo de lo que no requiere su juicio. Te explicamos cómo se diseña una IA con criterio humano y por qué este enfoque evita los errores más caros.</p>
+    <!-- GEO:TLDR -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Los proyectos de IA que funcionan en empresas serias tienen un patrón común: dejan al humano la decisión que importa. Automatizar no es eliminar al equipo de la ecuación, sino liberarlo de lo que no requiere su juicio. Te explicamos cómo se diseña una IA con criterio humano y por qué este enfoque evita los errores más caros.</p>
+    </aside>
   </header>
 
   <div class="article-body">

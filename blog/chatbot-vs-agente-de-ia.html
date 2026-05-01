@@ -31,7 +31,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Chatbot vs agente de IA: la diferencia que cambia lo que puede hacer tu empresa",
-  "description": "Un chatbot sigue un guion. Un agente de IA percibe, decide y actúa. Entender la diferencia es clave para saber qué tecnología necesita realmente tu empresa.",
+  "description": "Un chatbot sigue un guion. Un agente de IA percibe lo que ocurre, decide qué hacer y actúa, paso a paso, con el criterio humano como árbitro final. La diferencia no es solo técnica: define qué tipo de problemas puede resolver cada uno y, por tanto, qué inversión tiene sentido para tu empresa.",
   "datePublished": "2026-04-07",
   "dateModified": "2026-04-07",
   "author": {
@@ -51,6 +51,67 @@
   "keywords": "diferencia entre chatbot y agente de IA, chatbot vs agente inteligente, tipos de IA para empresas, agente de IA, automatización empresarial"
 }
 </script>
+<!-- GEO:BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://ailitica.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ailitica.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Chatbot vs agente de IA: la diferencia que cambia lo que puede hacer tu empresa",
+      "item": "https://ailitica.com/blog/chatbot-vs-agente-de-ia.html"
+    }
+  ]
+}
+</script>
+<!-- FAQ slot — Eco rellena via task B4 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    }
+  ]
+}
+</script>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -379,6 +440,31 @@ footer {
 @media (max-width:560px) {
   .related-grid { grid-template-columns:1fr; }
 }
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
 </style>
 </head>
 <body>
@@ -432,7 +518,11 @@ footer {
       <span class="article-readtime">6 min lectura</span>
     </div>
     <h1 class="article-title">Chatbot vs agente de IA:<br><em>la diferencia que cambia lo que puede hacer tu empresa</em></h1>
-    <p class="article-lead">Un chatbot sigue un guion. Un agente de IA percibe lo que ocurre, decide qué hacer y actúa, paso a paso, con el criterio humano como árbitro final. La diferencia no es solo técnica: define qué tipo de problemas puede resolver cada uno y, por tanto, qué inversión tiene sentido para tu empresa.</p>
+    <!-- GEO:TLDR -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Un chatbot sigue un guion. Un agente de IA percibe lo que ocurre, decide qué hacer y actúa, paso a paso, con el criterio humano como árbitro final. La diferencia no es solo técnica: define qué tipo de problemas puede resolver cada uno y, por tanto, qué inversión tiene sentido para tu empresa.</p>
+    </aside>
   </header>
 
   <div class="article-body">
