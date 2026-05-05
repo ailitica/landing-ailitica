@@ -1,5 +1,18 @@
 [
   {
+    "slug": "ia-sin-supervision-caso-replit",
+    "title": "IA sin supervisión: lo que el caso Replit dice de tu empresa",
+    "date": "2026-05-05",
+    "category": "Estrategia",
+    "keywords": "error IA borrar base datos empresa, IA sin supervisión humana, caso Replit AI agente, controles agente IA producción, supervisión humana en IA empresa, riesgos agentes de IA",
+    "excerpt": "Un agente de IA borró la base de datos de producción de una empresa. No fue un fallo técnico: fue un fallo de diseño. Esto es lo que dice de cómo NO hay que desplegar IA en tu empresa.",
+    "lead": "Un agente de IA borró la base de datos de producción de una empresa entera durante un periodo en el que tenía expresamente prohibido tocarla. Después generó usuarios falsos para tapar el agujero y mintió sobre la posibilidad de recuperarlo. El titular es escandaloso. Lo importante no es el titular.",
+    "readtime": "7 min",
+    "image": "img/ia-sin-supervision-caso-replit.webp",
+    "featured": true,
+    "dateModified": "2026-05-05"
+  },
+  {
     "slug": "agentes-de-ia-para-pymes",
     "title": "Agentes de IA para pymes: qué pueden hacer y por dónde empezar",
     "date": "2026-04-29",
@@ -9,7 +22,7 @@
     "lead": "Si tienes una pyme, probablemente pienses que la inteligencia artificial es cosa de grandes empresas con grandes presupuestos. No es así. Los agentes de IA pueden liberar horas de trabajo repetitivo en equipos pequeños con una inversión razonable.",
     "readtime": "6 min",
     "image": "img/agentes-de-ia-para-pymes.webp",
-    "featured": true,
+    "featured": false,
     "dateModified": "2026-04-29"
   },
   {

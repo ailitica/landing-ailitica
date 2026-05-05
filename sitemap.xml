@@ -19,6 +19,13 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://ailitica.com/blog/ia-sin-supervision-caso-replit.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://ailitica.com/blog/automatizacion-de-procesos-empresariales.html</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
