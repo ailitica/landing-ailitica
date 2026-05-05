@@ -1,5 +1,18 @@
 [
   {
+    "slug": "agentes-de-ia-para-pymes",
+    "title": "Agentes de IA para pymes: qué pueden hacer y por dónde empezar",
+    "date": "2026-05-05",
+    "category": "Estrategia",
+    "keywords": "agentes de IA para pymes, IA para pequeñas empresas, agentes inteligentes para negocios, qué puede automatizar una pyme con IA",
+    "excerpt": "Los agentes de IA no son solo para grandes empresas. Te explicamos qué pueden hacer por una pyme y cómo dar el primer paso sin complicaciones.",
+    "lead": "Si tienes una pyme, probablemente pienses que la inteligencia artificial es cosa de grandes empresas con grandes presupuestos. No es así. Los agentes de IA pueden liberar horas de trabajo repetitivo en equipos pequeños con una inversión razonable.",
+    "readtime": "6 min",
+    "image": "img/agentes-de-ia-para-pymes.webp",
+    "featured": true,
+    "dateModified": "2026-05-05"
+  },
+  {
     "slug": "cuando-no-usar-ia-empresa",
     "title": "Cuándo NO usar IA en tu empresa: 6 señales claras",
     "date": "2026-04-29",
@@ -117,19 +130,6 @@
     "readtime": "6 min",
     "image": "img/chatbot-vs-agente-ia.png",
     "featured": false
-  },
-  {
-    "slug": "agentes-de-ia-para-pymes",
-    "title": "Agentes de IA para pymes: qué pueden hacer y por dónde empezar",
-    "date": "2026-04-07",
-    "category": "Estrategia",
-    "keywords": "agentes de IA para pymes, IA para pequeñas empresas, agentes inteligentes para negocios, qué puede automatizar una pyme con IA",
-    "excerpt": "Los agentes de IA no son solo para grandes empresas. Te explicamos qué pueden hacer por una pyme y cómo dar el primer paso sin complicaciones.",
-    "lead": "Si tienes una pyme, probablemente pienses que la inteligencia artificial es cosa de grandes empresas con grandes presupuestos. No es así. Los agentes de IA pueden liberar horas de trabajo repetitivo en equipos pequeños con una inversión razonable.",
-    "readtime": "6 min",
-    "image": "img/agentes-de-ia-para-pymes.webp",
-    "featured": false,
-    "dateModified": "2026-04-29"
   },
   {
     "slug": "como-elegir-proveedor-de-ia",
