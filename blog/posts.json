@@ -1,5 +1,18 @@
 [
   {
+    "slug": "como-controlar-agente-ia-empresa",
+    "title": "Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos",
+    "date": "2026-05-12",
+    "category": "Estrategia",
+    "keywords": "como controlar un agente de IA en empresa, supervision agente IA, human in the loop pyme, sandbox agente IA, auditoria agente IA, gobernanza IA pequeña empresa",
+    "excerpt": "Controlar un agente de IA en una pyme no es comprar una plataforma de gobernanza. Son tres decisiones de diseño: aprobación humana en pasos críticos, sandbox por defecto con whitelist explícita y registro estructurado mínimo accionable.",
+    "lead": "Cuando un directivo de una empresa pequeña pregunta cómo controla a un agente de IA, lo más habitual es que le respondan con un catálogo de herramientas caras. La versión real, aplicable a una pyme, son tres mecanismos sencillos que se deciden antes de arrancar.",
+    "readtime": "8 min",
+    "image": "img/como-controlar-agente-ia-empresa.webp",
+    "featured": true,
+    "dateModified": "2026-05-12"
+  },
+  {
     "slug": "ai-act-pyme-aplazamiento-agosto-2026",
     "title": "AI Act: Bruselas aplaza el deadline de agosto 2026, ¿qué pasa ahora con tu pyme?",
     "date": "2026-05-08",
@@ -9,7 +22,7 @@
     "lead": "Hasta anteayer, cualquier directivo español que usa IA en captación, recursos humanos o atención al cliente tenía un deadline a doce semanas. Ayer, 7 de mayo de 2026, ese deadline se movió 16 meses. La buena noticia es real. La letra pequeña también.",
     "readtime": "8 min",
     "image": "img/ai-act-pyme-aplazamiento-agosto-2026.webp",
-    "featured": true,
+    "featured": false,
     "dateModified": "2026-05-08"
   },
   {

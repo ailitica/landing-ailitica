@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos — Ailitica</title>
+<meta name="description" content="Cómo controlar un agente de IA en una empresa real: aprobación humana en pasos críticos, sandbox por defecto con whitelist explícita y registro estructurado mínimo accionable. Tres mecanismos pyme, sin jerga.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/como-controlar-agente-ia-empresa.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/como-controlar-agente-ia-empresa.html">
+<meta property="og:title" content="Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos">
+<meta property="og:description" content="Cómo controlar un agente de IA en una empresa real: aprobación humana en pasos críticos, sandbox por defecto con whitelist explícita y registro estructurado mínimo accionable. Tres mecanismos pyme, sin jerga.">
+<meta property="og:image" content="https://ailitica.com/blog/img/como-controlar-agente-ia-empresa.webp">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-05-12">
+<meta property="article:modified_time" content="2026-05-12">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos">
+<meta name="twitter:description" content="Cómo controlar un agente de IA en una empresa real: aprobación humana en pasos críticos, sandbox por defecto con whitelist explícita y registro estructurado mínimo accionable. Tres mecanismos pyme, sin jerga.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/como-controlar-agente-ia-empresa.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos",
+  "description": "Controlar un agente de IA en una pyme no consiste en pedir un panel de gobernanza enorme. Consiste en tres decisiones de diseño: dónde pide permiso, qué tiene permitido tocar y qué deja escrito. Esta es la versión práctica, aplicable la semana que viene.",
+  "datePublished": "2026-05-12",
+  "dateModified": "2026-05-12",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/como-controlar-agente-ia-empresa.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "keywords": "como controlar un agente de IA en empresa, supervision agente IA, human in the loop pyme, sandbox agente IA, auditoria agente IA, gobernanza IA pequeña empresa"
+}
+</script>
+<!-- GEO:BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://ailitica.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ailitica.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos",
+      "item": "https://ailitica.com/blog/como-controlar-agente-ia-empresa.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si el agente de IA se equivoca en mi empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del mecanismo de control. Si los pasos críticos requieren aprobación humana, el error se detiene antes de ejecutarse y solo cuesta el tiempo de revisión. Si el agente trabaja en sandbox con whitelist, el daño está acotado a un perímetro pequeño. Y si hay registro estructurado, sabes qué falló, cuándo y por qué en menos de cinco minutos. Sin estos tres mecanismos, un error puede pasar inadvertido durante semanas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo conviene meter aprobación humana (HITL) y cuándo no?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conviene en pasos irreversibles o costosos: enviar a un cliente, mover dinero, modificar registros legales, comprometer a la empresa. No conviene en pasos reversibles, baratos o repetitivos masivos (clasificar, etiquetar, resumir, preparar borradores). La regla práctica: si rehacerlo cuesta minutos, deja al agente solo. Si rehacerlo cuesta días o una conversación incómoda, pon un humano antes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta auditar un agente de IA en una pyme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El mecanismo mínimo (registro estructurado, sandbox con whitelist y aprobaciones en pasos críticos) se monta en una o dos semanas de trabajo y casi no añade coste operativo recurrente. Auditar después es leer el registro: minutos a la semana en una pyme. La parte cara solo aparece si hay que reconstruir lo que hizo el agente sin tener el registro, ahí sí se va a días de trabajo y a dudas que ningún CEO quiere tener."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito un equipo técnico grande para implementar estos controles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Los tres mecanismos son decisiones de diseño, no piezas de infraestructura caras. Una pyme de cinco a treinta personas puede aplicarlos con un solo responsable identificado, una herramienta de logs sencilla y los flujos de aprobación que ya usa para otros temas (correo, mensajería interna o un canal compartido). Lo que sí necesita es claridad sobre qué puede y qué no puede tocar el agente antes de arrancar."
+      }
+    }
+  ]
+}
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+.disclaimer {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  font-size:12px; color:var(--text-dim); line-height:1.6;
+  border-top:1px solid var(--border-soft); padding-top:20px;
+  font-style:italic;
+}
+
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/como-controlar-agente-ia-empresa.webp" alt="Panel de control sobrio con tres palancas claramente identificadas, ilustrando los tres mecanismos prácticos para controlar un agente de inteligencia artificial en una empresa" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">12 de mayo de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">8 min lectura</span>
+    </div>
+    <h1 class="article-title">Cómo controlar un agente de IA en tu empresa: <em>3 mecanismos prácticos</em></h1>
+    <!-- GEO:TLDR -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Controlar un agente de IA en una pyme no es comprar una plataforma de gobernanza. Son tres decisiones de diseño: <strong>aprobación humana</strong> en los pasos que no se pueden deshacer, <strong>sandbox con whitelist</strong> que define qué tiene permitido tocar y <strong>registro estructurado mínimo</strong> que deja por escrito qué ha hecho. Con estos tres mecanismos, una empresa pequeña tiene control real sin proceso pesado.</p>
+    </aside>
+  </header>
+
+  <div class="article-body">
+
+    <h2>El control no es lo que el mercado te está vendiendo</h2>
+
+    <p>Cuando un directivo de una empresa pequeña pregunta cómo controla a un agente de IA, lo más habitual es que le respondan con un catálogo: RBAC, audit logs centralizados, alertas en tiempo real, dashboards de gobernanza, comités de revisión, certificaciones. Todo eso existe, todo eso vale en empresas grandes, y casi nada de eso aplica a una pyme de cinco a treinta personas.</p>
+
+    <p>Para una empresa que no tiene un departamento de IT con cinco personas dedicadas, el control no se monta con herramientas caras. Se monta con tres decisiones de diseño al arrancar el agente. Si esas tres decisiones están bien tomadas, el control es real. Si están mal tomadas, ningún panel posterior compensa el agujero.</p>
+
+    <p>Este artículo describe los tres mecanismos en su versión pyme. No son teoría. Son lo que aplicamos cuando ponemos en marcha un agente para un cliente real, y lo que recomendamos cuando un cliente nuevo nos pregunta por dónde empezar. Si has leído <a href="/blog/ia-sin-supervision-caso-pocketos.html">el caso PocketOS</a> o <a href="/blog/ia-con-criterio-humano.html">IA con criterio humano</a>, este artículo es la pieza operativa que cierra el bucle.</p>
+
+    <h2>Mecanismo 1: aprobación humana en los pasos que no se pueden deshacer</h2>
+
+    <p>El primer mecanismo es el más simple de explicar y el que más gente se salta. Antes de dejar al agente en producción, se identifican los pasos del flujo que son <strong>irreversibles o costosos</strong> y se decide que en esos pasos el agente <em>propone</em>, pero un humano <em>aprueba</em>.</p>
+
+    <p>Irreversibles o costosos significa cosas muy concretas: enviar un mensaje a un cliente externo, mover dinero, modificar un registro legal o contable, comprometer a la empresa con una fecha o un precio, borrar información. Si rehacerlo cuesta minutos, no hace falta aprobación. Si rehacerlo cuesta una conversación incómoda, una factura rectificativa o una llamada al cliente, sí hace falta.</p>
+
+    <p>La forma operativa más sencilla para una pyme: el agente prepara la acción, la deja en un sitio donde un humano la ve (un correo, un canal de mensajería interna, una bandeja en una herramienta que ya use el equipo) y espera. Cuando el humano da el visto bueno, el agente ejecuta. Sin visto bueno, el agente no ejecuta. No hace falta más.</p>
+
+    <p>Esto se conoce en la jerga técnica como <em>human in the loop</em>, pero el nombre da igual. Lo importante es que el listado de pasos críticos esté escrito antes de arrancar y que el equipo sepa quién aprueba qué. Ese listado, en una pyme, cabe en una hoja de cálculo de quince filas.</p>
+
+    <div class="callout">
+      <p><strong>El error más común.</strong> Pedir aprobación humana para <em>todo</em>. Si el humano tiene que aprobar cada paso, el agente no libera tiempo, lo consume. La gracia del mecanismo es que el 90% de los pasos van solos y el 10% crítico va con freno. Confundir prudencia con desconfianza convierte al agente en un formulario lento, y entonces nadie lo usa.</p>
+    </div>
+
+    <h2>Mecanismo 2: sandbox por defecto con whitelist explícita</h2>
+
+    <p>El segundo mecanismo responde a una pregunta distinta. La aprobación humana decide quién <em>autoriza</em> una acción. El sandbox decide qué tiene permitido <em>tocar</em> el agente en primer lugar. Son capas complementarias, no sustitutas.</p>
+
+    <p>La regla operativa es simple y, sobre todo, es la opuesta a lo que mucha gente hace al empezar. Por defecto, el agente <strong>no tiene acceso a nada</strong>. Cada sistema, carpeta, base de datos, API o herramienta a la que pueda llegar se añade <em>de uno en uno</em> y <em>por escrito</em>. Eso es la <em>whitelist</em>: una lista corta y explícita de lo que el agente puede tocar.</p>
+
+    <p>El motivo de hacerlo así, y no al revés, es estructural. Si arrancas con acceso amplio y vas restringiendo después, siempre queda algún sitio donde el agente puede entrar y no debería. Si arrancas con acceso cero y vas abriendo, lo que queda accesible está accesible <em>a propósito</em>, no por descuido. La diferencia entre las dos posturas se nota el día que algo va mal.</p>
+
+    <p>En una pyme, la whitelist se construye en una conversación de una mañana. Se hace una lista de los sistemas que el agente <em>necesita de verdad</em> para hacer su trabajo, se descarta el resto y se documenta. Si el agente tiene que leer correos, lee solo la bandeja específica que se le asigne, no toda la cuenta. Si tiene que escribir en una hoja de cálculo, escribe en esa hoja y no en la carpeta entera. Si tiene que consultar una base de datos, consulta las tablas que se le abren, no el esquema completo.</p>
+
+    <p>Esto no exige tecnología especial. Las herramientas SaaS que ya usa la pyme (Google Workspace, Microsoft 365, los CRM habituales, las plataformas de facturación) traen permisos granulares por defecto. Lo que falta no suele ser la herramienta, es la decisión de aplicarla. La preparación previa es la misma que recomendamos en <a href="/blog/agentes-de-ia-para-pymes.html">agentes de IA para pymes</a>: antes de dar acceso, definir el perímetro.</p>
+
+    <h3>Cómo se ve un perímetro mínimo viable</h3>
+
+    <p>Un ejemplo concreto, sacado de un despliegue real reciente. El agente leía pedidos entrantes de una bandeja específica de correo, los clasificaba, los registraba en una hoja de control en Google Sheets y preparaba un borrador de respuesta. La whitelist completa era esta:</p>
+
+    <ul>
+      <li>Bandeja: <strong>pedidos@empresa.com</strong>, solo lectura.</li>
+      <li>Hoja de cálculo: <strong>2026_pedidos_entrada.xlsx</strong>, lectura y escritura, solo esa hoja.</li>
+      <li>Carpeta de borradores: <strong>borradores_respuesta/</strong>, escritura.</li>
+      <li>Acceso a Internet: <strong>solo</strong> al dominio del proveedor logístico para consultar plazos.</li>
+    </ul>
+
+    <p>El agente no tenía acceso al resto del correo, ni a la contabilidad, ni a la lista de clientes histórica, ni a la mensajería interna del equipo, ni a la red social corporativa. La pregunta que cierra la decisión: ¿qué pasaría si el agente se equivocase con cualquier cosa fuera de la whitelist? Respuesta: nada, porque no puede llegar ahí. Eso es control real.</p>
+
+    <h2>Mecanismo 3: registro estructurado mínimo accionable</h2>
+
+    <p>El tercer mecanismo es el que más se subestima en pyme, y el que más se agradece el día que algo no sale bien. Un agente que actúa sin dejar rastro es un agente sobre el que no se puede auditar nada después. El registro estructurado es el cuaderno de bitácora que convierte una pregunta difícil ("¿qué hizo el agente la semana pasada?") en una consulta de cinco minutos.</p>
+
+    <p>La palabra clave aquí es <strong>mínimo accionable</strong>. No se trata de un sistema de logging empresarial. Se trata de que cada acción significativa del agente deje cuatro datos: <em>qué hizo</em>, <em>cuándo</em>, <em>sobre qué entidad</em> y <em>qué información usó para decidirlo</em>. Cuatro columnas. Una fila por acción.</p>
+
+    <p>En una pyme, esto se monta sobre una herramienta que ya existe en la empresa. Una hoja de cálculo dedicada, una tabla en Notion, una base de datos sencilla. No hace falta más, mientras se escriba siempre y se escriba con un formato consistente. La consistencia es lo que permite leer mil filas en cinco minutos en lugar de en cinco horas.</p>
+
+    <p>La utilidad del registro aparece en tres momentos. En el día a día, permite revisar el trabajo del agente en lotes cortos (diez minutos a la semana basta) en lugar de revisar cada acción una a una. Cuando algo falla, permite reconstruir la cadena de eventos sin tener que reconstruirla de memoria. Y cuando llega el AI Act europeo en agosto de 2026, deja a la empresa preparada para responder a las obligaciones de trazabilidad sin un proyecto extra: hay registro porque ya había registro, no porque la ley lo haya forzado. Si te interesa cómo se está aplicando ese reglamento en empresas pequeñas, conviene revisar <a href="/blog/ai-act-pyme-aplazamiento-agosto-2026.html">AI Act pyme: el aplazamiento de agosto 2026 y lo que cambia</a>.</p>
+
+    <h3>Qué se registra y qué no</h3>
+
+    <p>Lo que se registra: cada acción que toca el mundo (escribir en una hoja, enviar un borrador, modificar un registro), cada aprobación humana solicitada y resuelta, cada error o salida inesperada del agente. Lo que no se registra: los pasos intermedios de razonamiento del agente, las consultas internas que no tocan datos, las repeticiones de la misma acción dentro de un mismo lote. Si se registra de todo, el registro deja de ser útil porque no se lee. Si se registra lo que importa, el registro se mantiene y se consulta.</p>
+
+    <h2>Cómo encajan los tres mecanismos</h2>
+
+    <p>Los tres mecanismos no son tres opciones entre las que elegir. Son tres capas que se aplican a la vez, cada una resolviendo un problema distinto.</p>
+
+    <ol>
+      <li><strong>Sandbox con whitelist</strong> decide a qué puede llegar el agente. Es la capa estructural, se define una vez y rara vez cambia.</li>
+      <li><strong>Aprobación humana</strong> decide qué pasos críticos requieren validación antes de ejecutarse. Es la capa de decisión, se define en función del tipo de acción.</li>
+      <li><strong>Registro estructurado</strong> deja constancia de todo lo que el agente hace, dentro de su perímetro. Es la capa de trazabilidad, alimenta auditoría y mejora continua.</li>
+    </ol>
+
+    <p>Una empresa que aplica los tres tiene control real. Una empresa que aplica solo uno tiene una sensación de control que se evapora la primera vez que algo va mal. Y lo que va mal con un agente de IA, va mal de forma silenciosa hasta que alguien lo encuentra: aquí enlazo con <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>, donde aparece el caso opuesto, el del proceso que no debería automatizarse de entrada.</p>
+
+    <h2>Lo que conviene tener decidido antes de arrancar</h2>
+
+    <p>Antes de poner el primer agente en producción, una pyme tendría que poder responder a estas preguntas. Si no puede responder a alguna, es señal de que falta diseño, no de que falten herramientas:</p>
+
+    <ul>
+      <li>¿<strong>Qué sistemas, carpetas y bandejas</strong> está autorizado a tocar el agente? (whitelist escrita).</li>
+      <li>¿<strong>Qué pasos</strong> del flujo requieren aprobación humana antes de ejecutarse? (lista de pasos críticos).</li>
+      <li>¿<strong>Quién aprueba</strong> esos pasos cuando el agente los propone? (responsable identificado por nombre).</li>
+      <li>¿<strong>Dónde se registra</strong> lo que el agente hace? (herramienta y formato definidos).</li>
+      <li>¿<strong>Cada cuánto</strong> se revisa el registro? (cadencia mínima, idealmente semanal).</li>
+      <li>¿<strong>Qué pasa</strong> si el agente se equivoca? (procedimiento de pausa y revisión definido).</li>
+    </ul>
+
+    <p>Si las seis respuestas existen, la empresa está lista para arrancar con control. Si tres o más respuestas faltan, conviene parar y resolverlas antes de poner al agente a hacer trabajo real. Es una conversación de una mañana con el responsable interno y el proveedor; cuesta menos que reconstruir un desastre después.</p>
+
+    <h2>El criterio que aplica Ailitica</h2>
+
+    <p>Cuando ponemos en marcha un agente para un cliente, los tres mecanismos están definidos antes de escribir una sola línea de configuración. No es opcional, no es una buena práctica que se añade al final, es parte del diseño desde el primer día. La whitelist se acuerda con el cliente antes del arranque. La lista de pasos críticos se acuerda con el cliente antes del arranque. El registro se acuerda con el cliente antes del arranque.</p>
+
+    <p>El motivo es muy directo. Un agente sin control no es un agente útil, es una bomba de relojería. Y un agente con control desproporcionado para el tamaño de la empresa tampoco es útil, porque se convierte en proceso pesado que nadie quiere usar. La proporción adecuada se decide al principio, leyendo a la empresa real que tenemos delante. No hay plantilla universal, hay criterio aplicado.</p>
+
+    <hr>
+
+    <p>Si estás pensando en poner un agente de IA en producción y quieres revisar si los tres mecanismos están bien diseñados antes de arrancar, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Revisamos tu caso, vemos lo que falta y, si conviene esperar a tener mejores cimientos, también lo decimos.</p>
+
+  </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué pasa si el agente de IA se equivoca en mi empresa?</summary>
+        <p>Depende del mecanismo de control. Si los pasos críticos requieren aprobación humana, el error se detiene antes de ejecutarse y solo cuesta el tiempo de revisión. Si el agente trabaja en sandbox con whitelist, el daño está acotado a un perímetro pequeño. Y si hay registro estructurado, sabes qué falló, cuándo y por qué en menos de cinco minutos. Sin estos tres mecanismos, un error puede pasar inadvertido durante semanas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuándo conviene meter aprobación humana (HITL) y cuándo no?</summary>
+        <p>Conviene en pasos irreversibles o costosos: enviar a un cliente, mover dinero, modificar registros legales, comprometer a la empresa. No conviene en pasos reversibles, baratos o repetitivos masivos (clasificar, etiquetar, resumir, preparar borradores). La regla práctica: si rehacerlo cuesta minutos, deja al agente solo. Si rehacerlo cuesta días o una conversación incómoda, pon un humano antes.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta auditar un agente de IA en una pyme?</summary>
+        <p>El mecanismo mínimo (registro estructurado, sandbox con whitelist y aprobaciones en pasos críticos) se monta en una o dos semanas de trabajo y casi no añade coste operativo recurrente. Auditar después es leer el registro: minutos a la semana en una pyme. La parte cara solo aparece si hay que reconstruir lo que hizo el agente sin tener el registro, ahí sí se va a días de trabajo y a dudas que ningún CEO quiere tener.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Necesito un equipo técnico grande para implementar estos controles?</summary>
+        <p>No. Los tres mecanismos son decisiones de diseño, no piezas de infraestructura caras. Una pyme de cinco a treinta personas puede aplicarlos con un solo responsable identificado, una herramienta de logs sencilla y los flujos de aprobación que ya usa para otros temas (correo, mensajería interna o un canal compartido). Lo que sí necesita es claridad sobre qué puede y qué no puede tocar el agente antes de arrancar.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">Revisa si tu agente está listo para producción con control real</h2>
+    <p class="article-cta-text">Te ayudamos a definir la whitelist, identificar los pasos críticos y dejar el registro montado antes de que el agente toque nada importante. Sin compromiso y sin venderte una plataforma que no necesitas.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/ia-sin-supervision-caso-pocketos.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">IA sin supervisión: el caso PocketOS y la lección que deja a las empresas</span>
+        <span class="related-card-excerpt">Qué pasó cuando un agente actuó sin freno, y por qué la conversación correcta no es sobre la IA sino sobre los límites que se le ponen.</span>
+        <span class="related-card-readtime">7 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/ia-con-criterio-humano.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">IA con criterio humano: por qué el agente decide mejor cuando no decide solo</span>
+        <span class="related-card-excerpt">Cuándo conviene que la IA proponga y el humano decida, y cómo se diseña esa supervisión.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+  <p class="disclaimer">Este artículo describe un enfoque general de control aplicable a la mayoría de pymes. No constituye asesoramiento técnico, legal ni regulatorio. Cada caso real requiere un análisis específico del flujo, los sistemas implicados y el contexto del equipo.</p>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
