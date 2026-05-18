@@ -1,5 +1,18 @@
 [
   {
+    "slug": "auditoria-agente-ia-cada-dia",
+    "title": "Cómo auditar lo que tu agente de IA decide cada día (sin doctorado en IT)",
+    "date": "2026-05-19",
+    "category": "Estrategia",
+    "keywords": "auditoria agente de IA, revisar decisiones IA, que hace mi agente IA, log agente IA, supervisar IA empresa, auditoria diaria agente IA pyme, control agente IA directivo",
+    "excerpt": "Si no sabes lo que tu agente de IA hizo ayer, no tienes un agente, tienes una caja negra. Tres preguntas que un directivo no técnico puede responder cada mañana en menos de 30 minutos, con plantilla operativa.",
+    "lead": "Si no sabes lo que tu agente de IA hizo ayer, no tienes un agente, tienes una caja negra. Te enseñamos qué tres preguntas debes poder responder cada mañana sobre tu IA, y cómo organizarlo en menos de 30 minutos al día.",
+    "readtime": "8 min",
+    "image": "img/auditoria-agente-ia-cada-dia.webp",
+    "featured": true,
+    "dateModified": "2026-05-19"
+  },
+  {
     "slug": "como-controlar-agente-ia-empresa",
     "title": "Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos",
     "date": "2026-05-12",
@@ -9,7 +22,7 @@
     "lead": "Cuando un directivo de una empresa pequeña pregunta cómo controla a un agente de IA, lo más habitual es que le respondan con un catálogo de herramientas caras. La versión real, aplicable a una pyme, son tres mecanismos sencillos que se deciden antes de arrancar.",
     "readtime": "8 min",
     "image": "img/como-controlar-agente-ia-empresa.webp",
-    "featured": true,
+    "featured": false,
     "dateModified": "2026-05-12"
   },
   {

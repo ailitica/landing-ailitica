@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Cómo auditar lo que tu agente de IA decide cada día (sin doctorado en IT) — Ailitica</title>
+<meta name="description" content="Auditoría de un agente de IA en una pyme: las 3 preguntas que un directivo no técnico puede responder cada mañana en menos de 30 minutos. Plantilla operativa, sin jerga DevOps.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/auditoria-agente-ia-cada-dia.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/auditoria-agente-ia-cada-dia.html">
+<meta property="og:title" content="Cómo auditar lo que tu agente de IA decide cada día (sin doctorado en IT)">
+<meta property="og:description" content="Auditoría de un agente de IA en una pyme: las 3 preguntas que un directivo no técnico puede responder cada mañana en menos de 30 minutos. Plantilla operativa, sin jerga DevOps.">
+<meta property="og:image" content="https://ailitica.com/blog/img/auditoria-agente-ia-cada-dia.webp">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-05-19">
+<meta property="article:modified_time" content="2026-05-19">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Cómo auditar lo que tu agente de IA decide cada día (sin doctorado en IT)">
+<meta name="twitter:description" content="Auditoría de un agente de IA en una pyme: las 3 preguntas que un directivo no técnico puede responder cada mañana en menos de 30 minutos. Plantilla operativa, sin jerga DevOps.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/auditoria-agente-ia-cada-dia.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo auditar lo que tu agente de IA decide cada día (sin doctorado en IT)",
+  "description": "Si no sabes lo que tu agente de IA hizo ayer, no tienes un agente, tienes una caja negra. Tres preguntas que un directivo no técnico puede responder cada mañana en menos de 30 minutos, con una plantilla operativa pensada para pymes y sin jerga DevOps.",
+  "datePublished": "2026-05-19",
+  "dateModified": "2026-05-19",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/auditoria-agente-ia-cada-dia.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "keywords": "auditoria agente de IA, revisar decisiones IA, que hace mi agente IA, log agente IA, supervisar IA empresa, auditoria diaria agente IA pyme, control agente IA directivo"
+}
+</script>
+<!-- GEO:BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://ailitica.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ailitica.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cómo auditar lo que tu agente de IA decide cada día (sin doctorado en IT)",
+      "item": "https://ailitica.com/blog/auditoria-agente-ia-cada-dia.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué métricas mirar primero al auditar un agente de IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tres, en este orden. Primera: número de acciones ejecutadas en las últimas 24 horas, contrastado con lo que esperabas. Segunda: cuántas pidieron aprobación humana y cuántas se aprobaron. Tercera: cuántas terminaron en error o salida inesperada. Con estas tres cifras delante, un directivo no técnico ya sabe en 5 minutos si su agente tuvo un día normal o un día raro. No hace falta mirar nada más para empezar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con qué frecuencia hay que auditar un agente de IA en una pyme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una revisión diaria corta (de 10 a 30 minutos, según volumen) y una revisión semanal más larga (una hora). La diaria detecta lo que va mal hoy. La semanal detecta tendencias: aprobaciones que se convierten en automáticas por rutina, errores que se repiten o categorías de decisión que crecen sin haberlo decidido. Sin esa doble cadencia, los problemas se acumulan invisibles hasta que alguien los descubre por accidente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién audita al agente de IA en una empresa de 15 personas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El responsable del proceso al que sirve el agente, no el responsable de IT. Si el agente atiende pedidos, audita quien manda en pedidos. Si el agente prepara propuestas comerciales, audita comercial. La auditoría operativa diaria es responsabilidad del dueño del proceso porque es quien sabe lo que es normal y lo que no en ese contexto. IT entra solo cuando hay un problema técnico que el dueño no puede resolver."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Esta auditoría diaria sustituye a la auditoría regulatoria del AI Act?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La auditoría diaria es operativa: sirve para saber si el agente está haciendo lo que tiene que hacer en tu empresa. La auditoría regulatoria del AI Act es formal y se hace en momentos concretos (despliegue, cambios significativos, requerimiento de autoridad). Lo bueno es que si tienes la auditoría diaria bien montada, la regulatoria casi se hace sola: ya tienes el registro, ya tienes el responsable, ya tienes el procedimiento. Sin auditoría diaria, la regulatoria es un proyecto desde cero."
+      }
+    }
+  ]
+}
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+.disclaimer {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  font-size:12px; color:var(--text-dim); line-height:1.6;
+  border-top:1px solid var(--border-soft); padding-top:20px;
+  font-style:italic;
+}
+
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/auditoria-agente-ia-cada-dia.webp" alt="Cuaderno de bitácora abierto sobre mesa de despacho con sello verde de visto bueno, lupa y estilográfica, ilustrando la auditoría diaria de un agente de inteligencia artificial en una empresa pequeña" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">19 de mayo de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">8 min lectura</span>
+    </div>
+    <h1 class="article-title">Cómo auditar lo que tu agente de IA decide cada día <em>(sin doctorado en IT)</em></h1>
+    <!-- GEO:TLDR -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Si no sabes lo que tu agente de IA hizo ayer, no tienes un agente, tienes una caja negra. Hay <strong>tres preguntas</strong> que un directivo no técnico puede responder cada mañana en menos de 30 minutos: <em>cuánto hizo</em>, <em>qué pidió permiso</em> y <em>dónde se atascó</em>. Con esas tres respuestas escritas, el control es real. Sin ellas, el control es una sensación.</p>
+    </aside>
+  </header>
+
+  <div class="article-body">
+
+    <h2>El día que descubres que llevas un mes sin saber qué hace tu agente</h2>
+
+    <p>La conversación se repite con cierta frecuencia. Un directivo nos cuenta que tiene un agente de IA en producción desde hace unas semanas, que el equipo parece contento y que las cosas, en general, van bien. Cuando le preguntamos qué hizo el agente ayer, hay una pausa. Y después, casi siempre, la misma respuesta: <em>no lo sé exactamente, habría que mirarlo</em>.</p>
+
+    <p>Esa pausa es el síntoma. No es un problema técnico, es un problema de gobierno. Un agente que actúa sobre cosas que importan en tu empresa, y del que no se sabe lo que hizo ayer, está fuera de control. No fuera de control en el sentido catastrófico, fuera de control en el sentido más mundano: nadie está mirando, y lo que nadie mira tiende a degradarse.</p>
+
+    <p>Este artículo describe la pieza que cierra el círculo de los <a href="/blog/como-controlar-agente-ia-empresa.html">mecanismos de control de un agente IA</a>. Si los controles estructurales (permisos, aprobaciones, registro) son los cimientos, la auditoría diaria es la inspección rutinaria. Sin esa inspección, los cimientos sirven de poco.</p>
+
+    <h2>La auditoría operativa no es la auditoría regulatoria</h2>
+
+    <p>Antes de seguir, una distinción que ahorra mucho ruido. Cuando una empresa pequeña oye la palabra <em>auditoría</em> aplicada a IA, suele pensar en una de dos cosas: o un papel formal que pide una autoridad, o una herramienta cara que prometen los proveedores. Ninguna de las dos es lo que aquí importa.</p>
+
+    <p>La <strong>auditoría regulatoria</strong> existe (el AI Act la define, en sus diferentes intensidades según el sistema), pero ocurre en momentos puntuales: al desplegar, al cambiar algo significativo, cuando una autoridad lo pide. Si quieres entender en qué punto está esa normativa después del aplazamiento reciente, conviene revisar las <a href="/blog/ai-act-pyme-aplazamiento-agosto-2026.html">obligaciones del AI Act para pymes</a>.</p>
+
+    <p>La <strong>auditoría operativa</strong>, en cambio, ocurre cada día. Es lo que un director de almacén hace cuando entra por la mañana y mira el cuadro de control de la jornada anterior. No es un acto formal, es una rutina. Y no la hace IT: la hace quien manda en el proceso al que sirve el agente. Es una diferencia que cambia toda la conversación, porque la mayoría de directivos creen que esto no les toca a ellos. Sí les toca. De hecho, es lo único que les toca.</p>
+
+    <h2>La regla de los 30 minutos</h2>
+
+    <p>El criterio operativo que aplicamos con clientes pyme es simple. Si la auditoría diaria de tu agente de IA no cabe en 30 minutos, está mal diseñada. Una auditoría que requiere una hora cada mañana no se hace; una que requiere cinco minutos no detecta nada. Los 30 minutos son la franja donde la rutina se mantiene y la información es suficiente.</p>
+
+    <p>Para que esa franja funcione, hace falta que el agente deje su trabajo registrado de forma que se pueda leer en lotes, no acción por acción. Eso no es opcional: es la condición que hace posible la auditoría. Si el agente no deja registro, no hay auditoría diaria, hay arqueología de logs cada vez que algo va mal. Es la diferencia entre revisar y reconstruir.</p>
+
+    <p>El registro mínimo que recomendamos cuando ponemos un agente en producción cubre cuatro columnas por acción: qué hizo, cuándo, sobre qué entidad y con qué información decidió. Cuatro columnas. Esa estructura permite responder las tres preguntas que vienen ahora, porque cada pregunta es una lectura distinta del mismo registro.</p>
+
+    <h2>Pregunta 1: ¿cuánto hizo el agente ayer?</h2>
+
+    <p>La primera pregunta es la más sencilla y la más reveladora. Cuántas acciones ejecutó el agente en las últimas 24 horas, repartidas por categoría. No hace falta más detalle: solo el contador.</p>
+
+    <p>Lo que esa cifra te dice no es si el agente trabajó bien. Te dice si trabajó <em>como un día normal</em> o si trabajó <em>como un día raro</em>. La diferencia entre los dos casos es la primera señal útil. Un agente que clasifica 80 pedidos en un día y de repente clasifica 240 no necesariamente está fallando: puede haber habido una promoción, una incidencia del proveedor, o cualquier evento que justifique la subida. Pero el directivo que ve el 240 quiere saber por qué, y la pregunta surge en 30 segundos si la cifra está visible.</p>
+
+    <p>El error que vemos más a menudo aquí es no haber definido qué es <em>normal</em>. Si nunca te has parado a mirar un día tranquilo cualquiera y a anotar las cifras esperadas, no tienes referencia para detectar un día raro. La primera semana de un agente en producción se dedica precisamente a eso: a construir esa línea base con números reales, no con estimaciones.</p>
+
+    <div class="callout">
+      <p><strong>El umbral mental.</strong> No hace falta dashboards sofisticados. Una hoja de cálculo con la cifra de ayer al lado de la media de los últimos siete días es suficiente. Cuando el dato de ayer se aleja más de un 30% de la media, el directivo entra a mirar. Cuando no, sigue con su día. Esto es control sostenible: trabajo cuando hace falta, no trabajo perpetuo por desconfianza.</p>
+    </div>
+
+    <h2>Pregunta 2: ¿qué pidió permiso y qué pasó?</h2>
+
+    <p>La segunda pregunta concentra el riesgo donde está. Si el agente está bien diseñado, los pasos críticos (los que tocan dinero, comprometen a la empresa o son irreversibles) requieren aprobación humana antes de ejecutarse. La pregunta es: cuántas aprobaciones pidió ayer y cómo se resolvieron.</p>
+
+    <p>Aquí lo que se mira no es solo el número, es el patrón. Hay tres patrones que aparecen y los tres dicen algo:</p>
+
+    <ol>
+      <li><strong>Aprobaciones que se aprueban en segundos.</strong> Si todas las solicitudes se resuelven en menos de un minuto y con un sí automático, lo más probable es que la aprobación se haya convertido en un trámite. Cuando eso pasa, la aprobación deja de proteger porque ya nadie la lee. Síntoma típico: el responsable aprueba en lote desde el móvil camino al café.</li>
+      <li><strong>Aprobaciones que se quedan colgadas.</strong> Si hay solicitudes de aprobación con más de 24 horas sin respuesta, el flujo del agente se atasca por el cuello de botella humano. Tampoco es un problema del agente, es un problema de proceso: o sobra carga sobre el responsable, o el listado de pasos críticos es demasiado amplio.</li>
+      <li><strong>Aprobaciones rechazadas o modificadas.</strong> Cuando un responsable rechaza o modifica una propuesta del agente, es información de alto valor. Significa que el agente propuso algo que no procedía. Si eso ocurre una vez al mes, anécdota; si ocurre varias veces a la semana sobre la misma categoría, el agente necesita un ajuste y el responsable lo está absorbiendo con su trabajo.</li>
+    </ol>
+
+    <p>Si la herramienta de aprobación es el correo, una columna que diga "aprobado / rechazado / modificado / sin respuesta" basta. Si es una bandeja en una herramienta de gestión, mejor todavía. Lo que no puede pasar es que nadie sume al final del día cuántas hubo y cómo terminaron, porque esa suma es el indicador más directo de salud del agente.</p>
+
+    <h2>Pregunta 3: ¿dónde se atascó o salió por la tangente?</h2>
+
+    <p>La tercera pregunta es la que casi nadie hace y la que más explica. Cuántas veces el agente terminó una acción con error, con salida inesperada o con respuesta evasiva (los <em>no he podido</em>, los <em>no encuentro la información</em>, los <em>requiere intervención manual</em>).</p>
+
+    <p>El error técnico puro (la API que no respondió, la conexión que falló) es ruido y se descarta rápido. Lo interesante son las dos categorías intermedias. Una <em>salida inesperada</em> es el agente haciendo algo que el responsable no esperaba, aunque no haya petado nada. Una <em>respuesta evasiva</em> es el agente reconociendo que no sabe seguir. Las dos son señales tempranas de que algo se está moviendo.</p>
+
+    <p>Por ejemplo: un agente que clasifica pedidos empieza a marcar más pedidos como "categoría no identificada" de lo habitual. Técnicamente no hay error, todo funciona. Operativamente, está pasando algo: el catálogo cambió, entró un cliente nuevo con productos distintos o la fuente de datos perdió calidad. Sin mirar esa cifra a diario, el directivo se entera del problema un mes después, cuando alguien le pregunta por qué hay tantos pedidos pendientes de revisar manualmente. Con la cifra a la vista, se entera el día dos.</p>
+
+    <p>Esto conecta con una idea más amplia sobre <a href="/blog/ia-con-criterio-humano.html">diseñar IA con criterio humano</a>: el agente bien hecho admite que no sabe, y deja constancia. Un agente que nunca se atasca es un agente que está improvisando, y el directivo necesita poder distinguir las dos cosas.</p>
+
+    <h2>La plantilla mínima: una página, tres bloques</h2>
+
+    <p>Las tres preguntas se montan sobre una plantilla muy simple. Una página de informe diario, generada automáticamente desde el registro estructurado del agente, dividida en tres bloques. Esto es lo que aplicamos cuando ponemos un agente para un cliente.</p>
+
+    <h3>Bloque A — Volumen del día</h3>
+
+    <ul>
+      <li>Acciones totales ejecutadas en las últimas 24 horas.</li>
+      <li>Desglose por categoría principal (las tres o cuatro más frecuentes).</li>
+      <li>Comparación con la media de los siete días previos, expresada en porcentaje.</li>
+    </ul>
+
+    <h3>Bloque B — Aprobaciones humanas</h3>
+
+    <ul>
+      <li>Solicitudes de aprobación generadas ayer.</li>
+      <li>Aprobadas, rechazadas, modificadas y sin respuesta.</li>
+      <li>Tiempo medio de resolución.</li>
+    </ul>
+
+    <h3>Bloque C — Atascos y salidas raras</h3>
+
+    <ul>
+      <li>Errores técnicos puros (se reportan a IT, no al directivo).</li>
+      <li>Salidas inesperadas con breve descripción de la categoría.</li>
+      <li>Respuestas evasivas (el agente no supo seguir).</li>
+    </ul>
+
+    <p>El informe lo recibe el responsable del proceso cada mañana, por correo o en la herramienta interna que use el equipo. Si los tres bloques entran dentro de lo esperado, la auditoría dura cinco minutos: una mirada y a otra cosa. Si algún bloque tiene una señal rara, los 30 minutos se ocupan en bajar a detalle. Esa elasticidad es lo que hace sostenible la rutina.</p>
+
+    <h2>Quién audita en una empresa pequeña</h2>
+
+    <p>En una pyme con cinco a treinta personas, esto se resuelve con un solo nombre apuntado al lado del agente. La persona que manda en el proceso es la que audita. No el responsable de IT (que entra solo cuando hay un fallo técnico que el responsable del proceso no puede resolver), no un comité, no el CEO (salvo que sea él quien manda directamente en ese proceso). Una persona, identificada por nombre, con cinco a 30 minutos asignados cada mañana en su agenda.</p>
+
+    <p>Esa asignación es la decisión que más se subestima al desplegar un agente. Una empresa que no la toma acaba con el agente en producción y la auditoría diluida entre todos, lo que en la práctica significa que la hace nadie. Y un agente que nadie audita es un agente al que su empresa renunció a controlar sin haberlo decidido conscientemente.</p>
+
+    <p>Si en este momento no puedes responder con un nombre a la pregunta <em>quién audita al agente</em>, es señal de que falta esa decisión. Es la conversación más corta y más útil que se puede tener con el equipo después de poner un agente en producción: en cinco minutos queda resuelto y el control pasa a existir de verdad.</p>
+
+    <h2>La revisión semanal: el patrón que la diaria no ve</h2>
+
+    <p>La auditoría diaria detecta el día raro. La auditoría semanal detecta lo que ningún día raro revela por sí solo: las tendencias. Aprobaciones que se vuelven automáticas por costumbre. Errores que se repiten siempre el mismo día de la semana. Categorías de decisión que crecen sin haberlo decidido. Patrones de uso que indican que el agente está siendo aprovechado para algo distinto de lo que se diseñó.</p>
+
+    <p>La revisión semanal cuesta una hora a la semana, idealmente un viernes por la tarde o un lunes por la mañana, y la hace la misma persona que hace la diaria. La diferencia es que en lugar de mirar 24 horas, mira siete días seguidos. Y en lugar de buscar excepciones, busca <em>tendencias</em>.</p>
+
+    <p>Aquí también el responsable tiene que tener permiso, y permiso interno explícito, para pausar al agente si algo no le cuadra. Esa autoridad es parte del diseño. Sin ella, la revisión semanal es informativa y nada más; con ella, la revisión semanal es operativa. La diferencia es enorme, y suele ser la frontera entre las empresas que aprovechan un agente y las que conviven con un agente que se va degradando despacio. Si te interesa el otro lado de esa moneda, conviene mirar <a href="/blog/ia-sin-supervision-caso-pocketos.html">qué pasa sin supervisión humana</a>.</p>
+
+    <h2>Cuándo no merece la pena auditar a diario</h2>
+
+    <p>Honestidad operativa. La auditoría diaria que aquí describo tiene sentido cuando el agente toca cosas que importan: dinero, clientes, registros legales, decisiones operativas con impacto. Si tienes un agente que solo resume documentos internos para tu uso personal, o que ordena el correo en carpetas, la auditoría diaria es desproporcionada. Una revisión semanal basta, y a veces ni eso.</p>
+
+    <p>La pregunta para decidir es directa: ¿el agente puede provocar un daño que tarde más de un día en detectarse por otros medios? Si la respuesta es sí, auditoría diaria. Si la respuesta es no, semanal o mensual. Lo que no funciona es la postura intermedia de <em>vamos viendo</em>: ese <em>vamos viendo</em> es lo que produce las pausas incómodas con las que abríamos el artículo. Si la situación, además, te lleva a dudar de la decisión de fondo, conviene revisar <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo NO usar IA en una empresa</a>, porque la auditoría no salva un caso que no debería haber arrancado.</p>
+
+    <h2>El criterio que aplica Ailitica</h2>
+
+    <p>Cuando ponemos un agente en producción para un cliente, la plantilla de auditoría diaria está definida antes del arranque. No después. La conversación sobre quién audita, qué se mira y cuánto tiempo se dedica forma parte del diseño, no del soporte post-implantación. Si esa conversación no se ha tenido, no se arranca: el agente se queda en pruebas hasta que esté.</p>
+
+    <p>El motivo es el mismo de siempre. Un agente sin auditoría diaria no es un agente más barato, es un agente <em>aparentemente</em> más barato. La factura llega cuando algo va mal y nadie se ha enterado, y la factura es siempre mayor que las horas que cuesta montar la rutina al principio. Lo razonable es invertir poco al inicio para que el control sea posible después.</p>
+
+    <hr>
+
+    <p>Si quieres revisar si tu agente actual genera un informe diario auditable y si tienes asignada la persona que lo mira, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Te ayudamos a montar la rutina en una mañana y, si te falta el registro estructurado debajo, también te decimos por dónde empezar.</p>
+
+  </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué métricas mirar primero al auditar un agente de IA?</summary>
+        <p>Tres, en este orden. Primera: número de acciones ejecutadas en las últimas 24 horas, contrastado con lo que esperabas. Segunda: cuántas pidieron aprobación humana y cuántas se aprobaron. Tercera: cuántas terminaron en error o salida inesperada. Con estas tres cifras delante, un directivo no técnico ya sabe en 5 minutos si su agente tuvo un día normal o un día raro. No hace falta mirar nada más para empezar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Con qué frecuencia hay que auditar un agente de IA en una pyme?</summary>
+        <p>Una revisión diaria corta (de 10 a 30 minutos, según volumen) y una revisión semanal más larga (una hora). La diaria detecta lo que va mal hoy. La semanal detecta tendencias: aprobaciones que se convierten en automáticas por rutina, errores que se repiten o categorías de decisión que crecen sin haberlo decidido. Sin esa doble cadencia, los problemas se acumulan invisibles hasta que alguien los descubre por accidente.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Quién audita al agente de IA en una empresa de 15 personas?</summary>
+        <p>El responsable del proceso al que sirve el agente, no el responsable de IT. Si el agente atiende pedidos, audita quien manda en pedidos. Si el agente prepara propuestas comerciales, audita comercial. La auditoría operativa diaria es responsabilidad del dueño del proceso porque es quien sabe lo que es normal y lo que no en ese contexto. IT entra solo cuando hay un problema técnico que el dueño no puede resolver.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Esta auditoría diaria sustituye a la auditoría regulatoria del AI Act?</summary>
+        <p>No. La auditoría diaria es operativa: sirve para saber si el agente está haciendo lo que tiene que hacer en tu empresa. La auditoría regulatoria del AI Act es formal y se hace en momentos concretos (despliegue, cambios significativos, requerimiento de autoridad). Lo bueno es que si tienes la auditoría diaria bien montada, la regulatoria casi se hace sola: ya tienes el registro, ya tienes el responsable, ya tienes el procedimiento. Sin auditoría diaria, la regulatoria es un proyecto desde cero.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">Monta la rutina de auditoría diaria antes de que la pidas con prisa</h2>
+    <p class="article-cta-text">Te ayudamos a definir el informe diario, asignar el responsable y dejar la revisión semanal en marcha. Una mañana de trabajo en tu equipo y el control pasa a existir de verdad. Sin compromiso y sin venderte un panel que no necesitas.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/como-controlar-agente-ia-empresa.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos</span>
+        <span class="related-card-excerpt">Los tres mecanismos de diseño que hacen que una pyme tenga control real sin proceso pesado: aprobación humana, sandbox con whitelist y registro estructurado.</span>
+        <span class="related-card-readtime">8 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/ia-con-criterio-humano.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">IA con criterio humano: por qué el agente decide mejor cuando no decide solo</span>
+        <span class="related-card-excerpt">Cuándo conviene que la IA proponga y el humano decida, y cómo se diseña esa supervisión.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+  <p class="disclaimer">Este artículo describe una plantilla operativa de auditoría aplicable a la mayoría de pymes con un agente de IA en producción. No constituye asesoramiento técnico, legal ni regulatorio. Cada caso real requiere un análisis específico del flujo, los sistemas implicados y el contexto del equipo.</p>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
