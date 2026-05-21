@@ -1,5 +1,18 @@
 [
   {
+    "slug": "agente-vertical-vs-chatbot-horizontal",
+    "title": "Agente vertical vs chatbot horizontal: qué eligen las grandes en 2026",
+    "date": "2026-05-21",
+    "category": "Estrategia",
+    "keywords": "agente vertical IA, agente especializado IA empresa, domain specific agent, chatbot vs agente IA, agente IA dominio especifico, Harvey IA legal, Rogo finanzas, Markups.ai contratos",
+    "excerpt": "Las empresas que están ganando con IA en 2026 no usan un chatbot que sirve para todo. Usan agentes verticales con dominio específico. Harvey, Rogo, Markups.ai. La hallucination de Rogo bajó del 34,1% al 3,9% al especializarlo.",
+    "lead": "Las empresas que están ganando con IA en 2026 no usan un chatbot que sirve para todo. Usan agentes verticales con dominio específico. La conclusión para la pyme: tu agente bueno no responde lo que sea, responde tu pipeline.",
+    "readtime": "9 min",
+    "image": "img/agente-vertical-vs-chatbot-horizontal.webp",
+    "featured": true,
+    "dateModified": "2026-05-21"
+  },
+  {
     "slug": "auditoria-agente-ia-cada-dia",
     "title": "Cómo auditar lo que tu agente de IA decide cada día (sin doctorado en IT)",
     "date": "2026-05-19",
@@ -9,7 +22,7 @@
     "lead": "Si no sabes lo que tu agente de IA hizo ayer, no tienes un agente, tienes una caja negra. Te enseñamos qué tres preguntas debes poder responder cada mañana sobre tu IA, y cómo organizarlo en menos de 30 minutos al día.",
     "readtime": "8 min",
     "image": "img/auditoria-agente-ia-cada-dia.webp",
-    "featured": true,
+    "featured": false,
     "dateModified": "2026-05-19"
   },
   {
