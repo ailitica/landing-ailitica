@@ -1,5 +1,18 @@
 [
   {
+    "slug": "agente-ia-vs-empleado-junior",
+    "title": "Tu agente de IA no es un empleado junior (y por qué tratarlo así te sale caro)",
+    "date": "2026-05-26",
+    "category": "Estrategia",
+    "keywords": "agente de IA vs empleado junior, IA reemplaza junior, que hace mejor IA que persona, IA y equipo, analogía IA becario, humano más agente, organigrama IA",
+    "excerpt": "Comparar un agente de IA con un becario es la analogía más fácil y la más cara. Un junior aprende; un agente ejecuta. Por qué tratarlos igual sale caro.",
+    "lead": "Comparar un agente de IA con un becario es la analogía más fácil y la más cara. Un junior aprende, pregunta, duda. Un agente ejecuta sin dudar. Te explicamos qué cambia cuando entiendes la diferencia y por qué cambia tu organigrama.",
+    "readtime": "7 min",
+    "image": "img/agente-ia-vs-empleado-junior.webp",
+    "featured": true,
+    "dateModified": "2026-05-26"
+  },
+  {
     "slug": "agente-vertical-vs-chatbot-horizontal",
     "title": "Agente vertical vs chatbot horizontal: qué eligen las grandes en 2026",
     "date": "2026-05-21",
@@ -9,7 +22,7 @@
     "lead": "Las empresas que están ganando con IA en 2026 no usan un chatbot que sirve para todo. Usan agentes verticales con dominio específico. La conclusión para la pyme: tu agente bueno no responde lo que sea, responde tu pipeline.",
     "readtime": "9 min",
     "image": "img/agente-vertical-vs-chatbot-horizontal.webp",
-    "featured": true,
+    "featured": false,
     "dateModified": "2026-05-21"
   },
   {
