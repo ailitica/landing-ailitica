@@ -1,5 +1,18 @@
 [
   {
+    "slug": "como-medir-roi-agente-ia",
+    "title": "Cómo medir el ROI de un agente de IA en tu empresa (sin spreadsheets imposibles)",
+    "date": "2026-05-29",
+    "category": "Estrategia",
+    "keywords": "como medir el ROI de un agente de IA, ROI inteligencia artificial empresa, retorno inversion IA, calcular ahorro IA, KPIs agente IA, plantilla ROI IA, business case IA pyme",
+    "excerpt": "El ROI de un agente de IA no se mide solo en horas ahorradas. Tres palancas que multiplican el retorno real por dos, en una sola página y sin spreadsheets imposibles.",
+    "lead": "El ROI de un agente de IA no se mide solo en horas ahorradas. Hay tres palancas que la mayoría de empresas no contabiliza —tiempo recuperado, errores evitados y capacidad nueva habilitada— y que multiplican el retorno real por dos. Te enseñamos a calcularlo en una sola página.",
+    "readtime": "8 min",
+    "image": "img/como-medir-roi-agente-ia.jpg",
+    "featured": true,
+    "dateModified": "2026-05-29"
+  },
+  {
     "slug": "agente-ia-vs-empleado-junior",
     "title": "Tu agente de IA no es un empleado junior (y por qué tratarlo así te sale caro)",
     "date": "2026-05-26",
@@ -9,7 +22,7 @@
     "lead": "Comparar un agente de IA con un becario es la analogía más fácil y la más cara. Un junior aprende, pregunta, duda. Un agente ejecuta sin dudar. Te explicamos qué cambia cuando entiendes la diferencia y por qué cambia tu organigrama.",
     "readtime": "7 min",
     "image": "img/agente-ia-vs-empleado-junior.webp",
-    "featured": true,
+    "featured": false,
     "dateModified": "2026-05-26"
   },
   {

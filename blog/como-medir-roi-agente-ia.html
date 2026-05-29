@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Cómo medir el ROI de un agente de IA en tu empresa — Ailitica</title>
+<meta name="description" content="El ROI de un agente de IA no se mide solo en horas ahorradas. Tres palancas que multiplican el retorno real por dos, en una sola página y sin spreadsheets imposibles.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/como-medir-roi-agente-ia.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/como-medir-roi-agente-ia.html">
+<meta property="og:title" content="Cómo medir el ROI de un agente de IA en tu empresa (sin spreadsheets imposibles)">
+<meta property="og:description" content="El ROI de un agente de IA no se mide solo en horas ahorradas. Tres palancas que multiplican el retorno real por dos, en una sola página y sin spreadsheets imposibles.">
+<meta property="og:image" content="https://ailitica.com/blog/img/como-medir-roi-agente-ia.jpg">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-05-29">
+<meta property="article:modified_time" content="2026-05-29">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Cómo medir el ROI de un agente de IA en tu empresa (sin spreadsheets imposibles)">
+<meta name="twitter:description" content="El ROI de un agente de IA no se mide solo en horas ahorradas. Tres palancas que multiplican el retorno real por dos, en una sola página y sin spreadsheets imposibles.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/como-medir-roi-agente-ia.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo medir el ROI de un agente de IA en tu empresa (sin spreadsheets imposibles)",
+  "description": "El ROI de un agente de IA no se mide solo en horas ahorradas. Hay tres palancas que la mayoría de empresas no contabiliza y que multiplican el retorno real por dos. Te enseñamos a calcularlo en una sola página, con plantilla incluida.",
+  "datePublished": "2026-05-29",
+  "dateModified": "2026-05-29",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/como-medir-roi-agente-ia.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "image": "https://ailitica.com/blog/img/como-medir-roi-agente-ia.jpg",
+  "keywords": "como medir el ROI de un agente de IA, ROI inteligencia artificial empresa, retorno inversion IA, calcular ahorro IA, KPIs agente IA, plantilla ROI IA, business case IA pyme"
+}
+</script>
+<!-- GEO:BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://ailitica.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ailitica.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cómo medir el ROI de un agente de IA en tu empresa (sin spreadsheets imposibles)",
+      "item": "https://ailitica.com/blog/como-medir-roi-agente-ia.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo se calcula el ROI de un agente de IA en una empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El ROI realista de un agente de IA se calcula sumando tres palancas: tiempo recuperado por las personas que antes hacían la tarea, errores evitados (multados, retrabajos, clientes perdidos) y capacidad nueva que la empresa no podía atender. Esa suma se divide entre el coste total anual del agente, incluyendo la suscripción al modelo, el tiempo de la persona dueña del proceso y el coste de mantenimiento. Si solo cuentas tiempo recuperado, estás midiendo entre el 30 y el 50 por ciento del ROI real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son los KPIs imprescindibles de un agente de IA en producción?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tres familias: KPIs de uso (volumen procesado, intentos por usuario, frecuencia), KPIs de calidad (tasa de error visible, derivaciones a humano, tasa de retrabajo) y KPIs de impacto (horas equivalentes recuperadas, casos atendidos que antes no se atendían, ahorro por error evitado). En una pyme bastan entre cuatro y seis de esas métricas en una sola tabla revisada cada semana. Las dashboards complejas suelen no usarse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda un agente de IA en dar ROI positivo en una pyme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En implantaciones bien acotadas (un proceso, un dueño humano, una métrica clara), entre seis y doce semanas para empezar a ver retorno medible. El payback completo de la inversión suele caer entre seis y dieciocho meses, dependiendo de cuánto tiempo libera por persona y de si la empresa reasigna ese tiempo a actividad de mayor valor. Si en doce semanas no hay señal alguna, casi siempre el problema no es el agente: es el diseño del proceso o la asignación de responsabilidad humana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué la mayoría de empresas mide mal el ROI de su IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque solo cuentan lo que es fácil de medir: horas ahorradas. Esa palanca suele ser entre un 30 y un 50 por ciento del retorno real. El resto está en los errores que la IA evita antes de que ocurran, en la capacidad nueva que abre, en el tiempo de directivos que dejan de ser cuellos de botella y en la atención que la empresa puede dar a casos que antes simplemente perdía. Cuando un CFO solo mide tiempo ahorrado, suele concluir que el ROI es bajo y desinvierte justo cuando empezaba a multiplicar."
+      }
+    }
+  ]
+}
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+/* Tabla de palancas */
+.palancas-tabla {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0; border-collapse:collapse;
+  background:var(--glass-bg); border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm); overflow:hidden;
+  font-size:clamp(13px, 1.2vw, 15px);
+}
+.palancas-tabla th, .palancas-tabla td {
+  padding:14px 18px; text-align:left;
+  border-bottom:1px solid var(--border-soft);
+  color:var(--text-secondary); line-height:1.6;
+  vertical-align:top;
+}
+.palancas-tabla th {
+  font-family:var(--font-d); font-weight:400; color:var(--text-primary);
+  background:rgba(74,179,255,0.05); font-size:13px; letter-spacing:.02em;
+}
+.palancas-tabla tr:last-child td { border-bottom:none; }
+.palancas-tabla td strong { color:var(--text-primary); font-weight:400; }
+@media (max-width:560px) {
+  .palancas-tabla, .palancas-tabla thead, .palancas-tabla tbody,
+  .palancas-tabla th, .palancas-tabla td, .palancas-tabla tr {
+    display:block;
+  }
+  .palancas-tabla th { display:none; }
+  .palancas-tabla td { padding:10px 16px; border-bottom:1px solid var(--border-soft); }
+  .palancas-tabla tr { margin-bottom:14px; border:1px solid var(--border-soft); border-radius:var(--radius-sm); }
+}
+
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/como-medir-roi-agente-ia.jpg" alt="Mesa de directivo con calculadora, gráfico de ROI, taza de café y un terminal de portátil mostrando datos de uso de un agente de IA en una pyme" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">29 de mayo de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">8 min lectura</span>
+    </div>
+    <h1 class="article-title">Cómo medir el <em>ROI</em> de un agente de IA en tu empresa (sin <em>spreadsheets</em> imposibles)</h1>
+    <!-- GEO:TLDR -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">El <strong>ROI de un agente de IA</strong> no se mide solo en horas ahorradas. Hay tres palancas que la mayoría de empresas no contabiliza —<em>tiempo recuperado</em>, errores evitados y capacidad nueva habilitada— y que multiplican el retorno real por dos. Te enseñamos a calcularlo en una sola página, con una plantilla que cualquier directivo puede llevarse a la reunión del lunes.</p>
+    </aside>
+  </header>
+
+  <div class="article-body">
+
+    <h2>Por qué casi todos los <em>ROIs</em> de IA que verás están mal contados</h2>
+
+    <p>En la mayoría de pymes que estamos viendo en 2026, cuando alguien pregunta por el ROI de su agente de IA, la respuesta es siempre la misma cuenta: <em>horas ahorradas multiplicadas por coste hora</em>. Tres becarios menos, un técnico menos, dos comerciales que cierran más rápido. La hoja de cálculo cabe en una pantalla y suele dar un retorno aceptable. La sensación al terminar es de tarea cumplida.</p>
+
+    <p>El problema es que esa cuenta mide entre el <strong>30 y el 50 por ciento del ROI real</strong>. El resto está en sitios donde el spreadsheet clásico no mira: en los errores que el agente está evitando antes de que ocurran, en la capacidad nueva que la empresa puede atender sin contratar y en el tiempo que el equipo directivo deja de gastar en cuellos de botella. Cuando un CFO con prisa solo cuenta horas, suele concluir que el ROI es bajo y desinvierte justo cuando empezaba a multiplicar.</p>
+
+    <p>Este artículo es la versión corta de la conversación que tenemos cada vez que un cliente nos pregunta cómo justificar la inversión. Tres palancas, una tabla y la pregunta única que decide si el agente sigue en producción al cabo de un trimestre. Si quieres además la cifra absoluta de cuánto cuesta montarlo, lo tienes en <a href="/blog/cuanto-cuesta-automatizar-ia.html">cuánto cuesta automatizar con IA en una empresa</a>. Aquí nos centramos en lo que retorna, no en lo que cuesta.</p>
+
+    <h2>Las tres palancas del ROI real (y por qué casi nadie las suma)</h2>
+
+    <p>Toda implantación de IA que vemos en una pyme genera retorno por una combinación de estas tres palancas. Si tu cálculo solo contempla la primera, tienes el ROI a la mitad. Si suma las tres, suele duplicar el resultado.</p>
+
+    <table class="palancas-tabla">
+      <thead>
+        <tr>
+          <th>Palanca</th>
+          <th>Qué es</th>
+          <th>Ejemplo PYME</th>
+          <th>Cómo medirla</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Tiempo recuperado</strong></td>
+          <td>Horas de personas que antes hacían la tarea y ahora pueden dedicarse a otra cosa.</td>
+          <td>El equipo de administración pasa de procesar 200 facturas/semana a revisar las 20 que el agente marca como dudosas.</td>
+          <td>Horas semana antes − horas semana después, multiplicado por coste hora cargado (no salario bruto).</td>
+        </tr>
+        <tr>
+          <td><strong>2. Errores evitados</strong></td>
+          <td>Coste de los fallos que el agente no comete o que detecta antes de que afecten al cliente o al balance.</td>
+          <td>Validador de CPV en licitaciones que evita una candidatura excluida (coste real: 1 contrato perdido al año).</td>
+          <td>Frecuencia anual del error × coste unitario × tasa de detección/prevención del agente.</td>
+        </tr>
+        <tr>
+          <td><strong>3. Capacidad nueva</strong></td>
+          <td>Trabajo que la empresa antes no podía hacer y ahora sí, sin contratar más personas.</td>
+          <td>Atender 3× los leads entrantes en horario no comercial sin abrir nueva delegación.</td>
+          <td>Volumen nuevo procesado × margen unitario, descontando el coste marginal del agente.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>La trampa habitual es asumir que solo la primera palanca es <em>real</em> porque las otras dos son hipotéticas. No lo son. Son tan reales como el coste de un error de facturación que pasó hace seis meses o como la queja del cliente que se fue al competidor porque nadie le contestó el viernes a las ocho de la tarde. La diferencia es que no aparecen en ningún P&amp;L hasta que las cuentas. Esto, además, encaja con la conversación de fondo sobre <a href="/blog/automatizacion-ia-vs-rpa.html">automatización con IA vs RPA tradicional</a>: la IA permite tipos de ROI que el RPA puro nunca ofreció.</p>
+
+    <h2>La cuenta de servilleta: ROI en una sola página</h2>
+
+    <p>Con esas tres palancas y el coste total del agente, el cálculo cabe en una servilleta. Para cualquier proceso candidato, esta es la plantilla que aplicamos en una primera conversación con un cliente.</p>
+
+    <div class="callout">
+      <p><strong>Numerador (retorno anual):</strong> tiempo recuperado (palanca 1) + errores evitados (palanca 2) + capacidad nueva habilitada (palanca 3).<br>
+      <strong>Denominador (coste anual):</strong> suscripción al modelo + coste interno de mantenimiento + tiempo del dueño humano del proceso + coste de despliegue prorrateado a 24 meses.<br>
+      <strong>ROI anual</strong> = (numerador − denominador) / denominador.</p>
+    </div>
+
+    <p>Tres precisiones que cambian el resultado:</p>
+
+    <ul>
+      <li>El <strong>coste hora cargado</strong> de tu equipo no es el salario bruto. Súmale impuestos, equipamiento, herramientas, sala y mánager prorrateado. En una pyme española, multiplica el bruto por entre 1,5 y 2 para llegar al cargado real.</li>
+      <li><strong>No contabilices el 100 por cien</strong> de las horas teóricas recuperadas. Las personas no son lineales: una hora libre de tarea repetitiva no equivale a una hora dedicada a estrategia. Aplica un factor de reasignación entre el 60 y el 80 por ciento. Si lo dejas al 100, el ROI calculado es optimista y el real decepciona.</li>
+      <li>El <strong>coste interno de mantenimiento</strong> es el más olvidado. Un agente exige revisión semanal del dueño humano: aproximadamente 2 a 4 horas/semana al principio, 1 a 2 horas/semana en régimen. Esto no es opcional: sin esa revisión, el agente entra en deriva. Aprendimos por qué en <a href="/blog/auditoria-agente-ia-cada-dia.html">cómo auditar lo que tu agente de IA decide cada día</a>.</li>
+    </ul>
+
+    <h2>Los KPIs que tienen que estar en la tabla (y los que sobran)</h2>
+
+    <p>Para que el ROI sea defendible en un comité y no una cifra inventada cada trimestre, conviene apoyarlo en cuatro o cinco métricas operativas que se midan cada semana. Más de seis y la tabla deja de mirarse; menos de tres y no se distingue señal de ruido.</p>
+
+    <h3>KPIs de uso (¿se está usando?)</h3>
+
+    <ul>
+      <li><strong>Volumen procesado</strong> por el agente cada semana, en unidades del proceso (facturas, leads, expedientes, consultas).</li>
+      <li><strong>Tasa de adopción</strong>: porcentaje del volumen total del proceso que pasa por el agente vs. el que se sigue haciendo a mano. Si está por debajo del 60 por ciento al cabo de dos meses, hay un problema de diseño o de cambio cultural, no de tecnología.</li>
+    </ul>
+
+    <h3>KPIs de calidad (¿lo hace bien?)</h3>
+
+    <ul>
+      <li><strong>Tasa de error visible</strong>: porcentaje de salidas del agente que un humano corrige a posteriori. Marca techo de confianza.</li>
+      <li><strong>Tasa de derivación a humano</strong>: porcentaje de casos en los que el agente reconoce que no sabe y escala. Una tasa demasiado baja (cerca de cero) es mala señal, no buena: significa que el agente probablemente está inventando.</li>
+    </ul>
+
+    <h3>KPIs de impacto (¿está generando ROI?)</h3>
+
+    <ul>
+      <li><strong>Horas equivalentes recuperadas/semana</strong> (palanca 1). Con cargado, no con bruto.</li>
+      <li><strong>Casos resueltos que antes no se atendían</strong> (palanca 3), si aplica.</li>
+    </ul>
+
+    <p>Cuatro KPIs en una tabla revisada cada lunes, dos dueños humanos firmando la fila correspondiente, y se acabó el dashboard imposible. Lo que no quepa ahí, no se mira. Lo que no se mira, no decide.</p>
+
+    <h2>Cuándo el ROI calculado y el real divergen (y qué hacer)</h2>
+
+    <p>El error más caro que vemos es asumir que el ROI calculado en la propuesta inicial es el que va a ocurrir. Casi nunca lo es. En las pymes que hemos acompañado durante los últimos doce meses, la divergencia entre el ROI ex ante y el ex post tiene tres causas recurrentes.</p>
+
+    <p><strong>Primero, el proceso cambia.</strong> Lo que antes tardaba 40 horas/semana cuando empezó la implantación, hoy son 28 porque el negocio bajó volumen. El ROI calculado mantiene la cifra antigua y queda inflado. Solución: recalibrar el numerador cada trimestre con el volumen real, no con el del estudio inicial.</p>
+
+    <p><strong>Segundo, la tasa de adopción es menor que la prevista.</strong> El equipo no migra al agente al ritmo esperado, sigue haciendo parte a mano por inercia o por miedo, y el tiempo recuperado calculado nunca se materializa. Solución: medir adopción como KPI duro y, si está estancada, tratarlo como problema de gestión del cambio, no de producto.</p>
+
+    <p><strong>Tercero, el coste de mantenimiento crece más de lo previsto.</strong> Porque el agente exige más revisión humana que la estimada, porque hay que actualizar prompts, porque cambia el modelo subyacente. Solución: poner el coste de mantenimiento en el presupuesto desde el día uno con un margen de 30 por ciento sobre la estimación inicial.</p>
+
+    <p>Como en cualquier inversión en infraestructura, la versión inicial es un compromiso. Para que el agente sostenga el retorno hace falta revisar el proceso, la adopción y el coste con disciplina. Es exactamente la dinámica que aplican las empresas que sí están sacando partido a la IA y que describimos en <a href="/blog/agentes-de-ia-para-pymes.html">agentes de IA para pymes</a>: control humano explícito, ajuste continuo, métricas cortas.</p>
+
+    <h2>La pregunta única que decide si sigue en producción</h2>
+
+    <p>Al cabo de un trimestre con el agente activo, la conversación más útil con el dueño humano del proceso es la más corta posible. Una sola pregunta concentra el 80 por ciento de la decisión: <em>si apagáramos el agente mañana, ¿cuántas horas, cuántos errores y cuánta capacidad recuperaríamos manualmente, y a qué coste?</em></p>
+
+    <p>Si la respuesta es <em>sin problema, lo absorbemos</em>, el agente no estaba aportando lo suficiente y conviene apagarlo o rediseñarlo. Si la respuesta es <em>habría que contratar a alguien o pararíamos un servicio</em>, el ROI es real y se justifica seguir invirtiendo. Esta prueba pasa por encima del spreadsheet trimestral, evita la discusión sobre supuestos y rara vez engaña.</p>
+
+    <p>Antes de llegar a esa pregunta, eso sí, conviene tener claro el otro lado: el control del agente. Sin control sólido el ROI calculado y el real divergen sin que nadie lo note. En <a href="/blog/como-controlar-agente-ia-empresa.html">cómo controlar un agente de IA en tu empresa</a> está el patrón mínimo.</p>
+
+    <hr>
+
+    <p>Si quieres calcular el ROI de un proceso concreto de tu empresa con esta plantilla, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. En una conversación de 45 minutos salimos con el numerador, el denominador y la pregunta única para el trimestre. Sin compromiso y sin venderte una plataforma.</p>
+
+    <p style="font-size:13px; color:var(--text-dim); margin-top:24px;">Para una referencia externa sobre cómo las empresas que extraen valor de la IA generativa miden el impacto más allá del tiempo ahorrado, el <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener">State of AI Report de McKinsey</a> describe los patrones de adopción y las métricas asociadas en empresas que reportan retorno medible.</p>
+
+  </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cómo se calcula el ROI de un agente de IA en una empresa?</summary>
+        <p>El ROI realista de un agente de IA se calcula sumando tres palancas: tiempo recuperado por las personas que antes hacían la tarea, errores evitados (multados, retrabajos, clientes perdidos) y capacidad nueva que la empresa no podía atender. Esa suma se divide entre el coste total anual del agente, incluyendo la suscripción al modelo, el tiempo de la persona dueña del proceso y el coste de mantenimiento. Si solo cuentas tiempo recuperado, estás midiendo entre el 30 y el 50 por ciento del ROI real.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuáles son los KPIs imprescindibles de un agente de IA en producción?</summary>
+        <p>Tres familias: KPIs de uso (volumen procesado, intentos por usuario, frecuencia), KPIs de calidad (tasa de error visible, derivaciones a humano, tasa de retrabajo) y KPIs de impacto (horas equivalentes recuperadas, casos atendidos que antes no se atendían, ahorro por error evitado). En una pyme bastan entre cuatro y seis de esas métricas en una sola tabla revisada cada semana. Las dashboards complejas suelen no usarse.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tarda un agente de IA en dar ROI positivo en una pyme?</summary>
+        <p>En implantaciones bien acotadas (un proceso, un dueño humano, una métrica clara), entre seis y doce semanas para empezar a ver retorno medible. El payback completo de la inversión suele caer entre seis y dieciocho meses, dependiendo de cuánto tiempo libera por persona y de si la empresa reasigna ese tiempo a actividad de mayor valor. Si en doce semanas no hay señal alguna, casi siempre el problema no es el agente: es el diseño del proceso o la asignación de responsabilidad humana.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Por qué la mayoría de empresas mide mal el ROI de su IA?</summary>
+        <p>Porque solo cuentan lo que es fácil de medir: horas ahorradas. Esa palanca suele ser entre un 30 y un 50 por ciento del retorno real. El resto está en los errores que la IA evita antes de que ocurran, en la capacidad nueva que abre, en el tiempo de directivos que dejan de ser cuellos de botella y en la atención que la empresa puede dar a casos que antes simplemente perdía. Cuando un CFO solo mide tiempo ahorrado, suele concluir que el ROI es bajo y desinvierte justo cuando empezaba a multiplicar.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">Calcula el ROI real de un proceso candidato en 45 minutos</h2>
+    <p class="article-cta-text">Una conversación con el dueño humano del proceso. Salimos con la plantilla rellena: numerador con las tres palancas, denominador con coste total honesto y la pregunta única para el comité del trimestre. Sin compromiso y sin venderte una plataforma.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/cuanto-cuesta-automatizar-ia.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Cuánto cuesta automatizar con IA en una empresa (rangos reales, sin humo)</span>
+        <span class="related-card-excerpt">El otro lado de la ecuación. Cifras concretas de cuánto cuesta montar un agente de IA en una pyme española, según el tipo de proceso y el nivel de integración.</span>
+        <span class="related-card-readtime">7 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/auditoria-agente-ia-cada-dia.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Cómo auditar lo que tu agente de IA decide cada día (sin doctorado en IT)</span>
+        <span class="related-card-excerpt">Tres preguntas que un directivo no técnico puede responder cada mañana en menos de 30 minutos para mantener el ROI calculado y el real alineados.</span>
+        <span class="related-card-readtime">8 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
