@@ -1,5 +1,18 @@
 [
   {
+    "slug": "productividad-invisible-ia-empresa",
+    "title": "Productividad invisible: por qué la IA no se nota (aún) en tu cuenta de resultados",
+    "date": "2026-06-02",
+    "category": "Estrategia",
+    "keywords": "",
+    "excerpt": "Tu empresa lleva meses usando IA y la productividad no sube en los KPIs. No es que la IA no funcione: es que el ahorro se evapora antes de llegar a la cuenta de resultados. Te explicamos por qué y cómo medirlo de verdad.",
+    "lead": "Tu empresa lleva meses usando IA y la productividad no sube en los KPIs. No es que la IA no funcione: es que el ahorro se evapora antes de llegar a la cuenta de resultados. Te explicamos por qué y cómo medirlo de verdad.",
+    "readtime": "9 min",
+    "image": "img/productividad-invisible-ia-empresa.webp",
+    "featured": false,
+    "dateModified": "2026-06-02"
+  },
+  {
     "slug": "como-medir-roi-agente-ia",
     "title": "Cómo medir el ROI de un agente de IA en tu empresa (sin spreadsheets imposibles)",
     "date": "2026-05-29",
@@ -152,17 +165,6 @@
     "featured": false
   },
   {
-    "slug": "ia-para-directivos",
-    "title": "Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico",
-    "date": "2026-04-14",
-    "category": "Estrategia",
-    "keywords": "IA para directivos que no son técnicos, IA explicada para empresarios, guía IA para CEOs, inteligencia artificial para directivos, IA empresas sin conocimientos técnicos",
-    "excerpt": "No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.",
-    "readtime": "7 min",
-    "image": "img/ia-para-directivos.png",
-    "featured": false
-  },
-  {
     "slug": "que-procesos-automatizar-primero",
     "title": "Qué procesos automatizar primero con IA: los tres candidatos más frecuentes",
     "date": "2026-04-16",
@@ -175,16 +177,15 @@
     "featured": false
   },
   {
-    "slug": "como-empezar-con-ia-en-tu-empresa",
-    "title": "Cómo empezar con IA en tu empresa (guía para quien no sabe por dónde)",
-    "date": "2026-04-07",
+    "slug": "ia-para-directivos",
+    "title": "Inteligencia artificial para directivos: lo que necesitas saber sin ser técnico",
+    "date": "2026-04-14",
     "category": "Estrategia",
-    "keywords": "cómo empezar con IA en mi empresa, primeros pasos IA empresa, guía IA para empresas, IA para directivos, implementar inteligencia artificial en empresa",
-    "excerpt": "No necesitas ser técnico para dar el primer paso con IA. Te explicamos cómo identificar por dónde empezar y qué evitar en el camino.",
-    "lead": "Sabes que la inteligencia artificial puede hacer algo por tu empresa. Lo lees cada semana, lo escuchas en cada evento. Pero cuando intentas dar el primer paso, la pregunta es siempre la misma: cómo empezar sin perder tiempo ni dinero en algo que no funcione.",
-    "readtime": "5 min",
-    "image": "img/como-empezar-con-ia.png",
-    "featured": true
+    "keywords": "IA para directivos que no son técnicos, IA explicada para empresarios, guía IA para CEOs, inteligencia artificial para directivos, IA empresas sin conocimientos técnicos",
+    "excerpt": "No necesitas entender cómo funciona la IA por dentro para tomar buenas decisiones sobre ella en tu empresa. Te explicamos qué puede hacer, qué no puede hacer y qué tienes que preguntarte antes de empezar.",
+    "readtime": "7 min",
+    "image": "img/ia-para-directivos.png",
+    "featured": false
   },
   {
     "slug": "estrategia-de-ia-para-tu-empresa",
@@ -209,6 +210,18 @@
     "readtime": "6 min",
     "image": "img/automatizacion-ia-vs-rpa.webp",
     "featured": false
+  },
+  {
+    "slug": "como-empezar-con-ia-en-tu-empresa",
+    "title": "Cómo empezar con IA en tu empresa (guía para quien no sabe por dónde)",
+    "date": "2026-04-07",
+    "category": "Estrategia",
+    "keywords": "cómo empezar con IA en mi empresa, primeros pasos IA empresa, guía IA para empresas, IA para directivos, implementar inteligencia artificial en empresa",
+    "excerpt": "No necesitas ser técnico para dar el primer paso con IA. Te explicamos cómo identificar por dónde empezar y qué evitar en el camino.",
+    "lead": "Sabes que la inteligencia artificial puede hacer algo por tu empresa. Lo lees cada semana, lo escuchas en cada evento. Pero cuando intentas dar el primer paso, la pregunta es siempre la misma: cómo empezar sin perder tiempo ni dinero en algo que no funcione.",
+    "readtime": "5 min",
+    "image": "img/como-empezar-con-ia.png",
+    "featured": true
   },
   {
     "slug": "chatbot-vs-agente-de-ia",
