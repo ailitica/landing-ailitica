@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: https://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Productividad invisible: por qué la IA no se nota (aún) en tu cuenta de resultados | Ailitica</title>
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Productividad invisible: por qué la IA no se nota (aún) en tu cuenta de resultados — Ailitica</title>
 <meta name="description" content="Tu empresa lleva meses usando IA y la productividad no sube en los KPIs. No es que la IA no funcione: es que el ahorro se evapora antes de llegar a la cuenta de resultados. Te explicamos por qué y cómo medirlo de verdad.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ailitica.com/blog/productividad-invisible-ia-empresa.html">
 
 <meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/productividad-invisible-ia-empresa.html">
 <meta property="og:title" content="Productividad invisible: por qué la IA no se nota (aún) en tu cuenta de resultados">
 <meta property="og:description" content="Tu empresa lleva meses usando IA y la productividad no sube en los KPIs. El ahorro existe, pero se evapora antes de llegar a la cuenta de resultados. Te explicamos por qué.">
-<meta property="og:url" content="https://ailitica.com/blog/productividad-invisible-ia-empresa.html">
 <meta property="og:image" content="https://ailitica.com/blog/img/productividad-invisible-ia-empresa.webp">
 <meta property="og:site_name" content="Ailitica">
 <meta property="article:published_time" content="2026-06-02">
 <meta property="article:modified_time" content="2026-06-02">
-<meta property="article:author" content="https://www.linkedin.com/in/arriza/">
+<meta property="article:author" content="Andoni Arrizabalaga">
 <meta property="article:section" content="Estrategia IA">
-
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
 <meta name="twitter:title" content="Productividad invisible: por qué la IA no se nota (aún) en tu cuenta de resultados">
 <meta name="twitter:description" content="El ahorro de la IA existe, pero se evapora antes de llegar a la cuenta de resultados. Te explicamos por qué.">
 <meta name="twitter:image" content="https://ailitica.com/blog/img/productividad-invisible-ia-empresa.webp">
-
-<link rel="icon" type="image/png" href="../favicon.png">
-<link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="blog.css">
 
 <script type="application/ld+json">
 {
@@ -56,16 +56,18 @@
     "url": "https://ailitica.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://ailitica.com/img/logo-ailitica.png"
+      "url": "https://ailitica.com/icon.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ailitica.com/blog/productividad-invisible-ia-empresa.html"
-  }
+  },
+  "articleSection": "Estrategia IA",
+  "inLanguage": "es"
 }
 </script>
-
+<!-- GEO:BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -92,7 +94,6 @@
   ]
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -133,51 +134,451 @@
   ]
 }
 </script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+
+</style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="../index.html" class="logo-link">
-      <img src="../img/logo-ailitica.png" alt="Ailitica" class="logo">
-    </a>
-    <nav class="main-nav">
-      <a href="../index.html#metodo">Método</a>
-      <a href="../index.html#servicios">Servicios</a>
-      <a href="index.html" class="active">Blog</a>
-      <a href="../index.html#contacto" class="cta-nav">Contacto</a>
-    </nav>
-  </div>
-</header>
+<div id="cursor"></div>
+<div id="progress-bar"></div>
 
-<main class="blog-post">
-  <article class="container post-container">
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-    <nav class="breadcrumbs" aria-label="Migas de pan">
-      <a href="../index.html">Inicio</a>
-      <span class="sep">›</span>
-      <a href="index.html">Blog</a>
-      <span class="sep">›</span>
-      <span class="current">Productividad invisible</span>
-    </nav>
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
 
-    <header class="post-header">
-      <span class="post-category">Estrategia IA</span>
-      <h1>Productividad invisible: por qué la IA no se nota (aún) en tu cuenta de resultados</h1>
-      <div class="post-meta">
-        <span class="post-author">Por <a href="https://www.linkedin.com/in/arriza/" rel="author">Andoni Arrizabalaga</a></span>
-        <span class="post-date">2 de junio de 2026</span>
-        <span class="post-readtime">9 min de lectura</span>
-      </div>
-    </header>
+<article class="article-wrap" aria-label="Artículo">
 
-    <figure class="post-hero">
-      <img src="img/productividad-invisible-ia-empresa.webp" alt="Despacho de pyme al final del día con luz tenue, un portátil abierto mostrando un dashboard de KPIs planos y una taza de café medio vacía sobre el escritorio" width="1200" height="630">
-    </figure>
+  <figure class="article-hero">
+    <img src="img/productividad-invisible-ia-empresa.webp" alt="Despacho de pyme al final del día con luz tenue, un portátil abierto mostrando un dashboard de KPIs planos y una taza de café medio vacía sobre el escritorio" width="1200" height="630" loading="eager">
+  </figure>
 
-    <aside class="tldr">
-      <strong>En resumen:</strong> Tu empresa lleva meses usando IA, el equipo dice que ahorra tiempo, y los KPIs no se mueven. No es que la IA no funcione: es que el ahorro se evapora antes de llegar a la cuenta de resultados. Se reinvierte en pulir entregables, en más reuniones, en tareas que antes no se hacían. Para que el impacto sea visible hay que rediseñar el proceso, no solo soltar la herramienta. Tres palancas concretas al final del artículo.
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia IA</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">2 de junio de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">9 min lectura</span>
+    </div>
+    <h1 class="article-title">Productividad invisible: por qué la IA no se nota (aún) en tu <em>cuenta de resultados</em></h1>
+    <!-- GEO:TLDR -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Tu empresa lleva meses usando IA, el equipo dice que ahorra tiempo, y los KPIs no se mueven. No es que la IA no funcione: es que <strong>el ahorro se evapora antes de llegar a la cuenta de resultados</strong>. Se reinvierte en pulir entregables, en más reuniones, en tareas que antes no se hacían. Para que el impacto sea visible hay que rediseñar el proceso, no solo soltar la herramienta. Tres palancas concretas al final del artículo.</p>
     </aside>
+  </header>
+
+  <div class="article-body">
 
     <p>Llevas seis meses con licencias de IA pagadas. Tu equipo dice que la usa todos los días. En las reuniones, alguien siempre comenta "esto antes me llevaba dos horas y ahora veinte minutos". Y sin embargo, cuando miras el cuadro de mando del trimestre, no hay nada que delate que la IA esté ahí. Mismo margen. Misma capacidad. Mismo número de propuestas enviadas. Mismo lead time.</p>
 
@@ -195,7 +596,7 @@
 
     <p>Los KPIs financieros clásicos —margen, ingresos, número de clientes activos— son indicadores de resultado. Se mueven cuando el sistema entero se ha reorganizado, no cuando una pieza interna ha cambiado. Si tu organización tenía un cuello de botella en la fase de propuesta y la IA lo ha eliminado, lo que verás es que el cuello de botella se ha desplazado a la siguiente fase: revisión legal, validación del cliente, capacidad de entrega. El throughput total seguirá determinado por el nuevo cuello, no por el antiguo. Y los KPIs solo se moverán cuando esa nueva restricción también se haya resuelto.</p>
 
-    <p>Esto tiene dos consecuencias prácticas. La primera, que medir el impacto de la IA mirando solo KPIs de negocio te lleva a conclusiones falsas: "no funciona". La segunda, que para detectar valor real necesitas métricas intermedias que sí se mueven antes que la cuenta de resultados. Si no las tienes, estás conduciendo de noche sin faros.</p>
+    <p>Esto tiene dos consecuencias prácticas. La primera, que medir el impacto de la IA mirando solo KPIs de negocio te lleva a conclusiones falsas: "no funciona". La segunda, que para detectar valor real necesitas métricas intermedias que sí se mueven antes que la cuenta de resultados. Si no las tienes, estás conduciendo de noche sin faros. Es la misma lógica que aplicamos al explicar <a href="como-medir-roi-agente-ia.html">cómo medir el ROI de un agente de IA</a>: lo fácil de contar casi nunca es lo que de verdad importa.</p>
 
     <h2>Las tres capas de medición que sí funcionan</h2>
 
@@ -207,7 +608,9 @@
 
     <p><strong>Capa tres: resultado.</strong> Margen, capacidad facturable, ventas adicionales, errores evitados. Aquí es donde la cuenta de resultados empieza a notar la diferencia, pero solo si las capas uno y dos están en orden y si se ha tomado una decisión explícita sobre <em>qué hacer con la capacidad liberada</em>. Sin esa decisión, la capa tres no se mueve aunque las dos primeras vayan perfectas.</p>
 
-    <p>La regla práctica: si tu adopción está bien, tu ciclo se ha movido y tu resultado no, el problema no es la IA. Es que nadie ha rediseñado el proceso para capitalizar el ahorro.</p>
+    <div class="callout">
+      <p><strong>La regla práctica:</strong> si tu adopción está bien, tu ciclo se ha movido y tu resultado no, el problema no es la IA. Es que nadie ha rediseñado el proceso para capitalizar el ahorro.</p>
+    </div>
 
     <h2>Tres palancas para que el ahorro llegue a la cuenta de resultados</h2>
 
@@ -219,80 +622,131 @@
 
     <p><strong>Palanca dos: redirigir la capacidad a tareas con margen mayor.</strong> Si liberar horas en propuestas comerciales permite que alguien dedique tiempo a recuperar clientes inactivos, a hacer venta cruzada o a entrar en un segmento nuevo, el margen incremental por hora reasignada suele ser mucho más alto que el de la tarea original. Esto solo funciona si dirección decide explícitamente dónde quiere que aterrice el ahorro. Sin esa decisión, la capacidad se queda en mantenimiento.</p>
 
-    <p><strong>Palanca tres: usar el ahorro para reducir el cuello de botella siguiente.</strong> A veces la respuesta correcta no es ampliar producción sino acortar el ciclo de cobro, mejorar la tasa de respuesta a incidencias, o reducir el tiempo de onboarding de un cliente. Si tu cuello real está en la posventa, liberar tiempo comercial no se nota; liberar tiempo de operaciones, sí. Detectar dónde duele de verdad es trabajo de dirección, no de la herramienta.</p>
+    <p><strong>Palanca tres: usar el ahorro para reducir el cuello de botella siguiente.</strong> A veces la respuesta correcta no es ampliar producción sino acortar el ciclo de cobro, mejorar la tasa de respuesta a incidencias, o reducir el tiempo de onboarding de un cliente. Si tu cuello real está en la posventa, liberar tiempo comercial no se nota; liberar tiempo de operaciones, sí. Detectar dónde duele de verdad es trabajo de dirección, no de la herramienta. Es la misma frontera que describimos en <a href="ia-con-criterio-humano.html">IA con criterio humano</a>: la tecnología abre la opción, la decisión sigue siendo humana.</p>
 
     <h2>Lo que casi nadie dice sobre el calendario</h2>
 
     <p>La IA no produce su retorno en el trimestre en que se compra. La curva real, en una pyme que está empezando, se parece más a un proceso de aprendizaje organizativo que a una inversión clásica. Los primeros tres meses son adopción: la gente prueba, abandona, vuelve. Los siguientes tres son rediseño: alguien empieza a darse cuenta de qué procesos se pueden tocar de verdad. A partir del mes seis, si se ha llegado bien, empiezan a aparecer movimientos en capa dos. Capa tres, salvo en casos muy específicos, llega entre el mes nueve y el mes dieciocho.</p>
 
-    <p>Esto no es pesimismo: es honestidad sobre cómo funciona la adopción tecnológica en empresas pequeñas que no tienen un equipo dedicado a operacionalizar la transformación. Y es importante porque la mayoría de las decisiones de "esto no funciona" se toman entre el mes tres y el cinco, justo cuando la curva está empezando a inflexionar.</p>
+    <p>Esto no es pesimismo: es honestidad sobre cómo funciona la adopción tecnológica en empresas pequeñas que no tienen un equipo dedicado a operacionalizar la transformación. Y es importante porque la mayoría de las decisiones de "esto no funciona" se toman entre el mes tres y el cinco, justo cuando la curva está empezando a inflexionar. Saber <a href="cuando-no-usar-ia-empresa.html">cuándo NO usar IA</a> es tan importante como saber cuándo insistir.</p>
 
     <h2>La pregunta correcta para el próximo comité</h2>
 
     <p>Si en tu empresa estás en mes cuatro, mes seis o mes nueve con IA y no notas nada en la cuenta de resultados, hay una pregunta más útil que "¿está funcionando?". Es esta: <strong>¿quién ha decidido qué hacer con las horas que se están liberando?</strong> Si la respuesta es nadie, ya tienes el diagnóstico. Si la respuesta es alguien, pero esa decisión no se ha bajado a métricas concretas, también.</p>
 
-    <p>La IA no es invisible porque no funcione. Es invisible porque, en ausencia de una decisión explícita, el sistema absorbe el ahorro de la forma más cómoda: dejándolo donde estaba. Hacer visible la IA es, en el fondo, una decisión de dirección, no un problema técnico.</p>
+    <p>La IA no es invisible porque no funcione. Es invisible porque, en ausencia de una decisión explícita, el sistema absorbe el ahorro de la forma más cómoda: dejándolo donde estaba. Hacer visible la IA es, en el fondo, una decisión de dirección, no un problema técnico. Es la misma lógica que aplican las empresas que sí sacan partido a sus <a href="agentes-de-ia-para-pymes.html">agentes de IA en pymes</a>.</p>
 
-    <p>En Ailitica trabajamos justo en esa frontera: rediseñar el proceso para que el ahorro de la IA aterrice donde la empresa lo necesita, no donde caiga por gravedad. Si quieres ver cómo se aplica a tu caso, <a href="../index.html#contacto">cuéntanos en qué punto estás</a> y lo miramos juntos.</p>
+    <hr>
 
-    <section class="post-faq">
-      <h2>Preguntas frecuentes</h2>
+    <p>En Ailitica trabajamos justo en esa frontera: rediseñar el proceso para que el ahorro de la IA aterrice donde la empresa lo necesita, no donde caiga por gravedad. Si quieres ver cómo se aplica a tu caso, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong> y lo miramos juntos.</p>
 
-      <details>
+  </div>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
         <summary>¿Por qué la IA no se refleja en mis KPIs si todo el equipo la usa?</summary>
         <p>Porque el ahorro de tiempo individual rara vez se convierte en horas facturables, en ventas adicionales o en reducción de plantilla. Se reinvierte automáticamente en pulir entregables, en más reuniones o en tareas de baja prioridad. Sin un rediseño del proceso, la ganancia se queda en el plano personal y nunca llega a la cuenta de resultados.</p>
       </details>
-
-      <details>
+      <details class="faq-item">
         <summary>¿Cuánto tiempo tarda la IA en notarse en resultados de negocio?</summary>
         <p>Entre seis y dieciocho meses si hay un rediseño explícito del proceso. Si solo se ha entregado una herramienta al equipo, el impacto medible puede no llegar nunca. El factor decisivo no es la tecnología sino la decisión de qué se hace con las horas liberadas.</p>
       </details>
-
-      <details>
+      <details class="faq-item">
         <summary>¿Qué métricas debo seguir para saber si la IA está funcionando de verdad?</summary>
         <p>Tres niveles. Adopción (qué porcentaje del equipo la usa de forma recurrente), ciclo (cuánto se ha acortado el lead time del proceso intervenido) y resultado (margen, capacidad facturable, errores evitados). Solo el tercer nivel impacta en cuenta de resultados, pero los tres deben moverse en orden.</p>
       </details>
-
-      <details>
+      <details class="faq-item">
         <summary>¿Tiene sentido seguir invirtiendo en IA si no veo retorno todavía?</summary>
         <p>Sí, si la inversión es contenida y el aprendizaje es explícito. La fase inicial de IA en una pyme se parece más a una curva de adopción que a una inversión clásica con payback claro. Lo arriesgado no es invertir poco y aprender, sino invertir mucho sin un mecanismo para medir qué está pasando.</p>
       </details>
-    </section>
+    </div>
+  </section>
 
-    <section class="post-related">
-      <h2>Sigue leyendo</h2>
-      <ul>
-        <li><a href="cuanto-cuesta-automatizar-ia.html">Cuánto cuesta automatizar con IA en una pyme: rangos reales y trampas habituales</a></li>
-        <li><a href="ia-con-criterio-humano.html">IA con criterio humano: el patrón que separa los proyectos que funcionan de los que se quedan en demo</a></li>
-        <li><a href="como-controlar-agente-ia-empresa.html">Cómo controlar lo que decide un agente de IA en tu empresa</a></li>
-        <li><a href="cuando-no-usar-ia-empresa.html">Cuándo NO usar IA en tu empresa: 6 señales claras</a></li>
-        <li><a href="agentes-de-ia-para-pymes.html">Agentes de IA para pymes: qué son, qué no son y cuándo tienen sentido</a></li>
-      </ul>
-    </section>
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Tu IA se nota en tu cuenta de resultados?</h2>
+    <p class="article-cta-text">Si llevas meses con IA y no ves el impacto en los números, lo más probable es que el problema no sea la herramienta sino el proceso. En una conversación corta detectamos dónde se está evaporando el ahorro y qué palanca activar para que aterrice en la cuenta de resultados.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Hablamos</a>
+  </div>
 
-    <footer class="post-footer">
-      <div class="post-cta">
-        <h3>¿Tu IA se nota en tu cuenta de resultados?</h3>
-        <p>Si llevas meses con IA y no ves el impacto en los números, lo más probable es que el problema no sea la herramienta sino el proceso. En Ailitica te ayudamos a rediseñarlo.</p>
-        <a href="../index.html#contacto" class="cta-button">Hablamos</a>
-      </div>
-    </footer>
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="como-medir-roi-agente-ia.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Cómo medir el ROI de un agente de IA en tu empresa (sin spreadsheets imposibles)</span>
+        <span class="related-card-excerpt">Tres palancas que la mayoría de empresas no contabiliza y que multiplican el retorno real por dos. La cara medible de la productividad invisible.</span>
+        <span class="related-card-readtime">8 min lectura</span>
+      </a>
+      <a class="related-card" href="cuando-no-usar-ia-empresa.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Cuándo NO usar IA en tu empresa: 6 señales claras</span>
+        <span class="related-card-excerpt">Antes de medir si la IA se nota, conviene saber si tenía sentido desplegarla. Seis señales para no invertir donde el retorno nunca va a aparecer.</span>
+        <span class="related-card-readtime">7 min lectura</span>
+      </a>
+    </div>
+  </section>
 
-  </article>
-</main>
+</article>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2026 Ailitica. Agentes de IA y automatización con criterio humano.</p>
-    <nav class="footer-nav">
-      <a href="../index.html#metodo">Método</a>
-      <a href="../index.html#servicios">Servicios</a>
-      <a href="index.html">Blog</a>
-      <a href="../aviso-legal.html">Aviso legal</a>
-      <a href="../politica-privacidad.html">Privacidad</a>
-    </nav>
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
   </div>
 </footer>
 
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
 </body>
 </html>
