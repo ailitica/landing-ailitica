@@ -1,5 +1,18 @@
 [
   {
+    "slug": "senales-agente-ia-fuera-de-control",
+    "title": "7 señales de que tu agente de IA está fuera de control",
+    "date": "2026-06-09",
+    "category": "Estrategia",
+    "keywords": "señales de que un agente de IA está fuera de control, detectar fallo agente IA, alarma IA empresa, agente IA decisiones extrañas",
+    "excerpt": "Las 7 señales de que un agente de IA está fuera de control que cualquier responsable de negocio detecta en menos de 5 minutos, sin abrir un solo log.",
+    "lead": "Un agente de IA no avisa cuando empieza a tomar decisiones que no debería. Estas son las 7 señales de que un agente de IA está fuera de control que un humano puede detectar en menos de 5 minutos, sin abrir un solo log técnico. Cuanto antes las veas, más barato sale el problema.",
+    "readtime": "8 min",
+    "image": "img/senales-agente-ia-fuera-de-control.webp",
+    "featured": false,
+    "dateModified": "2026-06-09"
+  },
+  {
     "slug": "human-in-the-loop-cuando-aplicarlo",
     "title": "Human in the loop: cuándo merece la pena (y cuándo es un seguro caro)",
     "date": "2026-06-04",
