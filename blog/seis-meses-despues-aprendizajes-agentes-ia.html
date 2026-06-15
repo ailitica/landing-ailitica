@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
+<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
+<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
+<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
+<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
+<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Seis meses publicando sobre agentes de IA: lo que de verdad hemos aprendido (y rectificado) — Ailitica</title>
+<meta name="description" content="Llevamos seis meses escribiendo sobre agentes de IA. Unas cosas las clavamos, otras las hemos rectificado a la luz de la realidad de las empresas. Esto es lo que ha cambiado nuestra forma de proponer.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/seis-meses-despues-aprendizajes-agentes-ia.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/seis-meses-despues-aprendizajes-agentes-ia.html">
+<meta property="og:title" content="Seis meses publicando sobre agentes de IA: lo que de verdad hemos aprendido (y rectificado)">
+<meta property="og:description" content="Llevamos seis meses escribiendo sobre agentes de IA. Unas cosas las clavamos, otras las hemos rectificado a la luz de la realidad de las empresas. Esto es lo que ha cambiado nuestra forma de proponer.">
+<meta property="og:image" content="https://ailitica.com/blog/img/seis-meses-despues-aprendizajes-agentes-ia.jpg">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-06-25">
+<meta property="article:modified_time" content="2026-06-25">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Seis meses publicando sobre agentes de IA: lo que de verdad hemos aprendido (y rectificado)">
+<meta name="twitter:description" content="Llevamos seis meses escribiendo sobre agentes de IA. Unas cosas las clavamos, otras las hemos rectificado a la luz de la realidad de las empresas.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/seis-meses-despues-aprendizajes-agentes-ia.jpg">
+
+<!-- GEO:Article — FIJO salvo campos de contenido -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Seis meses publicando sobre agentes de IA: lo que de verdad hemos aprendido (y rectificado)",
+  "description": "Llevamos seis meses escribiendo sobre agentes de IA para empresas. Algunas ideas las habíamos clavado desde el principio; otras las hemos rectificado a la luz de lo que pasa de verdad en las empresas. Esta es una retrospectiva honesta: qué predicciones funcionaron, qué post se quedó obsoleto, qué hemos cambiado en nuestra forma de proponer y hacia dónde va Ailitica a partir de aquí.",
+  "image": "https://ailitica.com/blog/img/seis-meses-despues-aprendizajes-agentes-ia.jpg",
+  "datePublished": "2026-06-25",
+  "dateModified": "2026-06-25",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "jobTitle": "CEO de Ailitica",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "url": "https://ailitica.com",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/seis-meses-despues-aprendizajes-agentes-ia.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "keywords": "aprendizajes agentes de IA empresa, lecciones IA empresa, lo que hemos aprendido de la IA, retrospectiva IA empresa, agentes de IA seis meses"
+}
+</script>
+<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ailitica.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ailitica.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Seis meses publicando sobre agentes de IA: lo que de verdad hemos aprendido (y rectificado)", "item": "https://ailitica.com/blog/seis-meses-despues-aprendizajes-agentes-ia.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué post se quedó obsoleto el primero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El que usaba un caso de IA sin supervisión que creíamos reciente y resultó ser de meses atrás. El ciclo de la IA va tan rápido que un caso de hace medio año ya es historia, no actualidad. Lo rectificamos cambiando el caso por uno verdaderamente fresco. La lección: en IA, la frescura del dato caduca en semanas, no en años, y conviene verificar la fecha antes de construir un argumento sobre un caso famoso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué predicción funcionó mejor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La idea de que el valor de la IA en la empresa no está en la herramienta sino en el criterio humano que la rodea. Seis meses después, los datos del sector lo confirman: hay adopción masiva de IA pero poco retorno, porque falta integración y criterio. Lo que dijimos desde el primer artículo —el humano manda, la IA amplifica— ha envejecido bien. Si acaso, deberíamos haber sido aún más insistentes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué viene a partir de aquí para Ailitica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Menos teoría general y más casos concretos. Los próximos meses los dedicaremos a profundizar en cómo se controla, se mide y se gobierna un agente de IA dentro de una empresa real, que es donde hemos visto que está el problema de verdad. La adopción ya no es el reto; la ejecución sí. Nuestro contenido se moverá en esa dirección: del qué es la IA al cómo se ejecuta bien."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+/* Tabla genérica de contenido */
+.data-table {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0; border-collapse:collapse;
+  background:var(--glass-bg); border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm); overflow:hidden;
+  font-size:clamp(13px, 1.2vw, 15px);
+}
+.data-table th, .data-table td {
+  padding:14px 18px; text-align:left;
+  border-bottom:1px solid var(--border-soft);
+  color:var(--text-secondary); line-height:1.6; vertical-align:top;
+}
+.data-table th {
+  font-family:var(--font-d); font-weight:400; color:var(--text-primary);
+  background:rgba(74,179,255,0.05); font-size:13px; letter-spacing:.02em;
+}
+.data-table tr:last-child td { border-bottom:none; }
+.data-table td strong { color:var(--text-primary); font-weight:400; }
+@media (max-width:560px) {
+  .data-table, .data-table thead, .data-table tbody,
+  .data-table th, .data-table td, .data-table tr { display:block; }
+  .data-table th { display:none; }
+  .data-table td { padding:10px 16px; border-bottom:1px solid var(--border-soft); }
+  .data-table tr { margin-bottom:14px; border:1px solid var(--border-soft); border-radius:var(--radius-sm); }
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/seis-meses-despues-aprendizajes-agentes-ia.jpg" alt="Sobre una mesa de roble envejecido, una brújula de latón pulido junto a un cuaderno abierto con varias anotaciones tachadas y corregidas a mano: la metáfora de seis meses de aprendizajes sobre agentes de IA con rumbo mantenido y rectificaciones honestas." width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">25 de junio de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">8 min lectura</span>
+    </div>
+    <h1 class="article-title">Seis meses publicando sobre agentes de IA: lo que de verdad hemos aprendido (y <em>rectificado</em>)</h1>
+
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Llevamos seis meses escribiendo sobre agentes de IA. Algunas cosas las habíamos clavado desde el principio; otras las hemos rectificado a la luz de la realidad de las empresas. Esto es una retrospectiva honesta: qué envejeció bien, qué tuvimos que corregir y hacia dónde va nuestra forma de proponer. Spoiler: la adopción ya no es el reto, la ejecución sí.</p>
+    </aside>
+  </header>
+
+  <div class="article-body">
+    <p>Llevamos medio año escribiendo en este blog sobre agentes de IA para empresas. Treintaitantos artículos después, toca algo que casi nadie hace: parar y revisar qué dijimos, qué ha envejecido bien y qué hemos tenido que rectificar. No por ejercicio de modestia, sino porque la honestidad sobre los propios errores es lo único que distingue a quien sabe de lo que habla de quien repite titulares.</p>
+    <p>Así que aquí va sin filtros: tres cosas que clavamos, tres que cambiamos, y hacia dónde nos lleva todo esto. Si lees nuestro contenido, esto te ayudará a entender por qué proponemos lo que proponemos. Y si no, es una buena foto de cómo se ve el sector desde dentro cuando llevas seis meses mirándolo de cerca.</p>
+
+    <h2>Lo que clavamos (y deberíamos haber gritado más)</h2>
+    <p>La idea con la que abrimos el blog —que el valor de la IA no está en la herramienta sino en el criterio humano que la rodea— ha envejecido sorprendentemente bien. Lo escribimos cuando todo el mundo hablaba de modelos y de potencia. Seis meses después, los datos del sector lo confirman: hay IA por todas partes y poco retorno, justo porque falta criterio e integración.</p>
+    <p>También acertamos al insistir en empezar por el proceso y no por la herramienta. Nuestro artículo sobre el <a href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">diagnóstico antes de implementar IA</a> es de los que mejor se sostienen: cada caso real que hemos visto confirma que quien empieza por la herramienta acaba con una demo cara, no con un resultado. Si acaso, el aprendizaje es que deberíamos haber sido más insistentes y menos diplomáticos.</p>
+    <div class="callout"><p><strong>Aprendizaje 1:</strong> cuando una idea contracorriente resulta acertada, el error no es haberla dicho. Es haberla dicho con la boca pequeña.</p></div>
+
+    <h2>Lo que rectificamos: tres correcciones honestas</h2>
+    <p>Y ahora la parte incómoda. Tres cosas que cambiamos sobre la marcha.</p>
+
+    <h3>1. La frescura del dato caduca en semanas, no en años</h3>
+    <p>Publicamos un análisis sobre los riesgos de la IA sin supervisión apoyándonos en un caso que creíamos de plena actualidad. Resultó ser de varios meses atrás. En cualquier otro sector eso sería irrelevante; en IA, medio año es una era geológica. Lo rectificamos cambiando el ejemplo por un caso verdaderamente reciente, manteniendo el anterior solo como referencia de que el patrón se repite. El resultado fue mejor: dos casos en pocos meses demuestran que no es anécdota, es <a href="/blog/ia-sin-supervision-caso-pocketos.html">un patrón sistémico de la IA sin supervisión</a>. La lección quedó grabada: verifica la fecha antes de construir un argumento sobre un caso famoso.</p>
+
+    <h3>2. «Horas ahorradas» es una forma pobre de medir el valor</h3>
+    <p>Durante los primeros artículos hablábamos del retorno de la IA sobre todo en términos de horas ahorradas. No estaba mal, pero estaba incompleto. Al ver casos reales entendimos que el retorno de verdad incluye palancas que casi nadie cuenta: errores evitados, capacidad liberada para tareas de más valor, velocidad de respuesta. Lo corregimos en nuestra guía sobre <a href="/blog/como-medir-roi-agente-ia.html">cómo medir el ROI de un agente de IA</a>, que mira el retorno con más de una palanca. Reducir el valor de la IA a horas es quedarse en la superficie.</p>
+
+    <h3>3. Hablábamos poco de control y nos faltó</h3>
+    <p>Al principio el blog era muy «qué puede hacer la IA por ti» y poco «cómo evitas que la IA te dé un disgusto». Los casos de IA descontrolada nos obligaron a reequilibrar. Hoy dedicamos bastante más espacio al control: cómo se vigila, cómo se ponen límites, cómo se gobierna. Esa parte —<a href="/blog/gobernanza-ia-empresa-pequena.html">la gobernanza de IA incluso en empresas pequeñas</a>— no era un añadido legal, era una pieza que faltaba en nuestra propia forma de proponer.</p>
+
+    <h2>Lo que viene: de qué es la IA a cómo se ejecuta</h2>
+    <p>El hilo que conecta todos estos aprendizajes es uno solo: el problema de la IA en la empresa ya no es saber qué es ni perder el miedo a usarla. Eso ya está. El problema es la ejecución —integrarla en un proceso real, medirla, controlarla— y ahí es donde casi todo el mundo se atasca.</p>
+    <p>Por eso los próximos meses de este blog se moverán en esa dirección: menos teoría general y más casos concretos de cómo se controla, se mide y se gobierna un agente dentro de una empresa real. Si has seguido nuestra <a href="/blog/estrategia-de-ia-para-tu-empresa.html">visión de la estrategia de IA para empresas</a>, esto es su continuación natural: bajar de la estrategia a la ejecución, que es donde se gana o se pierde de verdad.</p>
+    <p>Gracias por leernos estos seis meses. Lo mejor de escribir en abierto es que te obliga a revisar lo que dijiste. Y lo más honesto que podemos ofrecerte no es no equivocarnos nunca, sino contarte cuándo lo hicimos y qué cambiamos. Nos vemos en el siguiente.</p>
+  </div>
+
+  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué post se quedó obsoleto el primero?</summary>
+        <p>El que usaba un caso de IA sin supervisión que creíamos reciente y resultó ser de meses atrás. El ciclo de la IA va tan rápido que un caso de hace medio año ya es historia, no actualidad. Lo rectificamos cambiando el caso por uno verdaderamente fresco. La lección: en IA, la frescura del dato caduca en semanas, no en años, y conviene verificar la fecha antes de construir un argumento sobre un caso famoso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué predicción funcionó mejor?</summary>
+        <p>La idea de que el valor de la IA en la empresa no está en la herramienta sino en el criterio humano que la rodea. Seis meses después, los datos del sector lo confirman: hay adopción masiva de IA pero poco retorno, porque falta integración y criterio. Lo que dijimos desde el primer artículo —el humano manda, la IA amplifica— ha envejecido bien. Si acaso, deberíamos haber sido aún más insistentes.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué viene a partir de aquí para Ailitica?</summary>
+        <p>Menos teoría general y más casos concretos. Los próximos meses los dedicaremos a profundizar en cómo se controla, se mide y se gobierna un agente de IA dentro de una empresa real, que es donde hemos visto que está el problema de verdad. La adopción ya no es el reto; la ejecución sí. Nuestro contenido se moverá en esa dirección: del qué es la IA al cómo se ejecuta bien.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Te interesa cómo ejecutamos, no solo lo que escribimos?</h2>
+    <p class="article-cta-text">En Ailitica aplicamos exactamente lo que contamos aquí: empezamos por tu proceso, medimos el retorno con varias palancas y diseñamos el control desde el primer día. Si llevas meses leyéndonos y quieres ver cómo se traduce en tu empresa, hablémoslo. Cuéntanos dónde estás atascado entre adoptar y ejecutar y te decimos por dónde empezaríamos.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Hablar con Ailitica</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/estrategia-de-ia-para-tu-empresa.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Estrategia de IA para tu empresa: del entusiasmo al plan</span>
+        <span class="related-card-excerpt">La visión que abrió este blog y que mejor ha envejecido. El marco que conecta seis meses de aprendizajes en una sola dirección.</span>
+        <span class="related-card-readtime">8 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/gobernanza-ia-empresa-pequena.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Gobernanza de IA en una empresa pequeña: la versión de 2 páginas que sí funciona</span>
+        <span class="related-card-excerpt">La pieza que descubrimos que nos faltaba: cómo se controla y se gobierna un agente de IA sin convertirlo en un proyecto eterno.</span>
+        <span class="related-card-readtime">8 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
