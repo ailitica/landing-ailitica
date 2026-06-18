@@ -17,6 +17,13 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://ailitica.com/blog/que-es-el-ai-act-union-europea.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://ailitica.com/blog/gobernanza-ia-empresa-pequena.html</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
