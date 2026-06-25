@@ -17,14 +17,43 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://ailitica.com/blog/seis-meses-despues-aprendizajes-agentes-ia.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ailitica.com/blog/espana-lidera-ia-pero-no-ejecuta.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://ailitica.com/blog/vibe-coding-riesgo-seguridad-pymes.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://ailitica.com/blog/que-es-el-ai-act-union-europea.html</loc>
     <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ailitica.com/blog/automatizar-atencion-cliente-con-ia.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ailitica.com/blog/ai-act-lo-que-no-se-aplazo-agosto-2026.html</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
