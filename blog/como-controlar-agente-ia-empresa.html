@@ -91,7 +91,7 @@
       "name": "¿Qué pasa si el agente de IA se equivoca en mi empresa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Depende del mecanismo de control. Si los pasos críticos requieren aprobación humana, el error se detiene antes de ejecutarse y solo cuesta el tiempo de revisión. Si el agente trabaja en sandbox con whitelist, el daño está acotado a un perímetro pequeño. Y si hay registro estructurado, sabes qué falló, cuándo y por qué en menos de cinco minutos. Sin estos tres mecanismos, un error puede pasar inadvertido durante semanas."
+        "text": "Depende del control. Con aprobación humana se detiene antes de ejecutarse; en sandbox el daño queda acotado; con registro sabes qué falló en minutos."
       }
     },
     {
@@ -99,7 +99,7 @@
       "name": "¿Cuándo conviene meter aprobación humana (HITL) y cuándo no?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Conviene en pasos irreversibles o costosos: enviar a un cliente, mover dinero, modificar registros legales, comprometer a la empresa. No conviene en pasos reversibles, baratos o repetitivos masivos (clasificar, etiquetar, resumir, preparar borradores). La regla práctica: si rehacerlo cuesta minutos, deja al agente solo. Si rehacerlo cuesta días o una conversación incómoda, pon un humano antes."
+        "text": "En pasos irreversibles o costosos: enviar a un cliente, mover dinero, tocar registros legales. No en lo reversible o masivo: clasificar, etiquetar, resumir."
       }
     },
     {
@@ -107,7 +107,7 @@
       "name": "¿Cuánto cuesta auditar un agente de IA en una pyme?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El mecanismo mínimo (registro estructurado, sandbox con whitelist y aprobaciones en pasos críticos) se monta en una o dos semanas de trabajo y casi no añade coste operativo recurrente. Auditar después es leer el registro: minutos a la semana en una pyme. La parte cara solo aparece si hay que reconstruir lo que hizo el agente sin tener el registro, ahí sí se va a días de trabajo y a dudas que ningún CEO quiere tener."
+        "text": "El mecanismo mínimo se monta en una o dos semanas y casi no añade coste recurrente. Auditar es leer el registro: minutos a la semana en una pyme."
       }
     },
     {
@@ -115,7 +115,7 @@
       "name": "¿Necesito un equipo técnico grande para implementar estos controles?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Los tres mecanismos son decisiones de diseño, no piezas de infraestructura caras. Una pyme de cinco a treinta personas puede aplicarlos con un solo responsable identificado, una herramienta de logs sencilla y los flujos de aprobación que ya usa para otros temas (correo, mensajería interna o un canal compartido). Lo que sí necesita es claridad sobre qué puede y qué no puede tocar el agente antes de arrancar."
+        "text": "No. Son decisiones de diseño, no infraestructura cara. Bastan un responsable identificado, una herramienta de logs sencilla y los flujos que ya usas."
       }
     }
   ]
@@ -590,7 +590,7 @@ footer {
 
     <p>La forma operativa más sencilla para una pyme: el agente prepara la acción, la deja en un sitio donde un humano la ve (un correo, un canal de mensajería interna, una bandeja en una herramienta que ya use el equipo) y espera. Cuando el humano da el visto bueno, el agente ejecuta. Sin visto bueno, el agente no ejecuta. No hace falta más.</p>
 
-    <p>Esto se conoce en la jerga técnica como <em>human in the loop</em>, pero el nombre da igual. Lo importante es que el listado de pasos críticos esté escrito antes de arrancar y que el equipo sepa quién aprueba qué. Ese listado, en una pyme, cabe en una hoja de cálculo de quince filas.</p>
+    <p>Esto se conoce en la jerga técnica como <em>human in the loop</em>, pero el nombre da igual. Para decidir en qué pasos merece la pena y en cuáles es un freno innecesario, lo desarrollamos en <a href="/blog/human-in-the-loop-cuando-aplicarlo.html">cuándo aplicar human in the loop en tu empresa</a>. Lo importante es que el listado de pasos críticos esté escrito antes de arrancar y que el equipo sepa quién aprueba qué. Ese listado, en una pyme, cabe en una hoja de cálculo de quince filas.</p>
 
     <div class="callout">
       <p><strong>El error más común.</strong> Pedir aprobación humana para <em>todo</em>. Si el humano tiene que aprobar cada paso, el agente no libera tiempo, lo consume. La gracia del mecanismo es que el 90% de los pasos van solos y el 10% crítico va con freno. Confundir prudencia con desconfianza convierte al agente en un formulario lento, y entonces nadie lo usa.</p>
@@ -629,7 +629,7 @@ footer {
 
     <p>En una pyme, esto se monta sobre una herramienta que ya existe en la empresa. Una hoja de cálculo dedicada, una tabla en Notion, una base de datos sencilla. No hace falta más, mientras se escriba siempre y se escriba con un formato consistente. La consistencia es lo que permite leer mil filas en cinco minutos en lugar de en cinco horas.</p>
 
-    <p>La utilidad del registro aparece en tres momentos. En el día a día, permite revisar el trabajo del agente en lotes cortos (diez minutos a la semana basta) en lugar de revisar cada acción una a una. Cuando algo falla, permite reconstruir la cadena de eventos sin tener que reconstruirla de memoria. Y cuando llega el AI Act europeo en agosto de 2026, deja a la empresa preparada para responder a las obligaciones de trazabilidad sin un proyecto extra: hay registro porque ya había registro, no porque la ley lo haya forzado. Si te interesa cómo se está aplicando ese reglamento en empresas pequeñas, conviene revisar <a href="/blog/ai-act-pyme-aplazamiento-agosto-2026.html">AI Act pyme: el aplazamiento de agosto 2026 y lo que cambia</a>.</p>
+    <p>La utilidad del registro aparece en tres momentos. En el día a día, permite revisar el trabajo del agente en lotes cortos (diez minutos a la semana basta) en lugar de revisar cada acción una a una; sobre cómo convertir ese registro en una rutina ligera está <a href="/blog/auditoria-agente-ia-cada-dia.html">cómo auditar lo que tu agente de IA decide cada día</a>. Cuando algo falla, permite reconstruir la cadena de eventos sin tener que reconstruirla de memoria. Y cuando llega el AI Act europeo en agosto de 2026, deja a la empresa preparada para responder a las obligaciones de trazabilidad sin un proyecto extra: hay registro porque ya había registro, no porque la ley lo haya forzado. Si te interesa cómo se está aplicando ese reglamento en empresas pequeñas, conviene revisar <a href="/blog/ai-act-pyme-aplazamiento-agosto-2026.html">AI Act pyme: el aplazamiento de agosto 2026 y lo que cambia</a>.</p>
 
     <h3>Qué se registra y qué no</h3>
 
@@ -645,7 +645,7 @@ footer {
       <li><strong>Registro estructurado</strong> deja constancia de todo lo que el agente hace, dentro de su perímetro. Es la capa de trazabilidad, alimenta auditoría y mejora continua.</li>
     </ol>
 
-    <p>Una empresa que aplica los tres tiene control real. Una empresa que aplica solo uno tiene una sensación de control que se evapora la primera vez que algo va mal. Y lo que va mal con un agente de IA, va mal de forma silenciosa hasta que alguien lo encuentra: aquí enlazo con <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>, donde aparece el caso opuesto, el del proceso que no debería automatizarse de entrada.</p>
+    <p>Una empresa que aplica los tres tiene control real. Una empresa que aplica solo uno tiene una sensación de control que se evapora la primera vez que algo va mal. Y lo que va mal con un agente de IA, va mal de forma silenciosa hasta que alguien lo encuentra: por eso conviene conocer de antemano las <a href="/blog/senales-agente-ia-fuera-de-control.html">señales tempranas de que un agente de IA se sale del guion</a>. Aquí enlazo también con <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>, donde aparece el caso opuesto, el del proceso que no debería automatizarse de entrada.</p>
 
     <h2>Lo que conviene tener decidido antes de arrancar</h2>
 
@@ -679,19 +679,19 @@ footer {
     <div class="faq-list">
       <details class="faq-item">
         <summary>¿Qué pasa si el agente de IA se equivoca en mi empresa?</summary>
-        <p>Depende del mecanismo de control. Si los pasos críticos requieren aprobación humana, el error se detiene antes de ejecutarse y solo cuesta el tiempo de revisión. Si el agente trabaja en sandbox con whitelist, el daño está acotado a un perímetro pequeño. Y si hay registro estructurado, sabes qué falló, cuándo y por qué en menos de cinco minutos. Sin estos tres mecanismos, un error puede pasar inadvertido durante semanas.</p>
+        <p>Depende del control. Con aprobación humana se detiene antes de ejecutarse; en sandbox el daño queda acotado; con registro sabes qué falló en minutos.</p>
       </details>
       <details class="faq-item">
         <summary>¿Cuándo conviene meter aprobación humana (HITL) y cuándo no?</summary>
-        <p>Conviene en pasos irreversibles o costosos: enviar a un cliente, mover dinero, modificar registros legales, comprometer a la empresa. No conviene en pasos reversibles, baratos o repetitivos masivos (clasificar, etiquetar, resumir, preparar borradores). La regla práctica: si rehacerlo cuesta minutos, deja al agente solo. Si rehacerlo cuesta días o una conversación incómoda, pon un humano antes.</p>
+        <p>En pasos irreversibles o costosos: enviar a un cliente, mover dinero, tocar registros legales. No en lo reversible o masivo: clasificar, etiquetar, resumir.</p>
       </details>
       <details class="faq-item">
         <summary>¿Cuánto cuesta auditar un agente de IA en una pyme?</summary>
-        <p>El mecanismo mínimo (registro estructurado, sandbox con whitelist y aprobaciones en pasos críticos) se monta en una o dos semanas de trabajo y casi no añade coste operativo recurrente. Auditar después es leer el registro: minutos a la semana en una pyme. La parte cara solo aparece si hay que reconstruir lo que hizo el agente sin tener el registro, ahí sí se va a días de trabajo y a dudas que ningún CEO quiere tener.</p>
+        <p>El mecanismo mínimo se monta en una o dos semanas y casi no añade coste recurrente. Auditar es leer el registro: minutos a la semana en una pyme.</p>
       </details>
       <details class="faq-item">
         <summary>¿Necesito un equipo técnico grande para implementar estos controles?</summary>
-        <p>No. Los tres mecanismos son decisiones de diseño, no piezas de infraestructura caras. Una pyme de cinco a treinta personas puede aplicarlos con un solo responsable identificado, una herramienta de logs sencilla y los flujos de aprobación que ya usa para otros temas (correo, mensajería interna o un canal compartido). Lo que sí necesita es claridad sobre qué puede y qué no puede tocar el agente antes de arrancar.</p>
+        <p>No. Son decisiones de diseño, no infraestructura cara. Bastan un responsable identificado, una herramienta de logs sencilla y los flujos que ya usas.</p>
       </details>
     </div>
   </section>

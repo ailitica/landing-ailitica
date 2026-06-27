@@ -92,7 +92,7 @@
       "name": "¿Qué es un agente vertical de IA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un agente vertical es un agente de IA diseñado para un dominio concreto: un sector (legal, banca, sanidad), una función (contratos, tesorería, atención clínica) o un proceso muy delimitado dentro de una empresa. A diferencia de un chatbot horizontal tipo ChatGPT genérico, el agente vertical se entrena, se ajusta y se evalúa contra la terminología, las fuentes y los flujos reales de ese dominio. La consecuencia práctica: responde mejor, se equivoca menos y se puede auditar contra un estándar claro de lo que es respuesta válida."
+        "text": "Un agente de IA diseñado para un dominio concreto —un sector, una función o un proceso— y evaluado contra sus fuentes y flujos reales, no contra todo."
       }
     },
     {
@@ -100,7 +100,7 @@
       "name": "¿En qué se diferencia un agente vertical de un asistente genérico?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El asistente genérico está optimizado para responder de todo razonablemente bien. El agente vertical está optimizado para responder un tipo de pregunta excepcionalmente bien y rechazar el resto. Esa renuncia explícita es lo que cambia los números: Rogo, agente vertical para banca de inversión, redujo su tasa de hallucination del 34,1% al 3,9% al especializar el dominio. Un asistente genérico no puede acercarse a esa cifra porque no tiene incentivo para reconocer cuándo no sabe, mientras que el vertical sí lo tiene y eso es precisamente lo que se entrena."
+        "text": "El genérico responde de todo razonablemente bien; el vertical responde una cosa excepcionalmente bien y rechaza el resto. Por eso se equivoca menos."
       }
     },
     {
@@ -108,7 +108,7 @@
       "name": "¿Cuántos datos hace falta para construir un agente vertical?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mucho menos de lo que la mayoría cree. La idea de que solo las grandes pueden permitirse un vertical porque hace falta entrenar un modelo desde cero es un mito de hace tres años. En 2026, un agente vertical para una pyme se monta sobre un modelo base ya entrenado (Claude, GPT, etcétera) al que se le proporciona la documentación específica del dominio (entre 50 y 500 documentos suele bastar), los patrones de decisión propios y los criterios de validación. Lo que importa no es el volumen sino la calidad y la curación. Una pyme con su procedimiento bien escrito tiene más material útil que muchos corporativos con terabytes de PDFs desordenados."
+        "text": "Mucho menos de lo que se cree. Sobre un modelo base, suelen bastar entre 50 y 500 documentos del dominio bien curados. Importa la calidad, no el volumen."
       }
     },
     {
@@ -116,7 +116,7 @@
       "name": "¿Cuesta más un agente vertical que usar ChatGPT directamente?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí en construcción, no en operación. Montar un agente vertical para una pyme suele costar entre 8.000 y 30.000 euros según alcance, frente al cero euros de abrir una pestaña de ChatGPT. Pero el coste relevante no es ese: es lo que vale el error. Si tu equipo está usando un genérico para decisiones que afectan al cliente, al margen o a la responsabilidad legal, el coste oculto de los errores no detectados es mayor que la diferencia. El vertical no compite con la herramienta genérica gratuita: compite con el coste oculto de seguir usándola para lo que no debería."
+        "text": "Sí en construcción (entre 8.000 y 30.000 € en una pyme), no en operación. Pero compite con el coste oculto del error, no con el ChatGPT gratuito."
       }
     },
     {
@@ -124,7 +124,7 @@
       "name": "¿Cuándo NO conviene un agente vertical?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cuando la tarea es genuinamente transversal y la calidad media es suficiente. Resumir un correo, redactar un primer borrador interno, traducir un texto, ordenar ideas. Para esos casos, el asistente horizontal sigue siendo lo correcto: barato, disponible y suficiente. La pregunta para decidir es directa: ¿el resultado va a salir de la empresa o va a sostener una decisión que importa? Si no, horizontal. Si sí, vertical o nada."
+        "text": "Cuando la tarea es transversal y la calidad media basta: resumir, traducir, ordenar ideas. La pregunta: ¿el resultado sostiene una decisión que importa?"
       }
     }
   ]
@@ -585,7 +585,7 @@ footer {
 
     <h2>El frame dominante en contenido español está equivocado</h2>
 
-    <p>Si uno hace la búsqueda en español sobre IA para empresas, lo que aparece arriba sigue siendo, en su mayoría, lo mismo que hace dos años. <em>Asistente para tu negocio</em>. <em>El ChatGPT de tu empresa</em>. <em>Una IA que sirve para todo</em>. El frame implícito es siempre el mismo: cuanto más generalista, mejor. Cuantas más cosas haga, más valor.</p>
+    <p>Casi nadie busca un <strong>agente vertical</strong>: en español, lo que aparece arriba sobre IA para empresas sigue siendo lo mismo que hace dos años. <em>Asistente para tu negocio</em>. <em>El ChatGPT de tu empresa</em>. <em>Una IA que sirve para todo</em>. El frame implícito es siempre el mismo: cuanto más generalista, mejor. Cuantas más cosas haga, más valor.</p>
 
     <p>El problema es que ese frame ya no describe lo que las empresas que están ganando con IA están comprando. Las que están moviendo facturación con agentes en producción, las que aparecen en las rondas de inversión que importan, las que han pasado el corte de la primera ola de hype y siguen creciendo, no están comprando asistentes genéricos. Están comprando lo contrario: agentes verticales. Un agente para una cosa, hecha excepcionalmente bien, sobre un dominio acotado.</p>
 
@@ -688,23 +688,23 @@ footer {
     <div class="faq-list">
       <details class="faq-item">
         <summary>¿Qué es un agente vertical de IA?</summary>
-        <p>Un agente vertical es un agente de IA diseñado para un dominio concreto: un sector (legal, banca, sanidad), una función (contratos, tesorería, atención clínica) o un proceso muy delimitado dentro de una empresa. A diferencia de un chatbot horizontal tipo ChatGPT genérico, el agente vertical se entrena, se ajusta y se evalúa contra la terminología, las fuentes y los flujos reales de ese dominio. La consecuencia práctica: responde mejor, se equivoca menos y se puede auditar contra un estándar claro de lo que es respuesta válida.</p>
+        <p>Un agente de IA diseñado para un dominio concreto —un sector, una función o un proceso— y evaluado contra sus fuentes y flujos reales, no contra todo.</p>
       </details>
       <details class="faq-item">
         <summary>¿En qué se diferencia un agente vertical de un asistente genérico?</summary>
-        <p>El asistente genérico está optimizado para responder de todo razonablemente bien. El agente vertical está optimizado para responder un tipo de pregunta excepcionalmente bien y rechazar el resto. Esa renuncia explícita es lo que cambia los números: Rogo, agente vertical para banca de inversión, redujo su tasa de hallucination del 34,1% al 3,9% al especializar el dominio. Un asistente genérico no puede acercarse a esa cifra porque no tiene incentivo para reconocer cuándo no sabe, mientras que el vertical sí lo tiene y eso es precisamente lo que se entrena.</p>
+        <p>El genérico responde de todo razonablemente bien; el vertical responde una cosa excepcionalmente bien y rechaza el resto. Por eso se equivoca menos.</p>
       </details>
       <details class="faq-item">
         <summary>¿Cuántos datos hace falta para construir un agente vertical?</summary>
-        <p>Mucho menos de lo que la mayoría cree. La idea de que solo las grandes pueden permitirse un vertical porque hace falta entrenar un modelo desde cero es un mito de hace tres años. En 2026, un agente vertical para una pyme se monta sobre un modelo base ya entrenado (Claude, GPT, etcétera) al que se le proporciona la documentación específica del dominio (entre 50 y 500 documentos suele bastar), los patrones de decisión propios y los criterios de validación. Lo que importa no es el volumen sino la calidad y la curación. Una pyme con su procedimiento bien escrito tiene más material útil que muchos corporativos con terabytes de PDFs desordenados.</p>
+        <p>Mucho menos de lo que se cree. Sobre un modelo base, suelen bastar entre 50 y 500 documentos del dominio bien curados. Importa la calidad, no el volumen.</p>
       </details>
       <details class="faq-item">
         <summary>¿Cuesta más un agente vertical que usar ChatGPT directamente?</summary>
-        <p>Sí en construcción, no en operación. Montar un agente vertical para una pyme suele costar entre 8.000 y 30.000 euros según alcance, frente al cero euros de abrir una pestaña de ChatGPT. Pero el coste relevante no es ese: es lo que vale el error. Si tu equipo está usando un genérico para decisiones que afectan al cliente, al margen o a la responsabilidad legal, el coste oculto de los errores no detectados es mayor que la diferencia. El vertical no compite con la herramienta genérica gratuita: compite con el coste oculto de seguir usándola para lo que no debería.</p>
+        <p>Sí en construcción (entre 8.000 y 30.000 € en una pyme), no en operación. Pero compite con el coste oculto del error, no con el ChatGPT gratuito.</p>
       </details>
       <details class="faq-item">
         <summary>¿Cuándo NO conviene un agente vertical?</summary>
-        <p>Cuando la tarea es genuinamente transversal y la calidad media es suficiente. Resumir un correo, redactar un primer borrador interno, traducir un texto, ordenar ideas. Para esos casos, el asistente horizontal sigue siendo lo correcto: barato, disponible y suficiente. La pregunta para decidir es directa: ¿el resultado va a salir de la empresa o va a sostener una decisión que importa? Si no, horizontal. Si sí, vertical o nada.</p>
+        <p>Cuando la tarea es transversal y la calidad media basta: resumir, traducir, ordenar ideas. La pregunta: ¿el resultado sostiene una decisión que importa?</p>
       </details>
     </div>
   </section>

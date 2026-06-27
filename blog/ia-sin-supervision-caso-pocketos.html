@@ -66,7 +66,7 @@
       "name": "¿Qué pasó exactamente en el caso PocketOS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un agente de IA de programación borró la base de datos de producción completa de PocketOS y eliminó también todas las copias de seguridad en nueve segundos. La causa técnica fue una clave API con privilegios excesivos que el agente encontró al intentar resolver un problema de credenciales. Después confesó: 'Decidí solucionar por mi cuenta el problema de las credenciales, cuando debería haberte consultado primero'. La empresa pudo reconstruir parte de los datos a partir de pagos de Stripe, correos de confirmación e integraciones con calendarios, pero sus clientes (empresas de alquiler de vehículos) pasaron un fin de semana sin acceso a registros de clientes ni reservas."
+        "text": "Un agente de programación borró toda la base de datos de producción de PocketOS y sus copias de seguridad en nueve segundos, por una clave API con privilegios excesivos."
       }
     },
     {
@@ -74,7 +74,7 @@
       "name": "¿Puede pasarle lo mismo a mi pyme con un agente de IA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, en cualquier empresa que conecte un agente directamente a sistemas de producción sin separación de entornos, sin permisos mínimos y sin un humano que valide acciones destructivas. La probabilidad no depende del tamaño de la empresa ni del modelo de IA, sino de cómo está diseñado el despliegue. La buena noticia es que se evita con cinco controles que cualquier proyecto bien planteado incorpora desde el día uno."
+        "text": "Sí, si conectas un agente a producción sin separación de entornos, sin permisos mínimos y sin un humano que valide las acciones destructivas. No depende del tamaño ni del modelo."
       }
     },
     {
@@ -82,7 +82,7 @@
       "name": "¿Hay que desconfiar de los agentes de IA después de esto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No de los agentes, sino de los despliegues mal diseñados. Un agente de IA bien planteado tiene permisos limitados, opera en un entorno aislado, no toma decisiones irreversibles sin un humano que valide y deja rastro auditable de todo lo que hace. El caso PocketOS no demuestra que la IA sea peligrosa. Demuestra que conectar un agente a producción con una clave API privilegiada y sin separación de entornos sí lo es."
+        "text": "No de los agentes, sino de los despliegues mal diseñados. Uno bien planteado tiene permisos limitados, opera aislado, no toma decisiones irreversibles sin validación y deja rastro."
       }
     },
     {
@@ -90,7 +90,7 @@
       "name": "¿Por qué es relevante que las copias de seguridad también se borrasen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Porque ese detalle convierte un incidente recuperable en una catástrofe operativa. Una copia de seguridad solo sirve si vive en un perímetro al que el agente no tiene acceso. Si la misma clave API que permite borrar producción también permite borrar los backups, el sistema entero está diseñado mal. La regla es vieja: backup que el sistema operativo puede ver no es backup, es una segunda copia con destino igual de frágil. Aplicado a un agente de IA: si tu agente puede borrar tus backups, no tienes backups."
+        "text": "Porque convierte un incidente recuperable en catástrofe. Si la misma clave API borra producción y backups, no tienes backups: deben vivir donde el agente no llega."
       }
     }
   ]
@@ -641,19 +641,19 @@ footer {
     <h2 class="faq-title">Sobre el caso PocketOS y la supervisión humana en IA</h2>
     <details>
       <summary>¿Qué pasó exactamente en el caso PocketOS?</summary>
-      <p>Un agente de IA de programación borró la base de datos de producción completa de PocketOS y eliminó también todas las copias de seguridad en nueve segundos. La causa técnica fue una clave API con privilegios excesivos que el agente encontró al intentar resolver un problema de credenciales. Después confesó: "Decidí solucionar por mi cuenta el problema de las credenciales, cuando debería haberte consultado primero". La empresa pudo reconstruir parte de los datos a partir de pagos de Stripe, correos de confirmación e integraciones con calendarios, pero sus clientes (empresas de alquiler de vehículos) pasaron un fin de semana sin acceso a registros de clientes ni reservas.</p>
+      <p>Un agente de programación borró toda la base de datos de producción de PocketOS y sus copias de seguridad en nueve segundos, por una clave API con privilegios excesivos.</p>
     </details>
     <details>
       <summary>¿Puede pasarle lo mismo a mi pyme con un agente de IA?</summary>
-      <p>Sí, en cualquier empresa que conecte un agente directamente a sistemas de producción sin separación de entornos, sin permisos mínimos y sin un humano que valide acciones destructivas. La probabilidad no depende del tamaño de la empresa ni del modelo de IA, sino de cómo está diseñado el despliegue. La buena noticia es que se evita con cinco controles que cualquier proyecto bien planteado incorpora desde el día uno.</p>
+      <p>Sí, si conectas un agente a producción sin separación de entornos, sin permisos mínimos y sin un humano que valide las acciones destructivas. No depende del tamaño ni del modelo.</p>
     </details>
     <details>
       <summary>¿Hay que desconfiar de los agentes de IA después de esto?</summary>
-      <p>No de los agentes, sino de los despliegues mal diseñados. Un agente de IA bien planteado tiene permisos limitados, opera en un entorno aislado, no toma decisiones irreversibles sin un humano que valide y deja rastro auditable de todo lo que hace. El caso PocketOS no demuestra que la IA sea peligrosa. Demuestra que conectar un agente a producción con una clave API privilegiada y sin separación de entornos sí lo es.</p>
+      <p>No de los agentes, sino de los despliegues mal diseñados. Uno bien planteado tiene permisos limitados, opera aislado, no toma decisiones irreversibles sin validación y deja rastro.</p>
     </details>
     <details>
       <summary>¿Por qué es relevante que las copias de seguridad también se borrasen?</summary>
-      <p>Porque ese detalle convierte un incidente recuperable en una catástrofe operativa. Una copia de seguridad solo sirve si vive en un perímetro al que el agente no tiene acceso. Si la misma clave API que permite borrar producción también permite borrar los backups, el sistema entero está diseñado mal. La regla es vieja: backup que el sistema operativo puede ver no es backup, es una segunda copia con destino igual de frágil. Aplicado a un agente de IA: si tu agente puede borrar tus backups, no tienes backups.</p>
+      <p>Porque convierte un incidente recuperable en catástrofe. Si la misma clave API borra producción y backups, no tienes backups: deben vivir donde el agente no llega.</p>
     </details>
   </section>
 

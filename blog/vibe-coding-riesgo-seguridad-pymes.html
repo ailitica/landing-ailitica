@@ -81,20 +81,20 @@
 }
 </script>
 <!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
-     con el de la sección .faq del cuerpo. {"@type":"Question","name":"¿Qué es el vibe coding y por qué es un riesgo para mi empresa?","acceptedAnswer":{"@type":"Answer","text":"El vibe coding es la práctica de generar código con IA sin que nadie con criterio técnico lo revise antes de usarlo. El riesgo no está en usar IA para programar, sino en asumir que el código generado es seguro por defecto. Los estudios disponibles indican que el 91,5% de estas aplicaciones presentan al menos una vulnerabilidad de seguridad explotable."}},
-    {"@type":"Question","name":"¿Qué tipo de vulnerabilidades de seguridad genera el código creado por IA?","acceptedAnswer":{"@type":"Answer","text":"Los fallos más frecuentes son inyecciones SQL, credenciales escritas directamente en el código (hardcoded secrets), endpoints sin autenticación y validación de inputs insuficiente. Estos patrones aparecen porque los modelos aprenden de código existente incluyendo código con malas prácticas y priorizan que el resultado funcione sobre que sea robusto frente a un atacante real."}},
-    {"@type":"Question","name":"¿Cómo puedo permitir que mi equipo use IA para crear herramientas sin asumir riesgos innecesarios?","acceptedAnswer":{"@type":"Answer","text":"Con tres medidas básicas: un inventario de las herramientas generadas por IA que están en uso y a qué datos acceden; una regla de revisión antes del despliegue para herramientas que accedan a datos sensibles; y un responsable designado por herramienta. No es un proceso de seguridad complejo: es aplicar el mismo criterio que aplicarías a código entregado por alguien que empieza en el equipo."}},
-    {"@type":"Question","name":"¿Significa esto que debo prohibir el vibe coding en mi empresa?","acceptedAnswer":{"@type":"Answer","text":"No. Prohibirlo sería contraproducente: la productividad que aporta es real y tu equipo probablemente ya lo usa. La solución no es la prohibición sino la supervisión. Una revisión de diez minutos cubre la mayoría de los casos críticos. El objetivo es conservar la velocidad de la IA y añadir el criterio humano que convierte ese código en algo que puedes desplegar con confianza."}} = array
+     con el de la sección .faq del cuerpo. {"@type":"Question","name":"¿Qué es el vibe coding y por qué es un riesgo para mi empresa?","acceptedAnswer":{"@type":"Answer","text":"El vibe coding es generar código con IA sin que nadie con criterio técnico lo revise. Los estudios disponibles indican que el 91,5 % tiene al menos una vulnerabilidad explotable."}},
+    {"@type":"Question","name":"¿Qué tipo de vulnerabilidades de seguridad genera el código creado por IA?","acceptedAnswer":{"@type":"Answer","text":"Los más frecuentes: inyecciones SQL, credenciales escritas en el código (hardcoded secrets), endpoints sin autenticación y validación de inputs insuficiente."}},
+    {"@type":"Question","name":"¿Cómo puedo permitir que mi equipo use IA para crear herramientas sin asumir riesgos innecesarios?","acceptedAnswer":{"@type":"Answer","text":"Tres medidas: inventariar las herramientas creadas por IA y a qué datos acceden, revisarlas antes de desplegar si tocan datos sensibles y asignar un responsable a cada una."}},
+    {"@type":"Question","name":"¿Significa esto que debo prohibir el vibe coding en mi empresa?","acceptedAnswer":{"@type":"Answer","text":"No. Prohibirlo es contraproducente: tu equipo ya lo usa. La solución es la supervisión; una revisión de diez minutos cubre la mayoría de los casos críticos."}} = array
      JSON de objetos Question/Answer (contenido). -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"¿Qué es el vibe coding y por qué es un riesgo para mi empresa?","acceptedAnswer":{"@type":"Answer","text":"El vibe coding es la práctica de generar código con IA sin que nadie con criterio técnico lo revise antes de usarlo. El riesgo no está en usar IA para programar, sino en asumir que el código generado es seguro por defecto. Los estudios disponibles indican que el 91,5% de estas aplicaciones presentan al menos una vulnerabilidad de seguridad explotable."}},
-    {"@type":"Question","name":"¿Qué tipo de vulnerabilidades de seguridad genera el código creado por IA?","acceptedAnswer":{"@type":"Answer","text":"Los fallos más frecuentes son inyecciones SQL, credenciales escritas directamente en el código (hardcoded secrets), endpoints sin autenticación y validación de inputs insuficiente. Estos patrones aparecen porque los modelos aprenden de código existente incluyendo código con malas prácticas y priorizan que el resultado funcione sobre que sea robusto frente a un atacante real."}},
-    {"@type":"Question","name":"¿Cómo puedo permitir que mi equipo use IA para crear herramientas sin asumir riesgos innecesarios?","acceptedAnswer":{"@type":"Answer","text":"Con tres medidas básicas: un inventario de las herramientas generadas por IA que están en uso y a qué datos acceden; una regla de revisión antes del despliegue para herramientas que accedan a datos sensibles; y un responsable designado por herramienta. No es un proceso de seguridad complejo: es aplicar el mismo criterio que aplicarías a código entregado por alguien que empieza en el equipo."}},
-    {"@type":"Question","name":"¿Significa esto que debo prohibir el vibe coding en mi empresa?","acceptedAnswer":{"@type":"Answer","text":"No. Prohibirlo sería contraproducente: la productividad que aporta es real y tu equipo probablemente ya lo usa. La solución no es la prohibición sino la supervisión. Una revisión de diez minutos cubre la mayoría de los casos críticos. El objetivo es conservar la velocidad de la IA y añadir el criterio humano que convierte ese código en algo que puedes desplegar con confianza."}}
+    {"@type":"Question","name":"¿Qué es el vibe coding y por qué es un riesgo para mi empresa?","acceptedAnswer":{"@type":"Answer","text":"El vibe coding es generar código con IA sin que nadie con criterio técnico lo revise. Los estudios disponibles indican que el 91,5 % tiene al menos una vulnerabilidad explotable."}},
+    {"@type":"Question","name":"¿Qué tipo de vulnerabilidades de seguridad genera el código creado por IA?","acceptedAnswer":{"@type":"Answer","text":"Los más frecuentes: inyecciones SQL, credenciales escritas en el código (hardcoded secrets), endpoints sin autenticación y validación de inputs insuficiente."}},
+    {"@type":"Question","name":"¿Cómo puedo permitir que mi equipo use IA para crear herramientas sin asumir riesgos innecesarios?","acceptedAnswer":{"@type":"Answer","text":"Tres medidas: inventariar las herramientas creadas por IA y a qué datos acceden, revisarlas antes de desplegar si tocan datos sensibles y asignar un responsable a cada una."}},
+    {"@type":"Question","name":"¿Significa esto que debo prohibir el vibe coding en mi empresa?","acceptedAnswer":{"@type":"Answer","text":"No. Prohibirlo es contraproducente: tu equipo ya lo usa. La solución es la supervisión; una revisión de diez minutos cubre la mayoría de los casos críticos."}}
   ]
 }
 </script>
@@ -569,7 +569,7 @@ footer {
 
   <!-- 
 <h2>Qué es el vibe coding y por qué tu empresa ya lo usa</h2>
-<p>El término lo popularizó el investigador Andrej Karpathy a principios de 2025 para describir una práctica que ya era habitual antes de que tuviera nombre: pedirle a una IA que genere código funcional sin que nadie con criterio técnico lo revise. El resultado funciona. Se ve bien. Y en muchos casos lleva dentro vulnerabilidades que no saltan a la vista.</p>
+<p>El término vibe coding lo popularizó el investigador Andrej Karpathy a principios de 2025 para describir una práctica que ya era habitual antes de tener nombre: pedirle a una IA que genere código funcional sin que nadie con criterio técnico lo revise. El resultado funciona. Se ve bien. Y en muchos casos lleva dentro vulnerabilidades que no saltan a la vista.</p>
 <p>Hoy cualquier persona de tu equipo puede pedirle a Claude, Cursor o ChatGPT que monte una herramienta interna en una tarde. Eso no es malo en sí mismo. Lo que sí es un problema es asumir que, porque funciona, es seguro.</p>
 <p>Si tienes personas en tu equipo que crean herramientas o scripts con IA —y casi todas las empresas las tienen ya— este artículo es para ti.</p>
 
@@ -619,7 +619,7 @@ footer {
   <div class="article-body">
     
 <h2>Qué es el vibe coding y por qué tu empresa ya lo usa</h2>
-<p>El término lo popularizó el investigador Andrej Karpathy a principios de 2025 para describir una práctica que ya era habitual antes de que tuviera nombre: pedirle a una IA que genere código funcional sin que nadie con criterio técnico lo revise. El resultado funciona. Se ve bien. Y en muchos casos lleva dentro vulnerabilidades que no saltan a la vista.</p>
+<p>El término vibe coding lo popularizó el investigador Andrej Karpathy a principios de 2025 para describir una práctica que ya era habitual antes de tener nombre: pedirle a una IA que genere código funcional sin que nadie con criterio técnico lo revise. El resultado funciona. Se ve bien. Y en muchos casos lleva dentro vulnerabilidades que no saltan a la vista.</p>
 <p>Hoy cualquier persona de tu equipo puede pedirle a Claude, Cursor o ChatGPT que monte una herramienta interna en una tarde. Eso no es malo en sí mismo. Lo que sí es un problema es asumir que, porque funciona, es seguro.</p>
 <p>Si tienes personas en tu equipo que crean herramientas o scripts con IA —y casi todas las empresas las tienen ya— este artículo es para ti.</p>
 
@@ -673,19 +673,19 @@ footer {
       
 <details class="faq-item">
   <summary>¿Qué es el vibe coding y por qué es un riesgo para mi empresa?</summary>
-  <p>El vibe coding es la práctica de generar código con IA —a través de herramientas como ChatGPT, Cursor o Claude— sin que nadie con criterio técnico lo revise antes de usarlo. El riesgo no está en usar IA para programar, sino en asumir que el código generado es seguro por defecto. Los estudios disponibles indican que el 91,5% de estas aplicaciones presentan al menos una vulnerabilidad de seguridad explotable.</p>
+  <p>El vibe coding es generar código con IA sin que nadie con criterio técnico lo revise. Los estudios disponibles indican que el 91,5 % tiene al menos una vulnerabilidad explotable.</p>
 </details>
 <details class="faq-item">
   <summary>¿Qué tipo de vulnerabilidades de seguridad genera el código creado por IA?</summary>
-  <p>Los fallos más frecuentes son inyecciones SQL, credenciales escritas directamente en el código (hardcoded secrets), endpoints sin autenticación y validación de inputs insuficiente. Estos patrones aparecen porque los modelos aprenden de código existente —incluyendo código con malas prácticas— y priorizan que el resultado funcione sobre que sea robusto frente a un atacante real en el contexto de tu empresa.</p>
+  <p>Los más frecuentes: inyecciones SQL, credenciales escritas en el código (hardcoded secrets), endpoints sin autenticación y validación de inputs insuficiente.</p>
 </details>
 <details class="faq-item">
   <summary>¿Cómo puedo permitir que mi equipo use IA para crear herramientas sin asumir riesgos innecesarios?</summary>
-  <p>Con tres medidas básicas: un inventario de las herramientas generadas por IA que están en uso y a qué datos acceden; una regla de revisión antes del despliegue para herramientas que accedan a datos sensibles; y un responsable designado por herramienta. No es un proceso de seguridad complejo: es aplicar el mismo criterio que aplicarías a código entregado por alguien que empieza en el equipo.</p>
+  <p>Tres medidas: inventariar las herramientas creadas por IA y a qué datos acceden, revisarlas antes de desplegar si tocan datos sensibles y asignar un responsable a cada una.</p>
 </details>
 <details class="faq-item">
   <summary>¿Significa esto que debo prohibir el vibe coding en mi empresa?</summary>
-  <p>No. Prohibirlo sería contraproducente: la productividad que aporta es real y tu equipo probablemente ya lo usa. La solución no es la prohibición sino la supervisión. Una revisión de diez minutos por parte de alguien con criterio técnico básico cubre la mayoría de los casos críticos. El objetivo es conservar la velocidad de la IA y añadir el criterio humano que convierte ese código en algo que puedes desplegar con confianza.</p>
+  <p>No. Prohibirlo es contraproducente: tu equipo ya lo usa. La solución es la supervisión; una revisión de diez minutos cubre la mayoría de los casos críticos.</p>
 </details>
 
     </div>
