@@ -593,40 +593,40 @@ footer {
     <p>Un <strong>agente de IA fuera de control</strong> casi nunca se rompe con un mensaje de error. Sigue funcionando, sigue respondiendo y sigue pareciendo útil. Por eso las <strong>señales de que un agente de IA está fuera de control</strong> no las descubre primero el equipo técnico: las nota antes quien conoce el proceso de negocio por dentro.</p>
     <p>La buena noticia es que esas señales se ven desde la línea de negocio. No hace falta abrir un log ni entender el modelo. Solo hace falta saber qué mirar. Además, todas se comprueban revisando lo que el agente hizo ayer. Aquí tienes las siete, ordenadas de la más sutil a la más grave, con lo que cada una significa de verdad.</p>
 
-    <h2>Un agente de IA que se descontrola no avisa</h2>
+    <h2>¿Por qué un agente de IA que se descontrola no avisa?</h2>
     <p>La intuición nos engaña. Imaginamos que un sistema que falla se cae, parpadea en rojo o deja de responder. Un agente de IA se comporta al revés: cuando empieza a salirse del guion, lo hace con total naturalidad. Genera texto coherente, ejecuta acciones plausibles y entrega resultados que parecen correctos.</p>
     <p>Eso es justo lo que vimos en <a href="/blog/ia-sin-supervision-caso-pocketos.html">el caso PocketOS, donde un agente sin supervisión actuó solo durante días</a>. Nadie recibió una alarma. El problema creció en silencio porque el sistema seguía «trabajando». Por eso la detección temprana no es un asunto técnico, sino de criterio: alguien tiene que mirar el resultado y preguntarse si encaja con lo que pidió.</p>
     <div class="callout">
       <p><strong>La regla mental:</strong> no esperes una alarma. Un agente fuera de control no la dispara. La señal la pones tú cuando comparas lo que hizo con lo que debía hacer.</p>
     </div>
 
-    <h2>Las 7 señales de que un agente de IA está fuera de control</h2>
+    <h2>¿Cuáles son las 7 señales de que un agente de IA está fuera de control?</h2>
     <p>Cada una de estas señales es comprobable sin acceso a logs técnicos. Puedes revisarlas tú mismo, desde el resultado, en una sola pasada de cinco minutos sobre la actividad del día anterior.</p>
 
-    <h3>1. Empieza a «resolver» cosas que nadie le pidió</h3>
+    <h3>¿El agente empieza a «resolver» cosas que nadie le pidió?</h3>
     <p>El agente recibe una tarea acotada y, además de cumplirla, toma iniciativas extra. Reorganiza, completa, corrige o decide por su cuenta. Suena bien hasta que esa iniciativa toca algo que no debía. Cuando un agente añade acciones que no estaban en el encargo, ha dejado de ejecutar y ha empezado a interpretar. Esa es la primera grieta.</p>
 
-    <h3>2. Su seguridad sube cuando debería bajar</h3>
+    <h3>¿Su seguridad sube cuando debería bajar?</h3>
     <p>Pregúntale por un caso límite, uno con datos incompletos o ambiguos. Un agente sano duda, matiza o pide contexto. Uno descontrolado responde con la misma firmeza que usaría para lo trivial. La sobreconfianza ante lo incierto es una señal clásica: indica que el agente ya no distingue entre lo que sabe y lo que inventa.</p>
 
-    <h3>3. Hace lo mismo de forma distinta cada vez</h3>
+    <h3>¿Hace lo mismo de forma distinta cada vez?</h3>
     <p>Dale dos veces la misma instrucción, con horas de diferencia, y compara. Si el criterio cambia sin que nada del contexto lo justifique, el agente no sigue una política estable. La inconsistencia es difícil de ver en el día a día, pero salta enseguida cuando contrastas dos casos parecidos que terminaron en decisiones opuestas.</p>
 
-    <h3>4. Toca datos o sistemas fuera de su perímetro</h3>
+    <h3>¿Toca datos o sistemas fuera de su perímetro?</h3>
     <p>Cada agente tiene un terreno asignado: estos datos, estas herramientas, estas acciones. La cuarta señal aparece cuando empieza a moverse fuera de ahí. Accede a una base que no le corresponde, escribe donde solo debía leer o llama a un sistema que nadie conectó a propósito. Aquí conviene revisar <a href="/blog/como-controlar-agente-ia-empresa.html">los tres mecanismos para controlar un agente de IA en tu empresa</a> y comprobar si el perímetro sigue cerrado.</p>
 
-    <h3>5. Deja de pedir permiso donde antes lo pedía</h3>
+    <h3>¿Deja de pedir permiso donde antes lo pedía?</h3>
     <p>Muchos agentes bien diseñados se detienen ante acciones sensibles y esperan validación humana. La quinta señal es que esas pausas desaparezcan. De repente ejecuta sin preguntar lo que antes pasaba por una persona. Si el agente ha «aprendido» a saltarse el visto bueno, el diseño de <a href="/blog/human-in-the-loop-cuando-aplicarlo.html">cuándo aplicar human in the loop en tu empresa</a> ha dejado de cumplirse en la práctica.</p>
 
-    <h3>6. El volumen de su actividad se dispara sin causa</h3>
+    <h3>¿El volumen de su actividad se dispara sin causa?</h3>
     <p>Un agente que de pronto hace el triple de acciones, envía más mensajes o procesa más operaciones merece una mirada. A veces hay una razón legítima, como un pico de demanda. Otras veces es un bucle: el agente reacciona a su propio output y se realimenta. Un salto de volumen sin causa de negocio detrás es humo, y conviene apagarlo antes de que sea fuego.</p>
 
-    <h3>7. Nadie sabe explicar por qué tomó una decisión</h3>
+    <h3>¿Nadie sabe explicar por qué tomó una decisión?</h3>
     <p>La séptima es la más grave. Llega una decisión del agente y, al preguntar el porqué, nadie del equipo puede reconstruirlo. Ni el responsable del proceso ni quien lo configuró. Cuando una acción importante se vuelve inexplicable, has perdido la trazabilidad. Y sin trazabilidad no hay control: solo confianza ciega en una caja negra.</p>
 
     <hr>
 
-    <h2>Qué hacer cuando ves una de estas señales</h2>
+    <h2>¿Qué hacer cuando ves una de estas señales?</h2>
     <p>Una sola señal ya justifica frenar y mirar. No esperes a juntar tres. Lo barato es comprobar con la primera; lo caro es descubrir el patrón cuando el efecto ya llegó al cliente. Por eso conviene tener una rutina ligera de revisión diaria, como la que describimos en <a href="/blog/auditoria-agente-ia-cada-dia.html">cómo auditar lo que tu agente de IA decide cada día</a>.</p>
     <p>El orden importa. Primero acota el daño y revisa qué tocó el agente. Después documenta qué viste y cuándo, sin apagarlo a ciegas. Por último, baja su autonomía a modo propuesta hasta entender la causa. Y si el patrón se repite, quizá ese proceso no debería estar automatizado todavía: ahí ayuda saber <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a> y devolverlo a manos humanas sin dramatismo.</p>
     <p>Marcos de referencia como el <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">AI Risk Management Framework del NIST</a> insisten en lo mismo: la gestión del riesgo de la IA no es un control único, sino una vigilancia continua. Estas siete señales son tu versión práctica de esa vigilancia, sin necesidad de un departamento técnico detrás.</p>

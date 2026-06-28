@@ -572,7 +572,7 @@ footer {
 
     <p>La empresa pudo reconstruir parte del estado a partir de pagos de Stripe, confirmaciones de correo electrónico e integraciones con calendarios. No fue gratis: sus clientes pasaron un fin de semana sin acceso a registros de clientes ni reservas. El reflejo natural es leer este caso como una advertencia sobre lo peligrosa que es la IA. Es un error de lectura. La IA no se rebeló. Hizo exactamente lo que cualquier sistema mal desplegado haría: ejecutar instrucciones dentro del perímetro que le dieron, sin un humano que validara antes de tocar lo irreversible. <strong>El problema no fue el agente. Fue la arquitectura.</strong></p>
 
-    <h2>Lo que el caso PocketOS dice de cómo NO hay que desplegar IA</h2>
+    <h2>¿Qué dice el caso PocketOS sobre cómo NO hay que desplegar IA?</h2>
 
     <p>En Ailitica trabajamos cada semana con empresas que están considerando integrar agentes de IA en sus procesos. La pregunta más frecuente desde que estalló este caso es la misma: <em>¿puede pasarle eso a mi empresa?</em> La respuesta honesta es que sí, y que la probabilidad no depende del modelo de IA que uses ni del proveedor que contrates. Depende de cómo esté diseñado el despliegue.</p>
 
@@ -582,27 +582,27 @@ footer {
 
     <p>Esto conecta con algo que llevamos diciendo en este blog desde el primer día. Como explicamos en nuestra guía sobre <a href="ia-con-criterio-humano.html">IA con criterio humano: por qué el agente decide mejor cuando no decide solo</a>, los proyectos serios dejan al humano la decisión que importa. No por sentimentalismo: por matemáticas del riesgo. Una IA puede acertar el 99% de las veces y aún así destruir el negocio si el 1% restante incluye operaciones irreversibles sin supervisión.</p>
 
-    <h2>Los cinco controles que evitan que tu empresa sea la próxima</h2>
+    <h2>¿Qué cinco controles evitan que tu empresa sea la próxima?</h2>
 
     <p>Lo que sigue no es una checklist de marketing. Es lo que aplicamos cuando diseñamos un agente de IA para una empresa antes de conectarlo a nada que importe. Si tu proveedor no puede explicarte cómo cubre cada uno de estos puntos, el problema lo tienes en tu casa.</p>
 
-    <h3>1. Permisos mínimos por diseño</h3>
+    <h3>¿Qué son los permisos mínimos por diseño?</h3>
 
     <p>Un agente de IA no tiene permisos generales. Tiene los permisos exactos que necesita para hacer lo que tiene que hacer y ni uno más. Si su trabajo es leer pedidos, tiene <em>read-only</em> sobre la tabla de pedidos. Si tiene que escribir respuestas en un CRM, escribe en una tabla específica con un campo específico. Si tiene que enviar correos, los manda desde una cuenta auditada con cuota diaria. La regla es vieja, se llama <strong>principio de mínimo privilegio</strong>, y la IA no inventa una excepción. La clave API que borró PocketOS no debería haber existido nunca: una sola credencial con permisos de DROP sobre producción y borrado de backups es un agujero por diseño, lo use un humano o una IA.</p>
 
-    <h3>2. Separación de entornos blindada</h3>
+    <h3>¿Por qué blindar la separación de entornos?</h3>
 
     <p>Producción no se toca desde un agente de IA en pruebas. Punto. El agente vive en <em>staging</em>, prueba contra datos sintéticos o anonimizados y solo después, con un commit revisado por un humano, se promueve. Y los backups viven fuera del perímetro al que el agente tiene acceso, en otra cuenta, otra región o, mejor, ambas. Si la misma credencial que opera tu base de datos puede borrar tus copias de seguridad, no tienes copias de seguridad: tienes una segunda copia con destino igual de frágil.</p>
 
-    <h3>3. Validación humana antes de toda acción irreversible</h3>
+    <h3>¿Por qué exigir validación humana antes de toda acción irreversible?</h3>
 
     <p>Borrar registros, enviar facturas, transferir dinero, desactivar cuentas, mandar comunicaciones masivas. Cualquier acción de la que no se pueda volver atrás tiene un humano enmedio que la valida antes de ejecutarla. No después. Antes. Esto cuesta algo de fricción operativa y es el coste más barato que vas a pagar nunca por evitar el desastre. Lo desarrollamos en detalle cuando explicamos <a href="cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>: hay procesos donde la velocidad de la IA es justamente lo último que necesitas.</p>
 
-    <h3>4. Logs auditables de cada decisión</h3>
+    <h3>¿Por qué necesitas logs auditables de cada decisión?</h3>
 
     <p>Cada acción del agente queda registrada con timestamp, contexto y el razonamiento que llevó a tomarla. No solo el resultado. El razonamiento. Esto convierte un "el agente borró la base" en un "el agente borró la base a las 14:32 porque interpretó la instrucción X como Y, y aquí está la cadena de pensamiento". La diferencia entre las dos versiones es la diferencia entre poder corregir el sistema o tener que cambiarlo entero. En PocketOS la confesión del agente sirvió para entender qué pasó: <em>"No verifiqué. No comprobé si el ID del volumen se compartía entre entornos"</em>. Ese tipo de log es exactamente el que tiene que existir desde el día uno, no aparecer por accidente cuando preguntas.</p>
 
-    <h3>5. Botón de parada accesible</h3>
+    <h3>¿Por qué tener un botón de parada accesible?</h3>
 
     <p>Existe siempre una forma rápida y conocida por todo el equipo de detener al agente sin tener que llamar al proveedor. Un comando, un toggle, una clave revocable. Si tu agente no tiene parada de emergencia, no es un agente, es una bomba de relojería con interfaz amable.</p>
 
@@ -610,7 +610,7 @@ footer {
       <p><strong>El patrón PocketOS no es nuevo.</strong> Lo que sí es nuevo es la velocidad con la que las empresas están conectando agentes de IA a sus procesos sin pasar por estos cinco controles. Se llama <em>vibe coding</em> y el sector lo está empezando a llamar lo que es: deuda técnica destructiva.</p>
     </div>
 
-    <h2>Por qué este caso importa más allá del titular</h2>
+    <h2>¿Por qué este caso importa más allá del titular?</h2>
 
     <p>Hay una conversación de fondo que el caso PocketOS ha vuelto a abrir y que llevábamos meses esperando. La conversación de si la IA es <strong>tan</strong> autónoma como prometen los marketplaces o si conviene volver a un enfoque más sobrio donde el humano sigue al mando.</p>
 
@@ -618,7 +618,7 @@ footer {
 
     <p>La buena noticia es que también se repite el patrón opuesto. Empresas que están sacando un valor enorme de los agentes de IA precisamente porque los desplegaron despacio, con permisos mínimos, validación humana en lo crítico y logs auditables. No salen en los titulares porque los titulares se hacen con desastres, no con sistemas que funcionan en silencio. Pero existen y son cada vez más.</p>
 
-    <h2>Cómo decidir si tu empresa está lista para un agente de IA</h2>
+    <h2>¿Cómo decidir si tu empresa está lista para un agente de IA?</h2>
 
     <p>Después de leer este caso, la pregunta correcta no es <em>¿debería evitar la IA?</em>. La pregunta correcta es <em>¿estoy preparando un despliegue que evite repetir lo de PocketOS?</em>. Si la respuesta es que no lo sabes, ahí hay un diagnóstico antes de un proyecto.</p>
 
@@ -626,7 +626,7 @@ footer {
 
     <p>El otro reflejo útil cuando se valora un agente de IA es entender qué problema concreto resuelve frente a alternativas más sobrias. Para muchos procesos, especialmente los muy estructurados y con bajo grado de variabilidad, sigue siendo mejor opción la <a href="automatizacion-ia-vs-rpa.html">automatización tradicional con RPA</a> que un agente de IA generativa. No por moda contraria al hype: por riesgo y coste de operación. La IA brilla donde hay variabilidad y contexto. En lo demás, el humilde RPA hace el trabajo con menos posibilidades de borrar nada por error.</p>
 
-    <h2>Lo que esperamos del próximo año</h2>
+    <h2>¿Qué esperamos del próximo año en despliegue de IA?</h2>
 
     <p>Casos como PocketOS van a seguir saliendo en titulares. La razón es simple: hay miles de empresas conectando agentes a procesos críticos sin pasar por los cinco controles. Es estadísticamente seguro que algunas se van a estrellar y que algunas de esas saldrán publicadas. La pregunta para una pyme decidiendo en qué punto está no es si pasará, es si la suya estará entre las que aprenden del caso o entre las que se convierten en el siguiente caso. La diferencia, como hemos visto, no es de tecnología. Es de método.</p>
 

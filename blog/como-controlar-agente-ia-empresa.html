@@ -574,7 +574,7 @@ footer {
 
   <div class="article-body">
 
-    <h2>El control no es lo que el mercado te está vendiendo</h2>
+    <h2>¿Qué es de verdad controlar un agente de IA? No es lo que el mercado te vende</h2>
 
     <p>Cuando un directivo de una empresa pequeña pregunta cómo controla a un agente de IA, lo más habitual es que le respondan con un catálogo: RBAC, audit logs centralizados, alertas en tiempo real, dashboards de gobernanza, comités de revisión, certificaciones. Todo eso existe, todo eso vale en empresas grandes, y casi nada de eso aplica a una pyme de cinco a treinta personas.</p>
 
@@ -582,7 +582,7 @@ footer {
 
     <p>Este artículo describe los tres mecanismos en su versión pyme. No son teoría. Son lo que aplicamos cuando ponemos en marcha un agente para un cliente real, y lo que recomendamos cuando un cliente nuevo nos pregunta por dónde empezar. Si has leído <a href="/blog/ia-sin-supervision-caso-pocketos.html">el caso PocketOS</a> o <a href="/blog/ia-con-criterio-humano.html">IA con criterio humano</a>, este artículo es la pieza operativa que cierra el bucle.</p>
 
-    <h2>Mecanismo 1: aprobación humana en los pasos que no se pueden deshacer</h2>
+    <h2>Mecanismo 1: ¿cómo aplicar aprobación humana en los pasos que no se pueden deshacer?</h2>
 
     <p>El primer mecanismo es el más simple de explicar y el que más gente se salta. Antes de dejar al agente en producción, se identifican los pasos del flujo que son <strong>irreversibles o costosos</strong> y se decide que en esos pasos el agente <em>propone</em>, pero un humano <em>aprueba</em>.</p>
 
@@ -596,7 +596,7 @@ footer {
       <p><strong>El error más común.</strong> Pedir aprobación humana para <em>todo</em>. Si el humano tiene que aprobar cada paso, el agente no libera tiempo, lo consume. La gracia del mecanismo es que el 90% de los pasos van solos y el 10% crítico va con freno. Confundir prudencia con desconfianza convierte al agente en un formulario lento, y entonces nadie lo usa.</p>
     </div>
 
-    <h2>Mecanismo 2: sandbox por defecto con whitelist explícita</h2>
+    <h2>Mecanismo 2: ¿qué es un sandbox por defecto con whitelist explícita?</h2>
 
     <p>El segundo mecanismo responde a una pregunta distinta. La aprobación humana decide quién <em>autoriza</em> una acción. El sandbox decide qué tiene permitido <em>tocar</em> el agente en primer lugar. Son capas complementarias, no sustitutas.</p>
 
@@ -608,7 +608,7 @@ footer {
 
     <p>Esto no exige tecnología especial. Las herramientas SaaS que ya usa la pyme (Google Workspace, Microsoft 365, los CRM habituales, las plataformas de facturación) traen permisos granulares por defecto. Lo que falta no suele ser la herramienta, es la decisión de aplicarla. La preparación previa es la misma que recomendamos en <a href="/blog/agentes-de-ia-para-pymes.html">agentes de IA para pymes</a>: antes de dar acceso, definir el perímetro.</p>
 
-    <h3>Cómo se ve un perímetro mínimo viable</h3>
+    <h3>¿Cómo se ve un perímetro mínimo viable?</h3>
 
     <p>Un ejemplo concreto, sacado de un despliegue real reciente. El agente leía pedidos entrantes de una bandeja específica de correo, los clasificaba, los registraba en una hoja de control en Google Sheets y preparaba un borrador de respuesta. La whitelist completa era esta:</p>
 
@@ -621,7 +621,7 @@ footer {
 
     <p>El agente no tenía acceso al resto del correo, ni a la contabilidad, ni a la lista de clientes histórica, ni a la mensajería interna del equipo, ni a la red social corporativa. La pregunta que cierra la decisión: ¿qué pasaría si el agente se equivocase con cualquier cosa fuera de la whitelist? Respuesta: nada, porque no puede llegar ahí. Eso es control real.</p>
 
-    <h2>Mecanismo 3: registro estructurado mínimo accionable</h2>
+    <h2>Mecanismo 3: ¿qué es un registro estructurado mínimo y accionable?</h2>
 
     <p>El tercer mecanismo es el que más se subestima en pyme, y el que más se agradece el día que algo no sale bien. Un agente que actúa sin dejar rastro es un agente sobre el que no se puede auditar nada después. El registro estructurado es el cuaderno de bitácora que convierte una pregunta difícil ("¿qué hizo el agente la semana pasada?") en una consulta de cinco minutos.</p>
 
@@ -631,11 +631,11 @@ footer {
 
     <p>La utilidad del registro aparece en tres momentos. En el día a día, permite revisar el trabajo del agente en lotes cortos (diez minutos a la semana basta) en lugar de revisar cada acción una a una; sobre cómo convertir ese registro en una rutina ligera está <a href="/blog/auditoria-agente-ia-cada-dia.html">cómo auditar lo que tu agente de IA decide cada día</a>. Cuando algo falla, permite reconstruir la cadena de eventos sin tener que reconstruirla de memoria. Y cuando llega el AI Act europeo en agosto de 2026, deja a la empresa preparada para responder a las obligaciones de trazabilidad sin un proyecto extra: hay registro porque ya había registro, no porque la ley lo haya forzado. Si te interesa cómo se está aplicando ese reglamento en empresas pequeñas, conviene revisar <a href="/blog/ai-act-pyme-aplazamiento-agosto-2026.html">AI Act pyme: el aplazamiento de agosto 2026 y lo que cambia</a>.</p>
 
-    <h3>Qué se registra y qué no</h3>
+    <h3>¿Qué se registra y qué no?</h3>
 
     <p>Lo que se registra: cada acción que toca el mundo (escribir en una hoja, enviar un borrador, modificar un registro), cada aprobación humana solicitada y resuelta, cada error o salida inesperada del agente. Lo que no se registra: los pasos intermedios de razonamiento del agente, las consultas internas que no tocan datos, las repeticiones de la misma acción dentro de un mismo lote. Si se registra de todo, el registro deja de ser útil porque no se lee. Si se registra lo que importa, el registro se mantiene y se consulta.</p>
 
-    <h2>Cómo encajan los tres mecanismos</h2>
+    <h2>¿Cómo encajan los tres mecanismos de control?</h2>
 
     <p>Los tres mecanismos no son tres opciones entre las que elegir. Son tres capas que se aplican a la vez, cada una resolviendo un problema distinto.</p>
 
@@ -647,7 +647,7 @@ footer {
 
     <p>Una empresa que aplica los tres tiene control real. Una empresa que aplica solo uno tiene una sensación de control que se evapora la primera vez que algo va mal. Y lo que va mal con un agente de IA, va mal de forma silenciosa hasta que alguien lo encuentra: por eso conviene conocer de antemano las <a href="/blog/senales-agente-ia-fuera-de-control.html">señales tempranas de que un agente de IA se sale del guion</a>. Aquí enlazo también con <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>, donde aparece el caso opuesto, el del proceso que no debería automatizarse de entrada.</p>
 
-    <h2>Lo que conviene tener decidido antes de arrancar</h2>
+    <h2>¿Qué conviene tener decidido antes de arrancar?</h2>
 
     <p>Antes de poner el primer agente en producción, una pyme tendría que poder responder a estas preguntas. Si no puede responder a alguna, es señal de que falta diseño, no de que falten herramientas:</p>
 
@@ -662,7 +662,7 @@ footer {
 
     <p>Si las seis respuestas existen, la empresa está lista para arrancar con control. Si tres o más respuestas faltan, conviene parar y resolverlas antes de poner al agente a hacer trabajo real. Es una conversación de una mañana con el responsable interno y el proveedor; cuesta menos que reconstruir un desastre después.</p>
 
-    <h2>El criterio que aplica Ailitica</h2>
+    <h2>¿Cuál es el criterio que aplica Ailitica?</h2>
 
     <p>Cuando ponemos en marcha un agente para un cliente, los tres mecanismos están definidos antes de escribir una sola línea de configuración. No es opcional, no es una buena práctica que se añade al final, es parte del diseño desde el primer día. La whitelist se acuerda con el cliente antes del arranque. La lista de pasos críticos se acuerda con el cliente antes del arranque. El registro se acuerda con el cliente antes del arranque.</p>
 
