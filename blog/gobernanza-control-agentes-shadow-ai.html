@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
+<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
+<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
+<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
+<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
+<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Shadow AI en la empresa: cómo gobernarlo — Ailitica</title>
+<meta name="description" content="El 82% de las empresas tiene agentes de IA que nadie autorizó (CSA, 2026). Qué es el shadow AI, qué riesgo implica y cómo controlarlo en una pyme.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/gobernanza-control-agentes-shadow-ai.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/gobernanza-control-agentes-shadow-ai.html">
+<meta property="og:title" content="Agentes de IA que nadie autorizó: el problema del 'shadow AI' que ya está en tu empresa">
+<meta property="og:description" content="El 82% de las empresas tiene agentes de IA que nadie autorizó (CSA, 2026). Qué es el shadow AI, qué riesgo implica y cómo controlarlo en una pyme.">
+<meta property="og:image" content="https://ailitica.com/blog/img/gobernanza-control-agentes-shadow-ai_blog-hero.jpg">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-07-01">
+<meta property="article:modified_time" content="2026-07-01">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Agentes de IA que nadie autorizó: el problema del 'shadow AI' que ya está en tu empresa">
+<meta name="twitter:description" content="El 82% de las empresas tiene agentes de IA que nadie autorizó (CSA, 2026). Qué es el shadow AI, qué riesgo implica y cómo controlarlo en una pyme.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/gobernanza-control-agentes-shadow-ai_blog-hero.jpg">
+
+<!-- GEO:Article — FIJO salvo campos de contenido -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Agentes de IA que nadie autorizó: el problema del 'shadow AI' que ya está en tu empresa",
+  "description": "El 82% de las empresas tiene agentes de IA que nadie autorizó (CSA, 2026). Qué es el shadow AI, qué riesgo implica y cómo controlarlo en una pyme.",
+  "image": "https://ailitica.com/blog/img/gobernanza-control-agentes-shadow-ai_blog-hero.jpg",
+  "datePublished": "2026-07-01",
+  "dateModified": "2026-07-01",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "jobTitle": "CEO de Ailitica",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "url": "https://ailitica.com",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/gobernanza-control-agentes-shadow-ai.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "wordCount": 1099,
+  "about": [
+    { "@type": "Thing", "name": "shadow AI" },
+    { "@type": "Thing", "name": "gobernanza de inteligencia artificial" },
+    { "@type": "Thing", "name": "agentes de IA en empresas" }
+  ],
+  "keywords": "shadow AI empresa, gobernanza de agentes de IA, control de agentes IA, agentes IA no autorizados, gobernanza IA empresa, IA en la sombra"
+}
+</script>
+<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ailitica.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ailitica.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Agentes de IA que nadie autorizó: el problema del 'shadow AI' que ya está en tu empresa", "item": "https://ailitica.com/blog/gobernanza-control-agentes-shadow-ai.html" }
+  ]
+}
+</script>
+<!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
+     con el de la sección .faq del cuerpo. {{FAQ_SCHEMA_ITEMS}} = array
+     JSON de objetos Question/Answer (contenido). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el shadow AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El shadow AI son agentes de IA que funcionan en la empresa sin que la dirección los apruebe ni los conozca. Acceden a datos y deciden sin control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo controlo los agentes de IA en mi empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con tres pasos proporcionados: inventario de qué agentes existen, autorización mínima antes de tocar datos reales y registro de lo que hace cada uno."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué riesgos tiene un agente de IA no autorizado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Accede a datos sin permiso, decide sin dejar rastro y falla en silencio. Según la CSA (abril 2026), el 61% de los incidentes acabó en fuga de datos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué aparece el shadow AI en las empresas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cualquier empleado conecta un asistente en minutos y la prisa hace el resto. La CSA halló (abril 2026) un 82% de empresas con agentes desconocidos."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+/* Tabla genérica de contenido */
+.data-table {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0; border-collapse:collapse;
+  background:var(--glass-bg); border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm); overflow:hidden;
+  font-size:clamp(13px, 1.2vw, 15px);
+}
+.data-table th, .data-table td {
+  padding:14px 18px; text-align:left;
+  border-bottom:1px solid var(--border-soft);
+  color:var(--text-secondary); line-height:1.6; vertical-align:top;
+}
+.data-table th {
+  font-family:var(--font-d); font-weight:400; color:var(--text-primary);
+  background:rgba(74,179,255,0.05); font-size:13px; letter-spacing:.02em;
+}
+.data-table tr:last-child td { border-bottom:none; }
+.data-table td strong { color:var(--text-primary); font-weight:400; }
+@media (max-width:560px) {
+  .data-table, .data-table thead, .data-table tbody,
+  .data-table th, .data-table td, .data-table tr { display:block; }
+  .data-table th { display:none; }
+  .data-table td { padding:10px 16px; border-bottom:1px solid var(--border-soft); }
+  .data-table tr { margin-bottom:14px; border:1px solid var(--border-soft); border-radius:var(--radius-sm); }
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/gobernanza-control-agentes-shadow-ai_blog-hero.jpg" alt="Oficina en penumbra con varios agentes de IA representados como siluetas tenues que nadie autorizó, ilustrando el problema del shadow AI y la gobernanza de agentes en la empresa" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">1 de julio de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">8 min lectura</span>
+    </div>
+    <h1 class="article-title">Agentes de IA que nadie autorizó: el problema del <em>shadow AI</em> que ya está en tu empresa</h1>
+    <!-- GEO:TLDR — bloque destacado obligatorio. {{TLDR_TEXT}} = contenido. -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">El <strong>shadow AI</strong> son agentes y automatizaciones de IA que entran en tu empresa sin que nadie los autorice ni los conozca. No es teoría: la Cloud Security Alliance halló en abril de 2026 que el <strong>82% de las empresas tiene agentes de IA desconocidos</strong> en su entorno. Acceden a datos y deciden sin control ni rastro. Para una pyme, la respuesta no es una plataforma cara: es inventario, autorización mínima y registro. Saber qué tienes, haberlo decidido a propósito.</p>
+    </aside>
+  </header>
+
+  <div class="article-body">
+
+    <h2>¿Qué es el shadow AI y por qué hay agentes de IA en tu empresa que nadie dio de alta?</h2>
+
+    <p>Tu equipo comercial conectó hace meses un asistente para responder correos. Alguien de finanzas montó una automatización que revisa facturas. Ninguna decisión pasó por dirección ni por quien lleva la tecnología, y las dos tocan datos de la empresa ahora mismo. Eso es <strong>shadow AI</strong> en una empresa: inteligencia artificial en la sombra.</p>
+
+    <p>El shadow AI son agentes que funcionan dentro de la empresa sin que la dirección los haya aprobado ni los conozca. El término viene del <em>shadow IT</em> de hace una década, cuando los empleados instalaban software por su cuenta. La diferencia es que ahora ese software no solo guarda datos: <strong>toma decisiones y actúa</strong>. No es cosa de empresas descuidadas: es el patrón dominante de 2026.</p>
+
+    <h2>¿Cuántas empresas tienen agentes de IA que desconocen?</h2>
+
+    <p>La <a href="https://cloudsecurityalliance.org/press-releases/2026/04/21/new-cloud-security-alliance-survey-reveals-82-of-enterprises-have-unknown-ai-agents-in-their-environments" target="_blank" rel="noopener">Cloud Security Alliance</a>, referencia mundial en seguridad de la nube, publicó en abril de 2026 una encuesta a 418 profesionales de TI y seguridad. El titular es contundente: el <strong>82% de las empresas encontró agentes de IA que desconocía</strong> en su entorno durante el último año, y en el 41% de los casos no ocurrió una vez, sino varias.</p>
+
+    <p>Hay más. El 65% de las organizaciones sufrió algún incidente relacionado con agentes de IA en los doce meses previos, y el 61% de esos incidentes acabó en <strong>exposición de datos</strong>. Solo el 21% de las empresas tiene un proceso formal para retirar un agente cuando deja de hacer falta: la mayoría no sabe ni cómo apagar lo que no sabe que tiene.</p>
+
+    <div class="callout">
+      <p><strong>El dato en una frase.</strong> Cuatro de cada cinco empresas tienen agentes de IA que nadie dio de alta, y la mayoría se entera cuando ya ha pasado algo. No es un riesgo futuro: es un inventario que falta hoy.</p>
+    </div>
+
+    <p>Una nota de honestidad: la encuesta mide sobre todo empresas medianas y grandes. En una pyme el porcentaje exacto importa menos que la mecánica, porque el problema no escala en tamaño, sino en facilidad de uso, y eso afecta a cualquier empresa.</p>
+
+    <h2>¿Por qué aparece el shadow AI sin que nadie haga nada malo?</h2>
+
+    <p>El shadow AI no nace de la mala intención, sino de dos cosas muy de 2026. La primera, que conectar un asistente o automatizar una tarea ya no requiere a un informático: lo hace cualquiera en una tarde. La segunda, la presión por ir rápido: si una herramienta resuelve un dolor real, la gente la usa.</p>
+
+    <p>El problema no es que la usen, sino lo que esa herramienta ve y hace sin que nadie lo haya decidido. Un agente que responde correos accede al buzón entero; uno que revisa facturas, a datos financieros y, quizá, personales. Cada acceso sin revisión es una puerta abierta que la dirección ni sabe que existe. Aquí el shadow AI deja de ser un asunto técnico y pasa a ser de gobierno.</p>
+
+    <h2>¿Qué riesgos reales corre una empresa con el shadow AI?</h2>
+
+    <p>"Exposición de datos" suena abstracto hasta que se traduce. Son tres daños concretos que un agente no autorizado puede causar.</p>
+
+    <ul>
+      <li><strong>Acceso a datos que no debería ver.</strong> Un agente conectado a un buzón o a un sistema lee todo lo que contiene. Si hay datos de clientes o personal, la empresa puede estar incumpliendo protección de datos sin saberlo.</li>
+      <li><strong>Decisiones sin trazabilidad.</strong> Un agente que actúa solo y no deja registro hace cosas que luego nadie puede explicar. "No lo sé, lo hizo el agente" es un problema de responsabilidad.</li>
+      <li><strong>Errores que pasan inadvertidos.</strong> Lo que nadie vigila, nadie corrige. Un agente que se equivoca en silencio repite el error durante semanas, y cuando se descubre el daño ya está hecho.</li>
+    </ul>
+
+    <p>El hilo común es la falta de control, no la peligrosidad de la IA. El agente no es el riesgo; el agente sin supervisión sí. El shadow AI es eso multiplicado por todos los que nadie mira.</p>
+
+    <h2>¿Cómo controlar el shadow AI en una pyme con un marco proporcionado?</h2>
+
+    <p>La buena noticia es que controlar el shadow AI no exige el aparato que venden a las grandes corporaciones. Como ya explicamos en nuestra guía sobre <a href="/blog/gobernanza-ia-empresa-pequena.html">gobernanza de la IA en una empresa pequeña</a>, en una empresa de cinco a treinta personas el control cabe en tres movimientos, y los tres se entienden sin saber de tecnología.</p>
+
+    <h3>1. Inventario: saber qué tienes</h3>
+
+    <p>El primer paso es el más simple y el que casi nadie ha dado: una lista de qué agentes y automatizaciones de IA hay funcionando, quién los puso y a qué acceden. Basta una hoja de cálculo y una pregunta honesta a cada departamento: "¿qué herramientas de IA estás usando para tu trabajo?". Las respuestas suelen sorprender.</p>
+
+    <h3>2. Autorización: decidir qué entra</h3>
+
+    <p>Una vez sabes lo que hay, la regla es sencilla: nada nuevo toca datos reales sin un visto bueno. No un comité, sino una persona responsable que dedica diez minutos a entender qué va a ver y hacer el agente antes de conectarlo. Esa fricción mínima separa una herramienta autorizada de un agente en la sombra.</p>
+
+    <h3>3. Registro: poder revisarlo</h3>
+
+    <p>El tercer movimiento es dejar por escrito qué hace cada agente: un registro mínimo de las acciones relevantes, en una herramienta que el equipo ya use. Con eso, revisarlo es cuestión de minutos a la semana. Lo desarrollamos en nuestra pieza sobre <a href="/blog/auditoria-agente-ia-cada-dia.html">auditar lo que tu agente de IA decide cada día</a>.</p>
+
+    <p>Inventario, autorización y registro son la versión gobernable del criterio que aplicamos al poner cualquier agente en marcha. Para el detalle operativo, nuestra guía sobre <a href="/blog/como-controlar-agente-ia-empresa.html">cómo controlar un agente de IA en tu empresa</a>; y para detectar a tiempo cuándo un agente se ha ido de las manos, <a href="/blog/senales-agente-ia-fuera-de-control.html">las señales de un agente de IA fuera de control</a>.</p>
+
+    <h2>¿Cuál es el criterio de fondo? La IA amplifica, no sustituye</h2>
+
+    <p>El criterio de fondo del shadow AI es una idea que es el centro de cómo trabajamos: la IA está para amplificar el juicio de las personas, no para reemplazarlo. Un agente en la sombra es justo lo contrario: tecnología que decide sin que ninguna persona lo haya decidido. El shadow AI no es un problema de la IA, sino de gobierno que la IA hace urgente.</p>
+
+    <p>La empresa que gana no es la que prohíbe la IA ni la que la deja correr suelta, sino la que la integra con criterio: deja que la gente use buenas herramientas, pero sabe cuáles son y ha decidido qué pueden tocar. Es la lógica que defendemos al hablar de <a href="/blog/ia-con-criterio-humano.html">IA con criterio humano</a>: el agente decide mejor cuando no decide solo. Y para eso, primero hay que saberlo.</p>
+
+  </div>
+
+  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué es el shadow AI?</summary>
+        <p>El shadow AI son agentes de IA que funcionan en la empresa sin que la dirección los apruebe ni los conozca. Acceden a datos y deciden sin control.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo controlo los agentes de IA en mi empresa?</summary>
+        <p>Con tres pasos proporcionados: inventario de qué agentes existen, autorización mínima antes de tocar datos reales y registro de lo que hace cada uno.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué riesgos tiene un agente de IA no autorizado?</summary>
+        <p>Accede a datos sin permiso, decide sin dejar rastro y falla en silencio. Según la CSA (abril 2026), el 61% de los incidentes acabó en fuga de datos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Por qué aparece el shadow AI en las empresas?</summary>
+        <p>Cualquier empleado conecta un asistente en minutos y la prisa hace el resto. La CSA halló (abril 2026) un 82% de empresas con agentes desconocidos.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Sabes qué agentes de IA hay funcionando en tu empresa?</h2>
+    <p class="article-cta-text">Hacemos el inventario contigo, revisamos a qué accede cada agente y dejamos montado el control mínimo para que tu equipo siga rápido sin sorpresas. Sin compromiso y sin venderte una plataforma que no necesitas.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Pon orden en tu shadow AI</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/como-controlar-agente-ia-empresa.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos</span>
+        <span class="related-card-excerpt">Aprobación humana, sandbox con whitelist y registro mínimo: las tres decisiones de diseño que dan control real a una pyme sin proceso pesado.</span>
+        <span class="related-card-readtime">8 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/senales-agente-ia-fuera-de-control.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Las señales de que tu agente de IA se está yendo de control</span>
+        <span class="related-card-excerpt">Cómo detectar a tiempo que un agente ha dejado de hacer lo que esperabas, antes de que el problema se vuelva caro.</span>
+        <span class="related-card-readtime">7 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
