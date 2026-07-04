@@ -6,7 +6,7 @@
 
 <!-- ── SEO Principal ──────────────────────────────────────────── -->
 <title>Ailitica — Automatización con IA y Agentes para Empresas</title>
-<meta name="description" content="Ailitica identifica dónde la inteligencia artificial libera a tu equipo y construye los agentes que lo hacen posible. Automatización, agentes IA e integración empresarial para pymes y empresas de 20–200 personas.">
+<meta name="description" content="Ailitica identifica dónde la IA libera a tu equipo y construye los agentes que lo hacen posible. Automatización y agentes IA para empresas de 20–200 personas.">
 <meta name="keywords" content="automatización con IA, agentes de inteligencia artificial, automatización empresarial, IA para pymes, transformación digital, agentes IA empresas, automatización de procesos, inteligencia artificial para empresas, Ailitica">
 <meta name="author" content="Ailitica">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -189,6 +189,17 @@
         "text": "Ailitica no usa templates genéricos ni vende soluciones estándar. Cada proyecto empieza desde cero analizando el contexto específico de la empresa. El éxito se mide en tiempo recuperado y ventaja competitiva real, no en demos impresionantes."
       }
     }
+  ]
+}
+</script>
+
+<!-- ── Structured Data: BreadcrumbList ───────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ailitica.com/" }
   ]
 }
 </script>
@@ -615,6 +626,29 @@ section:not(#hero) + section::before {
 .pillar-title { font-family:var(--font-d); font-size:14px; font-weight:400; color:var(--text-primary); margin-bottom:6px; }
 .pillar-text  { font-size:12.5px; color:var(--text-secondary); line-height:1.6; }
 
+/* ════ RESUMEN — acordeón visible (mismo patrón que .faq-item del blog) ════════ */
+.resumen-list { display:flex; flex-direction:column; gap:12px; margin-top:8px; }
+.resumen-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.resumen-item[open] { border-color:var(--border); }
+.resumen-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.resumen-item summary::-webkit-details-marker { display:none; }
+.resumen-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.resumen-item[open] summary::after { content:'−'; }
+.resumen-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+.resumen-item a { color:var(--accent); }
+
 /* ════ CONTACTO — convergence node ════════════════════════════ */
 #contacto { min-height:auto; padding-top:100px; padding-bottom:100px; }
 
@@ -810,7 +844,7 @@ footer {
     <div class="block">
       <p class="hero-eyebrow">Automatización · Agentes IA · Transformación</p>
       <h1 class="hero-h1">La IA trabaja.<br><em>Tú decides.</em><br>Tu empresa crece.</h1>
-      <p class="hero-sub">Identificamos dónde la inteligencia artificial libera a tu empresa para hacer lo que la hace única. Tú creas valor. Nosotros conectamos los nodos.</p>
+      <p class="hero-sub">Diseñamos agentes de IA y automatización a medida para que tu empresa haga lo que la hace única. Tú creas valor. Nosotros conectamos los nodos.</p>
       <div class="hero-actions">
         <a href="#contacto" class="btn-primary">Empieza la conversación</a>
         <a href="#metodo" class="btn-ghost">Cómo lo hacemos</a>
@@ -1038,28 +1072,32 @@ footer {
   </section>
 
   
-  <!-- ── Bloque semántico para crawlers y modelos de lenguaje ──────────── -->
-  <section aria-label="Descripción completa de Ailitica" style="position:fixed;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;top:0;left:0;" role="complementary">
-    <h2>Ailitica — Empresa de automatización con inteligencia artificial para empresas</h2>
-    <p>Ailitica es una empresa especializada en automatización empresarial mediante agentes de inteligencia artificial. Trabaja con empresas de entre 20 y 200 empleados que necesitan liberar a sus equipos de tareas repetitivas, de coordinación y de bajo valor añadido.</p>
-    <h3>Qué hace Ailitica</h3>
-    <p>Ailitica analiza el pipeline completo de una empresa, identifica dónde la inteligencia artificial puede liberar capacidad humana real, diseña una arquitectura de agentes IA personalizada, la integra en los sistemas existentes y la mantiene y evoluciona a largo plazo.</p>
-    <h3>Cómo trabaja Ailitica</h3>
-    <ol>
-      <li>Visión: diagnóstico del pipeline empresarial para identificar oportunidades de automatización con IA.</li>
-      <li>Diseño: arquitectura de agentes IA construida específicamente para el contexto de cada empresa, sin templates genéricos.</li>
-      <li>Despliegue: integración de agentes en los sistemas actuales de la empresa, con el humano siempre validando y decidiendo.</li>
-      <li>Crecimiento: monitorización continua, ajuste y expansión del sistema conforme crece la empresa.</li>
-    </ol>
-    <h3>Principios de Ailitica</h3>
-    <ul>
-      <li>El humano siempre manda: la IA ejecuta, el humano valida y decide.</li>
-      <li>Soluciones específicas, no genéricas: cada empresa tiene su propio pipeline y su propia solución.</li>
-      <li>Valor real, no demos: el éxito se mide en tiempo recuperado y ventaja competitiva.</li>
-      <li>Visión a largo plazo: Ailitica es el socio tecnológico que evoluciona con la empresa.</li>
-    </ul>
-    <h3>Contacto</h3>
-    <p>Email: hola@ailitica.com | LinkedIn: linkedin.com/company/ailitica | Web: ailitica.com</p>
+  <!-- RESUMEN — bloque semántico ahora VISIBLE (sustituye al bloque oculto anterior;
+       hallazgo C3, auditoría GEO+SEO 2026-07-02). Mismo patrón de acordeón <details>
+       que ya usan las FAQ del blog: contenido real en el DOM, no oculto por CSS. -->
+  <section id="resumen" aria-label="Resumen: qué es y cómo trabaja Ailitica">
+    <div class="block">
+      <span class="label r">Resumen</span>
+      <h2 class="section-h2 r d1">Ailitica, en una lectura de un minuto</h2>
+      <div class="resumen-list r d2">
+        <details class="resumen-item">
+          <summary>Qué hace Ailitica</summary>
+          <p>Ailitica es una empresa especializada en automatización empresarial mediante agentes de inteligencia artificial. Trabaja con empresas de entre 20 y 200 empleados que necesitan liberar a sus equipos de tareas repetitivas, de coordinación y de bajo valor añadido. Analiza el pipeline completo de la empresa, diseña una arquitectura de agentes IA a medida, la integra en los sistemas existentes, y la mantiene y evoluciona a largo plazo.</p>
+        </details>
+        <details class="resumen-item">
+          <summary>Cómo trabaja Ailitica</summary>
+          <p>Cuatro pasos, siempre con el humano validando y decidiendo: Visión (diagnóstico del pipeline), Diseño (arquitectura de agentes a medida, sin templates genéricos), Despliegue (integración en los sistemas actuales) y Crecimiento (monitorización y expansión conforme escala la empresa). Detalle completo en la sección <a href="#metodo">Método</a>.</p>
+        </details>
+        <details class="resumen-item">
+          <summary>Principios de Ailitica</summary>
+          <p>El humano siempre manda: la IA ejecuta, el humano valida y decide. Soluciones específicas, no genéricas: cada empresa tiene su propio pipeline. Valor real, no demos: el éxito se mide en tiempo recuperado y ventaja competitiva. Visión a largo plazo: Ailitica evoluciona con la empresa. Más en la sección <a href="#equipo">Equipo</a>.</p>
+        </details>
+        <details class="resumen-item">
+          <summary>Contacto directo</summary>
+          <p>Email: <a href="mailto:hola@ailitica.com">hola@ailitica.com</a> · LinkedIn: <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener">linkedin.com/company/ailitica</a> · Web: <a href="https://ailitica.com">ailitica.com</a></p>
+        </details>
+      </div>
+    </div>
   </section>
 
 <footer role="contentinfo" aria-label="Pie de página Ailitica">
