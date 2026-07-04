@@ -634,7 +634,7 @@ section:not(#hero) + section::before {
 }
 .resumen-item[open] { border-color:var(--border); }
 .resumen-item summary {
-  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  cursor:none; pointer-events:auto; list-style:none; font-family:var(--font-d); font-weight:400;
   font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
   display:flex; justify-content:space-between; align-items:center; gap:16px;
 }
