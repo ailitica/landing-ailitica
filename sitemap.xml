@@ -252,6 +252,38 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Páginas de categoría del blog -->
+  <url>
+    <loc>https://ailitica.com/blog/categoria/fundamentos/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ailitica.com/blog/categoria/automatizacion/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ailitica.com/blog/categoria/gobernanza-y-control/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ailitica.com/blog/categoria/normativa-ia/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ailitica.com/blog/categoria/estrategia/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Páginas legales -->
 <url>
     <loc>https://ailitica.com/terminos.html</loc>
