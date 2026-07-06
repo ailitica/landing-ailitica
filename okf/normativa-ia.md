@@ -1,56 +1,35 @@
 ---
 title: Normativa IA — AI Act y ley española
-description: AI Act europeo, ley de IA de España (AESIA), obligaciones del deployer y calendario de cumplimiento 2026-2028.
+description: Preguntas frecuentes sobre el AI Act europeo, la ley de IA de España, las obligaciones del deployer y el calendario de cumplimiento.
 area: normativa-ia
 related: [gobernanza-y-control, estrategia-y-decision]
 ---
 
 # Normativa IA
 
-## AI Act europeo: lo esencial
+## ¿Qué es el AI Act y me afecta si no fabrico IA?
 
-El AI Act (Reglamento UE 2024/1689) es la primera ley de IA de amplio espectro en el mundo, vigente desde agosto de 2024. Clasifica los sistemas de IA en cuatro niveles de riesgo:
+El AI Act (Reglamento UE 2024/1689) es la ley de IA de la Unión Europea, vigente desde agosto de 2024. Afecta también a las empresas que usan IA de terceros, no solo a quienes la fabrican. Si despliegas un sistema de IA para tomar decisiones que afectan a personas (clientes, empleados, proveedores), eres "deployer" y tienes obligaciones concretas. El mito "no fabricamos IA, no nos aplica" es la confusión más cara del mercado.
+→ [Qué es el AI Act de la Unión Europea](https://ailitica.com/blog/que-es-el-ai-act-union-europea.html)
+→ [Tu empresa usa IA de terceros: qué te obliga el AI Act como deployer](https://ailitica.com/blog/obligaciones-ia-empresa-usuaria-deployer.html)
 
-- **Prohibido**: sistemas de puntuación social, manipulación subliminal, reconocimiento de emociones en el trabajo (salvo excepciones).
-- **Alto riesgo** (Anexos I y III): sistemas en sectores críticos (sanidad, infraestructura, empleo, educación, justicia). Obligaciones estrictas: documentación técnica, registro humano, transparencia, robustez.
-- **Limitado**: chatbots y sistemas que interactúan con personas. Obligación de informar al usuario que habla con IA.
-- **Mínimo**: la mayoría de aplicaciones de negocio. Sin obligaciones específicas del AI Act.
+## ¿Qué tengo que hacer ya con el AI Act?
 
-**Mito frecuente**: "No fabricamos IA, no nos aplica." Si usas IA de terceros para tomar decisiones que afectan a personas (clientes, empleados), eres **deployer** y el AI Act sí te obliga.
+El artículo 4 (alfabetización en IA) está en vigor desde febrero de 2025. Obliga a garantizar que el personal que usa o supervisa sistemas de IA tiene la formación adecuada para su nivel de responsabilidad. Las prohibiciones y los sistemas de propósito general se aplican desde agosto de 2026. El alto riesgo (sectores como empleo, educación, servicios esenciales) entra en diciembre de 2027.
+→ [AI Act: lo que no se aplazó en agosto de 2026](https://ailitica.com/blog/ai-act-lo-que-no-se-aplazo-agosto-2026.html)
+→ [Calendario AI Act 2027 tras el Digital Omnibus](https://ailitica.com/blog/ai-act-omnibus-calendario-definitivo-2027.html)
 
-## Obligaciones del deployer (empresa usuaria)
+## ¿Qué es un deployer según el AI Act y qué obligaciones tiene?
 
-Las empresas que despliegan IA de terceros deben:
-1. Verificar que el sistema que usan está clasificado correctamente por el proveedor.
-2. Implementar supervisión humana proporcional al riesgo.
-3. Mantener logs de uso y resultados durante el periodo que marque el reglamento.
-4. Informar a los usuarios cuando interactúan con IA (Art. 50).
-5. Garantizar que el personal que usa o supervisa IA tiene formación suficiente (Art. 4, vigente desde febrero 2025).
+El deployer es la empresa que pone en funcionamiento un sistema de IA para un uso concreto. Sus obligaciones principales: verificar la clasificación de riesgo del sistema que usa, implementar supervisión humana proporcional al riesgo, mantener logs de uso, informar a los usuarios cuando interactúan con IA (Art. 50) y garantizar formación al personal que lo usa o supervisa (Art. 4).
+→ [Tu empresa usa IA de terceros: qué te obliga el AI Act como deployer](https://ailitica.com/blog/obligaciones-ia-empresa-usuaria-deployer.html)
 
-## Calendario tras el Digital Omnibus (provisional, acuerdo mayo 2026)
+## ¿Qué es la ley de IA española y qué sanciones tiene?
 
-| Fecha | Hito |
-|---|---|
-| Feb 2025 | Art. 4 (alfabetización en IA): vigente. Las empresas deben garantizar formación a quien usa o supervisa IA. |
-| Ago 2026 | Prohibiciones y sistemas de propósito general (GPAI): aplicables. |
-| Dic 2027 | Alto riesgo Anexo III (empleo, educación, acceso a servicios esenciales): aplicable. |
-| Ago 2028 | Alto riesgo Anexo I (productos regulados: maquinaria, juguetes, dispositivos médicos): aplicable. |
+España aprobó el 26 de mayo de 2026 su proyecto de ley de IA nacional, que crea la AESIA (Agencia Española de Supervisión de Inteligencia Artificial) como autoridad competente. Las sanciones alcanzan hasta 35 millones de euros o el 7% del volumen de negocio global anual para las infracciones más graves. La ley complementa el AI Act añadiendo obligaciones específicas para el contexto español.
+→ [España ya tiene su ley de IA: AESIA, multas de hasta 35 millones y qué te toca](https://ailitica.com/blog/ley-ia-espana-aesia-sanciones.html)
 
-## Ley de IA española
+## ¿Las pymes también tienen que cumplir el AI Act?
 
-España aprobó el 26 de mayo de 2026 su proyecto de ley de IA nacional. Puntos clave:
-- **AESIA** (Agencia Española de Supervisión de Inteligencia Artificial) como autoridad competente.
-- Sanciones de hasta 35 millones de euros o el 7% del volumen de negocio global anual.
-- La ley complementa el AI Act y añade obligaciones específicas para el contexto español.
-
-## Conceptos relacionados
-
-- [Gobernanza y control](gobernanza-y-control.md): supervisión operativa de agentes
-- [Estrategia y decisión](estrategia-y-decision.md): cómo evaluar el riesgo regulatorio antes de implementar
-
-## Artículos en profundidad
-
-- [Qué es el AI Act de la Unión Europea](https://ailitica.com/blog/que-es-el-ai-act-union-europea.html)
-- [España ya tiene su ley de IA: AESIA, multas de hasta 35 millones y qué te toca](https://ailitica.com/blog/ley-ia-espana-aesia-sanciones.html)
-- [AI Act: lo que no se aplazó en agosto de 2026](https://ailitica.com/blog/ai-act-lo-que-no-se-aplazo-agosto-2026.html)
-- [AI Act para pymes: el aplazamiento de agosto de 2026](https://ailitica.com/blog/ai-act-pyme-aplazamiento-agosto-2026.html)
+Sí. El AI Act tiene algunas proporcionalidades para pymes (principalmente en costes de documentación técnica para alto riesgo), pero las obligaciones de fondo aplican a cualquier empresa que opere en la UE con sistemas de IA, independientemente de su tamaño. La formación (Art. 4) y la transparencia con usuarios (Art. 50) no tienen exención por tamaño.
+→ [AI Act para pymes: el aplazamiento de agosto de 2026](https://ailitica.com/blog/ai-act-pyme-aplazamiento-agosto-2026.html)

@@ -1,53 +1,37 @@
 ---
 title: Gobernanza y control de agentes de IA
-description: Shadow AI, supervisión de agentes, auditoría, human-in-the-loop y cómo mantener el control cuando la IA actúa por su cuenta.
+description: Preguntas frecuentes sobre shadow AI, supervisión de agentes, auditoría, human-in-the-loop y control en producción.
 area: gobernanza-y-control
 related: [fundamentos, automatizacion-y-procesos, normativa-ia]
 ---
 
 # Gobernanza y control de agentes de IA
 
-## El problema del shadow AI
+## ¿Qué es el shadow AI?
 
-Shadow AI es el conjunto de agentes de IA que operan en una empresa sin que nadie los haya autorizado formalmente. Según el CSA (Cloud Security Alliance, abril 2026), el 82% de las empresas tiene agentes activos que nadie dio de alta. No son amenazas externas: son herramientas que los propios empleados adoptaron porque resuelven su trabajo, pero sin supervisión ni política.
+Shadow AI es el conjunto de agentes e IA que operan en una empresa sin que nadie los haya autorizado formalmente. Según el CSA (Cloud Security Alliance, abril 2026), el 82% de las empresas tiene agentes activos que nadie dio de alta. No son amenazas externas: son herramientas que los propios empleados adoptaron porque resuelven su trabajo, pero sin supervisión, sin política de datos y sin nadie responsable si algo falla.
+→ [Agentes de IA que nadie autorizó: el problema del shadow AI](https://ailitica.com/blog/gobernanza-control-agentes-shadow-ai.html)
+→ [Gobernanza de IA en la empresa pequeña](https://ailitica.com/blog/gobernanza-ia-empresa-pequena.html)
 
-El riesgo no es que la IA sea maliciosa: es que nadie sabe qué datos procesa, qué decisiones toma ni qué pasa cuando falla.
+## ¿Cómo sé si mi agente de IA está actuando correctamente?
 
-## Human-in-the-loop: cuándo es obligatorio
+Tres comprobaciones mínimas para cualquier agente en producción: hay un log de cada acción con fecha, input y output; hay un humano identificado como responsable de sus decisiones; y hay un procedimiento definido para detenerlo si algo sale mal. Si falla cualquiera de los tres, el agente no tiene la supervisión mínima necesaria.
+→ [Señales de que tu agente de IA está fuera de control](https://ailitica.com/blog/senales-agente-ia-fuera-de-control.html)
+→ [Cómo controlar un agente de IA en tu empresa](https://ailitica.com/blog/como-controlar-agente-ia-empresa.html)
 
-El principio de Ailitica: la IA propone, el humano decide. Esto no es filosófico, es operativo. Hay tres niveles:
+## ¿Qué es el human-in-the-loop y cuándo aplicarlo?
 
-1. **Siempre en el bucle**: el humano valida cada salida antes de que tenga efecto externo. Para decisiones de alto impacto o procesos nuevos sin histórico de fallos.
-2. **En excepciones**: el agente actúa de forma autónoma en los casos claros y escala al humano cuando detecta ambigüedad. Para procesos maduros con tasa de error baja y conocida.
-3. **Supervisión asíncrona**: el agente actúa, el humano revisa por muestreo. Para flujos de bajo riesgo y alto volumen con auditoría periódica.
+Human-in-the-loop es el principio de mantener a una persona en la cadena de decisión de un agente de IA. Hay tres niveles: el humano valida cada salida antes de que tenga efecto externo (para decisiones de alto impacto), el agente actúa en los casos claros y escala al humano en excepciones (para procesos maduros con tasa de error baja), o supervisión asíncrona por muestreo (para flujos de bajo riesgo y alto volumen). El nivel correcto depende del impacto de un error, no del grado de confianza en la IA.
+→ [Human-in-the-loop: cuándo aplicarlo y cuándo no](https://ailitica.com/blog/human-in-the-loop-cuando-aplicarlo.html)
 
-El nivel correcto depende del impacto de un error, no del grado de confianza en la IA.
+## ¿Qué pasa cuando un agente de IA comete un error?
 
-## Señales de que un agente está fuera de control
+El error de un agente de IA es recuperable si el sistema está bien diseñado: hay log de lo que hizo, hay un humano responsable y hay un procedimiento de reversión. El problema real no es que la IA falle (fallará), sino que no haya trazabilidad para saber qué falló, cuándo y con qué datos. Un agente sin log es un agente sin responsabilidad.
+→ [IA sin supervisión: el caso PocketOS](https://ailitica.com/blog/ia-sin-supervision-caso-pocketos.html)
+→ [Auditoría de agente de IA: lo que deberías revisar cada día](https://ailitica.com/blog/auditoria-agente-ia-cada-dia.html)
 
-- Toma decisiones que nadie le encargó explícitamente.
-- No hay registro de qué hizo, cuándo y con qué datos.
-- El equipo que lo usa no sabe explicar cómo llega a sus resultados.
-- Nadie puede revertir su última acción.
+## ¿Cómo gestiono la IA que ya usan mis empleados sin que yo lo haya pedido?
 
-## Auditoría periódica: mínimos
-
-Tres comprobaciones básicas para cualquier agente en producción:
-1. ¿Hay log de cada acción con fecha, input y output?
-2. ¿Hay un humano identificado responsable de sus decisiones?
-3. ¿Hay un procedimiento definido para detenerlo en caso de fallo?
-
-## Conceptos relacionados
-
-- [Fundamentos](fundamentos.md): qué es un agente de IA
-- [Normativa IA](normativa-ia.md): obligaciones legales de supervisión bajo el AI Act
-- [Estrategia y decisión](estrategia-y-decision.md): cómo evaluar un agente antes de pasarlo a producción
-
-## Artículos en profundidad
-
-- [Agentes de IA que nadie autorizó: el problema del shadow AI](https://ailitica.com/blog/gobernanza-control-agentes-shadow-ai.html)
-- [Señales de que tu agente de IA está fuera de control](https://ailitica.com/blog/senales-agente-ia-fuera-de-control.html)
-- [Human-in-the-loop: cuándo aplicarlo y cuándo no](https://ailitica.com/blog/human-in-the-loop-cuando-aplicarlo.html)
-- [Cómo controlar un agente de IA en tu empresa](https://ailitica.com/blog/como-controlar-agente-ia-empresa.html)
-- [IA sin supervisión: el caso PocketOS](https://ailitica.com/blog/ia-sin-supervision-caso-pocketos.html)
-- [Gobernanza de IA en la empresa pequeña](https://ailitica.com/blog/gobernanza-ia-empresa-pequena.html)
+El primer paso es visibilizar: hacer un inventario de qué herramientas de IA usa el equipo, para qué y con qué datos. El segundo es clasificar por riesgo: qué herramientas tocan datos de clientes o procesos críticos. El tercero es establecer una política mínima: qué está permitido, qué requiere aprobación y qué está prohibido. No se trata de prohibir sino de ordenar lo que ya existe.
+→ [Agentes de IA que nadie autorizó: el problema del shadow AI](https://ailitica.com/blog/gobernanza-control-agentes-shadow-ai.html)
+→ [Seis meses después: aprendizajes con agentes de IA](https://ailitica.com/blog/seis-meses-despues-aprendizajes-agentes-ia.html)

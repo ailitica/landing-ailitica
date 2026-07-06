@@ -1,69 +1,36 @@
 ---
-title: Estrategia y decisión — IA en la empresa
-description: Cuándo usar IA, cómo medir el ROI, evaluar agentes antes de producción, cuánto cuesta y arquitecturas para escalar.
+title: Estrategia y decisión en IA empresarial
+description: Preguntas frecuentes sobre cómo priorizar el primer proyecto de IA, cuándo no usar IA, cómo medir el ROI y cómo elegir proveedor.
 area: estrategia-y-decision
 related: [fundamentos, automatizacion-y-procesos, gobernanza-y-control]
 ---
 
-# Estrategia y decisión
+# Estrategia y decisión en IA empresarial
 
-## El primer trabajo real: diagnosticar dónde aplica la IA
+## ¿Por dónde empieza una empresa que no sabe por dónde empezar con la IA?
 
-La mayoría de empresas no sabe por dónde empezar con IA. El error más frecuente es buscar la herramienta antes de tener claro el problema. El orden correcto: primero el sistema, luego la IA.
+Por el diagnóstico del pipeline, no por la herramienta. El primer trabajo real es identificar dónde la IA libera capacidad humana que hoy se gasta en tareas repetitivas, de bajo juicio o de bajo valor estratégico. Sin ese diagnóstico, lo habitual es comprar una herramienta genérica, usarla durante un mes y abandonarla porque "no encajaba con nuestro negocio". Encajar no es la función de la herramienta: es el resultado de diseñarlo bien.
+→ [El primer trabajo real de la IA en tu empresa no es lo que crees](https://ailitica.com/blog/primer-trabajo-real-ia-empresa.html)
+→ [¿Por dónde empiezo si nunca he automatizado nada con IA?](https://ailitica.com/blog/por-donde-empezar-ia-empresa-sin-experiencia.html)
 
-Diagnóstico en tres preguntas:
-1. ¿Qué tareas consumen más tiempo cualificado de tu equipo que no requieren juicio diferencial?
-2. ¿Cuál de esas tareas tiene una salida verificable (se puede saber si está bien hecha)?
-3. ¿Cuántas veces al día/semana/mes ocurre?
+## ¿Cuándo NO tiene sentido usar IA en mi empresa?
 
-La respuesta a esas tres preguntas da el candidato con mayor retorno para empezar.
+La IA no tiene sentido cuando el proceso que se quiere automatizar no es estable (cambia de reglas cada semana), cuando el volumen es tan bajo que el coste de mantener el sistema supera el tiempo ahorrado, o cuando el resultado de un error tiene un coste humano inaceptable sin supervisión adicional. La IA también falla cuando se usa para evitar tomar una decisión de negocio que simplemente no está tomada: automatizar un proceso mal definido solo produce errores más rápido.
+→ [Cuándo la IA no es la solución: casos en los que no merece la pena](https://ailitica.com/blog/cuando-ia-no-es-la-solucion.html)
 
-## Cuándo NO usar IA
+## ¿Cómo mido el ROI de un agente de IA?
 
-La IA no es la respuesta para todo. Señales de que no es el momento:
-- El proceso cambia tan frecuentemente que cualquier sistema se queda obsoleto en semanas.
-- El volumen es tan bajo que la automatización no amortiza la inversión.
-- El error tiene consecuencias irreversibles y no hay forma de supervisión fiable.
-- El equipo no tiene capacidad de validar las salidas del sistema.
+El ROI real de un agente de IA se mide en tiempo recuperado (horas/persona que el proceso manual consumía vs. las que consume ahora), errores evitados (tasa de error antes y después) y capacidad desbloqueada (qué hace ahora el equipo con el tiempo que ganó). Las cifras en euros se construyen sobre esos tres datos. El ROI que no parte de una medición antes/después no es ROI: es marketing interno.
+→ [Cómo calcular el ROI de un agente de IA (sin humo)](https://ailitica.com/blog/como-calcular-roi-agente-ia.html)
 
-## Cómo medir el ROI de un agente de IA
+## ¿ChatGPT o un agente a medida?
 
-El retorno de un agente tiene tres componentes:
-1. **Tiempo liberado**: horas·persona recuperadas × coste por hora del perfil que hacía la tarea.
-2. **Reducción de errores**: coste de un error × tasa de error sin IA − tasa de error con IA.
-3. **Capacidad adicional**: volumen que el equipo puede asumir ahora sin contratar.
+ChatGPT (o cualquier frontal genérico) tiene sentido para tareas ocasionales, de bajo riesgo y sin memoria de contexto. Un agente a medida tiene sentido cuando la tarea es recurrente, cuando el proceso necesita conectarse a tus propios sistemas o datos, o cuando el error de un resultado genérico tiene coste real. La pregunta no es cuál es mejor: es para qué tarea concreta. Empezar con lo genérico y migrar cuando el volumen lo justifique es la secuencia lógica, no una derrota estratégica.
+→ [ChatGPT vs agente a medida: cuándo dar el salto](https://ailitica.com/blog/chatgpt-vs-agente-a-medida-cuando-dar-el-salto.html)
+→ [El primer trabajo real de la IA en tu empresa no es lo que crees](https://ailitica.com/blog/primer-trabajo-real-ia-empresa.html)
 
-El coste incluye: desarrollo, integración, mantenimiento y supervisión. El ROI se calcula sobre el ciclo de vida del sistema (mínimo 12 meses), no sobre el piloto.
+## ¿Cómo elijo el proveedor de IA correcto para mi empresa?
 
-## Evaluar un agente antes de pasarlo a producción
-
-Un agente que responde bien en demo no garantiza que acierte en producción. El método:
-1. Construir un banco de casos reales (mínimo 20-30) con resultado esperado conocido.
-2. Medir la tasa de acierto del agente sobre ese banco.
-3. Definir el umbral de acierto mínimo aceptable antes de correr la prueba (no después).
-4. Monitorizar la deriva: la tasa de acierto cambia con el tiempo cuando cambian los datos de entrada.
-
-## Arquitecturas: cuándo necesitas varios agentes
-
-Un solo agente generalista tiene límites. Señales de que necesitas una arquitectura multiagente:
-- La tarea tiene pasos de naturaleza muy distinta (leer, razonar, escribir, llamar a sistemas).
-- Necesitas paralelizar trabajo sobre volúmenes altos.
-- La calidad mejora cuando un agente revisa el trabajo de otro.
-
-El patrón estándar: un orquestador que recibe la tarea y la distribuye a agentes especializados. El humano supervisa al orquestador, no a cada agente individual.
-
-## Conceptos relacionados
-
-- [Fundamentos](fundamentos.md): qué es un agente de IA
-- [Automatización y procesos](automatizacion-y-procesos.md): candidatos de mayor retorno
-- [Gobernanza y control](gobernanza-y-control.md): supervisión en producción
-- [Normativa IA](normativa-ia.md): riesgo regulatorio en la decisión de implementar
-
-## Artículos en profundidad
-
-- [Cómo medir el ROI de un agente de IA](https://ailitica.com/blog/como-medir-roi-agente-ia.html)
-- [Cuánto cuesta automatizar con IA](https://ailitica.com/blog/cuanto-cuesta-automatizar-ia.html)
-- [Cuándo no usar IA en tu empresa](https://ailitica.com/blog/cuando-no-usar-ia-empresa.html)
-- [Diagnóstico antes de implementar IA en la empresa](https://ailitica.com/blog/diagnostico-antes-de-implementar-ia-empresa.html)
-- [Cómo elegir un proveedor de IA](https://ailitica.com/blog/como-elegir-proveedor-de-ia.html)
-- [Productividad invisible: lo que la IA hace sin que lo veas](https://ailitica.com/blog/productividad-invisible-ia-empresa.html)
+Tres filtros en orden: primero, compatibilidad de datos (el proveedor puede cumplir tus obligaciones RGPD y AI Act, o te expone a sanciones); segundo, integración real (puede conectarse a los sistemas que ya tienes, no solo a los que tienen en su demo); tercero, modelo de coste en producción (lo que cuesta en producción con tu volumen real, no el precio de la API en un README). El proveedor con la demo más impresionante no es necesariamente el que encaja mejor con tu operación.
+→ [Cómo elegir proveedor de IA sin arrepentirte al año](https://ailitica.com/blog/como-elegir-proveedor-ia-empresa.html)
+→ [Tu empresa usa IA de terceros: qué te obliga el AI Act como deployer](https://ailitica.com/blog/obligaciones-ia-empresa-usuaria-deployer.html)

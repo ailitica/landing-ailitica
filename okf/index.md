@@ -9,29 +9,48 @@ blog_url: https://ailitica.com/blog/
 
 # Mapa de conocimiento — Ailitica
 
-Índice de conceptos sobre agentes de inteligencia artificial y automatización empresarial. Cada sección cubre un área temática con definiciones, criterios de decisión y referencias a artículos en profundidad.
+Registro de preguntas frecuentes sobre agentes de IA y automatización empresarial. Cada área recoge las preguntas que los decisores hacen con más frecuencia, con respuestas autosuficientes y referencias a los artículos del blog que las desarrollan en profundidad. Un mismo artículo puede aparecer vinculado bajo varias preguntas de distintas áreas.
 
 ## Áreas de conocimiento
 
 ### 1. Fundamentos
-Qué es un agente de IA, diferencias con chatbots, cómo empezar y cuándo tiene sentido.
 → [okf/fundamentos.md](fundamentos.md)
+- ¿Qué es un agente de IA?
+- ¿En qué se diferencia un agente de IA de un chatbot?
+- ¿Cuándo tiene sentido usar un agente de IA en mi empresa?
+- ¿Puede un agente de IA reemplazar a un empleado?
+- ¿Qué saben de IA los directivos que necesitan saber?
 
 ### 2. Automatización y procesos
-Identificar procesos candidatos, RPA vs IA, integración con sistemas existentes.
 → [okf/automatizacion-y-procesos.md](automatizacion-y-procesos.md)
+- ¿Qué procesos puedo automatizar con IA en mi empresa?
+- ¿Cuál es la diferencia entre RPA e IA para automatizar?
+- ¿Cómo integro un agente de IA con los sistemas que ya tengo?
+- ¿Por dónde empiezo si nunca he automatizado nada con IA?
 
 ### 3. Gobernanza y control
-Shadow AI, control de agentes, auditoría, human-in-the-loop, supervisión.
 → [okf/gobernanza-y-control.md](gobernanza-y-control.md)
+- ¿Qué es el shadow AI?
+- ¿Cómo sé si mi agente de IA está actuando correctamente?
+- ¿Qué es el human-in-the-loop y cuándo aplicarlo?
+- ¿Qué pasa cuando un agente de IA comete un error?
+- ¿Cómo gestiono la IA que ya usan mis empleados sin que yo lo haya pedido?
 
 ### 4. Normativa IA
-AI Act europeo, ley de IA española, obligaciones del deployer, calendario de cumplimiento.
 → [okf/normativa-ia.md](normativa-ia.md)
+- ¿Qué es el AI Act y me afecta si no fabrico IA?
+- ¿Qué tengo que hacer ya con el AI Act?
+- ¿Qué es un deployer según el AI Act y qué obligaciones tiene?
+- ¿Qué es la ley de IA española y qué sanciones tiene?
+- ¿Las pymes también tienen que cumplir el AI Act?
 
 ### 5. Estrategia y decisión
-Cuándo usar IA, cómo medir el ROI, evaluar agentes antes de producción, arquitecturas.
 → [okf/estrategia-y-decision.md](estrategia-y-decision.md)
+- ¿Por dónde empieza una empresa que no sabe por dónde empezar con la IA?
+- ¿Cuándo NO tiene sentido usar IA en mi empresa?
+- ¿Cómo mido el ROI de un agente de IA?
+- ¿ChatGPT o un agente a medida?
+- ¿Cómo elijo el proveedor de IA correcto para mi empresa?
 
 ## Sobre Ailitica
 
