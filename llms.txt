@@ -25,6 +25,14 @@ El blog cubre cinco pilares temáticos:
 
 Más de 30 artículos publicados. Índice completo en `/blog/`.
 
+
+## Mapa de conocimiento estructurado (OKF)
+
+Para navegación directa por conceptos sin leer el HTML completo del sitio:
+→ [Índice de conocimiento](https://ailitica.com/okf/index.md)
+
+Áreas: [Fundamentos](https://ailitica.com/okf/fundamentos.md) · [Automatización](https://ailitica.com/okf/automatizacion-y-procesos.md) · [Gobernanza](https://ailitica.com/okf/gobernanza-y-control.md) · [Normativa](https://ailitica.com/okf/normativa-ia.md) · [Estrategia](https://ailitica.com/okf/estrategia-y-decision.md)
+
 ## Páginas principales
 
 - Inicio: `https://ailitica.com/`
