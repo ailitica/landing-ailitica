@@ -1,0 +1,38 @@
+# Ailitica
+
+Empresa especializada en agentes de inteligencia artificial y automatización para empresas. Diseñamos, construimos e integramos sistemas de agentes de IA a medida: el humano dirige, la IA ejecuta.
+
+## Servicios
+
+- **Agentes de IA a medida**: diseño e implementación de agentes especializados para procesos concretos de la empresa (atención al cliente, análisis de datos, generación de documentos, clasificación, ETL).
+- **Automatización de procesos**: identificación de los procesos candidatos de mayor retorno y construcción del pipeline de automatización sobre los sistemas existentes.
+- **Estrategia de IA**: diagnóstico del pipeline de la empresa, mapa de oportunidades y hoja de ruta de implementación. Primero el sistema, luego la IA.
+- **Integración empresarial**: conexión de agentes de IA con ERP, CRM, bases de datos y herramientas existentes sin reemplazar el stack.
+
+## Método
+
+Cuatro fases: Visión (diagnóstico del pipeline) → Diseño (arquitectura de agentes) → Despliegue (integración en sistemas actuales) → Crece (monitorización y expansión).
+
+## Blog — Áreas de conocimiento
+
+El blog cubre cinco pilares temáticos:
+
+- **Fundamentos** (`/blog/categoria/fundamentos/`): qué es un agente de IA, diferencias con chatbots, cómo empezar.
+- **Automatización y procesos** (`/blog/categoria/automatizacion-y-procesos/`): automatización de procesos, RPA vs IA, integración con sistemas existentes.
+- **Gobernanza y control** (`/blog/categoria/gobernanza-y-control/`): shadow AI, control de agentes, auditoría, human-in-the-loop.
+- **Normativa IA** (`/blog/categoria/normativa-ia/`): AI Act, ley de IA española, AESIA, cumplimiento para empresas.
+- **Estrategia y decisión** (`/blog/categoria/estrategia-y-decision/`): cuándo usar IA, cómo medir el ROI, evaluación de agentes antes de producción.
+
+Más de 30 artículos publicados. Índice completo en `/blog/`.
+
+## Páginas principales
+
+- Inicio: `https://ailitica.com/`
+- Blog: `https://ailitica.com/blog/`
+- Contacto: `https://ailitica.com/contacto.html`
+
+## Contacto
+
+- Web: https://ailitica.com
+- Email: hola@ailitica.com
+- LinkedIn: https://linkedin.com/company/ailitica
