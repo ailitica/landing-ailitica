@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
+<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
+<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
+<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
+<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
+<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Por qué fallan los pilotos de agentes IA — Ailitica</title>
+<meta name="description" content="El 88% de los pilotos de agentes de IA no llega a producción (IDC, 2025). No es la IA: es el diseño. Las causas reales y cómo estar en el 12%.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/por-que-fallan-pilotos-agentes-ia.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/por-que-fallan-pilotos-agentes-ia.html">
+<meta property="og:title" content="El 88% de los pilotos de agentes de IA no llega a producción: por qué, y cómo estar en el 12%">
+<meta property="og:description" content="El 88% de los pilotos de agentes de IA no llega a producción (IDC, 2025). No es la IA: es el diseño. Las causas reales y cómo estar en el 12%.">
+<meta property="og:image" content="https://ailitica.com/blog/img/por-que-fallan-pilotos-agentes-ia_blog-hero.jpg">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-07-07">
+<meta property="article:modified_time" content="2026-07-07">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="El 88% de los pilotos de agentes de IA no llega a producción: por qué, y cómo estar en el 12%">
+<meta name="twitter:description" content="El 88% de los pilotos de agentes de IA no llega a producción (IDC, 2025). No es la IA: es el diseño. Las causas reales y cómo estar en el 12%.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/por-que-fallan-pilotos-agentes-ia_blog-hero.jpg">
+
+<!-- GEO:Article — FIJO salvo campos de contenido -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "El 88% de los pilotos de agentes de IA no llega a producción: por qué, y cómo estar en el 12%",
+  "description": "El 88% de los pilotos de agentes de IA no llega a producción (IDC, 2025). No es la IA: es el diseño. Las causas reales y cómo estar en el 12%.",
+  "image": "https://ailitica.com/blog/img/por-que-fallan-pilotos-agentes-ia_blog-hero.jpg",
+  "datePublished": "2026-07-07",
+  "dateModified": "2026-07-07",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "jobTitle": "CEO de Ailitica",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "url": "https://ailitica.com",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/por-que-fallan-pilotos-agentes-ia.html" },
+  "articleSection": "Estrategia",
+  "inLanguage": "es",
+  "keywords": "por qué fallan los pilotos de IA, pilotos de IA que no llegan a producción, fracaso proyectos IA empresa, agentes IA del piloto a producción, por qué no funcionan los agentes de IA",
+  "wordCount": 855,
+  "about": [
+    {"@type": "Thing", "name": "agentes de inteligencia artificial"},
+    {"@type": "Thing", "name": "pilotos de IA"},
+    {"@type": "Thing", "name": "estrategia de IA para empresas"}
+  ]
+}
+</script>
+<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ailitica.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ailitica.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "El 88% de los pilotos de agentes de IA no llega a producción: por qué, y cómo estar en el 12%", "item": "https://ailitica.com/blog/por-que-fallan-pilotos-agentes-ia.html" }
+  ]
+}
+</script>
+<!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
+     con el de la sección .faq del cuerpo. {"@type": "Question", "name": "¿Por qué fallan los proyectos de agentes de IA?", "acceptedAnswer": {"@type": "Answer", "text": "No por el modelo, sino por el diseño: criterios de éxito poco claros, acceso insuficiente a datos y sistemas, y falta de evaluación continua."}}, {"@type": "Question", "name": "¿Qué porcentaje de pilotos de IA llega a producción?", "acceptedAnswer": {"@type": "Answer", "text": "Según IDC (AI CIO Playbook 2025), solo el 12% llega a producción: por cada 33 pruebas de concepto, cuatro pasan a producción."}}, {"@type": "Question", "name": "¿Cómo evito que mi piloto de IA fracase?", "acceptedAnswer": {"@type": "Answer", "text": "Tres decisiones antes de construir: diagnostica el proceso real, fija criterios de éxito medibles y monta evaluación continua."}} = array
+     JSON de objetos Question/Answer (contenido). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Por qué fallan los proyectos de agentes de IA?", "acceptedAnswer": {"@type": "Answer", "text": "No por el modelo, sino por el diseño: criterios de éxito poco claros, acceso insuficiente a datos y sistemas, y falta de evaluación continua."}}, {"@type": "Question", "name": "¿Qué porcentaje de pilotos de IA llega a producción?", "acceptedAnswer": {"@type": "Answer", "text": "Según IDC (AI CIO Playbook 2025), solo el 12% llega a producción: por cada 33 pruebas de concepto, cuatro pasan a producción."}}, {"@type": "Question", "name": "¿Cómo evito que mi piloto de IA fracase?", "acceptedAnswer": {"@type": "Answer", "text": "Tres decisiones antes de construir: diagnostica el proceso real, fija criterios de éxito medibles y monta evaluación continua."}}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+/* Tabla genérica de contenido */
+.data-table {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0; border-collapse:collapse;
+  background:var(--glass-bg); border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm); overflow:hidden;
+  font-size:clamp(13px, 1.2vw, 15px);
+}
+.data-table th, .data-table td {
+  padding:14px 18px; text-align:left;
+  border-bottom:1px solid var(--border-soft);
+  color:var(--text-secondary); line-height:1.6; vertical-align:top;
+}
+.data-table th {
+  font-family:var(--font-d); font-weight:400; color:var(--text-primary);
+  background:rgba(74,179,255,0.05); font-size:13px; letter-spacing:.02em;
+}
+.data-table tr:last-child td { border-bottom:none; }
+.data-table td strong { color:var(--text-primary); font-weight:400; }
+@media (max-width:560px) {
+  .data-table, .data-table thead, .data-table tbody,
+  .data-table th, .data-table td, .data-table tr { display:block; }
+  .data-table th { display:none; }
+  .data-table td { padding:10px 16px; border-bottom:1px solid var(--border-soft); }
+  .data-table tr { margin-bottom:14px; border:1px solid var(--border-soft); border-radius:var(--radius-sm); }
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/por-que-fallan-pilotos-agentes-ia_blog-hero.jpg" alt="Por qué fallan los pilotos de agentes de IA: del piloto a producción, diagnóstico antes de construir en una empresa" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">7 de julio de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">9 min lectura</span>
+    </div>
+    <h1 class="article-title">El 88% de los pilotos de agentes de IA no llega a producción: por qué, y cómo estar en el 12%</h1>
+    <!-- GEO:TLDR — bloque destacado obligatorio. El 88% de los pilotos de agentes de IA no llega a producción, según IDC (AI CIO Playbook 2025). No falla la tecnología: fallan los criterios de éxito poco claros, el acceso a datos y la falta de evaluación continua. El 12% que sí llega diagnostica antes de construir, fija métricas medibles y supervisa cada día. = contenido. -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">El 88% de los pilotos de agentes de IA no llega a producción, según IDC (AI CIO Playbook 2025). No falla la tecnología: fallan los criterios de éxito poco claros, el acceso a datos y la falta de evaluación continua. El 12% que sí llega diagnostica antes de construir, fija métricas medibles y supervisa cada día.</p>
+    </aside>
+  </header>
+
+  <!-- <p>La cifra circula por todas partes desde hace meses. <strong>El 88% de los pilotos de agentes de IA no llega a producción.</strong> Suena demoledora, y se repite como si fuera una sentencia sobre la tecnología. No lo es. Es una sentencia sobre cómo se abordan los proyectos. La diferencia entre el 88% que se queda en el cajón y el 12% que llega a funcionar casi nunca está en el modelo: está en lo que se hace antes de tocar el modelo.</p>
+
+<p>Conviene empezar por atribuir bien el dato, porque mucha cobertura lo cuenta mal. Ese 88% no es de Gartner: procede de <a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html" target="_blank" rel="noopener">IDC, en su AI CIO Playbook 2025 con Lenovo</a>. La métrica es nítida: por cada 33 pruebas de concepto que lanza una empresa, solo cuatro pasan a producción. Si arrancas un piloto sin saber esto, ya partes con el sesgo del optimista.</p>
+
+<h2>Por qué fallan los pilotos de IA: no es la inteligencia, es el diseño</h2>
+
+<p>Los informes que más se citan apuntan todos a la misma raíz, y no es la potencia del modelo. <strong>IDC, MIT y Gartner coinciden en que el cuello de botella es la preparación: datos, procesos e integración.</strong> El modelo casi siempre funciona en la demo. Lo que no funciona es el sistema alrededor: el acceso a los datos correctos, la conexión con lo que ya tienes, el criterio para decidir cuándo el agente acierta.</p>
+
+<p>El estudio <a href="https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf" target="_blank" rel="noopener">State of AI in Business 2025 del MIT (iniciativa NANDA)</a> lleva el dato aún más lejos: según el informe, el 95% de los pilotos de IA generativa en empresas no produce un retorno medible. Solo un 5% genera impacto real en la cuenta de resultados. Y el patrón del 5% que sí lo logra es revelador: aplicaciones concretas, integradas a fondo en un flujo de trabajo existente, no herramientas genéricas conectadas por encima.</p>
+
+<div class="callout">
+<p><strong>La trampa del piloto.</strong> Un agente que responde bien en una demo controlada no es un agente en producción. Entre los dos hay datos reales, casos límite, integración con sistemas vivos y supervisión continua. Saltarse esa distancia es exactamente lo que infla la estadística del 88%.</p>
+</div>
+
+<h2>Las tres causas raíz que separan al 88% del 12%</h2>
+
+<p>Cuando se ordenan los motivos de fracaso, casi todos caen en tres cestas. No son problemas de IA. Son problemas de planteamiento que un buen diagnóstico detecta antes de gastar un euro en construir.</p>
+
+<h3>1. Criterios de éxito poco claros</h3>
+
+<p>Muchos pilotos arrancan sin una definición medible de qué significa "funcionar". Sin esa cifra de partida, el proyecto no se puede evaluar ni defender ante quien paga. Por eso el primer paso no es elegir herramienta, sino diagnosticar el proceso. Como explicamos en nuestro caso real de <a href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">por qué un diagnóstico cambia la respuesta antes de implementar IA</a>, la pregunta correcta casi nunca es la que trae el cliente.</p>
+
+<h3>2. Acceso insuficiente a datos y sistemas</h3>
+
+<p>Gartner, en su <a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">predicción de junio de 2025</a>, calcula que más del 40% de los proyectos de IA agéntica se cancelarán antes de que termine 2027. Entre las causas que cita están los costes crecientes y el valor de negocio poco claro. Buena parte de ese coste oculto es conectar el agente a la infraestructura que ya existe y darle acceso fiable a datos de producción. La inteligencia rara vez es el problema; el acceso seguro a tus sistemas, casi siempre.</p>
+
+<h3>3. Ausencia de evaluación continua</h3>
+
+<p>Un agente que se monta y se abandona deja de ser fiable en semanas. Sin un mecanismo para comprobar que sigue acertando, el proyecto se degrada en silencio. Aquí es donde el criterio humano deja de ser un eslogan y se vuelve infraestructura: hay que <a href="/blog/como-controlar-agente-ia-empresa.html">controlar qué decide el agente cada día</a>, no solo el día del lanzamiento.</p>
+
+<h2>Cómo estar en el 12%: diagnóstico, criterios y evaluación</h2>
+
+<p>El 12% que llega a producción no tiene mejor IA. Tiene mejor método. Y ese método se reduce a tres decisiones que se toman antes de construir, no después.</p>
+
+<ul>
+<li><strong>Diagnostica antes de construir.</strong> Mapea el proceso real, identifica dónde la IA libera capacidad humana y descarta lo que no encaja. A veces el resultado del diagnóstico es no hacer el proyecto, y eso también es valor. Para eso conviene saber <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>.</li>
+<li><strong>Fija criterios de éxito medibles.</strong> Define la cifra que hay que mover y cómo se medirá. Si no sabes <a href="/blog/como-medir-roi-agente-ia.html">cómo medir el retorno de un agente de IA</a>, no sabrás si tu piloto pertenece al 88% o al 12%.</li>
+<li><strong>Empieza por el proceso correcto.</strong> No por el más vistoso, sino por el de retorno más claro y datos más accesibles. Acertar con <a href="/blog/que-procesos-automatizar-primero.html">qué procesos automatizar primero</a> es la mitad del éxito del piloto.</li>
+</ul>
+
+<p>Nada de esto es contraintuitivo. Es, simplemente, lo que se salta el 88%. Después de <a href="/blog/seis-meses-despues-aprendizajes-agentes-ia.html">seis meses publicando sobre agentes de IA</a>, lo hemos visto repetirse: los proyectos que mueren no mueren por falta de tecnología, mueren por exceso de prisa. El piloto que llega a producción es el que se diseñó como un sistema desde el primer día, no como una demo a la que luego se le pega la realidad.</p> = CONTENIDO. Solo etiquetas semánticas de cuerpo: p, h2, h3,
+       ul/ol, table.data-table, div.callout, hr, enlaces internos. El modelo NO
+       escribe estilos, NI hojas externas, NI bloque de autor: todo eso es FIJO. -->
+  <div class="article-body">
+    <p>La cifra circula por todas partes desde hace meses. <strong>El 88% de los pilotos de agentes de IA no llega a producción.</strong> Suena demoledora, y se repite como si fuera una sentencia sobre la tecnología. No lo es. Es una sentencia sobre cómo se abordan los proyectos. La diferencia entre el 88% que se queda en el cajón y el 12% que llega a funcionar casi nunca está en el modelo: está en lo que se hace antes de tocar el modelo.</p>
+
+<p>Conviene empezar por atribuir bien el dato, porque mucha cobertura lo cuenta mal. Ese 88% no es de Gartner: procede de <a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html" target="_blank" rel="noopener">IDC, en su AI CIO Playbook 2025 con Lenovo</a>. La métrica es nítida: por cada 33 pruebas de concepto que lanza una empresa, solo cuatro pasan a producción. Si arrancas un piloto sin saber esto, ya partes con el sesgo del optimista.</p>
+
+<h2>¿Por qué fallan los pilotos de IA? No es la inteligencia, es el diseño</h2>
+
+<p>Los informes que más se citan apuntan todos a la misma raíz, y no es la potencia del modelo. <strong>IDC, MIT y Gartner coinciden en que el cuello de botella es la preparación: datos, procesos e integración.</strong> El modelo casi siempre funciona en la demo. Lo que no funciona es el sistema alrededor: el acceso a los datos correctos, la conexión con lo que ya tienes, el criterio para decidir cuándo el agente acierta.</p>
+
+<p>El estudio <a href="https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf" target="_blank" rel="noopener">State of AI in Business 2025 del MIT (iniciativa NANDA)</a> lleva el dato aún más lejos: según el informe, el 95% de los pilotos de IA generativa en empresas no produce un retorno medible. Solo un 5% genera impacto real en la cuenta de resultados. Y el patrón del 5% que sí lo logra es revelador: aplicaciones concretas, integradas a fondo en un flujo de trabajo existente, no herramientas genéricas conectadas por encima.</p>
+
+<div class="callout">
+<p><strong>La trampa del piloto.</strong> Un agente que responde bien en una demo controlada no es un agente en producción. Entre los dos hay datos reales, casos límite, integración con sistemas vivos y supervisión continua. Saltarse esa distancia es exactamente lo que infla la estadística del 88%.</p>
+</div>
+
+<h2>¿Cuáles son las tres causas raíz que separan al 88% del 12%?</h2>
+
+<p>Cuando se ordenan los motivos de fracaso, casi todos caen en tres cestas. No son problemas de IA. Son problemas de planteamiento que un buen diagnóstico detecta antes de gastar un euro en construir.</p>
+
+<h3>¿Por qué fallan los pilotos por criterios de éxito poco claros?</h3>
+
+<p>Muchos pilotos arrancan sin una definición medible de qué significa "funcionar". Sin esa cifra de partida, el proyecto no se puede evaluar ni defender ante quien paga. Por eso el primer paso no es elegir herramienta, sino diagnosticar el proceso. Como explicamos en nuestro caso real de <a href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">por qué un diagnóstico cambia la respuesta antes de implementar IA</a>, la pregunta correcta casi nunca es la que trae el cliente.</p>
+
+<h3>¿Cómo afecta el acceso insuficiente a datos y sistemas?</h3>
+
+<p>Gartner, en su <a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">predicción de junio de 2025</a>, calcula que más del 40% de los proyectos de IA agéntica se cancelarán antes de que termine 2027. Entre las causas que cita están los costes crecientes y el valor de negocio poco claro. Buena parte de ese coste oculto es conectar el agente a la infraestructura que ya existe y darle acceso fiable a datos de producción. La inteligencia rara vez es el problema; el acceso seguro a tus sistemas, casi siempre.</p>
+
+<h3>¿Qué pasa sin una evaluación continua del agente?</h3>
+
+<p>Un agente que se monta y se abandona deja de ser fiable en semanas. Sin un mecanismo para comprobar que sigue acertando, el proyecto se degrada en silencio. Aquí es donde el criterio humano deja de ser un eslogan y se vuelve infraestructura: hay que <a href="/blog/como-controlar-agente-ia-empresa.html">controlar qué decide el agente cada día</a>, no solo el día del lanzamiento.</p>
+
+<h2>¿Cómo estar en el 12% que llega a producción? Diagnóstico, criterios y evaluación</h2>
+
+<p>El 12% que llega a producción no tiene mejor IA. Tiene mejor método. Y ese método se reduce a tres decisiones que se toman antes de construir, no después.</p>
+
+<ul>
+<li><strong>Diagnostica antes de construir.</strong> Mapea el proceso real, identifica dónde la IA libera capacidad humana y descarta lo que no encaja. A veces el resultado del diagnóstico es no hacer el proyecto, y eso también es valor. Para eso conviene saber <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>.</li>
+<li><strong>Fija criterios de éxito medibles.</strong> Define la cifra que hay que mover y cómo se medirá. Si no sabes <a href="/blog/como-medir-roi-agente-ia.html">cómo medir el retorno de un agente de IA</a>, no sabrás si tu piloto pertenece al 88% o al 12%.</li>
+<li><strong>Empieza por el proceso correcto.</strong> No por el más vistoso, sino por el de retorno más claro y datos más accesibles. Acertar con <a href="/blog/que-procesos-automatizar-primero.html">qué procesos automatizar primero</a> es la mitad del éxito del piloto.</li>
+</ul>
+
+<p>Nada de esto es contraintuitivo. Es, simplemente, lo que se salta el 88%. Después de <a href="/blog/seis-meses-despues-aprendizajes-agentes-ia.html">seis meses publicando sobre agentes de IA</a>, lo hemos visto repetirse: los proyectos que mueren no mueren por falta de tecnología, mueren por exceso de prisa. El piloto que llega a producción es el que se diseñó como un sistema desde el primer día, no como una demo a la que luego se le pega la realidad.</p>
+  </div>
+
+  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Por qué fallan los proyectos de agentes de IA?</summary>
+        <p>No por el modelo, sino por el diseño: criterios de éxito poco claros, acceso insuficiente a datos y sistemas, y falta de evaluación continua.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué porcentaje de pilotos de IA llega a producción?</summary>
+        <p>Según IDC (AI CIO Playbook 2025), solo el 12% llega a producción: por cada 33 pruebas de concepto, cuatro pasan a producción.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo evito que mi piloto de IA fracase?</summary>
+        <p>Tres decisiones antes de construir: diagnostica el proceso real, fija criterios de éxito medibles y monta evaluación continua.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">Antes de lanzar tu piloto, diagnostica si llegará a producción</h2>
+    <p class="article-cta-text">Si estás a punto de invertir en un agente de IA, el primer paso no es construir: es saber si tu proceso, tus datos y tus criterios de éxito están listos. Te ayudamos a hacer ese diagnóstico antes de gastar un euro de más.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Pide tu diagnóstico</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">
+        <span class="related-card-cat">Casos de uso</span>
+        <span class="related-card-title">Querían un chatbot. Una auditoría cambió la respuesta</span>
+        <span class="related-card-excerpt">Antes de elegir cualquier herramienta de IA, hay una pregunta que importa más. Un caso real muestra por qué el diagnóstico decide cómo implementar IA.</span>
+        <span class="related-card-readtime">5 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/seis-meses-despues-aprendizajes-agentes-ia.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Seis meses publicando sobre agentes de IA: lo que de verdad hemos aprendido</span>
+        <span class="related-card-excerpt">Unas cosas las clavamos, otras las hemos rectificado a la luz de la realidad de las empresas. Esto es lo que ha cambiado nuestra forma de proponer.</span>
+        <span class="related-card-readtime">8 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>

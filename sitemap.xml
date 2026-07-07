@@ -24,6 +24,12 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://ailitica.com/blog/por-que-fallan-pilotos-agentes-ia.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ailitica.com/blog/ley-ia-espana-aesia-sanciones.html</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
