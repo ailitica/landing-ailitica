@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
+<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
+<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
+<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
+<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
+<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Cómo montar un agente de IA en tu ChatGPT — Ailitica</title>
+<meta name="description" content="Cómo montar un agente de IA en tu ChatGPT en 5 minutos: las 3 piezas (cerebro, habilidades y herramientas) y 3 escalones, del truco al agente real.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/como-montar-un-agente-de-ia.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/como-montar-un-agente-de-ia.html">
+<meta property="og:title" content="Cómo montar un agente de IA en tu ChatGPT">
+<meta property="og:description" content="Cómo montar un agente de IA en tu ChatGPT en 5 minutos: las 3 piezas (cerebro, habilidades y herramientas) y 3 escalones, del truco al agente real.">
+<meta property="og:image" content="https://ailitica.com/blog/img/como-montar-un-agente-de-ia_blog-hero.jpg">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-07-14">
+<meta property="article:modified_time" content="2026-07-14">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Fundamentos">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Cómo montar un agente de IA en tu ChatGPT">
+<meta name="twitter:description" content="Cómo montar un agente de IA en tu ChatGPT en 5 minutos: las 3 piezas (cerebro, habilidades y herramientas) y 3 escalones, del truco al agente real.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/como-montar-un-agente-de-ia_blog-hero.jpg">
+
+<!-- GEO:Article — FIJO salvo campos de contenido -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo montar un agente de IA en tu ChatGPT",
+  "description": "Seguramente ya tienes un agente de IA a medias en tu ChatGPT y no lo sabes. Sus tres piezas (un cerebro que razona, unas habilidades que son las instrucciones que le das y unas herramientas como leer archivos o buscar en la web) ya están ahí. Explicamos tres escalones: simúlalo en tu chat en 5 minutos, conviértelo en un Proyecto estable y, el de verdad, el que actúa solo conectado a tus sistemas, que se diseña.",
+  "image": "https://ailitica.com/blog/img/como-montar-un-agente-de-ia_blog-hero.jpg",
+  "datePublished": "2026-07-14",
+  "dateModified": "2026-07-14",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "jobTitle": "CEO de Ailitica",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "url": "https://ailitica.com",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/como-montar-un-agente-de-ia.html" },
+  "articleSection": "Fundamentos",
+  "inLanguage": "es",
+  "keywords": "cómo montar un agente de IA, convertir ChatGPT en un agente, qué es un agente de IA, agente de IA sin programar, proyecto de ChatGPT, automatización con IA",
+  "wordCount": 952,
+  "about": [{"@type":"Thing","name":"agente de IA"}, {"@type":"Thing","name":"ChatGPT"}, {"@type":"Thing","name":"automatización de procesos con IA"}]
+}
+</script>
+<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ailitica.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ailitica.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Cómo montar un agente de IA en tu ChatGPT", "item": "https://ailitica.com/blog/como-montar-un-agente-de-ia.html" }
+  ]
+}
+</script>
+<!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
+     con el de la sección .faq del cuerpo. {{FAQ_SCHEMA_ITEMS}} = array
+     JSON de objetos Question/Answer (contenido). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Qué es un agente de IA en palabras sencillas?","acceptedAnswer":{"@type":"Answer","text":"Un programa que razona y actúa solo para cumplir un objetivo. Combina un modelo que piensa, unas habilidades y unas herramientas con las que actúa."}},
+    {"@type":"Question","name":"¿Puedo convertir mi ChatGPT en un agente?","acceptedAnswer":{"@type":"Answer","text":"En parte, sí. Con buenas instrucciones y algún archivo lo conviertes en un mini-agente dentro del chat. Que actúe solo y conectado se diseña aparte."}},
+    {"@type":"Question","name":"¿Cuál es la diferencia entre un chatbot y un agente de IA?","acceptedAnswer":{"@type":"Answer","text":"Un chatbot solo responde. Un agente decide y ejecuta acciones: busca, lee, escribe o envía por sí mismo hasta completar la tarea."}},
+    {"@type":"Question","name":"¿Qué es un Proyecto de ChatGPT o Claude?","acceptedAnswer":{"@type":"Answer","text":"Un espacio con instrucciones fijas y archivos que el chat reutiliza siempre. Convierte un truco suelto en un mini-agente estable y reutilizable."}}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+/* Tabla genérica de contenido */
+.data-table {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0; border-collapse:collapse;
+  background:var(--glass-bg); border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm); overflow:hidden;
+  font-size:clamp(13px, 1.2vw, 15px);
+}
+.data-table th, .data-table td {
+  padding:14px 18px; text-align:left;
+  border-bottom:1px solid var(--border-soft);
+  color:var(--text-secondary); line-height:1.6; vertical-align:top;
+}
+.data-table th {
+  font-family:var(--font-d); font-weight:400; color:var(--text-primary);
+  background:rgba(74,179,255,0.05); font-size:13px; letter-spacing:.02em;
+}
+.data-table tr:last-child td { border-bottom:none; }
+.data-table td strong { color:var(--text-primary); font-weight:400; }
+@media (max-width:560px) {
+  .data-table, .data-table thead, .data-table tbody,
+  .data-table th, .data-table td, .data-table tr { display:block; }
+  .data-table th { display:none; }
+  .data-table td { padding:10px 16px; border-bottom:1px solid var(--border-soft); }
+  .data-table tr { margin-bottom:14px; border:1px solid var(--border-soft); border-radius:var(--radius-sm); }
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/como-montar-un-agente-de-ia_blog-hero.jpg" alt="Esquema de las tres piezas de un agente de IA: cerebro que razona, habilidades y herramientas para actuar" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Fundamentos</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">14 de julio de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">6 min lectura</span>
+    </div>
+    <h1 class="article-title">Cómo montar un agente de IA en tu ChatGPT</h1>
+    <!-- GEO:TLDR — bloque destacado obligatorio. {{TLDR_TEXT}} = contenido. -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Seguramente ya tienes un agente de IA a medias en tu ChatGPT y no lo sabes. Sus tres piezas —un cerebro que razona, unas habilidades (las instrucciones que le das) y unas herramientas (leer archivos, buscar en la web)— ya están ahí. Te enseñamos tres escalones: simúlalo en tu propio chat en 5 minutos, conviértelo en un Proyecto estable y, el de verdad, el que actúa solo conectado a tus sistemas, que se diseña.</p>
+    </aside>
+  </header>
+
+  <div class="article-body">
+    <h2>Qué es un agente de IA (y por qué ya tienes uno a medias)</h2>
+    <p>Para <strong>montar un agente de IA</strong> no hace falta empezar de cero: seguramente ya tienes uno a medias en tu ChatGPT y no lo sabes. Un agente de IA es, sin humo, un programa que recibe un objetivo, piensa qué hacer y lo hace casi solo.</p>
+    <p>Conviene separarlo de un chatbot. Un chatbot solo responde lo que le preguntas. Un agente, en cambio, actúa: busca un dato, lo lee, redacta un correo o lo envía. Lo contamos largo en nuestra guía de <a href="/blog/que-es-un-agente-de-ia.html">qué es un agente de IA y qué puede hacer por tu empresa</a>.</p>
+    <p>En el fondo no es magia: es la suma de tres piezas. Y cuando las ves, todo encaja. Lo que vemos en la práctica es que un directivo "lo entiende" en el mismo instante: cuando deja de pensar en algoritmos y empieza a pensar en estas tres cosas.</p>
+
+    <h2>Las 3 piezas de un agente de IA: cerebro, habilidades y herramientas</h2>
+    <p>Un agente de IA funciona como una persona nueva en tu equipo: necesita una cabeza que razone, saber hacer su trabajo y unas manos con las que actuar. Y lo mejor es que tu ChatGPT ya trae una parte hecha.</p>
+
+    <h3>El cerebro: un modelo que razona</h3>
+    <p>El cerebro es el <strong>modelo de lenguaje</strong>, lo mismo que hay dentro de ChatGPT, Claude o Gemini. Es la parte que piensa: entiende lo que le pides, lo divide en pasos y decide. Ese cerebro ya lo tienes abierto en tu pantalla. No hay que construirlo.</p>
+
+    <h3>Las habilidades: lo que sabe hacer</h3>
+    <p>Las <strong>habilidades</strong> (en inglés, <em>skills</em>) son las instrucciones que le das: "eres mi asistente comercial, tu objetivo es preparar respuestas a clientes, trabajas así...". Eso convierte una cabeza lista en alguien que sabe hacer una tarea concreta de tu negocio. Son sus habilidades, y las escribes tú.</p>
+
+    <h3>Las herramientas: con qué actúa</h3>
+    <p>Las <strong>herramientas</strong> (en inglés, <em>tools</em>) son las manos. En tu chat ya hay algunas: subir y leer un archivo, buscar en la web, mirar una imagen. Son los accesos con los que el agente actúa de verdad en vez de solo opinar. Sin herramientas, piensa pero no hace nada.</p>
+
+    <div class="callout"><p><strong>La regla de oro:</strong> cerebro = piensa, habilidades = sabe, herramientas = hace. Si te falta una pieza, no tienes un agente: tienes media cosa.</p></div>
+
+    <h2>Escalón 1: convierte tu ChatGPT en un mini-agente (5 minutos)</h2>
+    <p>Montar un agente de IA básico no requiere instalar nada: te basta tu propio chat. Copia esta receta, pégala en ChatGPT (o Claude, o Gemini) y cámbiala por tu caso. Le estás dando sus habilidades.</p>
+    <div class="callout"><p>"Eres mi asistente comercial. Tu objetivo es ayudarme a contestar a clientes. Trabajas así: cuando te pegue un correo, dame (1) qué pide el cliente en una línea, (2) un borrador de respuesta cordial y breve, y (3) qué datos me faltan para cerrarlo. Pregúntame antes de inventar nada."</p></div>
+    <p>Ahora súmale una herramienta. Sube tu lista de precios o tu catálogo en PDF y pídele que lo use para responder. Acabas de darle manos: ya no opina en abstracto, lee tu documento y contesta con tus datos.</p>
+    <p>Y ya está. Tienes un agente que percibe (lee el correo y el PDF), razona (decide qué responder) y actúa (te entrega el borrador). En este punto casi todo el mundo piensa lo mismo: "qué sencillo, ¿no?". Y tiene razón. La idea es sencilla de verdad.</p>
+
+    <h2>Escalón 2: conviértelo en un Proyecto (deja de ser un juguete)</h2>
+    <p>Tu mini-agente de IA del escalón 1 tiene un problema: cada vez que abres un chat nuevo, empiezas de cero. La solución se llama <strong>Proyecto</strong> (en ChatGPT y en Claude) o un espacio equivalente. Es el mismo agente, pero con memoria de su sitio.</p>
+    <p>En un Proyecto guardas dos cosas fijas: su guía de trabajo (las habilidades de antes, ya permanentes) y sus archivos de referencia (tu catálogo, tus plantillas, tus normas). Cada conversación dentro del Proyecto arranca ya sabiendo quién es y con qué trabaja.</p>
+    <p>Con eso pasas de un truco de un día a un mini-agente estable y reutilizable. Lo abres el lunes y el viernes y es el mismo, con tus reglas y tus documentos. Es el primer paso serio hacia la <a href="/blog/automatizacion-de-procesos-empresariales.html">automatización de tus procesos del día a día</a>.</p>
+
+    <h2>Escalón 3: el agente de verdad, el que mueve tu negocio</h2>
+    <p>El agente de IA que de verdad mueve una empresa hace su trabajo solo, sin que estés delante. Los escalones 1 y 2 viven dentro de tu chat: tú pegas el correo, tú lees la respuesta, tú aprietas el botón. Quitar ese "tú" de en medio es otra liga.</p>
+    <p>Un agente que trabaja en serio necesita cosas que no se montan pegando texto: acceso seguro a tus datos reales, conexión fiable con tus sistemas (tu CRM, tu facturación, tu ERP), control de qué puede y qué no puede tocar, y un humano que valide lo importante. Esa parte, la de verdad, se diseña.</p>
+    <p>Por eso lo barato no es la IA, sino montarla bien. Si quieres entender ese salto, ayudan nuestras guías de <a href="/blog/agentes-de-ia-para-pymes.html">agentes de IA para pymes</a> y de <a href="/blog/como-controlar-agente-ia-empresa.html">cómo controlar lo que hace un agente de IA</a>. Y si aún no sabes por dónde empezar, primero conviene <a href="/blog/como-empezar-con-ia-en-tu-empresa.html">elegir bien el primer proceso a automatizar</a>.</p>
+    <p>La buena noticia es que la estructura mental no cambia en ningún escalón: cerebro, habilidades y herramientas. Lo único que cambia es el rigor con el que se montan las tres. De hecho, las herramientas son la pieza que más evoluciona: ya existe <a href="https://www.ibm.com/think/topics/model-context-protocol" target="_blank" rel="noopener">un estándar abierto para conectar la IA con tus sistemas (MCP)</a> que explica por qué esa pieza lo cambia todo.</p>
+  </div>
+
+  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary>¿Qué es un agente de IA en palabras sencillas?</summary><p>Un programa que razona y actúa solo para cumplir un objetivo. Combina un modelo que piensa, unas habilidades y unas herramientas con las que actúa.</p></details>
+      <details class="faq-item"><summary>¿Puedo convertir mi ChatGPT en un agente?</summary><p>En parte, sí. Con buenas instrucciones y algún archivo lo conviertes en un mini-agente dentro del chat. Que actúe solo y conectado se diseña aparte.</p></details>
+      <details class="faq-item"><summary>¿Cuál es la diferencia entre un chatbot y un agente de IA?</summary><p>Un chatbot solo responde. Un agente decide y ejecuta acciones: busca, lee, escribe o envía por sí mismo hasta completar la tarea.</p></details>
+      <details class="faq-item"><summary>¿Qué es un Proyecto de ChatGPT o Claude?</summary><p>Un espacio con instrucciones fijas y archivos que el chat reutiliza siempre. Convierte un truco suelto en un mini-agente estable y reutilizable.</p></details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Y cómo sería uno de verdad para tu empresa?</h2>
+    <p class="article-cta-text">El agente de cinco minutos enseña la idea. El que ahorra horas de verdad trabaja con tus datos, se conecta a tus sistemas y es fiable y seguro. Eso se diseña. Cuéntanos qué tarea te roba más tiempo y te decimos si tiene sentido automatizarla.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Hablar de tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/que-es-un-agente-de-ia.html">
+        <span class="related-card-cat">Fundamentos</span>
+        <span class="related-card-title">Qué es un agente de IA (y qué puede hacer por tu empresa)</span>
+        <span class="related-card-excerpt">Un agente de IA no es un chatbot. Es un sistema que percibe, decide y actúa de forma autónoma.</span>
+        <span class="related-card-readtime">5 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/agentes-de-ia-para-pymes.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Agentes de IA para pymes: por dónde empezar de verdad</span>
+        <span class="related-card-excerpt">Qué puede hacer hoy un agente de IA en una pyme y cómo dar el primer paso sin tirar el dinero.</span>
+        <span class="related-card-readtime">6 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">&copy; <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
