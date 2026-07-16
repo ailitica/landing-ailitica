@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
+<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
+<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
+<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
+<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
+<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Cómo evaluar un agente de IA antes de confiar — Ailitica</title>
+<meta name="description" content="Cómo evaluar un agente de IA antes de producción: medir si acierta, no solo que responde. Banco de casos, tasa de acierto y supervisión muestral.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/como-evaluar-agente-ia-antes-de-confiar.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/como-evaluar-agente-ia-antes-de-confiar.html">
+<meta property="og:title" content="Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir">
+<meta property="og:description" content="Cómo evaluar un agente de IA antes de producción: medir si acierta, no solo que responde. Banco de casos, tasa de acierto y supervisión muestral.">
+<meta property="og:image" content="https://ailitica.com/blog/img/como-evaluar-agente-ia-antes-de-confiar_blog-hero.jpg">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-07-16">
+<meta property="article:modified_time" content="2026-07-16">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia IA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir">
+<meta name="twitter:description" content="Cómo evaluar un agente de IA antes de producción: medir si acierta, no solo que responde. Banco de casos, tasa de acierto y supervisión muestral.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/como-evaluar-agente-ia-antes-de-confiar_blog-hero.jpg">
+
+<!-- GEO:Article — FIJO salvo campos de contenido -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir",
+  "description": "Cómo evaluar un agente de IA antes de producción: medir si acierta, no solo que responde. Banco de casos, tasa de acierto y supervisión muestral.",
+  "image": "https://ailitica.com/blog/img/como-evaluar-agente-ia-antes-de-confiar_blog-hero.jpg",
+  "datePublished": "2026-07-16",
+  "dateModified": "2026-07-16",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "jobTitle": "CEO de Ailitica",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "url": "https://ailitica.com",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/como-evaluar-agente-ia-antes-de-confiar.html" },
+  "articleSection": "Estrategia IA",
+  "inLanguage": "es",
+  "keywords": "cómo evaluar un agente de IA, evaluación de un agente de IA, métricas calidad agente IA, cómo saber si la IA funciona, validar agente IA antes de producción",
+  "wordCount": 1233,
+  "about": [
+    { "@type": "Thing", "name": "evaluación de agentes de IA" },
+    { "@type": "Thing", "name": "tasa de acierto de sistemas de IA" },
+    { "@type": "Thing", "name": "NIST AI Risk Management Framework" }
+  ]
+}
+</script>
+<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ailitica.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ailitica.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir", "item": "https://ailitica.com/blog/como-evaluar-agente-ia-antes-de-confiar.html" }
+  ]
+}
+</script>
+<!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
+     con el de la sección .faq del cuerpo. {
+      "@type": "Question",
+      "name": "¿Cómo sé si mi agente de IA funciona bien?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No basta con ver que responde: hay que medir si acierta. Reúne entre treinta y cien casos reales de tu negocio con la respuesta correcta ya verificada por una persona, pásaselos al agente y cuenta en cuántos coincide con la respuesta correcta. Ese porcentaje, la tasa de acierto, es la señal real de que funciona. Si nadie puede darte ese número, no tienes una evaluación, tienes una impresión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué métricas miden la calidad de un agente de IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las cuatro básicas que cualquier directivo puede exigir son: la tasa de acierto sobre un banco de casos de prueba, el coste de cada tipo de error (no todos los fallos pesan igual), la consistencia (si da la misma respuesta al mismo caso repetido) y el comportamiento ante lo desconocido (si reconoce que no sabe o se inventa la respuesta). Juntas dicen mucho más que cualquier demo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se prueba un agente de IA antes de ponerlo en producción?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En cuatro pasos: primero defines qué cuenta como respuesta correcta; luego montas un banco de casos reales con su respuesta verificada, incluyendo los difíciles y las trampas; después fijas por escrito la tasa de acierto mínima antes de mirar resultados; y por último mides, cuentas aciertos y revisas los fallos uno a uno. Si no llega al umbral acordado, no entra en producción: se rediseña."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es la deriva de un agente de IA y por qué importa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La deriva es la pérdida silenciosa de acierto con el tiempo: un agente que acertaba el 95% puede bajar al 80% porque el mundo cambia (nuevos clientes, formatos o casos) y él sigue igual. Importa porque nadie lo nota hasta que el daño es grande. Se controla con supervisión muestral: revisar a mano un porcentaje pequeño de las decisiones reales de forma continua."
+      }
+    } = array
+     JSON de objetos Question/Answer (contenido). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé si mi agente de IA funciona bien?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mídelo: pasa 30-100 casos reales con respuesta ya verificada y cuenta en cuántos acierta. Esa tasa de acierto, no que responda, dice si funciona."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué métricas miden la calidad de un agente de IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuatro: tasa de acierto sobre un banco de casos, coste de cada tipo de error, consistencia ante el mismo caso y qué hace cuando no sabe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se prueba un agente de IA antes de ponerlo en producción?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En cuatro pasos: define qué es acertar, monta un banco de casos reales verificados, fija el umbral por escrito y mide. Si no llega, se rediseña."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es la deriva de un agente de IA y por qué importa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es la pérdida silenciosa de acierto con el tiempo: el mundo cambia y el agente no. Nadie lo nota. Se controla con supervisión muestral continua."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+/* Tabla genérica de contenido */
+.data-table {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0; border-collapse:collapse;
+  background:var(--glass-bg); border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm); overflow:hidden;
+  font-size:clamp(13px, 1.2vw, 15px);
+}
+.data-table th, .data-table td {
+  padding:14px 18px; text-align:left;
+  border-bottom:1px solid var(--border-soft);
+  color:var(--text-secondary); line-height:1.6; vertical-align:top;
+}
+.data-table th {
+  font-family:var(--font-d); font-weight:400; color:var(--text-primary);
+  background:rgba(74,179,255,0.05); font-size:13px; letter-spacing:.02em;
+}
+.data-table tr:last-child td { border-bottom:none; }
+.data-table td strong { color:var(--text-primary); font-weight:400; }
+@media (max-width:560px) {
+  .data-table, .data-table thead, .data-table tbody,
+  .data-table th, .data-table td, .data-table tr { display:block; }
+  .data-table th { display:none; }
+  .data-table td { padding:10px 16px; border-bottom:1px solid var(--border-soft); }
+  .data-table tr { margin-bottom:14px; border:1px solid var(--border-soft); border-radius:var(--radius-sm); }
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/como-evaluar-agente-ia-antes-de-confiar_blog-hero.jpg" alt="Panel de evaluación de un agente de IA con casos de prueba y tasa de acierto antes de pasar a producción" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia IA</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">16 de julio de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">9 min lectura</span>
+    </div>
+    <h1 class="article-title">Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir</h1>
+    <!-- GEO:TLDR — bloque destacado obligatorio. Para evaluar un agente de IA antes de dejarle decidir no basta con que responda: hay que medir si acierta. Eso se hace con un banco de casos de prueba con respuesta correcta conocida, una tasa de acierto fijada antes de empezar, supervisión muestral en producción y vigilancia de la deriva. Si no puedes poner un número a cuántas veces acierta, no está listo para producción. = contenido. -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">Para evaluar un agente de IA antes de dejarle decidir no basta con que responda: hay que medir si acierta. Eso se hace con un banco de casos de prueba con respuesta correcta conocida, una tasa de acierto fijada antes de empezar, supervisión muestral en producción y vigilancia de la deriva. Si no puedes poner un número a cuántas veces acierta, no está listo para producción.</p>
+    </aside>
+  </header>
+
+  <!-- <p>Saber <strong>cómo evaluar un agente de IA</strong> es la diferencia entre delegar una decisión con criterio y delegarla a ciegas. Y casi nadie lo explica en llano. La mayoría de las pruebas se quedan en una comprobación engañosa: ¿responde? Sí. Listo. Pero que un agente responda no significa que acierte. Un modelo de lenguaje siempre produce una respuesta plausible; el problema es que la plausibilidad y la corrección no son lo mismo.</p>
+
+<p>Antes de dejar que un agente decida sobre tu negocio —clasificar un correo, aprobar un gasto, responder a un cliente, priorizar una tarea— necesitas una respuesta a una pregunta incómoda: ¿cuántas veces acierta de verdad? Este artículo explica cómo medirlo sin ser técnico.</p>
+
+<div class="callout">
+<p><strong>La trampa de fondo:</strong> un agente que se equivoca con seguridad es más peligroso que uno que duda. Suena convincente, así que nadie revisa. Por eso evaluar no es opcional: es lo que separa el 12% de pilotos que llega a producción del 88% que se queda por el camino.</p>
+</div>
+
+<h2>Responder no es acertar: la distinción que lo cambia todo</h2>
+
+<p>Imagina un agente que lee facturas y extrae el importe a pagar. Le das cien facturas y devuelve cien importes. Parece que funciona. Pero la pregunta correcta no es si devuelve un número, sino si devuelve el <em>número correcto</em>. Si en quince de esas cien se equivoca de casilla y coge el subtotal en vez del total, tienes un agente que "responde" el 100% de las veces y "acierta" solo el 85%.</p>
+
+<p>Esa diferencia es invisible si solo miras que la respuesta exista. Se vuelve visible cuando comparas cada respuesta contra la respuesta correcta conocida. Ahí está el núcleo de toda evaluación seria: no medir actividad, medir aciertos.</p>
+
+<h2>El banco de casos de prueba: tu vara de medir</h2>
+
+<p>Para medir aciertos necesitas saber cuál es el acierto. Eso se llama un <strong>banco de casos de prueba</strong>: un conjunto de ejemplos reales de tu negocio, cada uno con su respuesta correcta ya verificada por una persona. Es la herramienta más importante y la que casi todo el mundo se salta.</p>
+
+<p>No hace falta que sea enorme. Para empezar, entre treinta y cien casos bien elegidos dicen mucho más que mil al azar. Lo que importa es que cubran la realidad:</p>
+
+<ul>
+<li><strong>Casos típicos:</strong> lo que el agente verá el 80% de los días.</li>
+<li><strong>Casos difíciles:</strong> los que a un humano nuevo le costarían. Una factura con dos importes, un correo ambiguo, un cliente que pregunta dos cosas a la vez.</li>
+<li><strong>Casos trampa:</strong> entradas raras, incompletas o mal formadas. Aquí es donde un agente acierta de boquilla o se inventa la respuesta.</li>
+</ul>
+
+<p>Con ese banco, evaluar deja de ser una intuición y pasa a ser una cuenta: de estos casos, ¿en cuántos acertó? Ese mismo banco es el que después usas para <a href="/blog/auditoria-agente-ia-cada-dia.html">auditar lo que tu agente de IA decide cada día</a> sin partir de cero.</p>
+
+<h2>Cuatro criterios de evaluación que cualquier directivo puede pedir</h2>
+
+<p>No necesitas saber programar para exigir estas cuatro cosas a quien construye o vende el agente. Son la base de una evaluación honesta.</p>
+
+<h3>1. Tasa de acierto sobre el banco de casos</h3>
+
+<p>El porcentaje de casos en los que la respuesta del agente coincide con la respuesta correcta. Es el número rey. Pide que se fije <em>antes</em> de empezar: "este agente solo pasa a producción si acierta el 95% de los casos típicos y el 85% de los difíciles". Un umbral decidido después de ver los resultados no es un umbral, es una excusa.</p>
+
+<h3>2. Qué pasa cuando se equivoca</h3>
+
+<p>No todos los errores cuestan lo mismo. Equivocarse al etiquetar un correo como "no urgente" es leve. Equivocarse al aprobar un pago no lo es. Pide la lista de los casos fallados y el coste de cada tipo de fallo. Un 90% de acierto puede ser excelente o inaceptable según dónde caiga ese 10%.</p>
+
+<h3>3. Consistencia</h3>
+
+<p>Dale el mismo caso dos veces. ¿Responde lo mismo? Los agentes de IA pueden dar respuestas distintas a la misma entrada. Si vas a delegarle una decisión, necesitas saber cuánto varía. Un agente inconsistente es un agente que no puedes auditar.</p>
+
+<h3>4. Comportamiento ante lo desconocido</h3>
+
+<p>¿Qué hace cuando no sabe? El buen comportamiento es decir "no estoy seguro, lo paso a un humano". El malo es inventarse una respuesta con total aplomo. Pide ver casos fuera de su zona cómoda y observa si reconoce sus límites o los disimula.</p>
+
+<div class="callout">
+<p><strong>Regla práctica:</strong> si quien te ofrece el agente no puede enseñarte su tasa de acierto sobre un banco de casos reales, no tiene una evaluación. Tiene una demo. Y una demo no es una prueba.</p>
+</div>
+
+<h2>Qué probar antes de producción (y qué no se puede saltar)</h2>
+
+<p>La evaluación tiene dos momentos: antes de soltarlo y después. Antes de producción, el orden es este:</p>
+
+<ol>
+<li><strong>Define el acierto.</strong> Acuerda con el equipo qué cuenta como respuesta correcta. Si no hay acuerdo aquí, no hay nada que medir.</li>
+<li><strong>Monta el banco de casos.</strong> Reúne ejemplos reales con su respuesta verificada. Incluye los difíciles y las trampas.</li>
+<li><strong>Fija el umbral.</strong> Decide la tasa de acierto mínima para cada tipo de caso, por escrito, antes de mirar resultados.</li>
+<li><strong>Mide y decide.</strong> Pasa el banco, cuenta aciertos, revisa los fallos uno a uno. Si no llega al umbral, no entra en producción: se rediseña.</li>
+</ol>
+
+<p>Este filtro es la mitad del trabajo de un buen <a href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">diagnóstico antes de implementar IA en la empresa</a>. Saltárselo es precisamente por donde se cuelan los proyectos que parecían perfectos en la demo y fallan el primer mes.</p>
+
+<h2>Después de producción: supervisión muestral y deriva</h2>
+
+<p>Pasar la prueba no es el final. Un agente que acertaba el 95% en marzo puede bajar al 80% en junio sin que nadie lo note. Eso se llama <strong>deriva</strong>: el mundo cambia (nuevos tipos de cliente, nuevos formatos, nuevos casos) y el agente sigue igual. Por eso la evaluación no es un examen único, es una rutina.</p>
+
+<p>La herramienta para esto es la <strong>supervisión muestral</strong>: revisar a mano un porcentaje pequeño de las decisiones reales, por ejemplo el 5%, y comprobar si siguen siendo correctas. Es barato, es continuo y te avisa antes de que el problema se haga grande. Aquí es donde el <a href="/blog/human-in-the-loop-cuando-aplicarlo.html">human in the loop, y cuándo aplicarlo</a>, deja de ser teoría y se vuelve un control concreto.</p>
+
+<p>La supervisión muestral también conecta la evaluación con el dinero: si conoces tu tasa de acierto y el coste de cada fallo, puedes calcular el <a href="/blog/como-medir-roi-agente-ia.html">retorno real de un agente de IA</a> sin engañarte. Un agente barato que acierta poco puede salir carísimo.</p>
+
+<h2>Las señales de que la evaluación falló</h2>
+
+<p>A veces el agente pasa la prueba y aun así algo va mal. Conviene reconocer los síntomas pronto: decisiones que nadie revisa, errores que se descubren tarde, respuestas que cambian sin explicación. Son las mismas <a href="/blog/senales-agente-ia-fuera-de-control.html">señales de un agente de IA fuera de control</a> que indican que la supervisión se relajó. Una evaluación viva las detecta; una evaluación de un solo día, no.</p>
+
+<p>Marcos públicos de referencia como el <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">AI Risk Management Framework del NIST</a> insisten en lo mismo desde el lado de la gobernanza: medir el desempeño de forma continua y documentada, no una vez. La idea de fondo es sencilla y poco glamurosa. Un agente de IA no se evalúa por lo bien que suena, sino por lo bien que acierta, y eso solo se sabe contándolo.</p> = CONTENIDO. Solo etiquetas semánticas de cuerpo: p, h2, h3,
+       ul/ol, table.data-table, div.callout, hr, enlaces internos. El modelo NO
+       escribe estilos, NI hojas externas, NI bloque de autor: todo eso es FIJO. -->
+  <div class="article-body">
+    <p>Saber <strong>cómo evaluar un agente de IA</strong> es la diferencia entre delegar una decisión con criterio y delegarla a ciegas. Y casi nadie lo explica en llano. La mayoría de las pruebas se quedan en una comprobación engañosa: ¿responde? Sí. Listo. Pero que un agente responda no significa que acierte. Un modelo de lenguaje siempre produce una respuesta plausible; el problema es que la plausibilidad y la corrección no son lo mismo.</p>
+
+<p>Antes de dejar que un agente decida sobre tu negocio —clasificar un correo, aprobar un gasto, responder a un cliente, priorizar una tarea— necesitas una respuesta a una pregunta incómoda: ¿cuántas veces acierta de verdad? Este artículo explica cómo medirlo sin ser técnico.</p>
+
+<div class="callout">
+<p><strong>La trampa de fondo:</strong> un agente que se equivoca con seguridad es más peligroso que uno que duda. Suena convincente, así que nadie revisa. Por eso evaluar no es opcional: es lo que separa el 12% de pilotos que llega a producción del 88% que se queda por el camino.</p>
+</div>
+
+<h2>¿Responder es lo mismo que acertar? La distinción que lo cambia todo</h2>
+
+<p>Imagina un agente que lee facturas y extrae el importe a pagar. Le das cien facturas y devuelve cien importes. Parece que funciona. Pero la pregunta correcta no es si devuelve un número, sino si devuelve el <em>número correcto</em>. Si en quince de esas cien se equivoca de casilla y coge el subtotal en vez del total, tienes un agente que "responde" el 100% de las veces y "acierta" solo el 85%.</p>
+
+<p>Esa diferencia es invisible si solo miras que la respuesta exista. Se vuelve visible cuando comparas cada respuesta contra la respuesta correcta conocida. Ahí está el núcleo de toda evaluación seria: no medir actividad, medir aciertos.</p>
+
+<h2>¿Qué es un banco de casos de prueba y por qué es tu vara de medir?</h2>
+
+<p>Para medir aciertos necesitas saber cuál es el acierto. Eso se llama un <strong>banco de casos de prueba</strong>: un conjunto de ejemplos reales de tu negocio, cada uno con su respuesta correcta ya verificada por una persona. Es la herramienta más importante y la que casi todo el mundo se salta.</p>
+
+<p>No hace falta que sea enorme. Para empezar, entre treinta y cien casos bien elegidos dicen mucho más que mil al azar. Lo que importa es que cubran la realidad:</p>
+
+<ul>
+<li><strong>Casos típicos:</strong> lo que el agente verá el 80% de los días.</li>
+<li><strong>Casos difíciles:</strong> los que a un humano nuevo le costarían. Una factura con dos importes, un correo ambiguo, un cliente que pregunta dos cosas a la vez.</li>
+<li><strong>Casos trampa:</strong> entradas raras, incompletas o mal formadas. Aquí es donde un agente acierta de boquilla o se inventa la respuesta.</li>
+</ul>
+
+<p>Con ese banco, evaluar deja de ser una intuición y pasa a ser una cuenta: de estos casos, ¿en cuántos acertó? Ese mismo banco es el que después usas para <a href="/blog/auditoria-agente-ia-cada-dia.html">auditar lo que tu agente de IA decide cada día</a> sin partir de cero.</p>
+
+<h2>¿Qué criterios de evaluación puede pedir cualquier directivo?</h2>
+
+<p>No necesitas saber programar para exigir estas cuatro cosas a quien construye o vende el agente. Son la base de una evaluación honesta.</p>
+
+<h3>¿Qué es la tasa de acierto sobre el banco de casos?</h3>
+
+<p>El porcentaje de casos en los que la respuesta del agente coincide con la respuesta correcta. Es el número rey. Pide que se fije <em>antes</em> de empezar: "este agente solo pasa a producción si acierta el 95% de los casos típicos y el 85% de los difíciles". Un umbral decidido después de ver los resultados no es un umbral, es una excusa.</p>
+
+<h3>¿Qué pasa cuando el agente se equivoca?</h3>
+
+<p>No todos los errores cuestan lo mismo. Equivocarse al etiquetar un correo como "no urgente" es leve. Equivocarse al aprobar un pago no lo es. Pide la lista de los casos fallados y el coste de cada tipo de fallo. Un 90% de acierto puede ser excelente o inaceptable según dónde caiga ese 10%.</p>
+
+<h3>¿Es consistente el agente ante la misma entrada?</h3>
+
+<p>Dale el mismo caso dos veces. ¿Responde lo mismo? Los agentes de IA pueden dar respuestas distintas a la misma entrada. Si vas a delegarle una decisión, necesitas saber cuánto varía. Un agente inconsistente es un agente que no puedes auditar.</p>
+
+<h3>¿Cómo se comporta el agente ante lo desconocido?</h3>
+
+<p>¿Qué hace cuando no sabe? El buen comportamiento es decir "no estoy seguro, lo paso a un humano". El malo es inventarse una respuesta con total aplomo. Pide ver casos fuera de su zona cómoda y observa si reconoce sus límites o los disimula.</p>
+
+<div class="callout">
+<p><strong>Regla práctica:</strong> si quien te ofrece el agente no puede enseñarte su tasa de acierto sobre un banco de casos reales, no tiene una evaluación. Tiene una demo. Y una demo no es una prueba.</p>
+</div>
+
+<h2>¿Qué probar antes de producción (y qué no se puede saltar)?</h2>
+
+<p>La evaluación tiene dos momentos: antes de soltarlo y después. Antes de producción, el orden es este:</p>
+
+<ol>
+<li><strong>Define el acierto.</strong> Acuerda con el equipo qué cuenta como respuesta correcta. Si no hay acuerdo aquí, no hay nada que medir.</li>
+<li><strong>Monta el banco de casos.</strong> Reúne ejemplos reales con su respuesta verificada. Incluye los difíciles y las trampas.</li>
+<li><strong>Fija el umbral.</strong> Decide la tasa de acierto mínima para cada tipo de caso, por escrito, antes de mirar resultados.</li>
+<li><strong>Mide y decide.</strong> Pasa el banco, cuenta aciertos, revisa los fallos uno a uno. Si no llega al umbral, no entra en producción: se rediseña.</li>
+</ol>
+
+<p>Este filtro es la mitad del trabajo de un buen <a href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">diagnóstico antes de implementar IA en la empresa</a>. Saltárselo es precisamente por donde se cuelan los proyectos que parecían perfectos en la demo y fallan el primer mes.</p>
+
+<h2>¿Qué hacer después de producción? Supervisión muestral y deriva</h2>
+
+<p>Pasar la prueba no es el final. Un agente que acertaba el 95% en marzo puede bajar al 80% en junio sin que nadie lo note. Eso se llama <strong>deriva</strong>: el mundo cambia (nuevos tipos de cliente, nuevos formatos, nuevos casos) y el agente sigue igual. Por eso la evaluación no es un examen único, es una rutina.</p>
+
+<p>La herramienta para esto es la <strong>supervisión muestral</strong>: revisar a mano un porcentaje pequeño de las decisiones reales, por ejemplo el 5%, y comprobar si siguen siendo correctas. Es barato, es continuo y te avisa antes de que el problema se haga grande. Aquí es donde el <a href="/blog/human-in-the-loop-cuando-aplicarlo.html">human in the loop, y cuándo aplicarlo</a>, deja de ser teoría y se vuelve un control concreto.</p>
+
+<p>La supervisión muestral también conecta la evaluación con el dinero: si conoces tu tasa de acierto y el coste de cada fallo, puedes calcular el <a href="/blog/como-medir-roi-agente-ia.html">retorno real de un agente de IA</a> sin engañarte. Un agente barato que acierta poco puede salir carísimo.</p>
+
+<h2>¿Cuáles son las señales de que la evaluación falló?</h2>
+
+<p>A veces el agente pasa la prueba y aun así algo va mal. Conviene reconocer los síntomas pronto: decisiones que nadie revisa, errores que se descubren tarde, respuestas que cambian sin explicación. Son las mismas <a href="/blog/senales-agente-ia-fuera-de-control.html">señales de un agente de IA fuera de control</a> que indican que la supervisión se relajó. Una evaluación viva las detecta; una evaluación de un solo día, no.</p>
+
+<p>Marcos públicos de referencia como el <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">AI Risk Management Framework del NIST</a> insisten en lo mismo desde el lado de la gobernanza: medir el desempeño de forma continua y documentada, no una vez. La idea de fondo es sencilla y poco glamurosa. Un agente de IA no se evalúa por lo bien que suena, sino por lo bien que acierta, y eso solo se sabe contándolo.</p>
+  </div>
+
+  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cómo sé si mi agente de IA funciona bien?</summary>
+        <p>Mídelo: pasa 30-100 casos reales con respuesta ya verificada y cuenta en cuántos acierta. Esa tasa de acierto, no que responda, dice si funciona.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué métricas miden la calidad de un agente de IA?</summary>
+        <p>Cuatro: tasa de acierto sobre un banco de casos, coste de cada tipo de error, consistencia ante el mismo caso y qué hace cuando no sabe.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo se prueba un agente de IA antes de ponerlo en producción?</summary>
+        <p>En cuatro pasos: define qué es acertar, monta un banco de casos reales verificados, fija el umbral por escrito y mide. Si no llega, se rediseña.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué es la deriva de un agente de IA y por qué importa?</summary>
+        <p>Es la pérdida silenciosa de acierto con el tiempo: el mundo cambia y el agente no. Nadie lo nota. Se controla con supervisión muestral continua.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Vas a delegar una decisión a un agente de IA?</h2>
+    <p class="article-cta-text">Antes de darle el control, conviene saber si acierta de verdad. Te ayudamos a montar el banco de casos, fijar el umbral de acierto y diseñar la supervisión muestral para tu proceso concreto. Sin demos: criterio aplicable a tu operación.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Hablar de tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/auditoria-agente-ia-cada-dia.html">
+        <span class="related-card-cat">Estrategia IA</span>
+        <span class="related-card-title">Cómo auditar lo que tu agente de IA decide cada día</span>
+        <span class="related-card-excerpt">El mismo banco de casos que usas para evaluar antes de producción es el que después audita las decisiones reales. Cómo montar esa rutina sin partir de cero.</span>
+        <span class="related-card-readtime">8 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/senales-agente-ia-fuera-de-control.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Las señales de que tu agente de IA se está saliendo de control</span>
+        <span class="related-card-excerpt">Decisiones que nadie revisa, errores que se descubren tarde, respuestas que cambian sin explicación. Los síntomas de que la evaluación se relajó.</span>
+        <span class="related-card-readtime">7 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>

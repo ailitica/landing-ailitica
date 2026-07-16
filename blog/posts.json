@@ -1,5 +1,14 @@
 [
   {
+    "slug": "como-evaluar-agente-ia-antes-de-confiar",
+    "title": "Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir",
+    "excerpt": "Que un agente responda no significa que acierte. Cómo medir la tasa de acierto con un banco de casos, qué probar antes de producción y cómo vigilar la deriva después.",
+    "date": "2026-07-16",
+    "category": "Estrategia IA",
+    "readtime": "9 min",
+    "image": "img/como-evaluar-agente-ia-antes-de-confiar_blog-hero.jpg"
+  },
+  {
     "slug": "como-montar-un-agente-de-ia",
     "title": "Cómo montar un agente de IA en tu ChatGPT",
     "excerpt": "Seguramente ya tienes un agente de IA a medias en tu ChatGPT. Sus tres piezas (cerebro, habilidades y herramientas) y 3 escalones: del truco al agente real.",
