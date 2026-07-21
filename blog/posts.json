@@ -1,5 +1,14 @@
 [
   {
+    "slug": "integrar-agente-ia-sistemas-existentes",
+    "title": "Integrar un agente de IA en los sistemas que ya tienes (sin reventar tu stack)",
+    "excerpt": "La inteligencia no es el problema; el acceso seguro a tus sistemas sí. Qué se conecta, qué se valida antes de tocar producción y dónde manda el humano.",
+    "date": "2026-07-21",
+    "category": "Automatización",
+    "readtime": "8 min",
+    "image": "img/integrar-agente-ia-sistemas-existentes_blog-hero.jpg"
+  },
+  {
     "slug": "como-evaluar-agente-ia-antes-de-confiar",
     "title": "Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir",
     "excerpt": "Que un agente responda no significa que acierte. Cómo medir la tasa de acierto con un banco de casos, qué probar antes de producción y cómo vigilar la deriva después.",
