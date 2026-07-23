@@ -24,6 +24,12 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://ailitica.com/blog/obligaciones-ia-empresa-usuaria-deployer.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ailitica.com/blog/integrar-agente-ia-sistemas-existentes.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>

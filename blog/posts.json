@@ -1,5 +1,14 @@
 [
   {
+    "slug": "obligaciones-ia-empresa-usuaria-deployer",
+    "title": "Tu empresa usa IA de terceros: qué te obliga el AI Act como «deployer» (y qué no)",
+    "excerpt": "El mito «no fabrico IA, no me aplica» es la confusión más cara del mercado. Como empresa usuaria eres «deployer» y el AI Act sí te obliga. Qué te toca hacer hoy, en llano.",
+    "date": "2026-07-23",
+    "category": "Normativa IA",
+    "readtime": "8 min",
+    "image": "img/obligaciones-ia-empresa-usuaria-deployer_blog-hero.jpg"
+  },
+  {
     "slug": "integrar-agente-ia-sistemas-existentes",
     "title": "Integrar un agente de IA en los sistemas que ya tienes (sin reventar tu stack)",
     "excerpt": "La inteligencia no es el problema; el acceso seguro a tus sistemas sí. Qué se conecta, qué se valida antes de tocar producción y dónde manda el humano.",
