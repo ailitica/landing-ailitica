@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
+<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
+<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
+<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
+<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
+<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+<!-- ── SEO del artículo ──────────────────────── -->
+<title>Arquitectura multiagente para empresas — Ailitica</title>
+<meta name="description" content="Arquitectura multiagente en la empresa: cuándo basta un agente y cuándo necesitas una célula coordinada. Criterio de decisión para un decisor técnico.">
+<meta name="author" content="Andoni Arrizabalaga">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ailitica.com/blog/arquitectura-multiagente-empresa.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ailitica.com/blog/arquitectura-multiagente-empresa.html">
+<meta property="og:title" content="Cuándo necesitas varios agentes de IA y no uno solo: arquitectura multiagente para empresas">
+<meta property="og:description" content="Arquitectura multiagente en la empresa: cuándo basta un agente y cuándo necesitas una célula coordinada. Criterio de decisión para un decisor técnico.">
+<meta property="og:image" content="https://ailitica.com/blog/img/arquitectura-multiagente-empresa_blog-hero.jpg">
+<meta property="og:site_name" content="Ailitica">
+<meta property="article:published_time" content="2026-07-28">
+<meta property="article:modified_time" content="2026-07-28">
+<meta property="article:author" content="Andoni Arrizabalaga">
+<meta property="article:section" content="Estrategia IA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ailitica">
+<meta name="twitter:title" content="Cuándo necesitas varios agentes de IA y no uno solo: arquitectura multiagente para empresas">
+<meta name="twitter:description" content="Arquitectura multiagente en la empresa: cuándo basta un agente y cuándo necesitas una célula coordinada. Criterio de decisión para un decisor técnico.">
+<meta name="twitter:image" content="https://ailitica.com/blog/img/arquitectura-multiagente-empresa_blog-hero.jpg">
+
+<!-- GEO:Article — FIJO salvo campos de contenido -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cuándo necesitas varios agentes de IA y no uno solo: arquitectura multiagente para empresas",
+  "description": "Arquitectura multiagente en la empresa: cuándo basta un agente y cuándo necesitas una célula coordinada. Criterio de decisión para un decisor técnico.",
+  "image": "https://ailitica.com/blog/img/arquitectura-multiagente-empresa_blog-hero.jpg",
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28",
+  "author": {
+    "@type": "Person",
+    "name": "Andoni Arrizabalaga",
+    "url": "https://www.linkedin.com/in/arriza/",
+    "sameAs": ["https://www.linkedin.com/in/arriza/"],
+    "jobTitle": "CEO de Ailitica",
+    "worksFor": { "@type": "Organization", "name": "Ailitica", "url": "https://ailitica.com" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ailitica",
+    "url": "https://ailitica.com",
+    "logo": { "@type": "ImageObject", "url": "https://ailitica.com/icon.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ailitica.com/blog/arquitectura-multiagente-empresa.html" },
+  "articleSection": "Estrategia IA",
+  "inLanguage": "es",
+  "wordCount": 1319,
+  "about": [
+    { "@type": "Thing", "name": "arquitectura multiagente" },
+    { "@type": "Thing", "name": "sistemas de agentes de IA" },
+    { "@type": "Thing", "name": "automatización empresarial con IA" }
+  ],
+  "keywords": "arquitectura multiagente empresa, sistema multi-agente IA, orquestación de agentes IA, cuándo usar varios agentes, agentes especializados vs generalista"
+}
+</script>
+<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ailitica.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ailitica.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Cuándo necesitas varios agentes de IA y no uno solo: arquitectura multiagente para empresas", "item": "https://ailitica.com/blog/arquitectura-multiagente-empresa.html" }
+  ]
+}
+</script>
+<!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
+     con el de la sección .faq del cuerpo. {{FAQ_SCHEMA_ITEMS}} = array
+     JSON de objetos Question/Answer (contenido). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es un sistema multi-agente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Varios agentes de IA especializados que colaboran en una tarea, coordinados por un orquestador que reparte el trabajo y reúne el resultado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo necesita una empresa varios agentes de IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando hay pasos heterogéneos con herramientas distintas, conviene auditar partes por separado o un solo agente se satura de instrucciones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es un orquestador de agentes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El componente que coordina a los demás: descompone la petición, asigna cada subtarea, controla el orden, gestiona errores y consolida la respuesta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es siempre mejor usar varios agentes que uno solo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Cada agente extra suma coste de coordinación, latencia y puntos de fallo. Empieza con uno y divide solo cuando haya un motivo concreto."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --glass-bg:       rgba(2,8,20,0.50);
+  --radius-sm:      16px;
+  --radius-md:      24px;
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+  --col-pad: clamp(36px, 5vw, 80px);
+  --article-w: min(800px, 80vw);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  overflow-x:hidden; cursor:none;
+}
+
+#cursor {
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 10px var(--accent);
+  transform:translate(-50%,-50%); mix-blend-mode:screen;
+  transition:width .12s, height .12s;
+}
+body:has(a:hover) #cursor,
+body:has(button:hover) #cursor { width:12px; height:12px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:26px var(--col-pad); transition:background .4s, padding .4s;
+}
+nav.scrolled {
+  background:rgba(2,6,18,0.86);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  padding:16px var(--col-pad);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
+.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  color:var(--text-secondary); text-decoration:none;
+  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
+}
+.nav-links a:hover { color:var(--text-primary); }
+.nav-links a.active { color:var(--accent); }
+.nav-cta {
+  background:transparent; border:1px solid var(--border); color:var(--accent);
+  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
+  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
+  transition:background .2s, border-color .2s;
+}
+.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
+.hamburger {
+  display:none; flex-direction:column; gap:5px; cursor:none;
+  background:none; border:none; padding:4px;
+}
+.hamburger span {
+  display:block; width:22px; height:1.5px;
+  background:var(--text-secondary); border-radius:2px;
+  transition:transform .3s, opacity .3s;
+}
+.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+#mobile-menu {
+  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
+  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+  padding:80px 32px 48px; pointer-events:none;
+  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
+}
+#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
+.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
+.mob-links a {
+  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
+  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
+}
+.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
+.mob-cta {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
+  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
+}
+
+/* ── Progress bar ── */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
+  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
+}
+
+/* ── Artículo ── */
+.article-wrap {
+  padding:140px var(--col-pad) 100px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+
+.article-header {
+  width:var(--article-w); max-width:100%; margin-bottom:56px;
+  opacity:0; animation:fadeUp .9s ease .2s forwards;
+}
+.article-meta {
+  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
+}
+.article-category {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+}
+.article-date, .article-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+}
+.article-author {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
+  text-decoration:none; transition:color .2s;
+}
+.article-author:hover { color:var(--accent); }
+.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
+
+.article-title {
+  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
+  font-weight:300; line-height:1.1; letter-spacing:-.025em;
+  color:var(--text-primary); margin-bottom:20px;
+}
+.article-title em { font-style:normal; color:var(--accent); }
+
+.article-lead {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
+  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
+  padding-left:20px; margin-top:8px;
+}
+
+.article-body {
+  width:var(--article-w); max-width:100%;
+  opacity:0; animation:fadeUp .9s ease .4s forwards;
+}
+
+.article-body h2 {
+  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  color:var(--text-primary); margin:48px 0 16px;
+}
+.article-body h2:first-child { margin-top:0; }
+.article-body h3 {
+  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
+  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
+  letter-spacing:-.01em;
+}
+.article-body p {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
+  color:var(--text-secondary); margin-bottom:20px;
+}
+.article-body p strong { color:var(--text-primary); font-weight:400; }
+.article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
+
+.callout {
+  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
+  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
+}
+.callout p { margin-bottom:0; }
+.callout p strong { color:var(--accent); }
+
+.article-body ul, .article-body ol {
+  padding-left:0; margin-bottom:20px; list-style:none;
+}
+.article-body ul li, .article-body ol li {
+  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
+  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:15px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent); opacity:.5;
+}
+.article-body ol { counter-reset:ol-count; }
+.article-body ol li { counter-increment:ol-count; }
+.article-body ol li::before {
+  content:counter(ol-count);
+  position:absolute; left:0; top:6px;
+  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
+  color:var(--accent); opacity:.6;
+}
+
+.article-body hr {
+  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
+}
+
+/* Tabla genérica de contenido */
+.data-table {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0; border-collapse:collapse;
+  background:var(--glass-bg); border:1px solid var(--border-soft);
+  border-radius:var(--radius-sm); overflow:hidden;
+  font-size:clamp(13px, 1.2vw, 15px);
+}
+.data-table th, .data-table td {
+  padding:14px 18px; text-align:left;
+  border-bottom:1px solid var(--border-soft);
+  color:var(--text-secondary); line-height:1.6; vertical-align:top;
+}
+.data-table th {
+  font-family:var(--font-d); font-weight:400; color:var(--text-primary);
+  background:rgba(74,179,255,0.05); font-size:13px; letter-spacing:.02em;
+}
+.data-table tr:last-child td { border-bottom:none; }
+.data-table td strong { color:var(--text-primary); font-weight:400; }
+@media (max-width:560px) {
+  .data-table, .data-table thead, .data-table tbody,
+  .data-table th, .data-table td, .data-table tr { display:block; }
+  .data-table th { display:none; }
+  .data-table td { padding:10px 16px; border-bottom:1px solid var(--border-soft); }
+  .data-table tr { margin-bottom:14px; border:1px solid var(--border-soft); border-radius:var(--radius-sm); }
+}
+
+.article-cta {
+  width:var(--article-w); max-width:100%; margin-top:64px;
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-md);
+  padding:36px 40px;
+  opacity:0; animation:fadeUp .9s ease .6s forwards;
+}
+.article-cta-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
+}
+.article-cta-title {
+  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
+  font-weight:300; line-height:1.25; letter-spacing:-.02em;
+  margin-bottom:12px; color:var(--text-primary);
+}
+.article-cta-text {
+  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
+}
+.btn-primary {
+  background:var(--accent); color:#010c1e; font-family:var(--font-d);
+  font-size:13px; font-weight:500; letter-spacing:.04em;
+  padding:14px 30px; border-radius:50px; border:none; cursor:none;
+  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
+}
+.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
+
+/* ── Footer ── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px 24px;
+}
+.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
+.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
+.footer-social { display:flex; gap:16px; align-items:center; }
+.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
+.footer-social a:hover { color:var(--accent); }
+.footer-social svg { width:15px; height:15px; fill:currentColor; }
+
+@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+@media (max-width:1000px) { :root { --article-w:88vw; } }
+@media (max-width:560px) {
+  :root { --article-w:100%; --col-pad:24px; }
+  nav { padding:20px 24px; }
+  .nav-links { display:none; }
+  .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .article-cta { padding:24px 22px; }
+  footer { flex-direction:column; gap:20px; text-align:center; }
+  .footer-links { flex-wrap:wrap; justify-content:center; }
+  .footer-social { justify-content:center; }
+}
+
+/* ── Hero image ── */
+.article-hero {
+  width:var(--article-w); max-width:100%; margin-bottom:40px;
+  border-radius:var(--radius-sm); overflow:hidden;
+  opacity:0; animation:fadeUp .9s ease .15s forwards;
+}
+.article-hero img {
+  width:100%; height:auto; display:block;
+  aspect-ratio:16/9; object-fit:cover;
+}
+
+/* ── Artículos relacionados ── */
+.related-articles {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+  opacity:0; animation:fadeUp .9s ease .7s forwards;
+}
+.related-articles-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
+}
+.related-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+}
+.related-card {
+  background:var(--glass-bg); backdrop-filter:blur(24px);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
+  transition:border-color .2s, background .2s;
+}
+.related-card:hover {
+  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
+}
+.related-card-cat {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--accent); opacity:.7;
+}
+.related-card-title {
+  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
+  font-weight:300; line-height:1.35; letter-spacing:-.01em;
+  color:var(--text-primary);
+}
+.related-card-excerpt {
+  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
+}
+.related-card-readtime {
+  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
+}
+@media (max-width:560px) {
+  .related-grid { grid-template-columns:1fr; }
+}
+
+/* GEO:TLDR */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
+/* GEO:FAQ */
+.faq {
+  width:var(--article-w); max-width:100%; margin-top:48px;
+}
+.faq-title {
+  font-family:var(--font-d); font-weight:400;
+  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
+  margin-bottom:24px; letter-spacing:-.005em;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item {
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
+}
+.faq-item[open] { border-color:var(--border); }
+.faq-item summary {
+  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
+  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after {
+  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after { content:'−'; }
+.faq-item p {
+  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#manifesto">Filosofía</a></li>
+    <li><a href="../#metodo">Método</a></li>
+    <li><a href="../#valor">Valor</a></li>
+    <li><a href="../#equipo">Equipo</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="nav-cta">Conectar</a>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mob-links">
+    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
+    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
+    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
+    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
+    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
+  </ul>
+  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+</div>
+
+<article class="article-wrap" aria-label="Artículo">
+
+  <figure class="article-hero">
+    <img src="img/arquitectura-multiagente-empresa_blog-hero.jpg" alt="Diagrama abstracto de arquitectura multiagente en la empresa: un orquestador coordinando varios agentes de IA especializados" width="1200" height="630" loading="eager">
+  </figure>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">Estrategia IA</span>
+      <div class="meta-dot"></div>
+      <span class="article-date">28 de julio de 2026</span>
+      <div class="meta-dot"></div>
+      <a href="https://www.linkedin.com/in/arriza/" class="article-author" target="_blank" rel="noopener">Andoni Arrizabalaga</a>
+      <div class="meta-dot"></div>
+      <span class="article-readtime">9 min lectura</span>
+    </div>
+    <h1 class="article-title">Cuándo necesitas varios agentes de IA y no uno solo: <em>arquitectura multiagente</em> para empresas</h1>
+    <!-- GEO:TLDR — bloque destacado obligatorio. {{TLDR_TEXT}} = contenido. -->
+    <aside class="tldr" aria-label="Resumen del artículo">
+      <p class="tldr-label">TL;DR</p>
+      <p class="tldr-text">En una arquitectura multiagente, un solo agente basta cuando la tarea es acotada y de un dominio. Necesitas varios agentes coordinados por un orquestador cuando hay pasos heterogéneos, conviene auditar partes por separado o un agente se satura de instrucciones. La regla: empezar con uno y dividir solo con motivo, porque cada agente extra suma coste de coordinación.</p>
+    </aside>
+  </header>
+
+  <!-- {{BODY_HTML}} = CONTENIDO. Solo etiquetas semánticas de cuerpo: p, h2, h3,
+       ul/ol, table.data-table, div.callout, hr, enlaces internos. El modelo NO
+       escribe estilos, NI hojas externas, NI bloque de autor: todo eso es FIJO. -->
+  <div class="article-body">
+    <p>La pregunta de moda en los comités de dirección ya no es "¿usamos un agente de IA?". Es otra, más fina y peor entendida: <strong>¿necesito un agente o varios?</strong> La <strong>arquitectura multiagente</strong> en la empresa es el debate de los equipos que ya pasaron la fase de juguete. Y la mayoría lo plantea al revés: monta una célula de agentes porque suena potente, cuando un único agente bien diseñado habría hecho el trabajo con menos coste y menos puntos de fallo. Aquí va el criterio que casi nadie explica en llano.</p>
+
+    <h2>¿Qué es de verdad una arquitectura multiagente?</h2>
+
+    <p>Un agente de IA recibe un objetivo, decide pasos, usa herramientas y entrega un resultado. Si no tienes clara esa base, conviene empezar por <a href="/blog/que-es-un-agente-de-ia.html">nuestra guía sobre qué es un agente de IA y en qué se diferencia de un chatbot</a>, porque sin ese cimiento la conversación multiagente se vuelve humo.</p>
+
+    <p>Una <em>arquitectura multiagente</em> es otra cosa: varios agentes especializados que colaboran en una misma tarea en lugar de resolverla con un único generalista. Cada uno cubre una parte. Sobre todos ellos, un componente coordinador, el <strong>orquestador</strong>, reparte el trabajo, ordena los pasos y reúne el resultado. Es el equivalente digital de un equipo con roles definidos frente a una sola persona haciéndolo todo.</p>
+
+    <p>La diferencia importante no es técnica, es de gestión. Un agente único es un trabajador polivalente; una célula multiagente es un pequeño equipo con un responsable. Y, como en cualquier equipo, montar más roles de los necesarios no mejora el resultado: lo encarece y lo entorpece.</p>
+
+    <h2>¿Cuándo basta un solo agente de IA?</h2>
+
+    <p>Empieza siempre por aquí. Un solo agente es más barato de construir, más fácil de auditar y más predecible en producción. Si la tarea cabe en un agente, no la repartas. Un agente único basta cuando se dan estas condiciones:</p>
+
+    <ul>
+      <li><strong>La tarea es de un solo dominio.</strong> Un contexto, un tipo de conocimiento: responder sobre una base documental, clasificar tickets, redactar con un tono fijo.</li>
+      <li><strong>Los pasos son homogéneos.</strong> El trabajo fluye lineal, sin saltar entre herramientas o criterios muy distintos.</li>
+      <li><strong>El volumen de instrucciones es manejable.</strong> Su lista de reglas no crece hasta empezar a contradecirse u olvidar partes.</li>
+      <li><strong>La auditoría no exige separar responsabilidades.</strong> Te basta revisar entrada y salida, sin inspeccionar cada subtarea aislada.</li>
+    </ul>
+
+    <p>La mayoría de los primeros proyectos de una empresa caen aquí, y conviene que así sea. De hecho, el patrón más rentable que vemos no es multiagente, sino un agente vertical y acotado, como argumentamos en <a href="/blog/agente-vertical-vs-chatbot-horizontal.html">por qué las empresas serias eligen agentes verticales y no asistentes genéricos</a>.</p>
+
+    <h2>¿Cuáles son las tres señales de que necesitas varios agentes?</h2>
+
+    <p>Pasar a una arquitectura multiagente debe ser una decisión con motivo, no una aspiración estética. Hay tres señales que la justifican de verdad. Si no aparece al menos una, no dividas.</p>
+
+    <h3>¿La tarea tiene pasos heterogéneos que exigen herramientas o conocimientos distintos?</h3>
+
+    <p>Cuando una tarea mezcla actividades de contextos muy distintos, meterlas todas en un agente lo vuelve mediocre en todo. Piensa en un proceso que investiga en fuentes externas, luego redacta un informe y después valida cifras contra una base interna. Investigar, redactar y verificar son oficios distintos: separarlos en agentes especializados sube la calidad de cada parte.</p>
+
+    <h3>¿Necesitas auditar y corregir partes del proceso por separado?</h3>
+
+    <p>En procesos con implicaciones serias (dinero, clientes, cumplimiento) quieres saber exactamente qué paso falló y poder arreglarlo sin tocar el resto. Una arquitectura multiagente te da esa trazabilidad por diseño: cada agente tiene una responsabilidad acotada y deja su propio rastro. Esto enlaza con un principio que defendemos siempre, el de mantener <a href="/blog/auditoria-agente-ia-cada-dia.html">una auditoría de lo que tu agente de IA decide cada día</a>; separar responsabilidades hace esa auditoría mucho más limpia.</p>
+
+    <h3>¿Un solo agente se ha saturado de instrucciones?</h3>
+
+    <p>Esta es la señal más práctica y la más ignorada. Cuando un agente acumula tantas reglas, excepciones y casos especiales que empieza a equivocarse en cosas que antes hacía bien, ha tocado techo. No es que la IA sea mala: es que le has pedido a una sola pieza el trabajo de tres. Repartir esas instrucciones entre agentes especializados, cada uno con un foco estrecho, recupera la fiabilidad que se había perdido.</p>
+
+    <div class="callout">
+      <p><strong>Regla de oro:</strong> no dividas por anticipado. Empieza con un agente, mídelo en producción y reparte solo cuando una de estas tres señales aparezca de verdad. Multiplicar agentes "por si acaso" es la forma más común de encarecer un proyecto sin mejorarlo.</p>
+    </div>
+
+    <h2>¿Cuál es el coste oculto del multiagente? La coordinación no es gratis</h2>
+
+    <p>Aquí está el matiz que separa al decisor con criterio del entusiasta. Cada agente que añades a la arquitectura no solo aporta capacidad: también suma <strong>coste de coordinación</strong>. Y ese coste es real, aunque no aparezca en la demo bonita.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Lo que ves al añadir agentes</th><th>Lo que pagas y no se ve</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Más especialización por tarea</td><td>Más latencia: cada salto entre agentes suma tiempo de respuesta</td></tr>
+        <tr><td>Mejor calidad en cada parte</td><td>Más puntos de fallo: el error de un agente se propaga a los siguientes</td></tr>
+        <tr><td>Trazabilidad por responsabilidad</td><td>Más coste de cómputo: más llamadas al modelo por cada petición</td></tr>
+        <tr><td>Reparto limpio de instrucciones</td><td>Más complejidad operativa: alguien tiene que mantener el orquestador</td></tr>
+      </tbody>
+    </table>
+
+    <p>Por eso la decisión correcta no es "cuantos más agentes, mejor", sino "los mínimos que resuelven bien la tarea". El orquestador, además, se convierte en una pieza crítica: si falla quien coordina, falla todo. Un conjunto de agentes sin un orquestador claro no es una arquitectura; es un grupo de piezas sueltas sin responsable del resultado.</p>
+
+    <h2>¿Cómo decidir entre uno o varios agentes? Tres preguntas antes de multiplicar</h2>
+
+    <p>Cuando un cliente nos plantea si su caso pide arquitectura multiagente, no respondemos con tecnología. Respondemos con tres preguntas, en este orden:</p>
+
+    <ol>
+      <li><strong>¿La tarea reúne pasos que exigen conocimientos o herramientas claramente distintas?</strong> Si no, un agente único basta. Si sí, anota un punto a favor de dividir.</li>
+      <li><strong>¿Necesitas auditar o corregir partes del proceso por separado?</strong> En procesos con riesgo, la trazabilidad por responsabilidad suele justificar la división por sí sola.</li>
+      <li><strong>¿Tu agente actual ya se está saturando de instrucciones y perdiendo fiabilidad?</strong> Si has llegado a este punto, repartir no es lujo: es la cura.</li>
+    </ol>
+
+    <p>Si las tres respuestas son "no", quédate con un agente. Si una sola es un "sí" rotundo, ahí empieza a tener sentido una célula coordinada. Esta forma de razonar, primero el problema y el criterio humano, después la arquitectura, es la misma con la que abordamos cualquier <a href="/blog/estrategia-de-ia-para-tu-empresa.html">estrategia de IA para tu empresa</a>: la tecnología se elige al final, nunca al principio.</p>
+
+    <h2>¿Especializar agentes con cabeza o por moda?</h2>
+
+    <p>La industria está en plena fiebre de plataformas de agentes, y como toda fiebre, infla expectativas antes de asentar el criterio. La consultora Gartner ya sitúa el desarrollo de plataformas de agentes en lo más alto del ciclo de sobreexpectación, lo que en su lenguaje significa: mucho ruido, poca depuración todavía. Puedes verlo en su <a href="https://www.gartner.com/en/articles/hype-cycle-for-artificial-intelligence" target="_blank" rel="noopener">análisis del ciclo de expectativas de la IA</a>. La lectura para un decisor es sencilla: la arquitectura multiagente es una herramienta excelente para el problema adecuado, y un sobrecoste innecesario para el resto.</p>
+
+    <p>El error más caro no es elegir mal entre uno o varios agentes. Es no haber definido bien el problema antes de elegir. Un agente saturado y mal dividido decide peor que un trabajador junior abrumado, y por las mismas razones; lo desarrollamos en <a href="/blog/agente-ia-vs-empleado-junior.html">qué tienen en común un agente de IA y un empleado junior</a>. La especialización funciona cuando responde a una necesidad real del proceso, no cuando responde a la moda del trimestre.</p>
+
+    <p>En resumen: la arquitectura multiagente no es un signo de madurez por sí misma. Lo es saber cuándo no la necesitas. Empieza con un agente, divide con motivo, mantén siempre un orquestador responsable y cuenta el coste de coordinación antes de sumar la siguiente pieza. Esa disciplina separa un sistema que funciona en producción de una demo que impresiona y luego se cae.</p>
+  </div>
+
+  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2 class="faq-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué es un sistema multi-agente?</summary>
+        <p>Varios agentes de IA especializados que colaboran en una tarea, coordinados por un orquestador que reparte el trabajo y reúne el resultado.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuándo necesita una empresa varios agentes de IA?</summary>
+        <p>Cuando hay pasos heterogéneos con herramientas distintas, conviene auditar partes por separado o un solo agente se satura de instrucciones.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué es un orquestador de agentes?</summary>
+        <p>El componente que coordina a los demás: descompone la petición, asigna cada subtarea, controla el orden, gestiona errores y consolida la respuesta.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Es siempre mejor usar varios agentes que uno solo?</summary>
+        <p>No. Cada agente extra suma coste de coordinación, latencia y puntos de fallo. Empieza con uno y divide solo cuando haya un motivo concreto.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">¿Uno o varios agentes para tu proceso? Te lo decimos con criterio, no con moda</h2>
+    <p class="article-cta-text">Antes de montar una célula de agentes, conviene diagnosticar si tu proceso la necesita de verdad. Cuéntanos qué tarea quieres automatizar y te devolvemos una recomendación honesta sobre la arquitectura mínima que la resuelve.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Plantéanos tu caso</a>
+  </div>
+
+  <section class="related-articles" aria-label="Artículos relacionados">
+    <p class="related-articles-label">Artículos relacionados</p>
+    <div class="related-grid">
+      <a class="related-card" href="/blog/que-es-un-agente-de-ia.html">
+        <span class="related-card-cat">Fundamentos</span>
+        <span class="related-card-title">Qué es un agente de IA y en qué se diferencia de un chatbot</span>
+        <span class="related-card-excerpt">El cimiento necesario antes de hablar de arquitecturas: qué hace un agente, qué lo distingue de un asistente conversacional y por qué importa la diferencia.</span>
+        <span class="related-card-readtime">7 min lectura</span>
+      </a>
+      <a class="related-card" href="/blog/agente-vertical-vs-chatbot-horizontal.html">
+        <span class="related-card-cat">Estrategia</span>
+        <span class="related-card-title">Agente vertical vs chatbot horizontal: qué eligen las grandes en 2026</span>
+        <span class="related-card-excerpt">Por qué los casos faro de IA en empresa no compran asistentes genéricos: compran agentes verticales con dominio acotado y mejores métricas de error.</span>
+        <span class="related-card-readtime">9 min lectura</span>
+      </a>
+    </div>
+  </section>
+
+</article>
+
+<footer role="contentinfo">
+  <a class="footer-logo" href="../">
+    <img class="logo-icon" src="../icon.png" alt="">
+    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
+  </a>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
+  <div class="footer-links">
+    <a href="./">Blog</a>
+    <a href="../">Inicio</a>
+    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+});
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive:true });
+
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
+}, { passive:true });
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const o = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+</body>
+</html>
