@@ -458,19 +458,9 @@ footer {
 
 /* ── Hero image ── */
 .article-hero {
-  position:relative;
   width:var(--article-w); max-width:100%; margin-bottom:40px;
   border-radius:var(--radius-sm); overflow:hidden;
   opacity:0; animation:fadeUp .9s ease .15s forwards;
-}
-/* Distintivo UE: contenido generado con IA (overlay, no altera la imagen) */
-.article-hero::after {
-  content:"";
-  position:absolute; bottom:12px; left:12px;
-  width:90px; height:auto; aspect-ratio:1/1;
-  background-image:url('/img/eu-ai-generado.png');
-  background-size:contain; background-repeat:no-repeat; background-position:bottom left;
-  pointer-events:none; z-index:10;
 }
 .article-hero img {
   width:100%; height:auto; display:block;
