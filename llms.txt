@@ -18,20 +18,12 @@ Cuatro fases: Visión (diagnóstico del pipeline) → Diseño (arquitectura de a
 El blog cubre cinco pilares temáticos:
 
 - **Fundamentos** (`/blog/categoria/fundamentos/`): qué es un agente de IA, diferencias con chatbots, cómo empezar.
-- **Automatización y procesos** (`/blog/categoria/automatizacion-y-procesos/`): automatización de procesos, RPA vs IA, integración con sistemas existentes.
+- **Automatización y procesos** (`/blog/categoria/automatizacion/`): automatización de procesos, RPA vs IA, integración con sistemas existentes.
 - **Gobernanza y control** (`/blog/categoria/gobernanza-y-control/`): shadow AI, control de agentes, auditoría, human-in-the-loop.
 - **Normativa IA** (`/blog/categoria/normativa-ia/`): AI Act, ley de IA española, AESIA, cumplimiento para empresas.
-- **Estrategia y decisión** (`/blog/categoria/estrategia-y-decision/`): cuándo usar IA, cómo medir el ROI, evaluación de agentes antes de producción.
+- **Estrategia y decisión** (`/blog/categoria/estrategia/`): cuándo usar IA, cómo medir el ROI, evaluación de agentes antes de producción.
 
 Más de 30 artículos publicados. Índice completo en `/blog/`.
-
-
-## Mapa de conocimiento estructurado (OKF)
-
-Para navegación directa por conceptos sin leer el HTML completo del sitio:
-→ [Índice de conocimiento](https://ailitica.com/okf/index.md)
-
-Áreas: [Fundamentos](https://ailitica.com/okf/fundamentos.md) · [Automatización](https://ailitica.com/okf/automatizacion-y-procesos.md) · [Gobernanza](https://ailitica.com/okf/gobernanza-y-control.md) · [Normativa](https://ailitica.com/okf/normativa-ia.md) · [Estrategia](https://ailitica.com/okf/estrategia-y-decision.md)
 
 ## Páginas principales
 
