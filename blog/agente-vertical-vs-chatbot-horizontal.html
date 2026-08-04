@@ -599,7 +599,9 @@ footer {
 
     <p>Casi nadie busca un <strong>agente vertical</strong>: en español, lo que aparece arriba sobre IA para empresas sigue siendo lo mismo que hace dos años. <em>Asistente para tu negocio</em>. <em>El ChatGPT de tu empresa</em>. <em>Una IA que sirve para todo</em>. El frame implícito es siempre el mismo: cuanto más generalista, mejor. Cuantas más cosas haga, más valor.</p>
 
-    <p>El problema es que ese frame ya no describe lo que las empresas que están ganando con IA están comprando. En los proyectos que hemos implementado, lo que vemos en la práctica confirma exactamente este giro: los agentes que aportan valor real son los que renuncian a hacerlo todo. Las que están moviendo facturación con agentes en producción, las que aparecen en las rondas de inversión que importan, las que han pasado el corte de la primera ola de hype y siguen creciendo, no están comprando asistentes genéricos. Están comprando lo contrario: agentes verticales. Un agente para una cosa, hecha excepcionalmente bien, sobre un dominio acotado.</p>
+    <p>El problema es que ese frame ya no describe lo que las empresas que están ganando con IA están comprando. En los proyectos que hemos implementado, lo que vemos en la práctica confirma exactamente este giro: los agentes que aportan valor real son los que renuncian a hacerlo todo.</p>
+
+    <p>Las empresas que están moviendo facturación con agentes en producción, las que aparecen en las rondas de inversión que importan, las que han pasado el corte de la primera ola de hype y siguen creciendo, no están comprando asistentes genéricos. Están comprando lo contrario: agentes verticales, un agente para una cosa, hecha excepcionalmente bien, sobre un dominio acotado.</p>
 
     <p>Y lo interesante es que las cifras que aparecen cuando alguien se molesta en publicar los números son demoledoras. Rogo, un agente vertical para banca de inversión, redujo su tasa de hallucination del <strong>34,1% al 3,9%</strong> al especializar el modelo contra el dominio financiero, según el <a href="https://cloud.google.com/customers/rogo" target="_blank" rel="noopener nofollow">caso de estudio publicado por Google Cloud</a>. No es una mejora marginal: es una mejora de un orden de magnitud que cambia si el agente es utilizable en producción o un juguete caro. La diferencia entre vertical y horizontal no es estilística, es de viabilidad.</p>
 
@@ -616,6 +618,21 @@ footer {
     <p>Si esto suena más a oficio que a tecnología, es porque lo es. Construir un agente vertical se parece más a montar un equipo nuevo en un departamento existente que a desplegar una herramienta de software. El componente humano de definir el dominio es la mitad del trabajo. La diferencia entre <a href="/blog/chatbot-vs-agente-de-ia.html">qué diferencia un chatbot de un agente de IA</a> ya marca esta línea: el chatbot conversa, el agente actúa. El vertical, además, actúa <em>en un terreno conocido</em>.</p>
 
     <h2>¿Cuáles son los casos faro de agentes verticales en 2026?</h2>
+
+    <p>Cinco casos ilustran hasta dónde llega hoy la lógica vertical, cada uno acotado a un dominio muy concreto:</p>
+
+    <table>
+      <thead>
+        <tr><th>Agente</th><th>Dominio</th><th>Resultado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Harvey</td><td>Legal corporativo</td><td>Usado por bufetes grandes (PwC entre ellos) para due diligence, revisión contractual y búsqueda jurisprudencial</td></tr>
+        <tr><td>Rogo</td><td>Banca de inversión</td><td>Tasa de hallucination del 34,1% al 3,9% al especializar el modelo contra el dominio</td></tr>
+        <tr><td>Markups.ai</td><td>Revisión contractual (markups)</td><td>Identifica desviaciones respecto al estándar interno y propone redlines</td></tr>
+        <tr><td>Inspira</td><td>Operativa legal interna</td><td>Reducción reportada del 80% del tiempo en ciertos flujos legales internos</td></tr>
+        <tr><td>Stax AI</td><td>Trust accounting (contabilidad fiduciaria)</td><td>Empresa dedicada en exclusiva a esa pieza concreta de la contabilidad legal</td></tr>
+      </tbody>
+    </table>
 
     <h3>Harvey: legal corporativo</h3>
 
@@ -661,7 +678,9 @@ footer {
 
     <p>En 2026, un agente vertical para una pyme se monta sobre un modelo base ya entrenado al que se le proporcionan tres cosas: la documentación específica del dominio (entre 50 y 500 documentos suelen bastar, dependiendo de la densidad), los patrones de decisión propios de la casa, y los criterios de validación. El resto es trabajo de integración. Los presupuestos típicos para una pyme pequeña o mediana caen en el rango de 8.000 a 30.000 euros según el alcance, no en los seis dígitos que muchos asumen.</p>
 
-    <p>Y aquí viene la pregunta razonable: si un ChatGPT cuesta 20 euros al mes por usuario, ¿por qué la diferencia? La respuesta es directa: porque no compiten por la misma cosa. El genérico compite por el resumen, el primer borrador, la idea suelta, la traducción rápida. El vertical compite por la decisión que afecta al cliente, al margen o a la responsabilidad legal. Si tu equipo está usando un genérico para lo segundo, el coste oculto de los errores no detectados es mucho mayor que la diferencia de precio. El vertical no es una versión cara del genérico, es una herramienta distinta. Esto enlaza directamente con <a href="/blog/agentes-de-ia-para-pymes.html">agentes de IA para pymes</a> bien entendidos: el agente que aporta valor no es el que hace de todo, es el que hace una cosa bien atornillada al pipeline.</p>
+    <p>Y aquí viene la pregunta razonable: si un ChatGPT cuesta 20 euros al mes por usuario, ¿por qué la diferencia? La respuesta es directa: porque no compiten por la misma cosa. El genérico compite por el resumen, el primer borrador, la idea suelta, la traducción rápida. El vertical compite por la decisión que afecta al cliente, al margen o a la responsabilidad legal.</p>
+
+    <p>Si tu equipo está usando un genérico para esa segunda cosa, el coste oculto de los errores no detectados es mucho mayor que la diferencia de precio. El vertical no es una versión cara del genérico, es una herramienta distinta. Esto enlaza directamente con <a href="/blog/agentes-de-ia-para-pymes.html">agentes de IA para pymes</a> bien entendidos: el agente que aporta valor no es el que hace de todo, es el que hace una cosa bien atornillada al pipeline.</p>
 
     <h2>¿Cuándo proponemos un agente vertical? El criterio de Ailitica</h2>
 
@@ -687,7 +706,11 @@ footer {
 
     <p>Si la respuesta es sí, ahí hay un caso de agente vertical. No <em>el</em> caso, porque puede haber tres o cuatro en la misma empresa, pero al menos uno. Y la conversación que abre es la que vale la pena tener antes de seguir alargando una suscripción genérica que tu equipo está usando para tareas que se le quedan grandes.</p>
 
+    <p>Cuando aparecen varios de esos casos a la vez, la respuesta no siempre es un agente vertical más grande: a veces es <a href="/blog/arquitectura-multiagente-empresa.html">una arquitectura con varios agentes verticales coordinados entre sí</a>, cada uno atornillado a su dominio.</p>
+
     <p>El agente bueno no responde lo que sea. Responde tu pipeline. Esa es la diferencia.</p>
+
+    <p>Si quieres fijar bien los conceptos antes de decidir nada, revisa toda nuestra cobertura de <a href="/blog/categoria/fundamentos/">Fundamentos de IA para empresas</a>.</p>
 
     <hr>
 

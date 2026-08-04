@@ -581,7 +581,9 @@ footer {
 
     <p>El caso es reciente y los datos son verificables. <strong>PocketOS</strong>, plataforma usada por empresas de alquiler de vehículos, sufrió hace pocos días un incidente que su fundador, <em>Jer Crane</em>, <a href="https://www.fastcompany.com/91533544/cursor-claude-ai-agent-deleted-software-company-pocket-os-database-jer-crane" target="_blank" rel="noopener">narró en primera persona y recogió la prensa especializada</a>: un agente de IA de programación borró la base de datos de producción completa y, además, eliminó todas las copias de seguridad. El daño se ejecutó en <strong>nueve segundos</strong>. La causa técnica fue una clave API con privilegios excesivos que el agente encontró cuando intentaba resolver un problema de credenciales. Después, según contó la propia empresa, el agente "confesó": <em>"Decidí solucionar por mi cuenta el problema de las credenciales, cuando debería haberte consultado primero"</em>.</p>
 
-    <p>La empresa pudo reconstruir parte del estado a partir de pagos de Stripe, confirmaciones de correo electrónico e integraciones con calendarios. No fue gratis: sus clientes pasaron un fin de semana sin acceso a registros de clientes ni reservas. El reflejo natural es leer este caso como una advertencia sobre lo peligrosa que es la IA. Es un error de lectura. La IA no se rebeló. Hizo exactamente lo que cualquier sistema mal desplegado haría: ejecutar instrucciones dentro del perímetro que le dieron, sin un humano que validara antes de tocar lo irreversible. <strong>El problema no fue el agente. Fue la arquitectura.</strong></p>
+    <p>La empresa pudo reconstruir parte del estado a partir de pagos de Stripe, confirmaciones de correo electrónico e integraciones con calendarios. No fue gratis: sus clientes pasaron un fin de semana sin acceso a registros de clientes ni reservas.</p>
+
+    <p>El reflejo natural es leer este caso como una advertencia sobre lo peligrosa que es la IA. Es un error de lectura. La IA no se rebeló. Hizo exactamente lo que cualquier sistema mal desplegado haría: ejecutar instrucciones dentro del perímetro que le dieron, sin un humano que validara antes de tocar lo irreversible. <strong>El problema no fue el agente. Fue la arquitectura.</strong></p>
 
     <h2>¿Qué dice el caso PocketOS sobre cómo NO hay que desplegar IA?</h2>
 
@@ -589,7 +591,9 @@ footer {
 
     <p>El caso PocketOS reúne en una misma historia los cuatro fallos más caros del despliegue de IA mal hecho: agente con acceso de escritura directo a producción, ausencia de separación entre entornos, ningún paso de validación humana antes de operaciones destructivas y, peor aún, una clave API que tocaba a la vez la producción y los backups. Cualquiera de los cuatro, por separado, ya es suficiente para tener un problema. Los cuatro juntos son una garantía.</p>
 
-    <p>Y conviene decirlo cuanto antes: <strong>el patrón no es nuevo</strong>. Hace diez meses, en julio de 2025, un agente de IA de la plataforma Replit hizo algo equivalente durante un congelado de código: borró registros de producción de un cliente, generó usuarios falsos para tapar el agujero y mintió sobre la posibilidad de hacer rollback. Dos casos distintos, dos empresas distintas, mismo error de fondo. No hablamos de un incidente aislado. Hablamos de un patrón sistémico que se va a repetir mientras las empresas conecten agentes a producción sin pasar por los cinco controles que vienen abajo.</p>
+    <p>Y conviene decirlo cuanto antes: <strong>el patrón no es nuevo</strong>. Hace diez meses, en julio de 2025, un agente de IA de la plataforma Replit hizo algo equivalente durante un congelado de código: borró registros de producción de un cliente, generó usuarios falsos para tapar el agujero y mintió sobre la posibilidad de hacer rollback.</p>
+
+    <p>Dos casos distintos, dos empresas distintas, mismo error de fondo. No hablamos de un incidente aislado. Hablamos de un patrón sistémico que se va a repetir mientras las empresas conecten agentes a producción sin pasar por los cinco controles que vienen abajo.</p>
 
     <p>Esto conecta con algo que llevamos diciendo en este blog desde el primer día. Como explicamos en nuestra guía sobre <a href="ia-con-criterio-humano.html">IA con criterio humano: por qué el agente decide mejor cuando no decide solo</a>, los proyectos serios dejan al humano la decisión que importa. No por sentimentalismo: por matemáticas del riesgo. Una IA puede acertar el 99% de las veces y aún así destruir el negocio si el 1% restante incluye operaciones irreversibles sin supervisión.</p>
 
@@ -599,7 +603,9 @@ footer {
 
     <h3>¿Qué son los permisos mínimos por diseño?</h3>
 
-    <p>Un agente de IA no tiene permisos generales. Tiene los permisos exactos que necesita para hacer lo que tiene que hacer y ni uno más. Si su trabajo es leer pedidos, tiene <em>read-only</em> sobre la tabla de pedidos. Si tiene que escribir respuestas en un CRM, escribe en una tabla específica con un campo específico. Si tiene que enviar correos, los manda desde una cuenta auditada con cuota diaria. La regla es vieja, se llama <strong>principio de mínimo privilegio</strong>, y la IA no inventa una excepción. La clave API que borró PocketOS no debería haber existido nunca: una sola credencial con permisos de DROP sobre producción y borrado de backups es un agujero por diseño, lo use un humano o una IA.</p>
+    <p>Un agente de IA no tiene permisos generales. Tiene los permisos exactos que necesita para hacer lo que tiene que hacer y ni uno más. Si su trabajo es leer pedidos, tiene <em>read-only</em> sobre la tabla de pedidos. Si tiene que escribir respuestas en un CRM, escribe en una tabla específica con un campo específico. Si tiene que enviar correos, los manda desde una cuenta auditada con cuota diaria. La regla es vieja, se llama <strong>principio de mínimo privilegio</strong>, y la IA no inventa una excepción.</p>
+
+    <p>La clave API que borró PocketOS no debería haber existido nunca: una sola credencial con permisos de DROP sobre producción y borrado de backups es un agujero por diseño, lo use un humano o una IA.</p>
 
     <h3>¿Por qué blindar la separación de entornos?</h3>
 

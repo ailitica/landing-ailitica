@@ -594,6 +594,8 @@ footer {
 
     <p>Este artículo describe los tres mecanismos en su versión pyme. No son teoría. Son lo que aplicamos cuando ponemos en marcha un agente para un cliente real, y lo que recomendamos cuando un cliente nuevo nos pregunta por dónde empezar. Si has leído <a href="/blog/ia-sin-supervision-caso-pocketos.html">el caso PocketOS</a> o <a href="/blog/ia-con-criterio-humano.html">IA con criterio humano</a>, este artículo es la pieza operativa que cierra el bucle.</p>
 
+    <p>Antes incluso de diseñar estos tres mecanismos, conviene saber <a href="/blog/como-evaluar-agente-ia-antes-de-confiar.html">cómo evaluar si el agente funciona de verdad antes de dejarle decidir</a>: controlar un agente que no acierta no es controlar, es delegar el error con supervisión.</p>
+
     <h2>Mecanismo 1: ¿cómo aplicar aprobación humana en los pasos que no se pueden deshacer?</h2>
 
     <p>El primer mecanismo es el más simple de explicar y el que más gente se salta. Antes de dejar al agente en producción, se identifican los pasos del flujo que son <strong>irreversibles o costosos</strong> y se decide que en esos pasos el agente <em>propone</em>, pero un humano <em>aprueba</em>.</p>
@@ -620,6 +622,8 @@ footer {
 
     <p>Esto no exige tecnología especial. Las herramientas SaaS que ya usa la pyme (Google Workspace, Microsoft 365, los CRM habituales, las plataformas de facturación) traen permisos granulares por defecto. Lo que falta no suele ser la herramienta, es la decisión de aplicarla. La preparación previa es la misma que recomendamos en <a href="/blog/agentes-de-ia-para-pymes.html">agentes de IA para pymes</a>: antes de dar acceso, definir el perímetro.</p>
 
+    <p>Ese perímetro se decide en el mismo momento en que <a href="/blog/integrar-agente-ia-sistemas-existentes.html">conectas el agente a los sistemas que ya usas</a>: no son dos conversaciones distintas, es la misma.</p>
+
     <h3>¿Cómo se ve un perímetro mínimo viable?</h3>
 
     <p>Un ejemplo concreto, sacado de un despliegue real reciente. El agente leía pedidos entrantes de una bandeja específica de correo, los clasificaba, los registraba en una hoja de control en Google Sheets y preparaba un borrador de respuesta. La whitelist completa era esta:</p>
@@ -641,7 +645,11 @@ footer {
 
     <p>En una pyme, esto se monta sobre una herramienta que ya existe en la empresa. Una hoja de cálculo dedicada, una tabla en Notion, una base de datos sencilla. No hace falta más, mientras se escriba siempre y se escriba con un formato consistente. La consistencia es lo que permite leer mil filas en cinco minutos en lugar de en cinco horas.</p>
 
-    <p>La utilidad del registro aparece en tres momentos. En el día a día, permite revisar el trabajo del agente en lotes cortos (diez minutos a la semana basta) en lugar de revisar cada acción una a una; sobre cómo convertir ese registro en una rutina ligera está <a href="/blog/auditoria-agente-ia-cada-dia.html">cómo auditar lo que tu agente de IA decide cada día</a>. Cuando algo falla, permite reconstruir la cadena de eventos sin tener que reconstruirla de memoria. Y cuando llega el AI Act europeo en agosto de 2026, deja a la empresa preparada para responder a las obligaciones de trazabilidad sin un proyecto extra: hay registro porque ya había registro, no porque la ley lo haya forzado. Si te interesa cómo se está aplicando ese reglamento en empresas pequeñas, conviene revisar <a href="/blog/ai-act-pyme-aplazamiento-agosto-2026.html">AI Act pyme: el aplazamiento de agosto 2026 y lo que cambia</a>.</p>
+    <p>La utilidad del registro aparece en tres momentos. En el día a día, permite revisar el trabajo del agente en lotes cortos (diez minutos a la semana basta) en lugar de revisar cada acción una a una; sobre cómo convertir ese registro en una rutina ligera está <a href="/blog/auditoria-agente-ia-cada-dia.html">cómo auditar lo que tu agente de IA decide cada día</a>.</p>
+
+    <p>Cuando algo falla, el registro permite reconstruir la cadena de eventos sin tener que reconstruirla de memoria.</p>
+
+    <p>Y cuando llega el AI Act europeo en agosto de 2026, el registro deja a la empresa preparada para responder a las obligaciones de trazabilidad sin un proyecto extra: hay registro porque ya había registro, no porque la ley lo haya forzado. Si te interesa cómo se está aplicando ese reglamento en empresas pequeñas, conviene revisar <a href="/blog/ai-act-pyme-aplazamiento-agosto-2026.html">AI Act pyme: el aplazamiento de agosto 2026 y lo que cambia</a>.</p>
 
     <h3>¿Qué se registra y qué no?</h3>
 
@@ -683,6 +691,8 @@ footer {
     <hr>
 
     <p>Si estás pensando en poner un agente de IA en producción y quieres revisar si los tres mecanismos están bien diseñados antes de arrancar, escríbenos a <strong><a href="mailto:hola@ailitica.com">hola@ailitica.com</a></strong>. Revisamos tu caso, vemos lo que falta y, si conviene esperar a tener mejores cimientos, también lo decimos.</p>
+
+    <p>Más piezas sobre control y supervisión en <a href="/blog/categoria/gobernanza-y-control/">toda nuestra cobertura de Gobernanza y control</a>.</p>
 
   </div>
 
