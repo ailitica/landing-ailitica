@@ -1,3 +1,16 @@
 blog/img/raw/
 blog/img/*_logo.*
 _staging/
+
+# Carpetas de trabajo que nunca se publican (task #877, 2026-08-04).
+# Sin estas entradas, `git status` las lista como no rastreadas, publicar.py
+# las mete en la cesta "otros" y aborta con exit 8 en CADA ejecucion. La salida
+# que quedaba era --allow-extra-files, que las ignora en silencio: un control
+# que bloquea trabajo legitimo acaba entrenando a saltarselo. El prefijo "_"
+# ya era la convencion de "interno" en este repo (_staging/, _post-template).
+_componentes/
+_mockups/
+.claude/
+# Backlog del blog: material en preparacion que lee el despachador de la Pi.
+# Se publica el articulo resuelto en blog/<slug>.html, jamas el borrador.
+blog/_backlog/
