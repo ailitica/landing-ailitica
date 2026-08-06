@@ -34,14 +34,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PWNT3YC598"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PWNT3YC598');
-</script>
+<!-- Google Analytics retirado el 6 de agosto de 2026 (task #918; dictamen de Lex,
+     01_legal/rgpd/260806_dictamen_captura_emails_web.md, apartado 12).
+
+     Motivo: el gtag.js se cargaba aquí, en el <head>, así que el identificador
+     analítico se instalaba al abrir la página, ANTES de que el banner de cookies
+     llegara a pintarse. La función activarCookiesAnaliticas() busca los scripts
+     marcados con data-cookiecategory='analytics', y ese atributo no existía en
+     ninguna página: el banner no gobernaba nada, de modo que pulsar "rechazar" no
+     impedía la medición. Eso vulnera el artículo 22.2 de la LSSICE, que exige
+     consentimiento previo, informado y por acción afirmativa antes de instalar
+     cualquier identificador que no sea estrictamente necesario.
+
+     CONDICIÓN PARA VOLVER A INSTALARLO, y no es negociable: primero el mecanismo de
+     consentimiento funcionando y verificado en producción. Es decir, el script se
+     carga ÚNICAMENTE desde activarCookiesAnaliticas() y jamás desde el <head>; el
+     banner se despliega en todas las páginas, no en tres; rechazar cuesta lo mismo
+     que aceptar, un solo clic al mismo nivel; y el usuario puede cambiar de opinión
+     después. Mientras eso no esté probado, Analytics no vuelve.
+-->
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 

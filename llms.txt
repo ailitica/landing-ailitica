@@ -29,7 +29,7 @@ El blog cubre cinco pilares temáticos:
 
 - Inicio: `https://ailitica.com/`
 - Blog: `https://ailitica.com/blog/`
-- Contacto: `https://ailitica.com/contacto.html`
+- Contacto: `https://ailitica.com/#contacto` (formulario de contacto, en la página de inicio)
 
 ## Contacto
 

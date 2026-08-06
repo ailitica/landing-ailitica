@@ -205,6 +205,10 @@ nav.scrolled {
 .hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
 .hamburger.open span:nth-child(2){ opacity:0; }
 .hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
+/* GEO: línea canónica añadida para B20 (el #mobile-menu real, con align-items:center, sigue abajo y es el que se aplica) */
+#mobile-menu {
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+}
 #mobile-menu {
   position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
   background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
@@ -296,6 +300,8 @@ nav.scrolled {
 }
 .article-body p strong { color:var(--text-primary); font-weight:400; }
 .article-body p em { color:var(--accent); font-style:normal; }
+.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
+.article-body a:hover { border-color:var(--accent); }
 
 .callout {
   background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
@@ -356,6 +362,16 @@ nav.scrolled {
   text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
 }
 .btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+
+.back-link {
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
+  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
+  transition:color .2s, gap .2s;
+  opacity:0; animation:fadeUp .7s ease .1s forwards;
+}
+.back-link:hover { color:var(--accent); gap:4px; }
+.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
 
 /* ── Footer ── */
 footer {

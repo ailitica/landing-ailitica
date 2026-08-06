@@ -19,14 +19,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PWNT3YC598"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PWNT3YC598');
-</script>
+<!-- Google Analytics retirado el 6 de agosto de 2026 (task #918; dictamen de Lex,
+     01_legal/rgpd/260806_dictamen_captura_emails_web.md, apartado 12).
+
+     Motivo: el gtag.js se cargaba aquí, en el <head>, así que el identificador
+     analítico se instalaba al abrir la página, ANTES de que el banner de cookies
+     llegara a pintarse. La función activarCookiesAnaliticas() busca los scripts
+     marcados con data-cookiecategory='analytics', y ese atributo no existía en
+     ninguna página: el banner no gobernaba nada, de modo que pulsar "rechazar" no
+     impedía la medición. Eso vulnera el artículo 22.2 de la LSSICE, que exige
+     consentimiento previo, informado y por acción afirmativa antes de instalar
+     cualquier identificador que no sea estrictamente necesario.
+
+     CONDICIÓN PARA VOLVER A INSTALARLO, y no es negociable: primero el mecanismo de
+     consentimiento funcionando y verificado en producción. Es decir, el script se
+     carga ÚNICAMENTE desde activarCookiesAnaliticas() y jamás desde el <head>; el
+     banner se despliega en todas las páginas, no en tres; rechazar cuesta lo mismo
+     que aceptar, un solo clic al mismo nivel; y el usuario puede cambiar de opinión
+     después. Mientras eso no esté probado, Analytics no vuelve.
+-->
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
@@ -184,59 +195,34 @@ footer {
 <main>
   <span class="legal-label">Legal</span>
   <h1 class="legal-h1">Política de cookies</h1>
-  <span class="legal-version">Versión 1.0 — Diciembre 2025</span>
+  <span class="legal-version">Versión 2.0 — Agosto 2026</span>
   <div class="legal-body">
 
     <h2>1. ¿Qué son las cookies?</h2>
-    <p>Las cookies son pequeños archivos que se almacenan en tu dispositivo cuando visitas un sitio web. Permiten reconocer tu navegador, recordar información y medir el uso de la web.</p>
-    <p>Las cookies pueden ser:</p>
-    <ul>
-      <li><strong>Técnicas:</strong> necesarias para el funcionamiento básico del sitio.</li>
-      <li><strong>Analíticas:</strong> permiten medir el tráfico y comportamiento de los usuarios.</li>
-      <li><strong>Publicitarias o de seguimiento:</strong> no aplican en este sitio.</li>
-    </ul>
-    <p>En esta Web solo utilizamos <strong>cookies analíticas</strong>, que requieren tu consentimiento previo.</p>
+    <p>Las cookies son pequeños archivos que un sitio web almacena en tu dispositivo cuando lo visitas. Permiten reconocer tu navegador, recordar información y medir el uso de la web.</p>
+    <p>Las cookies pueden ser <strong>técnicas</strong> (necesarias para el funcionamiento básico del sitio), <strong>analíticas</strong> (miden el tráfico y el comportamiento de los visitantes) o <strong>publicitarias y de seguimiento</strong>.</p>
 
     <div class="legal-divider"></div>
 
-    <h2>2. ¿Qué tipos de cookies utiliza esta Web?</h2>
-    <h3>2.1. Cookies técnicas (exentas de consentimiento)</h3>
-    <p>Actualmente, Ailitica.com no utiliza cookies técnicas propias que almacenen datos personales o identificadores persistentes.</p>
-
-    <h3>2.2. Cookies analíticas (requieren consentimiento)</h3>
-    <p>Estas cookies ayudan a comprender cómo interactúan los visitantes con la Web. Ailitica no instala ninguna cookie analítica sin tu consentimiento.</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Cookie</th><th>Tipo</th><th>Titular</th><th>Finalidad</th><th>Duración</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>_ga</td><td>Analítica</td><td>Google Analytics 4</td><td>Identificar usuarios únicos para estadísticas de uso.</td><td>2 años</td></tr>
-        <tr><td>_ga_XXXXXXX</td><td>Analítica</td><td>Google Analytics 4</td><td>Mantener estado de sesión y medir actividad.</td><td>2 años</td></tr>
-        <tr><td>_tccl_visitor</td><td>Analítica</td><td>Ailitica.com</td><td>Asignar identificador único de visitante para análisis internos.</td><td>1 año aprox.</td></tr>
-      </tbody>
-    </table>
+    <h2>2. Cookies que utiliza esta Web</h2>
+    <p><strong>Esta Web no utiliza cookies.</strong> No instalamos cookies propias ni de terceros: ni técnicas, ni analíticas, ni publicitarias, ni de seguimiento.</p>
+    <p>Tampoco utilizamos ninguna otra tecnología de almacenamiento en tu dispositivo, como el almacenamiento local del navegador, con fines de identificación, medición o seguimiento.</p>
+    <p>Por ese motivo esta Web no te muestra ningún aviso de cookies: no hay nada que consentir.</p>
 
     <div class="legal-divider"></div>
 
-    <h2>3. ¿Quién utiliza la información de las cookies?</h2>
-    <ul>
-      <li><strong>Google Ireland Limited</strong> (para Google Analytics 4).</li>
-      <li><strong>Ailitica S.L.</strong> (para la cookie <em>_tccl_visitor</em>).</li>
-    </ul>
-    <p>En el caso de Google Analytics, puede haber transferencias internacionales bajo las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea.</p>
+    <h2>3. Si esto cambia</h2>
+    <p>Si en el futuro incorporamos alguna cookie que no sea estrictamente necesaria, por ejemplo para medir estadísticamente el uso de la Web, no se instalará hasta que tú lo autorices mediante una acción afirmativa, tal y como exige el artículo 22.2 de la Ley 34/2002, de servicios de la sociedad de la información. En ese momento actualizaremos esta Política detallando cada cookie, su titular, su finalidad y su duración, y publicaremos un mecanismo que te permita aceptarlas o rechazarlas con la misma facilidad, así como cambiar de opinión después.</p>
 
     <div class="legal-divider"></div>
 
-    <h2>4. Cómo gestionar o revocar el consentimiento</h2>
-    <p>Puedes aceptar, rechazar o configurar las cookies analíticas desde nuestro banner de cookies o desde la configuración de tu navegador.</p>
+    <h2>4. Datos que se tratan al visitar esta Web</h2>
+    <p>Aunque no usemos cookies, al cargar cualquier página tu dirección IP y los datos técnicos de tu navegador se comunican necesariamente a los proveedores que alojan y distribuyen esta Web. Puedes consultar quiénes son, qué reciben y qué garantías se aplican en nuestra <a href="/privacidad">Política de privacidad</a>.</p>
 
     <div class="legal-divider"></div>
 
-    <h2>5. ¿Cómo desactivar Google Analytics?</h2>
-    <p>Si rechazas las cookies analíticas, Google Analytics <strong>no</strong> se cargará y la cookie <strong>_tccl_visitor</strong> no se instalará. Esto no afecta al funcionamiento básico de la Web.</p>
+    <h2>5. Cómo gestionar las cookies en tu navegador</h2>
+    <p>Con independencia de lo anterior, todos los navegadores permiten bloquear o eliminar las cookies que cualquier sitio web intente instalar. Puedes hacerlo desde las opciones de configuración o privacidad de tu navegador.</p>
 
     <div class="legal-divider"></div>
 

@@ -19,14 +19,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PWNT3YC598"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PWNT3YC598');
-</script>
+<!-- Google Analytics retirado el 6 de agosto de 2026 (task #918; dictamen de Lex,
+     01_legal/rgpd/260806_dictamen_captura_emails_web.md, apartado 12).
+
+     Motivo: el gtag.js se cargaba aquí, en el <head>, así que el identificador
+     analítico se instalaba al abrir la página, ANTES de que el banner de cookies
+     llegara a pintarse. La función activarCookiesAnaliticas() busca los scripts
+     marcados con data-cookiecategory='analytics', y ese atributo no existía en
+     ninguna página: el banner no gobernaba nada, de modo que pulsar "rechazar" no
+     impedía la medición. Eso vulnera el artículo 22.2 de la LSSICE, que exige
+     consentimiento previo, informado y por acción afirmativa antes de instalar
+     cualquier identificador que no sea estrictamente necesario.
+
+     CONDICIÓN PARA VOLVER A INSTALARLO, y no es negociable: primero el mecanismo de
+     consentimiento funcionando y verificado en producción. Es decir, el script se
+     carga ÚNICAMENTE desde activarCookiesAnaliticas() y jamás desde el <head>; el
+     banner se despliega en todas las páginas, no en tres; rechazar cuesta lo mismo
+     que aceptar, un solo clic al mismo nivel; y el usuario puede cambiar de opinión
+     después. Mientras eso no esté probado, Analytics no vuelve.
+-->
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
@@ -189,12 +200,28 @@ footer {
 
     <h2>1. Identificación del titular</h2>
     <p>En cumplimiento del artículo 10 de la Ley 34/2002 (LSSI), se informa que el titular de este sitio web es:</p>
+    <!-- SOBRE EL DOMICILIO, y es decisión informada del CEO del 6 de agosto de 2026,
+         tomada con el dictamen de Lex delante.
+
+         Aquí figura "Madrid (España)", que es el municipio. El artículo 10.1.a de la
+         Ley 34/2002 (LSSICE) habla de DOMICILIO, y exige denominación, domicilio y
+         dirección de correo electrónico de forma acumulativa, no alternativa. Un
+         municipio puede quedarse corto frente a esa exigencia: lo habitual es vía,
+         número, código postal, municipio y provincia. El CEO lo sabe y lo asume
+         mientras decide qué domicilio publicar.
+
+         Por qué no se pone ya el completo: la alternativa era publicar su vivienda
+         particular y sustituirla al cabo de unas semanas, y para entonces el dato ya
+         estaría en la caché de los buscadores y en el historial de este repositorio,
+         que es público. Retirarlo después no lo borra de ninguno de los dos sitios.
+
+         Se completa en cuanto el CEO fije el domicilio definitivo: basta con
+         sustituir el valor de la línea de abajo y borrar este comentario. -->
     <ul>
       <li><strong>Empresa:</strong> Ailitica S.L.</li>
-      <li><strong>CIF:</strong> 11111111X</li>
-      <li><strong>Domicilio social:</strong> XXXXXX</li>
+      <li><strong>NIF:</strong> B88832951</li>
+      <li><strong>Domicilio social:</strong> Madrid (España)</li>
       <li><strong>Email:</strong> hola@ailitica.com</li>
-      <li><strong>Teléfono:</strong> 111111111</li>
     </ul>
 
     <div class="legal-divider"></div>

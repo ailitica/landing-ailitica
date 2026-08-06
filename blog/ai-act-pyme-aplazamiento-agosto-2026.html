@@ -314,6 +314,31 @@ nav.scrolled {
 .callout p { margin-bottom:0; }
 .callout p strong { color:var(--accent); }
 
+/* GEO:TLDR (plantilla canónica, añadido para B20; el .tldr real del artículo,
+   con .tldr p, sigue abajo y es el que se aplica) */
+.tldr {
+  width:var(--article-w); max-width:100%;
+  margin:32px 0 8px;
+  background:rgba(74,179,255,0.07);
+  border:1px solid rgba(74,179,255,.22);
+  border-left:3px solid var(--accent);
+  border-radius:var(--radius-sm);
+  padding:22px 26px;
+  opacity:0; animation:fadeUp .9s ease .25s forwards;
+}
+.tldr-label {
+  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent);
+  opacity:.75; margin-bottom:10px;
+}
+.tldr-text {
+  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
+  line-height:1.65; font-weight:300;
+}
+@media (max-width:560px) {
+  .tldr { padding:18px 20px; margin:24px 0 4px; }
+}
+
 .tldr {
   width:var(--article-w); max-width:100%; margin:0 auto 40px;
   background:rgba(74,179,255,0.06); border:1px solid rgba(74,179,255,.18);

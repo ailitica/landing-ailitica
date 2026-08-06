@@ -53,7 +53,7 @@
   "inLanguage": "es",
   "image": "https://ailitica.com/blog/img/agente-ia-vs-empleado-junior.webp",
   "keywords": "agente de IA vs empleado junior, IA reemplaza junior, que hace mejor IA que persona, IA y equipo, analogía IA becario, humano más agente, organigrama IA",
-  "wordCount": 1726,
+  "wordCount": 1968,
   "about": {"@type": "Thing", "name": "gestión de agentes de inteligencia artificial"}
 }
 </script>
@@ -616,6 +616,25 @@ footer {
     </ul>
 
     <p>Estas cuatro propiedades son lo que justifica meter un agente en producción. No vienen sin coste (exigen diseño, supervisión y mantenimiento), pero son cualitativamente distintas de lo que aporta una persona, y por eso forzar la comparación con el becario nos ciega ante el valor real. Esta es exactamente la línea que separa un <a href="/blog/chatbot-vs-agente-de-ia.html">chatbot que conversa de un agente que actúa</a> sobre tu pipeline.</p>
+
+    <h3>¿Cómo se comparan lado a lado, dimensión por dimensión?</h3>
+
+    <p>Puesto en una sola tabla, así queda el contraste entre las cinco capacidades del junior y las cuatro del agente que hemos visto arriba, más lo que exige cada uno del equipo que lo rodea:</p>
+
+    <table>
+      <thead>
+        <tr><th>Dimensión</th><th>Empleado junior</th><th>Agente de IA</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Aprendizaje</td><td>Aprende del contexto humano; una corrección, salvo excepciones, no vuelve a repetirla</td><td>No aprende espontáneamente: ejecuta la misma versión del modelo hasta que cambias sus instrucciones</td></tr>
+        <tr><td>Ante una duda</td><td>Pregunta a quien corresponde, en el momento adecuado y con el nivel de detalle correcto</td><td>Solo pregunta si el diseño lo fuerza explícitamente a marcar baja confianza o a derivar el caso</td></tr>
+        <tr><td>Ritmo de ejecución</td><td>Tiene curva de rendimiento: mejora con el tiempo, pero también tiene días flojos</td><td>Ejecuta a velocidad constante: la pieza mil sale igual que la pieza uno</td></tr>
+        <tr><td>Escalado</td><td>Escalar exige contratar y formar a más gente</td><td>Pasa de 100 a 10.000 casos diarios sin fricción</td></tr>
+        <tr><td>Ante la incertidumbre</td><td>Duda, frena y pide ayuda antes de seguir</td><td>Si no está bien diseñado, sigue y devuelve una respuesta plausible aunque esté adivinando</td></tr>
+        <tr><td>Auditabilidad</td><td>Es auditable, pero revisar a fondo cada decisión es caro en horas humanas</td><td>Cada acción queda registrada y se compara contra un estándar</td></tr>
+        <tr><td>Supervisión que necesita</td><td>Un responsable lo guía mientras dura su curva de aprendizaje</td><td>Necesita un dueño humano fijo que valide el estándar, audite la salida y decida cuándo apagarlo</td></tr>
+      </tbody>
+    </table>
 
     <h2>¿Cuáles son los errores caros de tratar al agente como un junior?</h2>
 

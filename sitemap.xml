@@ -8,27 +8,19 @@
     <priority>1.0</priority>
   </url>
 
-<url>
-    <loc>https://ailitica.com/contacto.html</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<!-- contacto.html, sensor.html y simulador.html se retiraron del repositorio el 6
+     de agosto de 2026 por decisión del CEO (task #918): "que no estén publicadas,
+     como inveria". Ya no existen, así que sus URLs devuelven 404 y no pueden
+     figurar aquí.
 
-  <!-- Producto: SmartStreetSensor -->
-  <url>
-    <loc>https://ailitica.com/sensor.html</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+     El punto de contacto pasa a ser el formulario del inicio, en
+     https://ailitica.com/#contacto, cableado al endpoint propio de n8n. Toda la
+     navegación del sitio (home, blog y categorías) ya apuntaba a esa ancla, así
+     que la retirada no dejó ningún enlace roto.
 
-  <url>
-    <loc>https://ailitica.com/simulador.html</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+     Con ellas desaparece la última página de producto del sitio: sensor.html era
+     la de SmartStreetSensor. Queda constancia, la decisión es del CEO. -->
+
 
 <url>
     <loc>https://ailitica.com/blog/</loc>
