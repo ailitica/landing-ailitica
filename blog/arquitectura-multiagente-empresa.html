@@ -4,14 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
-<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
-<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
-<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
-<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
-<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
 
 <!-- ── SEO del artículo ──────────────────────── -->
 <title>Arquitectura multiagente para empresas — Ailitica</title>
@@ -36,7 +28,7 @@
 <meta name="twitter:description" content="Arquitectura multiagente en la empresa: cuándo basta un agente y cuándo necesitas una célula coordinada. Criterio de decisión para un decisor técnico.">
 <meta name="twitter:image" content="https://ailitica.com/blog/img/arquitectura-multiagente-empresa_blog-hero.jpg">
 
-<!-- GEO:Article — FIJO salvo campos de contenido -->
+<!-- GEO:Article -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,7 +64,7 @@
   "keywords": "arquitectura multiagente empresa, sistema multi-agente IA, orquestación de agentes IA, cuándo usar varios agentes, agentes especializados vs generalista"
 }
 </script>
-<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<!-- GEO:BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,9 +76,7 @@
   ]
 }
 </script>
-<!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
-     con el de la sección .faq del cuerpo. {{FAQ_SCHEMA_ITEMS}} = array
-     JSON de objetos Question/Answer (contenido). -->
+<!-- GEO:FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -599,16 +589,13 @@ footer {
       <span class="article-readtime">9 min lectura</span>
     </div>
     <h1 class="article-title">Cuándo necesitas varios agentes de IA y no uno solo: <em>arquitectura multiagente</em> para empresas</h1>
-    <!-- GEO:TLDR — bloque destacado obligatorio. {{TLDR_TEXT}} = contenido. -->
+    <!-- GEO:TLDR -->
     <aside class="tldr" aria-label="Resumen del artículo">
       <p class="tldr-label">TL;DR</p>
       <p class="tldr-text">En una arquitectura multiagente, un solo agente basta cuando la tarea es acotada y de un dominio. Necesitas varios agentes coordinados por un orquestador cuando hay pasos heterogéneos, conviene auditar partes por separado o un agente se satura de instrucciones. La regla: empezar con uno y dividir solo con motivo, porque cada agente extra suma coste de coordinación.</p>
     </aside>
   </header>
 
-  <!-- {{BODY_HTML}} = CONTENIDO. Solo etiquetas semánticas de cuerpo: p, h2, h3,
-       ul/ol, table.data-table, div.callout, hr, enlaces internos. El modelo NO
-       escribe estilos, NI hojas externas, NI bloque de autor: todo eso es FIJO. -->
   <div class="article-body">
     <p>La pregunta de moda en los comités de dirección ya no es "¿usamos un agente de IA?". Es otra, más fina y peor entendida: <strong>¿necesito un agente o varios?</strong> La <strong>arquitectura multiagente</strong> en la empresa es el debate de los equipos que ya pasaron la fase de juguete. Y la mayoría lo plantea al revés: monta una célula de agentes porque suena potente, cuando un único agente bien diseñado habría hecho el trabajo con menos coste y menos puntos de fallo. Aquí va el criterio que casi nadie explica en llano.</p>
 
@@ -692,7 +679,7 @@ footer {
     <p>En resumen: la arquitectura multiagente no es un signo de madurez por sí misma. Lo es saber cuándo no la necesitas. Empieza con un agente, divide con motivo, mantén siempre un orquestador responsable y cuenta el coste de coordinación antes de sumar la siguiente pieza. Esa disciplina separa un sistema que funciona en producción de una demo que impresiona y luego se cae.</p>
   </div>
 
-  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <!-- GEO:FAQ -->
   <section class="faq" aria-label="Preguntas frecuentes">
     <h2 class="faq-title">Preguntas frecuentes</h2>
     <div class="faq-list">

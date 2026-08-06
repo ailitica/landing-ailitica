@@ -4,14 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
-<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
-<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
-<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
-<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
-<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
 
 <!-- ── SEO del artículo ──────────────────────── -->
 <title>Cómo evaluar un agente de IA antes de confiar — Ailitica</title>
@@ -36,7 +28,7 @@
 <meta name="twitter:description" content="Cómo evaluar un agente de IA antes de producción: medir si acierta, no solo que responde. Banco de casos, tasa de acierto y supervisión muestral.">
 <meta name="twitter:image" content="https://ailitica.com/blog/img/como-evaluar-agente-ia-antes-de-confiar_blog-hero.jpg">
 
-<!-- GEO:Article — FIJO salvo campos de contenido -->
+<!-- GEO:Article -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,7 +64,7 @@
   ]
 }
 </script>
-<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<!-- GEO:BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,40 +76,7 @@
   ]
 }
 </script>
-<!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
-     con el de la sección .faq del cuerpo. {
-      "@type": "Question",
-      "name": "¿Cómo sé si mi agente de IA funciona bien?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No basta con ver que responde: hay que medir si acierta. Reúne entre treinta y cien casos reales de tu negocio con la respuesta correcta ya verificada por una persona, pásaselos al agente y cuenta en cuántos coincide con la respuesta correcta. Ese porcentaje, la tasa de acierto, es la señal real de que funciona. Si nadie puede darte ese número, no tienes una evaluación, tienes una impresión."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué métricas miden la calidad de un agente de IA?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Las cuatro básicas que cualquier directivo puede exigir son: la tasa de acierto sobre un banco de casos de prueba, el coste de cada tipo de error (no todos los fallos pesan igual), la consistencia (si da la misma respuesta al mismo caso repetido) y el comportamiento ante lo desconocido (si reconoce que no sabe o se inventa la respuesta). Juntas dicen mucho más que cualquier demo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo se prueba un agente de IA antes de ponerlo en producción?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En cuatro pasos: primero defines qué cuenta como respuesta correcta; luego montas un banco de casos reales con su respuesta verificada, incluyendo los difíciles y las trampas; después fijas por escrito la tasa de acierto mínima antes de mirar resultados; y por último mides, cuentas aciertos y revisas los fallos uno a uno. Si no llega al umbral acordado, no entra en producción: se rediseña."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué es la deriva de un agente de IA y por qué importa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La deriva es la pérdida silenciosa de acierto con el tiempo: un agente que acertaba el 95% puede bajar al 80% porque el mundo cambia (nuevos clientes, formatos o casos) y él sigue igual. Importa porque nadie lo nota hasta que el daño es grande. Se controla con supervisión muestral: revisar a mano un porcentaje pequeño de las decisiones reales de forma continua."
-      }
-    } = array
-     JSON de objetos Question/Answer (contenido). -->
+<!-- GEO:FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -630,93 +589,13 @@ footer {
       <span class="article-readtime">9 min lectura</span>
     </div>
     <h1 class="article-title">Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir</h1>
-    <!-- GEO:TLDR — bloque destacado obligatorio. Para evaluar un agente de IA antes de dejarle decidir no basta con que responda: hay que medir si acierta. Eso se hace con un banco de casos de prueba con respuesta correcta conocida, una tasa de acierto fijada antes de empezar, supervisión muestral en producción y vigilancia de la deriva. Si no puedes poner un número a cuántas veces acierta, no está listo para producción. = contenido. -->
+    <!-- GEO:TLDR -->
     <aside class="tldr" aria-label="Resumen del artículo">
       <p class="tldr-label">TL;DR</p>
       <p class="tldr-text">Para evaluar un agente de IA antes de dejarle decidir no basta con que responda: hay que medir si acierta. Eso se hace con un banco de casos de prueba con respuesta correcta conocida, una tasa de acierto fijada antes de empezar, supervisión muestral en producción y vigilancia de la deriva. Si no puedes poner un número a cuántas veces acierta, no está listo para producción.</p>
     </aside>
   </header>
 
-  <!-- <p>Saber <strong>cómo evaluar un agente de IA</strong> es la diferencia entre delegar una decisión con criterio y delegarla a ciegas. Y casi nadie lo explica en llano. La mayoría de las pruebas se quedan en una comprobación engañosa: ¿responde? Sí. Listo. Pero que un agente responda no significa que acierte. Un modelo de lenguaje siempre produce una respuesta plausible; el problema es que la plausibilidad y la corrección no son lo mismo.</p>
-
-<p>Antes de dejar que un agente decida sobre tu negocio (clasificar un correo, aprobar un gasto, responder a un cliente, priorizar una tarea) necesitas una respuesta a una pregunta incómoda: ¿cuántas veces acierta de verdad? Este artículo explica cómo medirlo sin ser técnico.</p>
-
-<div class="callout">
-<p><strong>La trampa de fondo:</strong> un agente que se equivoca con seguridad es más peligroso que uno que duda. Suena convincente, así que nadie revisa. Por eso evaluar no es opcional: es lo que separa el 12% de pilotos que llega a producción del 88% que se queda por el camino.</p>
-</div>
-
-<h2>Responder no es acertar: la distinción que lo cambia todo</h2>
-
-<p>Imagina un agente que lee facturas y extrae el importe a pagar. Le das cien facturas y devuelve cien importes. Parece que funciona. Pero la pregunta correcta no es si devuelve un número, sino si devuelve el <em>número correcto</em>. Si en quince de esas cien se equivoca de casilla y coge el subtotal en vez del total, tienes un agente que "responde" el 100% de las veces y "acierta" solo el 85%.</p>
-
-<p>Esa diferencia es invisible si solo miras que la respuesta exista. Se vuelve visible cuando comparas cada respuesta contra la respuesta correcta conocida. Ahí está el núcleo de toda evaluación seria: no medir actividad, medir aciertos.</p>
-
-<h2>El banco de casos de prueba: tu vara de medir</h2>
-
-<p>Para medir aciertos necesitas saber cuál es el acierto. Eso se llama un <strong>banco de casos de prueba</strong>: un conjunto de ejemplos reales de tu negocio, cada uno con su respuesta correcta ya verificada por una persona. Es la herramienta más importante y la que casi todo el mundo se salta.</p>
-
-<p>No hace falta que sea enorme. Para empezar, entre treinta y cien casos bien elegidos dicen mucho más que mil al azar. Lo que importa es que cubran la realidad:</p>
-
-<ul>
-<li><strong>Casos típicos:</strong> lo que el agente verá el 80% de los días.</li>
-<li><strong>Casos difíciles:</strong> los que a un humano nuevo le costarían. Una factura con dos importes, un correo ambiguo, un cliente que pregunta dos cosas a la vez.</li>
-<li><strong>Casos trampa:</strong> entradas raras, incompletas o mal formadas. Aquí es donde un agente acierta de boquilla o se inventa la respuesta.</li>
-</ul>
-
-<p>Con ese banco, evaluar deja de ser una intuición y pasa a ser una cuenta: de estos casos, ¿en cuántos acertó? Ese mismo banco es el que después usas para <a href="/blog/auditoria-agente-ia-cada-dia.html">auditar lo que tu agente de IA decide cada día</a> sin partir de cero.</p>
-
-<h2>Cuatro criterios de evaluación que cualquier directivo puede pedir</h2>
-
-<p>No necesitas saber programar para exigir estas cuatro cosas a quien construye o vende el agente. Son la base de una evaluación honesta.</p>
-
-<h3>1. Tasa de acierto sobre el banco de casos</h3>
-
-<p>El porcentaje de casos en los que la respuesta del agente coincide con la respuesta correcta. Es el número rey. Pide que se fije <em>antes</em> de empezar: "este agente solo pasa a producción si acierta el 95% de los casos típicos y el 85% de los difíciles". Un umbral decidido después de ver los resultados no es un umbral, es una excusa.</p>
-
-<h3>2. Qué pasa cuando se equivoca</h3>
-
-<p>No todos los errores cuestan lo mismo. Equivocarse al etiquetar un correo como "no urgente" es leve. Equivocarse al aprobar un pago no lo es. Pide la lista de los casos fallados y el coste de cada tipo de fallo. Un 90% de acierto puede ser excelente o inaceptable según dónde caiga ese 10%.</p>
-
-<h3>3. Consistencia</h3>
-
-<p>Dale el mismo caso dos veces. ¿Responde lo mismo? Los agentes de IA pueden dar respuestas distintas a la misma entrada. Si vas a delegarle una decisión, necesitas saber cuánto varía. Un agente inconsistente es un agente que no puedes auditar.</p>
-
-<h3>4. Comportamiento ante lo desconocido</h3>
-
-<p>¿Qué hace cuando no sabe? El buen comportamiento es decir "no estoy seguro, lo paso a un humano". El malo es inventarse una respuesta con total aplomo. Pide ver casos fuera de su zona cómoda y observa si reconoce sus límites o los disimula.</p>
-
-<div class="callout">
-<p><strong>Regla práctica:</strong> si quien te ofrece el agente no puede enseñarte su tasa de acierto sobre un banco de casos reales, no tiene una evaluación. Tiene una demo. Y una demo no es una prueba.</p>
-</div>
-
-<h2>Qué probar antes de producción (y qué no se puede saltar)</h2>
-
-<p>La evaluación tiene dos momentos: antes de soltarlo y después. Antes de producción, el orden es este:</p>
-
-<ol>
-<li><strong>Define el acierto.</strong> Acuerda con el equipo qué cuenta como respuesta correcta. Si no hay acuerdo aquí, no hay nada que medir.</li>
-<li><strong>Monta el banco de casos.</strong> Reúne ejemplos reales con su respuesta verificada. Incluye los difíciles y las trampas.</li>
-<li><strong>Fija el umbral.</strong> Decide la tasa de acierto mínima para cada tipo de caso, por escrito, antes de mirar resultados.</li>
-<li><strong>Mide y decide.</strong> Pasa el banco, cuenta aciertos, revisa los fallos uno a uno. Si no llega al umbral, no entra en producción: se rediseña.</li>
-</ol>
-
-<p>Este filtro es la mitad del trabajo de un buen <a href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">diagnóstico antes de implementar IA en la empresa</a>. Saltárselo es precisamente por donde se cuelan los proyectos que parecían perfectos en la demo y fallan el primer mes.</p>
-
-<h2>Después de producción: supervisión muestral y deriva</h2>
-
-<p>Pasar la prueba no es el final. Un agente que acertaba el 95% en marzo puede bajar al 80% en junio sin que nadie lo note. Eso se llama <strong>deriva</strong>: el mundo cambia (nuevos tipos de cliente, nuevos formatos, nuevos casos) y el agente sigue igual. Por eso la evaluación no es un examen único, es una rutina.</p>
-
-<p>La herramienta para esto es la <strong>supervisión muestral</strong>: revisar a mano un porcentaje pequeño de las decisiones reales, por ejemplo el 5%, y comprobar si siguen siendo correctas. Es barato, es continuo y te avisa antes de que el problema se haga grande. Aquí es donde el <a href="/blog/human-in-the-loop-cuando-aplicarlo.html">human in the loop, y cuándo aplicarlo</a>, deja de ser teoría y se vuelve un control concreto.</p>
-
-<p>La supervisión muestral también conecta la evaluación con el dinero: si conoces tu tasa de acierto y el coste de cada fallo, puedes calcular el <a href="/blog/como-medir-roi-agente-ia.html">retorno real de un agente de IA</a> sin engañarte. Un agente barato que acierta poco puede salir carísimo.</p>
-
-<h2>Las señales de que la evaluación falló</h2>
-
-<p>A veces el agente pasa la prueba y aun así algo va mal. Conviene reconocer los síntomas pronto: decisiones que nadie revisa, errores que se descubren tarde, respuestas que cambian sin explicación. Son las mismas <a href="/blog/senales-agente-ia-fuera-de-control.html">señales de un agente de IA fuera de control</a> que indican que la supervisión se relajó. Una evaluación viva las detecta; una evaluación de un solo día, no.</p>
-
-<p>Marcos públicos de referencia como el <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">AI Risk Management Framework del NIST</a> insisten en lo mismo desde el lado de la gobernanza: medir el desempeño de forma continua y documentada, no una vez. La idea de fondo es sencilla y poco glamurosa. Un agente de IA no se evalúa por lo bien que suena, sino por lo bien que acierta, y eso solo se sabe contándolo.</p> = CONTENIDO. Solo etiquetas semánticas de cuerpo: p, h2, h3,
-       ul/ol, table.data-table, div.callout, hr, enlaces internos. El modelo NO
-       escribe estilos, NI hojas externas, NI bloque de autor: todo eso es FIJO. -->
   <div class="article-body">
     <p>Saber <strong>cómo evaluar un agente de IA</strong> es la diferencia entre delegar una decisión con criterio y delegarla a ciegas. Y casi nadie lo explica en llano. La mayoría de las pruebas se quedan en una comprobación engañosa: ¿responde? Sí. Listo. Pero que un agente responda no significa que acierte. Un modelo de lenguaje siempre produce una respuesta plausible; el problema es que la plausibilidad y la corrección no son lo mismo.</p>
 
@@ -798,7 +677,7 @@ footer {
 <p>Marcos públicos de referencia como el <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">AI Risk Management Framework del NIST</a> insisten en lo mismo desde el lado de la gobernanza: medir el desempeño de forma continua y documentada, no una vez. La idea de fondo es sencilla y poco glamurosa. Un agente de IA no se evalúa por lo bien que suena, sino por lo bien que acierta, y eso solo se sabe contándolo.</p>
   </div>
 
-  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <!-- GEO:FAQ -->
   <section class="faq" aria-label="Preguntas frecuentes">
     <h2 class="faq-title">Preguntas frecuentes</h2>
     <div class="faq-list">

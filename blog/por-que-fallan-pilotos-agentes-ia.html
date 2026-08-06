@@ -4,14 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  PLANTILLA CANONICA BLOG AILITICA — v2.6.0 (task #554)               -->
-<!--  FIJO DE PLANTILLA: estructura, CSS inline completo, autor,         -->
-<!--  esqueleto de schemas, nav, footer, scripts. NO lo escribe el       -->
-<!--  modelo. Solo se sustituyen los marcadores de CONTENIDO.            -->
-<!--  Posts autocontenidos: CERO <link> a hojas de estilo externas       -->
-<!--  (solo la fuente de Google). Cualquier CSS externo enlazado = BUG.  -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
 
 <!-- ── SEO del artículo ──────────────────────── -->
 <title>Por qué fallan los pilotos de agentes IA — Ailitica</title>
@@ -36,7 +28,7 @@
 <meta name="twitter:description" content="El 88% de los pilotos de agentes de IA no llega a producción (IDC, 2025). No es la IA: es el diseño. Las causas reales y cómo estar en el 12%.">
 <meta name="twitter:image" content="https://ailitica.com/blog/img/por-que-fallan-pilotos-agentes-ia_blog-hero.jpg">
 
-<!-- GEO:Article — FIJO salvo campos de contenido -->
+<!-- GEO:Article -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,7 +64,7 @@
   ]
 }
 </script>
-<!-- GEO:BreadcrumbList — FIJO salvo título -->
+<!-- GEO:BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,9 +76,7 @@
   ]
 }
 </script>
-<!-- GEO:FAQPage — mínimo 3 Q&A. El texto de cada respuesta debe COINCIDIR
-     con el de la sección .faq del cuerpo. {"@type": "Question", "name": "¿Por qué fallan los proyectos de agentes de IA?", "acceptedAnswer": {"@type": "Answer", "text": "No por el modelo, sino por el diseño: criterios de éxito poco claros, acceso insuficiente a datos y sistemas, y falta de evaluación continua."}}, {"@type": "Question", "name": "¿Qué porcentaje de pilotos de IA llega a producción?", "acceptedAnswer": {"@type": "Answer", "text": "Según IDC (AI CIO Playbook 2025), solo el 12% llega a producción: por cada 33 pruebas de concepto, cuatro pasan a producción."}}, {"@type": "Question", "name": "¿Cómo evito que mi piloto de IA fracase?", "acceptedAnswer": {"@type": "Answer", "text": "Tres decisiones antes de construir: diagnostica el proceso real, fija criterios de éxito medibles y monta evaluación continua."}} = array
-     JSON de objetos Question/Answer (contenido). -->
+<!-- GEO:FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -568,56 +558,13 @@ footer {
       <span class="article-readtime">9 min lectura</span>
     </div>
     <h1 class="article-title">El 88% de los pilotos de agentes de IA no llega a producción: por qué, y cómo estar en el 12%</h1>
-    <!-- GEO:TLDR — bloque destacado obligatorio. El 88% de los pilotos de agentes de IA no llega a producción, según IDC (AI CIO Playbook 2025). No falla la tecnología: fallan los criterios de éxito poco claros, el acceso a datos y la falta de evaluación continua. El 12% que sí llega diagnostica antes de construir, fija métricas medibles y supervisa cada día. = contenido. -->
+    <!-- GEO:TLDR -->
     <aside class="tldr" aria-label="Resumen del artículo">
       <p class="tldr-label">TL;DR</p>
       <p class="tldr-text">El 88% de los pilotos de agentes de IA no llega a producción, según IDC (AI CIO Playbook 2025). No falla la tecnología: fallan los criterios de éxito poco claros, el acceso a datos y la falta de evaluación continua. El 12% que sí llega diagnostica antes de construir, fija métricas medibles y supervisa cada día.</p>
     </aside>
   </header>
 
-  <!-- <p>La cifra circula por todas partes desde hace meses. <strong>El 88% de los pilotos de agentes de IA no llega a producción.</strong> Suena demoledora, y se repite como si fuera una sentencia sobre la tecnología. No lo es. Es una sentencia sobre cómo se abordan los proyectos. La diferencia entre el 88% que se queda en el cajón y el 12% que llega a funcionar casi nunca está en el modelo: está en lo que se hace antes de tocar el modelo.</p>
-
-<p>Conviene empezar por atribuir bien el dato, porque mucha cobertura lo cuenta mal. Ese 88% no es de Gartner: procede de <a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html" target="_blank" rel="noopener">IDC, en su AI CIO Playbook 2025 con Lenovo</a>. La métrica es nítida: por cada 33 pruebas de concepto que lanza una empresa, solo cuatro pasan a producción. Si arrancas un piloto sin saber esto, ya partes con el sesgo del optimista.</p>
-
-<h2>Por qué fallan los pilotos de IA: no es la inteligencia, es el diseño</h2>
-
-<p>Los informes que más se citan apuntan todos a la misma raíz, y no es la potencia del modelo. <strong>IDC, MIT y Gartner coinciden en que el cuello de botella es la preparación: datos, procesos e integración.</strong> El modelo casi siempre funciona en la demo. Lo que no funciona es el sistema alrededor: el acceso a los datos correctos, la conexión con lo que ya tienes, el criterio para decidir cuándo el agente acierta.</p>
-
-<p>El estudio <a href="https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf" target="_blank" rel="noopener">State of AI in Business 2025 del MIT (iniciativa NANDA)</a> lleva el dato aún más lejos: según el informe, el 95% de los pilotos de IA generativa en empresas no produce un retorno medible. Solo un 5% genera impacto real en la cuenta de resultados. Y el patrón del 5% que sí lo logra es revelador: aplicaciones concretas, integradas a fondo en un flujo de trabajo existente, no herramientas genéricas conectadas por encima.</p>
-
-<div class="callout">
-<p><strong>La trampa del piloto.</strong> Un agente que responde bien en una demo controlada no es un agente en producción. Entre los dos hay datos reales, casos límite, integración con sistemas vivos y supervisión continua. Saltarse esa distancia es exactamente lo que infla la estadística del 88%.</p>
-</div>
-
-<h2>Las tres causas raíz que separan al 88% del 12%</h2>
-
-<p>Cuando se ordenan los motivos de fracaso, casi todos caen en tres cestas. No son problemas de IA. Son problemas de planteamiento que un buen diagnóstico detecta antes de gastar un euro en construir.</p>
-
-<h3>1. Criterios de éxito poco claros</h3>
-
-<p>Muchos pilotos arrancan sin una definición medible de qué significa "funcionar". Sin esa cifra de partida, el proyecto no se puede evaluar ni defender ante quien paga. Por eso el primer paso no es elegir herramienta, sino diagnosticar el proceso. Como explicamos en nuestro caso real de <a href="/blog/diagnostico-antes-de-implementar-ia-empresa.html">por qué un diagnóstico cambia la respuesta antes de implementar IA</a>, la pregunta correcta casi nunca es la que trae el cliente.</p>
-
-<h3>2. Acceso insuficiente a datos y sistemas</h3>
-
-<p>Gartner, en su <a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">predicción de junio de 2025</a>, calcula que más del 40% de los proyectos de IA agéntica se cancelarán antes de que termine 2027. Entre las causas que cita están los costes crecientes y el valor de negocio poco claro. Buena parte de ese coste oculto es conectar el agente a la infraestructura que ya existe y darle acceso fiable a datos de producción. La inteligencia rara vez es el problema; el acceso seguro a tus sistemas, casi siempre.</p>
-
-<h3>3. Ausencia de evaluación continua</h3>
-
-<p>Un agente que se monta y se abandona deja de ser fiable en semanas. Sin un mecanismo para comprobar que sigue acertando, el proyecto se degrada en silencio. Aquí es donde el criterio humano deja de ser un eslogan y se vuelve infraestructura: hay que <a href="/blog/como-controlar-agente-ia-empresa.html">controlar qué decide el agente cada día</a>, no solo el día del lanzamiento.</p>
-
-<h2>Cómo estar en el 12%: diagnóstico, criterios y evaluación</h2>
-
-<p>El 12% que llega a producción no tiene mejor IA. Tiene mejor método. Y ese método se reduce a tres decisiones que se toman antes de construir, no después.</p>
-
-<ul>
-<li><strong>Diagnostica antes de construir.</strong> Mapea el proceso real, identifica dónde la IA libera capacidad humana y descarta lo que no encaja. A veces el resultado del diagnóstico es no hacer el proyecto, y eso también es valor. Para eso conviene saber <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>.</li>
-<li><strong>Fija criterios de éxito medibles.</strong> Define la cifra que hay que mover y cómo se medirá. Si no sabes <a href="/blog/como-medir-roi-agente-ia.html">cómo medir el retorno de un agente de IA</a>, no sabrás si tu piloto pertenece al 88% o al 12%.</li>
-<li><strong>Empieza por el proceso correcto.</strong> No por el más vistoso, sino por el de retorno más claro y datos más accesibles. Acertar con <a href="/blog/que-procesos-automatizar-primero.html">qué procesos automatizar primero</a> es la mitad del éxito del piloto.</li>
-</ul>
-
-<p>Nada de esto es contraintuitivo. Es, simplemente, lo que se salta el 88%. Después de <a href="/blog/seis-meses-despues-aprendizajes-agentes-ia.html">seis meses publicando sobre agentes de IA</a>, lo hemos visto repetirse: los proyectos que mueren no mueren por falta de tecnología, mueren por exceso de prisa. El piloto que llega a producción es el que se diseñó como un sistema desde el primer día, no como una demo a la que luego se le pega la realidad.</p> = CONTENIDO. Solo etiquetas semánticas de cuerpo: p, h2, h3,
-       ul/ol, table.data-table, div.callout, hr, enlaces internos. El modelo NO
-       escribe estilos, NI hojas externas, NI bloque de autor: todo eso es FIJO. -->
   <div class="article-body">
     <p>La cifra circula por todas partes desde hace meses. <strong>El 88% de los pilotos de agentes de IA no llega a producción.</strong> Suena demoledora, y se repite como si fuera una sentencia sobre la tecnología. No lo es. Es una sentencia sobre cómo se abordan los proyectos. La diferencia entre el 88% que se queda en el cajón y el 12% que llega a funcionar casi nunca está en el modelo: está en lo que se hace antes de tocar el modelo.</p>
 
@@ -662,7 +609,7 @@ footer {
 <p>Nada de esto es contraintuitivo. Es, simplemente, lo que se salta el 88%. Después de <a href="/blog/seis-meses-despues-aprendizajes-agentes-ia.html">seis meses publicando sobre agentes de IA</a>, lo hemos visto repetirse: los proyectos que mueren no mueren por falta de tecnología, mueren por exceso de prisa. El piloto que llega a producción es el que se diseñó como un sistema desde el primer día, no como una demo a la que luego se le pega la realidad.</p>
   </div>
 
-  <!-- GEO:FAQ — mínimo 3 <details>. Texto idéntico al FAQPage schema del head. -->
+  <!-- GEO:FAQ -->
   <section class="faq" aria-label="Preguntas frecuentes">
     <h2 class="faq-title">Preguntas frecuentes</h2>
     <div class="faq-list">
