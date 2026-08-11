@@ -1,5 +1,14 @@
 [
   {
+    "slug": "documentos-que-aguanta-agente-ia",
+    "title": "Qué documentos aguanta un agente de IA, y en cuáles se equivoca",
+    "excerpt": "Un agente de IA lee bien facturas y contratos con formato fijo, pero se rompe con manuscritos, escaneos borrosos y cláusulas ambiguas. La taxonomía real: leer, clasificar, extraer, validar.",
+    "date": "2026-08-11",
+    "category": "Automatización",
+    "readtime": "6 min",
+    "image": "img/documentos-que-aguanta-agente-ia_blog-hero.jpg"
+  },
+  {
     "slug": "arquitectura-multiagente-empresa",
     "title": "Cuándo necesitas varios agentes de IA y no uno solo: arquitectura multiagente para empresas",
     "excerpt": "Cuándo basta un agente de IA y cuándo hace falta una célula coordinada por un orquestador. El criterio de decisión que separa un sistema en producción de una demo bonita.",
