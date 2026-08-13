@@ -1,5 +1,14 @@
 [
   {
+    "slug": "como-saber-que-ia-usa-tu-equipo",
+    "title": "Cómo saber qué IA está usando tu equipo, antes de escribir una política",
+    "excerpt": "Tres sitios donde mirar antes de redactar ninguna política de IA: tarjeta de empresa, extensiones del navegador y registros de acceso SSO/OAuth.",
+    "date": "2026-08-13",
+    "category": "Estrategia y decisión",
+    "readtime": "6 min",
+    "image": "img/como-saber-que-ia-usa-tu-equipo_blog-hero.jpg"
+  },
+  {
     "slug": "es-legal-usar-ia-con-datos-de-clientes",
     "title": "¿Es legal usar ChatGPT (o cualquier IA) con datos de tus clientes?",
     "excerpt": "La regla del email a un desconocido: qué no pegar nunca en una IA de consumo, qué revisar del proveedor antes de activarla y cuándo consultar a tu asesor legal.",
