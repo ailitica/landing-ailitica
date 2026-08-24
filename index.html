@@ -1122,10 +1122,10 @@ footer {
     </div>
     <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
     <div class="footer-links">
-      <a href="https://ailitica.com/terminos" target="_blank" rel="noopener">Términos y condiciones</a>
-      <a href="https://ailitica.com/cookies" target="_blank" rel="noopener">Política de cookies</a>
-      <a href="https://ailitica.com/privacidad" target="_blank" rel="noopener">Política de privacidad</a>
-      <a href="https://ailitica.com/politica-ia" target="_blank" rel="noopener">Política de IA</a>
+      <a href="https://ailitica.com/terminos.html" target="_blank" rel="noopener">Términos y condiciones</a>
+      <a href="https://ailitica.com/cookies.html" target="_blank" rel="noopener">Política de cookies</a>
+      <a href="https://ailitica.com/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>
+      <a href="https://ailitica.com/politica-ia.html" target="_blank" rel="noopener">Política de IA</a>
       <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
     </div>
   </footer>
@@ -1215,11 +1215,21 @@ async function handleSubmit(e) {
   btn.textContent = 'Enviando…';
   btn.disabled = true;
 
+  // Corte de seguridad a 15 s. Sin esto, si el destinatario del formulario no
+  // responde (red móvil mala, caída del servicio), la promesa del fetch nunca
+  // resuelve: el botón se queda en "Enviando…" indefinidamente y deshabilitado,
+  // así que el visitante ni sabe qué ha pasado ni puede reintentar. Este
+  // formulario es la única vía de contacto del sitio, de modo que un envío que
+  // se cuelga en silencio equivale a perder el contacto.
+  const corte = new AbortController();
+  const temporizador = setTimeout(() => corte.abort(), 15000);
+
   try {
     const res = await fetch(form.action, {
       method: 'POST',
       body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
+      headers: { 'Accept': 'application/json' },
+      signal: corte.signal
     });
     if (res.ok) {
       btn.textContent = 'Mensaje enviado ✓';
@@ -1232,7 +1242,12 @@ async function handleSubmit(e) {
   } catch {
     btn.textContent = 'Error al enviar. Inténtalo de nuevo.';
     btn.style.cssText = errorStyle;
-    setTimeout(() => { btn.textContent = orig; btn.style.cssText = ''; btn.disabled = false; }, 4000);
+    // Se rehabilita ya, no a los 4 s: quien acaba de fallar quiere reintentar
+    // en ese momento, no esperar a que el aviso se borre solo.
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = orig; btn.style.cssText = ''; }, 4000);
+  } finally {
+    clearTimeout(temporizador);
   }
 }
 
