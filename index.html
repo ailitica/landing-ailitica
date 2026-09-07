@@ -729,6 +729,16 @@ section:not(#hero) + section::before {
   transition:opacity .2s,transform .2s;
 }
 .btn-send:hover { opacity:.87; transform:translateY(-1px); }
+/* Aviso del articulo 13 del RGPD bajo el formulario. Siempre visible, sin
+   desplegable y sin ventana emergente: es informacion obligatoria, no letra
+   pequena. Texto de Lex, apartado 5.2 de 01_legal/rgpd/260907_textos_cookies_privacidad.md */
+.form-legal {
+  font-size:11.5px; line-height:1.75; color:var(--text-secondary);
+  margin:4px 0 2px; max-width:62ch;
+}
+.form-legal strong { color:var(--text-primary); font-weight:400; }
+.form-legal a { color:var(--accent); text-decoration:none; }
+.form-legal a:hover { text-decoration:underline; }
 
 /* ── Footer ───────────────────────────────────────────────────── */
 footer {
@@ -1066,6 +1076,36 @@ footer {
         </div>
         <input class="c-input" type="text" name="empresa" placeholder="Empresa">
         <textarea class="c-textarea" name="mensaje" placeholder="Cuéntanos brevemente tu mayor reto operativo…"></textarea>
+<!-- === INICIO BLOQUE LEGAL - AVISO ART. 13 RGPD DEL FORMULARIO ===
+             Texto literal del apartado 5.2 de los textos definitivos de Lex
+             (01_legal/rgpd/260907_textos_cookies_privacidad.md), version adaptada
+             al destino REAL de hoy, que es Formspree. Cuando la task #1050
+             despliegue el formulario propio, la linea de Destinatarios se
+             sustituye por la del apartado 22.1 del dictamen de agosto y se retira
+             la mencion a Formspree de los apartados 7 y 8 de privacidad.html.
+             Sin casilla: con base en el art. 6.1.b no hay consentimiento que recoger. -->
+        <p class="form-legal">
+          <strong>Responsable:</strong> Ailitica S.L. &middot;
+          <strong>Finalidad:</strong> atender tu solicitud y ponernos en contacto contigo.
+          Si de tu consulta nace una relación comercial, la seguiremos gestionando en
+          nuestro sistema interno &middot;
+          <strong>Legitimación:</strong> las gestiones previas a un posible contrato, que
+          nos pides al escribirnos (artículo 6.1.b del RGPD) &middot;
+          <strong>Destinatarios:</strong> tu mensaje se envía a través de Formspree, Inc.
+          (Estados Unidos), que nos lo entrega. Estamos migrando este servicio a un
+          servidor propio de Ailitica. Si prefieres que tus datos no salgan de nuestros
+          sistemas, escríbenos directamente a
+          <a href="mailto:hola@ailitica.com">hola@ailitica.com</a> &middot;
+          <strong>Conservación:</strong> conservamos tu mensaje un máximo de 90 días.
+          Lo borramos antes en cuanto dejamos de necesitarlo &middot;
+          <strong>Derechos:</strong> acceso, rectificación, supresión, oposición,
+          limitación y portabilidad escribiendo a
+          <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>, y reclamación ante la
+          AEPD. Puedes pedirnos que borremos tu mensaje en cualquier momento &middot;
+          <strong>Más información:</strong>
+          <a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>.
+        </p>
+<!-- === FIN BLOQUE LEGAL - AVISO ART. 13 RGPD DEL FORMULARIO === -->
         <button type="submit" class="btn-send">Iniciar conexión</button>
       </form>
     </div>
@@ -1232,6 +1272,14 @@ async function handleSubmit(e) {
       signal: corte.signal
     });
     if (res.ok) {
+      // Conversion real: el destinatario ha aceptado el mensaje. Se avisa aqui y
+      // no en el submit porque un envio que falla, o que se corta a los 15 s, no
+      // es una conversion, y contarlo como tal ensucia la medicion con leads que
+      // nunca llegaron. consent.js escucha este evento y solo manda generate_lead
+      // a GA4 si hay consentimiento. No viaja ningun dato del formulario.
+      document.dispatchEvent(new CustomEvent('ailitica:formulario-enviado', {
+        detail: { form_id: 'contacto-home' }
+      }));
       btn.textContent = 'Mensaje enviado ✓';
       btn.style.cssText = successStyle;
       form.reset();
@@ -1515,5 +1563,6 @@ async function handleSubmit(e) {
 })();
 </script>
 <script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+<script src="/consent.js" defer></script>
 </body>
 </html>

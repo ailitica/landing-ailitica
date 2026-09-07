@@ -19,25 +19,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
-<!-- Google Analytics retirado el 6 de agosto de 2026 (task #918; dictamen de Lex,
-     01_legal/rgpd/260806_dictamen_captura_emails_web.md, apartado 12).
+<!-- Google Analytics 4 (G-PWNT3YC598) vuelve el 7 de septiembre de 2026, task #1048.
+     Esta vez SI esta gobernado: la etiqueta la inyecta /consent.js dinamicamente y
+     solo desde la funcion que corre al pulsar "Aceptar". Nunca desde el <head>, que
+     fue exactamente el defecto de julio: el script se cargaba aqui arriba y el banner
+     no gobernaba nada, de modo que pulsar "rechazar" no impedia la medicion.
 
-     Motivo: el gtag.js se cargaba aquí, en el <head>, así que el identificador
-     analítico se instalaba al abrir la página, ANTES de que el banner de cookies
-     llegara a pintarse. La función activarCookiesAnaliticas() busca los scripts
-     marcados con data-cookiecategory='analytics', y ese atributo no existía en
-     ninguna página: el banner no gobernaba nada, de modo que pulsar "rechazar" no
-     impedía la medición. Eso vulnera el artículo 22.2 de la LSSICE, que exige
-     consentimiento previo, informado y por acción afirmativa antes de instalar
-     cualquier identificador que no sea estrictamente necesario.
-
-     CONDICIÓN PARA VOLVER A INSTALARLO, y no es negociable: primero el mecanismo de
-     consentimiento funcionando y verificado en producción. Es decir, el script se
-     carga ÚNICAMENTE desde activarCookiesAnaliticas() y jamás desde el <head>; el
-     banner se despliega en todas las páginas, no en tres; rechazar cuesta lo mismo
-     que aceptar, un solo clic al mismo nivel; y el usuario puede cambiar de opinión
-     después. Mientras eso no esté probado, Analytics no vuelve.
--->
+     Contrato funcional: apartado 6 del dictamen de Lex de 7-sep-2026
+     (00_inbox/owner/lex_2609071700_dictamen-analitica-web-consentimiento.md).
+     Textos legales de esta pagina: 01_legal/rgpd/260907_textos_cookies_privacidad.md,
+     apartado 2, copiados literalmente. -->
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
@@ -152,6 +143,13 @@ main {
 }
 .legal-body tr:hover td { background:var(--accent-soft); }
 
+/* La tabla de cookies tiene 5 columnas y a 402 px de ancho desbordaba la
+   pagina entera, lo que obligaba al navegador a alejar el zoom. Se le da su
+   propio desplazamiento horizontal: el cuerpo del documento nunca scrollea
+   en horizontal. */
+.tabla-responsive { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:16px 0; }
+.tabla-responsive table { margin:0; }
+
 /* Divider */
 .legal-divider {
   height:1px; margin:48px 0;
@@ -174,6 +172,11 @@ footer {
 
 @media (max-width:560px) {
   :root { --col-w:100%; --col-pad:24px; }
+  /* La tabla no se comprime hasta lo ilegible: mantiene un ancho minimo y
+     se desplaza dentro de su propio contenedor. */
+  .legal-body table { font-size:12px; min-width:540px; }
+  .legal-body th, .legal-body td { padding:8px; }
+  .legal-body code { overflow-wrap:anywhere; }
   nav { padding:20px 24px; }
   main { padding:100px 24px 60px; }
   footer { flex-direction:column; gap:20px; text-align:center; }
@@ -195,38 +198,82 @@ footer {
 <main>
   <span class="legal-label">Legal</span>
   <h1 class="legal-h1">Política de cookies</h1>
-  <span class="legal-version">Versión 2.0 — Agosto 2026</span>
+  <span class="legal-version">Versión 3.0 — Septiembre 2026</span>
   <div class="legal-body">
-
     <h2>1. ¿Qué son las cookies?</h2>
     <p>Las cookies son pequeños archivos que un sitio web almacena en tu dispositivo cuando lo visitas. Permiten reconocer tu navegador, recordar información y medir el uso de la web.</p>
-    <p>Las cookies pueden ser <strong>técnicas</strong> (necesarias para el funcionamiento básico del sitio), <strong>analíticas</strong> (miden el tráfico y el comportamiento de los visitantes) o <strong>publicitarias y de seguimiento</strong>.</p>
+    <p>Las cookies pueden ser <strong>técnicas</strong> (necesarias para el funcionamiento básico del sitio), <strong>analíticas</strong> (miden el tráfico y el comportamiento de los visitantes) o <strong>publicitarias y de seguimiento</strong>. Esta Web <strong>no utiliza cookies publicitarias ni de seguimiento</strong>, ni ahora ni antes.</p>
 
     <div class="legal-divider"></div>
 
     <h2>2. Cookies que utiliza esta Web</h2>
-    <p><strong>Esta Web no utiliza cookies.</strong> No instalamos cookies propias ni de terceros: ni técnicas, ni analíticas, ni publicitarias, ni de seguimiento.</p>
-    <p>Tampoco utilizamos ninguna otra tecnología de almacenamiento en tu dispositivo, como el almacenamiento local del navegador, con fines de identificación, medición o seguimiento.</p>
-    <p>Por ese motivo esta Web no te muestra ningún aviso de cookies: no hay nada que consentir.</p>
+    <p>Esta Web utiliza cookies analíticas de un tercero, <strong>y solo si tú lo autorizas</strong>. Mientras no aceptes, no se instala ninguna: ni siquiera se descarga el código que las crearía.</p>
+
+    <div class="tabla-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Titular</th>
+          <th>Tipo</th>
+          <th>Finalidad</th>
+          <th>Duración</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>_ga</code></td>
+          <td>Google Ireland Limited (tercero)</td>
+          <td>Analítica</td>
+          <td>Distinguir unos visitantes de otros, para poder contar cuántas personas distintas visitan la Web</td>
+          <td>2 años</td>
+        </tr>
+        <tr>
+          <td><code>_ga_PWNT3YC598</code></td>
+          <td>Google Ireland Limited (tercero)</td>
+          <td>Analítica</td>
+          <td>Mantener el estado de la sesión de medición mientras navegas por el sitio</td>
+          <td>2 años</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p>Las dos son cookies del servicio <strong>Google Analytics 4</strong>. Su uso implica que tus datos se traten también en <strong>Estados Unidos</strong>. Puedes consultar el detalle de esa transferencia y las garantías que se le aplican en el apartado 8 de nuestra <a href="/privacidad.html">Política de privacidad</a>.</p>
 
     <div class="legal-divider"></div>
 
-    <h2>3. Si esto cambia</h2>
-    <p>Si en el futuro incorporamos alguna cookie que no sea estrictamente necesaria, por ejemplo para medir estadísticamente el uso de la Web, no se instalará hasta que tú lo autorices mediante una acción afirmativa, tal y como exige el artículo 22.2 de la Ley 34/2002, de servicios de la sociedad de la información. En ese momento actualizaremos esta Política detallando cada cookie, su titular, su finalidad y su duración, y publicaremos un mecanismo que te permita aceptarlas o rechazarlas con la misma facilidad, así como cambiar de opinión después.</p>
+    <h2>3. Otra información que se guarda en tu navegador</h2>
+    <p>No es una cookie, pero te lo contamos porque también se guarda en tu dispositivo:</p>
+    <ul>
+      <li><strong>Tu decisión sobre las cookies</strong> (<code>ailitica_cookie_consent</code>), guardada en el almacenamiento local de tu navegador durante <strong>24 meses</strong>. Solo sirve para recordar si aceptaste o rechazaste, y no volver a preguntártelo en cada página. Es estrictamente necesaria para prestarte ese servicio, así que no requiere tu autorización. Pasados los 24 meses te lo volveremos a preguntar.</li>
+      <li><strong>Una cookie propia de uso interno</strong> (<code>ailitica_traffic_internal</code>), que marca un dispositivo como nuestro para excluir nuestras propias visitas de la estadística. <strong>No se instala navegando por esta Web:</strong> solo se instala si se accede voluntariamente a una página interna destinada a ese fin, que no está enlazada públicamente.</li>
+    </ul>
 
     <div class="legal-divider"></div>
 
-    <h2>4. Datos que se tratan al visitar esta Web</h2>
-    <p>Aunque no usemos cookies, al cargar cualquier página tu dirección IP y los datos técnicos de tu navegador se comunican necesariamente a los proveedores que alojan y distribuyen esta Web. Puedes consultar quiénes son, qué reciben y qué garantías se aplican en nuestra <a href="/privacidad.html">Política de privacidad</a>.</p>
+    <h2>4. Medición sin cookies</h2>
+    <p>Además de lo anterior, medimos el uso de la Web con <strong>Cloudflare Web Analytics</strong>, un servicio que <strong>no instala cookies ni almacena ningún dato en tu dispositivo</strong> y que no permite identificarte ni seguirte entre distintos sitios web. Por eso funciona aceptes o rechaces las cookies: no hay nada que consentir. Puedes consultar cómo funciona y cómo oponerte en el apartado 6 de nuestra <a href="/privacidad.html">Política de privacidad</a>.</p>
 
     <div class="legal-divider"></div>
 
-    <h2>5. Cómo gestionar las cookies en tu navegador</h2>
+    <h2>5. Cómo aceptar, rechazar o cambiar de opinión</h2>
+    <p>La primera vez que visitas esta Web te mostramos un aviso con dos opciones al mismo nivel: <strong>aceptar</strong> o <strong>rechazar</strong> las cookies analíticas. La Web funciona exactamente igual elijas lo que elijas: nunca condicionamos el acceso a que aceptes.</p>
+    <p>Puedes cambiar tu decisión en cualquier momento desde el enlace <strong>«Preferencias de cookies»</strong> que encontrarás en el pie de todas las páginas. Retirar tu consentimiento es tan fácil como darlo, y al hacerlo dejamos de cargar la herramienta de medición y <strong>borramos de tu navegador las cookies <code>_ga</code> y <code>_ga_PWNT3YC598</code></strong>.</p>
+
+    <div class="legal-divider"></div>
+
+    <h2>6. Datos que se tratan al visitar esta Web</h2>
+    <p>Con independencia de las cookies, al cargar cualquier página tu dirección IP y los datos técnicos de tu navegador se comunican necesariamente a los proveedores que alojan y distribuyen esta Web. Puedes consultar quiénes son, qué reciben y qué garantías se aplican en nuestra <a href="/privacidad.html">Política de privacidad</a>.</p>
+
+    <div class="legal-divider"></div>
+
+    <h2>7. Cómo gestionar las cookies desde tu navegador</h2>
     <p>Con independencia de lo anterior, todos los navegadores permiten bloquear o eliminar las cookies que cualquier sitio web intente instalar. Puedes hacerlo desde las opciones de configuración o privacidad de tu navegador.</p>
 
     <div class="legal-divider"></div>
 
-    <h2>6. Actualización de esta Política</h2>
+    <h2>8. Actualización de esta Política</h2>
     <p>Ailitica puede actualizar esta Política para adaptarla a cambios normativos o técnicos. La versión vigente será siempre la publicada en esta página.</p>
   </div>
 </main>
@@ -254,5 +301,6 @@ document.addEventListener('mousemove', e => {
 });
 </script>
 <script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+<script src="/consent.js" defer></script>
 </body>
 </html>

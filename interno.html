@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tráfico interno — Ailitica</title>
+<!-- Página privada de uso interno. No se enlaza desde ninguna parte del sitio,
+     no figura en sitemap.xml y lleva noindex/nofollow. Sirve para marcar un
+     navegador como interno mediante una cookie de primera parte, de forma que
+     GA4 reciba traffic_type='internal' y el filtro Internal Traffic de la
+     propiedad pueda pasar de Prueba a Activo SIN escribir ninguna dirección IP
+     en ningún sitio. Task #1048. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg:             #020a1a;
+  --text-primary:   #eef2ff;
+  --text-secondary: rgba(160,195,240,0.65);
+  --text-dim:       rgba(120,160,210,0.38);
+  --accent:         #4ab3ff;
+  --accent-soft:    rgba(74,179,255,0.11);
+  --border:         rgba(74,179,255,0.15);
+  --border-soft:    rgba(74,179,255,0.08);
+  --font-d: 'Google Sans', sans-serif;
+  --font-b: 'Google Sans Text','Google Sans',sans-serif;
+}
+body {
+  background:var(--bg); color:var(--text-primary);
+  font-family:var(--font-b); font-weight:300;
+  min-height:100dvh; display:flex; align-items:center; justify-content:center;
+  padding:40px clamp(20px,5vw,60px);
+}
+main { max-width:640px; width:100%; }
+.etiqueta {
+  font-family:var(--font-d); font-size:10px; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--accent); opacity:.75;
+  margin-bottom:18px; display:block;
+}
+h1 {
+  font-family:var(--font-d); font-size:clamp(28px,5vw,42px); font-weight:300;
+  line-height:1.15; letter-spacing:-.022em; margin-bottom:16px;
+}
+p { font-size:15px; line-height:1.8; color:var(--text-secondary); margin-bottom:14px; }
+code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; color:var(--accent); }
+.estado {
+  border:1px solid var(--border); border-radius:16px;
+  padding:18px 20px; margin:24px 0; font-size:14px;
+}
+.estado strong { color:var(--text-primary); font-weight:400; }
+.acciones { display:grid; grid-template-columns:1fr; gap:12px; }
+@media (min-width:560px) { .acciones { grid-template-columns:1fr 1fr; } }
+button {
+  min-height:48px; padding:13px 22px;
+  font-family:var(--font-d); font-size:14px; font-weight:400; letter-spacing:.02em;
+  color:var(--text-primary); background:var(--accent-soft);
+  border:1px solid rgba(74,179,255,0.42); border-radius:50px;
+  cursor:pointer; -webkit-tap-highlight-color:transparent;
+  transition:background .18s, border-color .18s;
+}
+button:hover { background:rgba(74,179,255,0.24); border-color:rgba(74,179,255,0.68); }
+button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.nota { font-size:12.5px; color:var(--text-dim); line-height:1.7; margin-top:26px; }
+.nota a { color:var(--accent); text-decoration:none; }
+</style>
+</head>
+<body>
+<main>
+  <span class="etiqueta">Uso interno</span>
+  <h1>Marcar este navegador como interno</h1>
+  <p>Esta página escribe en tu navegador una cookie propia llamada <code>ailitica_traffic_internal</code>,
+     con una duración de 24 meses. Mientras exista, todas las visitas que hagas a
+     ailitica.com se envían a Google Analytics con la etiqueta <code>traffic_type = internal</code>
+     y quedan fuera de los informes de audiencia.</p>
+  <p>No se registra ninguna dirección IP en ningún sitio: la exclusión es por cookie,
+     no por red. La cookie solo vive en este navegador y en este dispositivo, así que
+     hay que repetir el proceso en cada navegador que se use para revisar la web.</p>
+
+  <div class="estado" id="estado" role="status" aria-live="polite">Comprobando el estado…</div>
+
+  <div class="acciones">
+    <button type="button" id="activar">Marcar como interno</button>
+    <button type="button" id="desactivar">Quitar la marca</button>
+  </div>
+
+  <p class="nota">Atajo equivalente: abrir <code>https://ailitica.com/interno.html?interno=1</code>.
+     Para quitar la marca, <code>?interno=0</code>. El parámetro solo funciona en esta página:
+     en el resto del sitio se ignora, para que nadie pueda instalar esta cookie en el
+     navegador de un visitante con un enlace preparado. Esta página no está enlazada desde
+     ninguna parte del sitio ni figura en el mapa del sitio. <a href="/">Volver al inicio</a>.</p>
+</main>
+
+<script src="/consent.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var caja = document.getElementById('estado');
+
+  function pintar() {
+    var api = window.AiliticaConsent;
+    if (!api) {
+      caja.innerHTML = '<strong>No se ha podido cargar consent.js.</strong> ' +
+        'Sin él no se puede fijar la marca desde esta página.';
+      return;
+    }
+    caja.innerHTML = api.esInterno()
+      ? 'Este navegador está marcado como <strong>interno</strong>. Sus visitas no cuentan en los informes.'
+      : 'Este navegador <strong>no</strong> está marcado. Sus visitas cuentan como tráfico normal.';
+  }
+
+  document.getElementById('activar').addEventListener('click', function () {
+    if (window.AiliticaConsent) window.AiliticaConsent.marcarInterno(true);
+    pintar();
+  });
+  document.getElementById('desactivar').addEventListener('click', function () {
+    if (window.AiliticaConsent) window.AiliticaConsent.marcarInterno(false);
+    pintar();
+  });
+
+  // consent.js se carga con defer, así que puede iniciarse justo después de este
+  // manejador. Se reintenta una vez para no depender del orden de ejecución.
+  pintar();
+  setTimeout(pintar, 150);
+});
+</script>
+</body>
+</html>
