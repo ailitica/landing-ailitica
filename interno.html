@@ -65,6 +65,19 @@ button:hover { background:rgba(74,179,255,0.24); border-color:rgba(74,179,255,0.
 button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
 .nota { font-size:12.5px; color:var(--text-dim); line-height:1.7; margin-top:26px; }
 .nota a { color:var(--accent); text-decoration:none; }
+/* Pie minimo. Existe por un motivo concreto: consent.js inserta el enlace
+   "Preferencias de cookies" dentro de footer .footer-links, y sin pie lo dejaba
+   flotando a media pantalla. Con esto aterriza donde debe, igual que en el resto
+   del sitio, y de paso esta pagina deja de ser la unica sin pie. */
+footer {
+  border-top:1px solid var(--border-soft); margin-top:36px; padding-top:20px;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:12px 24px;
+}
+.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin:0; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
+.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text-secondary); }
 </style>
 </head>
 <body>
@@ -91,6 +104,15 @@ button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
      en el resto del sitio se ignora, para que nadie pueda instalar esta cookie en el
      navegador de un visitante con un enlace preparado. Esta página no está enlazada desde
      ninguna parte del sitio ni figura en el mapa del sitio. <a href="/">Volver al inicio</a>.</p>
+
+  <footer role="contentinfo">
+    <p class="footer-copy">&copy; <span class="cy"></span> Ailitica. Uso interno.</p>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/cookies.html">Política de cookies</a>
+      <a href="/privacidad.html">Política de privacidad</a>
+    </div>
+  </footer>
 </main>
 
 <script src="/consent.js" defer></script>
@@ -123,6 +145,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // manejador. Se reintenta una vez para no depender del orden de ejecución.
   pintar();
   setTimeout(pintar, 150);
+
+  document.querySelectorAll('.cy').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
 });
 </script>
 </body>

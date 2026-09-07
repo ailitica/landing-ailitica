@@ -35,11 +35,24 @@ di(f"A1  Paginas con referencia estatica a gtag/googletagmanager/google-analytic
 sin_consent = [p.relative_to(WEB).as_posix() for p in paginas if "consent.js" not in p.read_text(encoding="utf-8", errors="replace")]
 di(f"A3  Paginas sin la linea de consent.js: {len(sin_consent)} {sin_consent or ''}")
 
-# B3: nombres declarados en cookies.html frente a los del codigo
+# B3: nombres declarados en cookies.html frente a los del codigo.
+# Hay dos familias y NO se comprueban igual:
+#  - Las que instala nuestro codigo tienen que aparecer en cookies.html Y en
+#    consent.js. Declarar una que el codigo no instala, o instalar una que no se
+#    declara, es el defecto de la fila fantasma "_tccl_visitor".
+#  - Las tecnicas de tercero (Cloudflare) las instala la CDN, no nosotros: se
+#    declaran en cookies.html y NO deben aparecer en consent.js. Que el script
+#    las marcara como incoherencia seria un falso positivo.
 js = (WEB / "consent.js").read_text(encoding="utf-8")
 ck = (WEB / "cookies.html").read_text(encoding="utf-8")
 for nombre in ["_ga", "_ga_PWNT3YC598", "ailitica_cookie_consent", "ailitica_traffic_internal"]:
-    di(f"B3  '{nombre}': declarado en cookies.html={nombre in ck}  usado en consent.js={nombre in js}")
+    ok = nombre in ck and nombre in js
+    di(f"B3  propia '{nombre}': declarada en cookies.html={nombre in ck}  "
+       f"usada en consent.js={nombre in js}  {'OK' if ok else 'REVISAR'}")
+for nombre in ["__cf_bm", "cf_clearance"]:
+    ok = nombre in ck and nombre not in js
+    di(f"B3  tecnica de tercero '{nombre}': declarada en cookies.html={nombre in ck}  "
+       f"ausente de consent.js={nombre not in js}  {'OK' if ok else 'REVISAR'}")
 
 # B5: frases prohibidas
 prohibidas = ["no se transferirán fuera del Espacio Económico Europeo", "copia de tu DNI"]
