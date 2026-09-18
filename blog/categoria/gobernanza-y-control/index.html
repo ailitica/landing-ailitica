@@ -56,317 +56,109 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<link href="/favicon.ico" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;display=swap" rel="stylesheet"/>
 <style>
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-
-:root {
-  --bg:             #020a1a;
-  --text-primary:   #eef2ff;
-  --text-secondary: rgba(160,195,240,0.65);
-  --text-dim:       rgba(120,160,210,0.38);
-  --accent:         #4ab3ff;
-  --accent-soft:    rgba(74,179,255,0.11);
-  --border:         rgba(74,179,255,0.15);
-  --border-soft:    rgba(74,179,255,0.08);
-  --glass-bg:       rgba(2,8,20,0.50);
-  --radius-sm:      16px;
-  --radius-md:      24px;
-  --font-d: 'Google Sans', sans-serif;
-  --font-b: 'Google Sans Text','Google Sans',sans-serif;
-  --col-w:   min(860px, 72vw);
-  --col-pad: clamp(36px, 5vw, 80px);
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --ink:#1B1D22; --ink-2:#4A4F5A; --ink-3:#8A8F99; --ink-4:#B9BDC7;
+  --accent:#1F6FEB; --accent-light:#7FB0FF; --accent-tint:#EEF4FF;
+  --paper:#F4F3EF; --line:#E2E0D9; --line-soft:#EEF0F3;
+  --font-d:'Newsreader',serif; --font-b:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
-
-html { scroll-behavior:smooth; }
-body {
-  background:var(--bg); color:var(--text-primary);
-  font-family:var(--font-b); font-weight:300;
-  overflow-x:hidden; cursor:none;
+body{margin:0;background:#FFFFFF;color:var(--ink);font-family:var(--font-b);font-weight:400;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+[hidden]{display:none !important}
+.cab-l:hover{background:#FFFFFF !important}
+.cab-roi:hover{background:#1B1D22 !important}
+#menu-movil a{color:#1B1D22}
+#menu-movil a:hover{color:#1F6FEB}
+footer .footer-links a{color:#8A8F99}
+footer .footer-links a:hover{color:#1F6FEB}
+@media (max-width:859px){.nav-d{display:none !important}.nav-b{display:inline-grid !important}}
+.visualmente-oculto{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+#blog-hero{max-width:1240px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(20px,4vw,40px) clamp(28px,4vw,48px);display:grid;gap:28px}
+.hero-cabeza{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:end}
+.hero-kicker{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.blog-h1{margin:0;font-family:var(--font-d);font-weight:400;font-size:clamp(40px,5.4vw,72px);line-height:1.02;letter-spacing:-.03em;text-wrap:balance;color:var(--ink)}
+.blog-h1 em{font-style:italic;color:var(--accent)}
+.palabra-rotativa{display:inline-grid;vertical-align:baseline;white-space:nowrap}
+.palabra-rotativa span{grid-area:1/1;color:var(--accent);font-style:italic;opacity:0;transition:opacity .3s ease}
+.palabra-rotativa span.activa{opacity:1;animation:palabraEntra .5s cubic-bezier(.22,.8,.3,1) both}
+.palabra-rotativa span.saliente{opacity:0;transform:translateY(-.25em);transition:opacity .3s ease,transform .3s ease}
+@keyframes palabraEntra{from{opacity:0;transform:translateY(.4em)}to{opacity:1;transform:none}}
+.hero-lead{margin:0;color:var(--ink-2);line-height:1.55;font-size:16px;max-width:440px;justify-self:end}
+.blog-crumbs{display:flex;gap:8px;font-size:13px;font-weight:600;color:var(--ink-3);flex-wrap:wrap}
+.blog-crumbs a{color:var(--ink-3)}
+.blog-crumbs a:hover{color:var(--accent)}
+.blog-hero-inner{display:grid;gap:14px}
+.label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.blog-sub{margin:0;color:var(--ink-2);line-height:1.6;font-size:16.5px;max-width:680px}
+.categorias-fila{display:flex;gap:8px;flex-wrap:wrap}
+.categorias-fila.aparte{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(24px,4vw,40px)}
+.categoria-pill{font-size:13px;font-weight:600;padding:9px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink-2)}
+.categoria-pill:hover{border-color:var(--ink);color:var(--ink)}
+.categoria-pill.activa{background:var(--ink);color:#fff;border-color:var(--ink)}
+.categoria-pill[aria-pressed]{cursor:pointer}
+.categoria-pill:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filtro-hubs{display:flex;gap:6px 18px;flex-wrap:wrap;margin:0;font-size:14px;font-weight:600}
+.filtro-hubs[hidden]{display:none}
+.filtro-hubs a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.filtro-hubs a[hidden]{display:none}
+.post-card[hidden]{display:none}
+#blog-posts{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(56px,8vw,96px)}
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.post-card{display:grid;gap:14px;padding:0 0 24px;border-radius:22px;background:var(--paper);color:inherit;align-content:start;overflow:hidden;transition:background .2s,transform .2s}
+.post-card:hover{background:var(--accent-tint);transform:translateY(-2px)}
+.post-card-img{height:170px;width:100%;object-fit:cover;display:block;background:var(--line)}
+.post-card-body{display:grid;gap:12px;padding:0 24px}
+.post-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;font-weight:700}
+.post-category{color:var(--accent)}
+.post-date,.post-readtime{color:var(--ink-3);font-weight:600}
+.post-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--ink-3)}
+.post-title{margin:0;font-size:20px;font-weight:700;letter-spacing:-.02em;line-height:1.18;text-wrap:balance;color:var(--ink)}
+.post-excerpt{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.post-cta{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--accent)}
+.post-cta svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none}
+.con-destacado .post-card:first-child{grid-column:1/-1;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0;padding:0;border-radius:32px;background:var(--ink);min-height:340px}
+.con-destacado .post-card:first-child:hover{background:#23262D}
+.con-destacado .post-card:first-child .post-card-img{height:100%;min-height:240px}
+.con-destacado .post-card:first-child .post-card-body{padding:clamp(28px,4vw,48px);align-content:center;gap:14px}
+.con-destacado .post-card:first-child .post-category{color:var(--accent-light)}
+.con-destacado .post-card:first-child .post-date,.con-destacado .post-card:first-child .post-readtime{color:var(--ink-4)}
+.con-destacado .post-card:first-child .post-title{font-family:var(--font-d);font-weight:400;font-size:clamp(26px,3.2vw,42px);line-height:1.08;letter-spacing:-.025em;color:#FFFFFF}
+.con-destacado .post-card:first-child .post-excerpt{font-size:15.5px;color:rgba(255,255,255,.85)}
+.con-destacado .post-card:first-child .post-cta{color:#FFFFFF}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
 }
-
-#cursor {
-  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
-  width:7px; height:7px; border-radius:50%;
-  background:var(--accent); box-shadow:0 0 10px var(--accent);
-  transform:translate(-50%,-50%); mix-blend-mode:screen;
-  transition:width .12s, height .12s;
-}
-body:has(a:hover) #cursor,
-body:has(button:hover) #cursor { width:12px; height:12px; }
-
-/* ── Nav ── */
-nav {
-  position:fixed; top:0; left:0; right:0; z-index:100;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:26px var(--col-pad); transition:background .4s, padding .4s;
-}
-nav.scrolled {
-  background:rgba(2,6,18,0.86);
-  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
-  padding:16px var(--col-pad);
-}
-.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
-.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
-.nav-logo .logo-text { height:42px; mix-blend-mode:screen; filter:brightness(1.1); }
-.nav-links { display:flex; gap:36px; list-style:none; }
-.nav-links a {
-  color:var(--text-secondary); text-decoration:none;
-  font-family:var(--font-d); font-size:13px; letter-spacing:.04em;
-  transition:color .2s;
-}
-.nav-links a:hover { color:var(--text-primary); }
-.nav-links a.active { color:var(--accent); }
-.nav-cta {
-  background:transparent; border:1px solid var(--border); color:var(--accent);
-  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
-  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
-  transition:background .2s, border-color .2s;
-}
-.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
-.hamburger {
-  display:none; flex-direction:column; gap:5px; cursor:none;
-  background:none; border:none; padding:4px;
-}
-.hamburger span {
-  display:block; width:22px; height:1.5px;
-  background:var(--text-secondary); border-radius:2px;
-  transition:transform .3s, opacity .3s;
-}
-.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
-.hamburger.open span:nth-child(2){ opacity:0; }
-.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
-#mobile-menu {
-  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
-  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
-  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
-  padding:80px 32px 48px; pointer-events:none;
-  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
-}
-#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
-.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
-.mob-links a {
-  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
-  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
-}
-.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
-.mob-cta {
-  background:var(--accent); color:#010c1e; font-family:var(--font-d);
-  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
-  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
-}
-
-/* ── Progress bar ── */
-#progress-bar {
-  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
-  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
-  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
-}
-
-/* ── Reveal ── */
-.r { opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
-.r.d1{transition-delay:.1s}.r.d2{transition-delay:.2s}.r.d3{transition-delay:.3s}
-.r.on { opacity:1; transform:none; }
-
-/* ── Label ── */
-.label {
-  font-family:var(--font-d); font-size:10px; font-weight:400;
-  letter-spacing:.24em; text-transform:uppercase;
-  color:var(--accent); opacity:.75; margin-bottom:18px; display:block;
-}
-
-/* ── Hero del blog ── */
-#blog-hero {
-  padding: 160px var(--col-pad) 80px;
-  position:relative;
-}
-.blog-hero-inner { width:var(--col-w); max-width:100%; margin:0 auto; }
-.blog-h1 {
-  font-family:var(--font-d); font-size:clamp(38px,5vw,68px);
-  font-weight:300; line-height:1.1; letter-spacing:-.026em;
-  opacity:0; animation:fadeUp .9s ease .3s forwards; margin-bottom:20px;
-}
-.blog-h1 em { font-style:normal; color:var(--accent); }
-.blog-sub {
-  font-size:clamp(14px,1.4vw,17px); color:var(--text-secondary);
-  line-height:1.8; max-width:480px;
-  opacity:0; animation:fadeUp .9s ease .55s forwards;
-}
-
-/* ── Grid de artículos ── */
-#blog-posts {
-  padding:0 var(--col-pad) 120px;
-}
-.posts-inner { width:var(--col-w); max-width:100%; margin:0 auto; }
-
-.posts-grid {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
-}
-
-/* Primer artículo destacado ocupa todo el ancho */
-.post-card.featured {
-  grid-column:1 / -1;
-}
-
-.post-card {
-  display:flex; flex-direction:column; text-decoration:none;
-  background:var(--glass-bg);
-  backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
-  border:1px solid var(--border-soft); border-radius:var(--radius-md);
-  overflow:hidden;
-  transition:border-color .3s, transform .25s, background .3s;
-  cursor:none;
-}
-.post-card-img {
-  width:100%; aspect-ratio:16/9; object-fit:cover; display:block;
-}
-.post-card-body {
-  padding:28px 32px 32px;
-  display:flex; flex-direction:column; flex:1;
-}
-.post-card:hover {
-  border-color:rgba(74,179,255,.28);
-  background:rgba(2,10,30,0.68);
-  transform:translateY(-3px);
-}
-
-.post-meta {
-  display:flex; align-items:center; gap:16px; margin-bottom:16px;
-}
-.post-category {
-  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--accent); opacity:.7;
-}
-.post-date {
-  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
-}
-.post-readtime {
-  font-size:11px; color:var(--text-dim);
-}
-.post-meta-dot {
-  width:2px; height:2px; border-radius:50%;
-  background:var(--text-dim); flex-shrink:0;
-}
-
-.post-title {
-  font-family:var(--font-d);
-  font-size:clamp(17px,1.8vw,24px);
-  font-weight:300; line-height:1.25; letter-spacing:-.02em;
-  color:var(--text-primary); margin-bottom:14px;
-}
-.post-card.featured .post-title {
-  font-size:clamp(22px,2.6vw,36px);
-}
-
-.post-excerpt {
-  font-size:13.5px; line-height:1.7; color:var(--text-secondary);
-  margin-bottom:24px;
-}
-.post-card.featured .post-excerpt {
-  font-size:15px; max-width:640px;
-}
-
-.post-cta {
-  display:inline-flex; align-items:center; gap:8px;
-  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
-  text-transform:uppercase; color:var(--accent); opacity:.7;
-  transition:opacity .2s, gap .2s;
-}
-.post-card:hover .post-cta { opacity:1; gap:12px; }
-.post-cta svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
-
-/* Estado vacío mientras carga */
-.posts-loading {
-  grid-column:1/-1; text-align:center;
-  padding:80px 0; color:var(--text-dim);
-  font-size:13px; letter-spacing:.06em;
-}
-
-/* ── Footer ── */
-footer {
-  position:relative; z-index:1;
-  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
-  display:flex; align-items:center; justify-content:space-between;
-  flex-wrap:wrap; gap:16px 24px;
-}
-.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
-.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
-.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
-.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
-.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
-.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
-.footer-links a:hover { color:var(--text-secondary); }
-.footer-social { display:flex; gap:16px; align-items:center; }
-.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
-.footer-social a:hover { color:var(--accent); }
-.footer-social svg { width:15px; height:15px; fill:currentColor; }
-
-@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
-
-/* ── Mobile ── */
-@media (max-width:1000px) { :root { --col-w:88vw; } }
-@media (max-width:700px) {
-  .posts-grid { grid-template-columns:1fr; }
-  .post-card.featured { grid-column:1; }
-}
-@media (max-width:560px) {
-  :root { --col-w:100%; --col-pad:24px; }
-  nav { padding:20px 24px; }
-  .nav-links { display:none; }
-  .nav-cta { display:none; }
-  .hamburger { display:flex; }
-  #blog-hero { padding:120px 24px 60px; }
-  .post-card-body { padding:20px 22px 24px; }
-  footer { flex-direction:column; gap:20px; text-align:center; }
-  .footer-links { flex-wrap:wrap; justify-content:center; }
-  .footer-social { justify-content:center; }
-}
-</style>
-<style>
-.blog-crumbs { font-family:var(--font-d); font-size:11px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:22px; }
-.blog-crumbs a { color:var(--text-secondary); text-decoration:none; transition:color .2s; }
-.blog-crumbs a:hover { color:var(--accent); }
-.blog-crumbs span { color:var(--text-dim); }
 </style>
 </head>
 <body>
 
-<div id="cursor"></div>
-<div id="progress-bar"></div>
-
-<nav id="navbar" role="navigation" aria-label="Navegación principal">
-  <a class="nav-logo" href="/">
-    <img class="logo-icon" src="/icon.png" alt="">
-    <img class="logo-text" src="/ailitica.webp" alt="Ailitica">
-  </a>
-  <ul class="nav-links">
-    <li><a href="/#manifesto">Filosofía</a></li>
-    <li><a href="/#metodo">Método</a></li>
-    <li><a href="/#valor">Valor</a></li>
-    <li><a href="/#equipo">Equipo</a></li>
-    <li><a href="/blog/" class="active">Blog</a></li>
-  </ul>
-  <a href="/#contacto" class="nav-cta">Conectar</a>
-  <button class="hamburger" id="hamburger" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div id="mobile-menu">
-  <ul class="mob-links">
-    <li><a href="/#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
-    <li><a href="/#metodo" onclick="closeMobileMenu()">Método</a></li>
-    <li><a href="/#valor" onclick="closeMobileMenu()">Valor</a></li>
-    <li><a href="/#equipo" onclick="closeMobileMenu()">Equipo</a></li>
-    <li><a href="/blog/" class="active" onclick="closeMobileMenu()">Blog</a></li>
-  </ul>
-  <a href="/#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+<header data-cabecera="comun" style="position: sticky; top: 0px; z-index: 50; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgb(238, 240, 243);">
+<nav aria-label="Principal" style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 40px); height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<a href="/" style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: -0.02em;"><img alt="" src="/img/icono-ailitica-dark.webp" style="height: clamp(26px, 2.6vw, 34px); width: auto; display: block;"/><img alt="Ailitica" src="/img/logo-ailitica-dark.webp" style="height: clamp(22px, 2.2vw, 30px); width: auto; display: block;"/></a>
+<div class="nav-d" style="display: flex; gap: 6px; align-items: center; font-size: 14px; font-weight: 600; color: rgb(74, 79, 90); background: rgb(244, 243, 239); border-radius: 999px; padding: 4px;">
+<a class="cab-l" href="/#sectores" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Sectores</a>
+<a class="cab-l" href="/#areas" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Áreas</a>
+<a class="cab-l" href="/casos-de-uso/" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Casos de uso</a>
+<a aria-current="page" href="/blog/" style="color: rgb(27, 29, 34); padding: 8px 14px; border-radius: 999px; background: rgb(255, 255, 255);">Blog</a>
 </div>
+<div style="display: flex; gap: 10px; align-items: center;">
+<a class="cab-roi" href="/calculadora-roi.html" style="font-size: 14px; font-weight: 700; padding: 11px 18px; border-radius: 999px; background: rgb(31, 111, 235); color: rgb(255, 255, 255); white-space: nowrap; flex-shrink: 0;">Calcula ROI</a>
+<button type="button" aria-label="Menú" aria-controls="menu-movil" aria-expanded="false" class="nav-b" data-nav-burger="1" style="display: none; background: rgb(244, 243, 239); border: none; border-radius: 999px; width: 42px; height: 42px; cursor: pointer; color: rgb(27, 29, 34); font-size: 18px; place-items: center;">≡</button>
+</div>
+</nav><div hidden="" id="menu-movil" style="padding: 8px clamp(20px, 4vw, 40px) 24px; display: grid; gap: 12px; font-size: 20px; font-weight: 600;"><a href="/#sectores">Sectores</a><a href="/#areas">Áreas</a><a href="/casos-de-uso/">Casos de uso</a><a href="/blog/">Blog</a></div>
+<div style="height: 3px; background: rgb(238, 240, 243);"><div data-barra-progreso style="height: 100%; width: 0%; background: rgb(31, 111, 235); transition: width 0.15s linear;"></div></div></header>
 
+<main>
 <section id="blog-hero" aria-label="Gobernanza y control">
   <div class="blog-hero-inner">
     <nav class="blog-crumbs" aria-label="Ruta de navegación">
@@ -378,9 +170,18 @@ footer {
   </div>
 </section>
 
+<nav class="categorias-fila aparte" aria-label="Categorías del blog">
+  <a class="categoria-pill" href="/blog/">Todas</a>
+  <a class="categoria-pill" href="/blog/#cat=fundamentos">Fundamentos</a>
+  <a class="categoria-pill" href="/blog/#cat=automatizacion">Automatización y procesos</a>
+  <a class="categoria-pill activa" href="/blog/categoria/gobernanza-y-control/" aria-current="page">Gobernanza y control</a>
+  <a class="categoria-pill" href="/blog/#cat=normativa-ia">Normativa IA</a>
+  <a class="categoria-pill" href="/blog/#cat=estrategia">Estrategia y decisión</a>
+</nav>
+
 <section id="blog-posts" aria-label="Artículos de Gobernanza y control">
   <div class="posts-inner">
-    <div class="posts-grid" id="posts-grid">
+<div class="posts-grid" id="posts-grid">
 <a class="post-card r d1" href="/blog/como-evaluar-agente-ia-antes-de-confiar.html" aria-label="Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir">
         <img class="post-card-img" src="/blog/img/como-evaluar-agente-ia-antes-de-confiar_blog-hero.jpg" alt="Cómo evaluar si un agente de IA funciona de verdad antes de dejarle decidir" loading="lazy">
         <div class="post-card-body">
@@ -573,64 +374,47 @@ footer {
     </div>
   </div>
 </section>
+</main>
 
-<footer role="contentinfo">
-  <a class="footer-logo" href="/">
-    <img class="logo-icon" src="/icon.png" alt="">
-    <img class="logo-text" src="/ailitica.webp" alt="Ailitica">
-  </a>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-    </a>
-    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-    </a>
-  </div>
-  <p class="footer-copy">© <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/blog/">Blog</a>
-    <a href="/terminos.html">Términos y condiciones</a>
-    <a href="/cookies.html">Política de cookies</a>
-    <a href="/privacidad.html">Política de privacidad</a>
-    <a href="/politica-ia.html">Política de IA</a>
-    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
-  </div>
-</footer>
+<footer style="border-top: 1px solid rgb(238, 240, 243); background: rgb(255, 255, 255);">
+<div style="max-width: 1240px; margin: 0px auto; padding: 44px clamp(20px, 4vw, 40px) 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px; font-size: 13.5px;">
+<div style="display: grid; gap: 12px; align-content: start;"><a href="/" style="display: flex; align-items: center; gap: 10px;"><img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height: 26px; width: auto; display: block;"/><img width="1182" height="198" srcset="/img/logo-ailitica-dark-600.webp 600w, /img/logo-ailitica-dark.webp 1182w" sizes="180px" alt="Ailitica" src="/img/logo-ailitica-dark.webp" style="height: 22px; width: auto; display: block;"/></a><p style="margin: 0px; color: rgb(138, 143, 153); line-height: 1.5; max-width: 260px;">Agentes de IA a medida para tu empresa. El humano decide.</p></div>
+<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Sectores</span><a href="/casos-de-uso/#sector-inmobiliario" style="color: rgb(74, 79, 90);">Inmobiliario</a><a href="/casos-de-uso/#sector-construccion-e-ingenieria" style="color: rgb(74, 79, 90);">Construcción e ingeniería</a><a href="/casos-de-uso/#sector-farmaceutico" style="color: rgb(74, 79, 90);">Farmacéutico</a><a href="/casos-de-uso/#sector-salud-y-clinicas" style="color: rgb(74, 79, 90);">Salud y clínicas</a><a href="/casos-de-uso/#sector-legal-y-despachos" style="color: rgb(74, 79, 90);">Legal y despachos</a><a href="/casos-de-uso/#sector-logistica" style="color: rgb(74, 79, 90);">Logística</a></div>
+<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Áreas</span><a href="/casos-de-uso/#area-atencion-al-cliente" style="color: rgb(74, 79, 90);">Atención al cliente</a><a href="/casos-de-uso/#area-operaciones" style="color: rgb(74, 79, 90);">Operaciones</a><a href="/casos-de-uso/#area-back-office" style="color: rgb(74, 79, 90);">Back-office</a><a href="/casos-de-uso/#area-ventas" style="color: rgb(74, 79, 90);">Ventas</a></div>
+<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Ailitica</span><a href="/casos-de-uso/" style="color: rgb(74, 79, 90);">Casos de uso</a><a href="/calculadora-roi.html" style="color: rgb(74, 79, 90);">Calculadora ROI</a><a href="/blog/" style="color: rgb(74, 79, 90);">Blog</a><a href="/contacto.html" style="color: rgb(74, 79, 90);">Contacto</a></div><div data-col="blog" style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Blog</span><a href="/blog/categoria/fundamentos/" style="color: rgb(74, 79, 90);">Fundamentos</a><a href="/blog/categoria/automatizacion/" style="color: rgb(74, 79, 90);">Automatización y procesos</a><a href="/blog/categoria/gobernanza-y-control/" style="color: rgb(74, 79, 90);">Gobernanza y control</a><a href="/blog/categoria/normativa-ia/" style="color: rgb(74, 79, 90);">Normativa IA</a><a href="/blog/categoria/estrategia/" style="color: rgb(74, 79, 90);">Estrategia y decisión</a><a href="/blog/por-que-fallan-pilotos-agentes-ia.html" style="color: rgb(74, 79, 90);">Por qué fallan los pilotos</a></div>
+</div>
+<div style="border-top: 1px solid rgb(238, 240, 243);">
+<div style="max-width: 1240px; margin: 0px auto; padding: 18px clamp(20px, 4vw, 40px); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; font-size: 12px; color: rgb(138, 143, 153);">
+<span>© 2026 Ailitica. Todos los derechos reservados.</span>
+<img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height: 18px; width: auto; opacity: 0.6;"/>
+<div style="display: flex; gap: 14px; justify-content: end; align-items: center;"><a aria-label="LinkedIn" class="hv6" href="https://www.linkedin.com/company/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg></a><a aria-label="Instagram" class="hv6" href="https://www.instagram.com/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.75a3.05 3.05 0 1 1 0-6.1 3.05 3.05 0 0 1 0 6.1zM17.9 7.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 3.9c2.64 0 2.95.01 3.99.06 2.68.12 3.93 1.39 4.05 4.05.05 1.04.06 1.35.06 3.99s-.01 2.95-.06 3.99c-.12 2.66-1.37 3.93-4.05 4.05-1.04.05-1.35.06-3.99.06s-2.95-.01-3.99-.06c-2.69-.12-3.93-1.4-4.05-4.05C3.91 14.95 3.9 14.64 3.9 12s.01-2.95.06-3.99C4.08 5.33 5.33 4.08 8.01 3.96 9.05 3.91 9.36 3.9 12 3.9zM12 2.2c-2.69 0-3.02.01-4.08.06C4.3 2.43 2.43 4.3 2.26 7.92 2.21 8.98 2.2 9.31 2.2 12s.01 3.02.06 4.08c.17 3.62 2.04 5.49 5.66 5.66 1.06.05 1.39.06 4.08.06s3.02-.01 4.08-.06c3.61-.17 5.49-2.04 5.66-5.66.05-1.06.06-1.39.06-4.08s-.01-3.02-.06-4.08c-.17-3.61-2.04-5.49-5.66-5.66C15.02 2.21 14.69 2.2 12 2.2z"></path></svg></a><a aria-label="X" class="hv6" href="https://x.com/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-7.2L4.5 22H1.4l8.1-9.3L0.9 2h7.2l5 6.6L18.9 2zm-1.2 18.2h1.7L7.2 3.7H5.3l12.4 16.5z"></path></svg></a></div>
+</div>
+<div class="footer-links" style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 40px) 22px; display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; font-size: 12px;">
+<a href="/terminos.html" style="color: rgb(138, 143, 153);">Términos y condiciones</a><a href="/cookies.html" style="color: rgb(138, 143, 153);">Política de cookies</a><a href="/privacidad.html" style="color: rgb(138, 143, 153);">Política de privacidad</a><a href="/politica-ia.html" style="color: rgb(138, 143, 153);">Política de IA</a>
+<a href="mailto:hola@ailitica.com" style="color: rgb(138, 143, 153);">hola@ailitica.com</a>
+</div>
+</div></footer>
 
 <script>
-const cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top  = e.clientY + 'px';
-});
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-}, { passive:true });
-const progressBar = document.getElementById('progress-bar');
-window.addEventListener('scroll', () => {
-  const d = document.documentElement.scrollHeight - window.innerHeight;
-  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
-}, { passive:true });
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-hamburger.addEventListener('click', () => {
-  const o = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open', o);
-  document.body.style.overflow = o ? 'hidden' : '';
-});
-function closeMobileMenu() {
-  mobileMenu.classList.remove('open');
-  hamburger.classList.remove('open');
-  document.body.style.overflow = '';
-}
-const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); ro.unobserve(e.target); } });
-}, { threshold:0.07 });
-document.querySelectorAll('.r').forEach(el => ro.observe(el));
+(function(){
+  var barra = document.querySelector('[data-barra-progreso]');
+  var enlaces = Array.prototype.slice.call(document.querySelectorAll('[data-toc-link]'));
+  var titulos = Array.prototype.slice.call(document.querySelectorAll('.article-body h2[id]'));
+  var pendiente = false;
+  function pintar(){
+    pendiente = false;
+    var alto = document.documentElement.scrollHeight - window.innerHeight;
+    if (barra) barra.style.width = (alto > 0 ? Math.min(100, Math.max(0, window.scrollY / alto * 100)) : 0) + '%';
+    if (!enlaces.length) return;
+    var actual = '';
+    titulos.forEach(function(h){ if (h.getBoundingClientRect().top < 140) actual = h.id; });
+    enlaces.forEach(function(a){ a.classList.toggle('activo', a.getAttribute('href') === '#' + actual); });
+  }
+  window.addEventListener('scroll', function(){ if (!pendiente) { pendiente = true; requestAnimationFrame(pintar); } }, { passive: true });
+  pintar();
+})();
 </script>
-<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+<script src="/menu.js" defer></script>
 <script src="/consent.js" defer></script>
 </body>
 </html>

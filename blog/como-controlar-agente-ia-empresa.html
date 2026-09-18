@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://ailitica.com/blog/img/como-controlar-agente-ia-empresa.webp">
 <meta property="og:site_name" content="Ailitica">
 <meta property="article:published_time" content="2026-05-12">
-<meta property="article:modified_time" content="2026-05-12">
+<meta property="article:modified_time" content="2026-09-19">
 <meta property="article:author" content="Andoni Arrizabalaga">
 <meta property="article:section" content="Gobernanza y control">
 <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,7 @@
   "headline": "Cómo controlar un agente de IA en tu empresa: 3 mecanismos prácticos",
   "description": "Controlar un agente de IA en una pyme no consiste en pedir un panel de gobernanza enorme. Consiste en tres decisiones de diseño: dónde pide permiso, qué tiene permitido tocar y qué deja escrito. Esta es la versión práctica, aplicable la semana que viene.",
   "datePublished": "2026-05-12",
-  "dateModified": "2026-05-12",
+  "dateModified": "2026-09-19",
   "author": {
     "@type": "Person",
     "name": "Andoni Arrizabalaga",
@@ -52,7 +52,7 @@
   "articleSection": "Gobernanza y control",
   "inLanguage": "es",
   "keywords": "como controlar un agente de IA en empresa, supervision agente IA, human in the loop pyme, sandbox agente IA, auditoria agente IA, gobernanza IA pequeña empresa",
-  "wordCount": 2010,
+  "wordCount": 2204,
   "about": {"@type": "Thing", "name": "control y supervisión de agentes de inteligencia artificial"}
 }
 </script>
@@ -123,448 +123,157 @@
   ]
 }
 </script>
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500&family=Google+Sans+Text:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/blog/img/como-controlar-agente-ia-empresa.webp" imagesrcset="/blog/img/como-controlar-agente-ia-empresa-800.webp 800w, /blog/img/como-controlar-agente-ia-empresa.webp 1200w" imagesizes="(max-width: 1240px) 100vw, 1160px" fetchpriority="high"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;display=swap" rel="stylesheet"/>
 <style>
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-
-:root {
-  --bg:             #020a1a;
-  --text-primary:   #eef2ff;
-  --text-secondary: rgba(160,195,240,0.65);
-  --text-dim:       rgba(120,160,210,0.38);
-  --accent:         #4ab3ff;
-  --accent-soft:    rgba(74,179,255,0.11);
-  --border:         rgba(74,179,255,0.15);
-  --border-soft:    rgba(74,179,255,0.08);
-  --glass-bg:       rgba(2,8,20,0.50);
-  --radius-sm:      16px;
-  --radius-md:      24px;
-  --font-d: 'Google Sans', sans-serif;
-  --font-b: 'Google Sans Text','Google Sans',sans-serif;
-  --col-pad: clamp(36px, 5vw, 80px);
-  --article-w: min(800px, 80vw);
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --ink:#1B1D22; --ink-2:#4A4F5A; --ink-3:#8A8F99; --ink-4:#B9BDC7;
+  --accent:#1F6FEB; --accent-light:#7FB0FF; --accent-tint:#EEF4FF;
+  --paper:#F4F3EF; --line:#E2E0D9; --line-soft:#EEF0F3;
+  --font-d:'Newsreader',serif; --font-b:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
-
-html { scroll-behavior:smooth; }
-body {
-  background:var(--bg); color:var(--text-primary);
-  font-family:var(--font-b); font-weight:300;
-  overflow-x:hidden; cursor:none;
+body{margin:0;background:#FFFFFF;color:var(--ink);font-family:var(--font-b);font-weight:400;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+[hidden]{display:none !important}
+.cab-l:hover{background:#FFFFFF !important}
+.cab-roi:hover{background:#1B1D22 !important}
+#menu-movil a{color:#1B1D22}
+#menu-movil a:hover{color:#1F6FEB}
+footer .footer-links a{color:#8A8F99}
+footer .footer-links a:hover{color:#1F6FEB}
+@media (max-width:859px){.nav-d{display:none !important}.nav-b{display:inline-grid !important}}
+.visualmente-oculto{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.migas{max-width:1240px;margin:0 auto;padding:clamp(32px,5vw,56px) clamp(20px,4vw,40px) 0;display:flex;gap:8px;font-size:13px;font-weight:600;color:var(--ink-3);flex-wrap:wrap}
+.migas a{color:var(--ink-3)}
+.migas a:hover{color:var(--accent)}
+.article-header{max-width:1240px;margin:20px auto 0;padding:0 clamp(20px,4vw,40px)}
+.article-meta{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;font-size:13px;color:var(--ink-2);font-weight:600;margin-bottom:18px}
+.article-category{font-family:var(--font-b);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.article-date,.article-readtime{color:var(--ink-3);font-weight:600}
+.article-author{color:var(--ink);font-weight:700}
+.article-author:hover{color:var(--accent)}
+.meta-dot,.article-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--ink-3)}
+.article-title{max-width:980px;font-family:var(--font-d);font-weight:400;font-size:clamp(32px,4.6vw,58px);line-height:1.05;letter-spacing:-.03em;color:#1B1D22;margin:0 0 28px;text-wrap:balance}
+.article-title em{font-style:italic;color:var(--accent)}
+.article-lead{max-width:760px;margin:-8px 0 28px;font-size:18px;line-height:1.6;color:var(--ink-2)}
+.article-hero{position:relative;max-width:1240px;margin:0 auto 40px;padding:0 clamp(20px,4vw,40px)}
+.article-hero-caja{position:relative;border-radius:28px;overflow:hidden;background:var(--paper)}
+.article-hero img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;display:block}
+.article-hero::after{content:"";position:absolute;bottom:12px;left:calc(clamp(20px,4vw,40px) + 12px);width:64px;height:auto;aspect-ratio:1/1;background-image:url('/img/eu-ai-generado.png');background-size:contain;background-repeat:no-repeat;background-position:bottom left;pointer-events:none;z-index:10}
+.article-grid{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(40px,6vw,64px);display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start}
+@media (max-width:1000px){.article-grid{grid-template-columns:minmax(0,1fr)}}
+.toc-lateral{position:sticky;top:96px;display:grid;gap:10px;align-content:start}
+@media (max-width:1000px){.toc-lateral{display:none}}
+.toc-kicker{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.toc-lateral a{font-size:14px;line-height:1.4;color:var(--ink-3);font-weight:500;border-left:2px solid var(--line);padding-left:12px;transition:color .2s,border-color .2s}
+.toc-lateral a:hover{color:var(--ink)}
+.toc-lateral a.activo{color:var(--ink);font-weight:700;border-left-color:var(--accent)}
+.toc-roi{margin-top:16px;display:grid;gap:6px;padding:16px;border-radius:16px;background:var(--accent-tint)}
+.toc-roi strong{font-size:14px;color:var(--ink)}
+.toc-roi span{font-size:13px;color:var(--ink-2);line-height:1.4}
+.toc-lateral .toc-roi a{border:0;padding:0;font-size:13px;font-weight:700;color:var(--accent)}
+.article-col{max-width:900px;min-width:0}
+.tldr{background:var(--paper);border-radius:22px;padding:24px 26px;display:grid;gap:12px;margin:0 0 24px}
+.tldr-label{margin:0;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.tldr-text{margin:0;font-size:16.5px;line-height:1.55;color:var(--ink)}
+.tldr-text strong{color:var(--ink)}
+.tldr-text em{color:var(--accent);font-style:italic}
+.ficha-articulo{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px 20px;margin:0 0 32px;padding:clamp(20px,3vw,26px) clamp(20px,3vw,28px);border:1.5px solid var(--line);border-radius:24px}
+.ficha-articulo>div{display:grid;gap:3px;align-content:start}
+.ficha-articulo dt{margin:0;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.ficha-articulo dd{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.ficha-articulo a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.article-body{min-width:0}
+.article-body h2{margin:44px 0 14px;font-family:var(--font-d);font-weight:400;font-size:clamp(26px,3vw,36px);line-height:1.14;letter-spacing:-.02em;color:var(--ink);text-wrap:balance;scroll-margin-top:96px}
+.article-body h3{margin:28px 0 8px;font-size:19px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.article-body p{font-size:17px;line-height:1.7;color:#2B2E35;margin:0 0 20px}
+.article-body p strong,.article-body li strong,.article-body td strong{color:var(--ink)}
+.article-body p em{color:var(--accent);font-style:italic}
+.article-body a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.article-body ul,.article-body ol{margin:0 0 20px;padding-left:22px}
+.article-body li{font-size:16.5px;line-height:1.65;color:#2B2E35;margin-bottom:8px}
+.article-body hr{border:0;border-top:1px solid var(--line);margin:36px 0}
+.article-body blockquote{margin:24px 0;padding:4px 0 4px 20px;border-left:3px solid var(--line);color:var(--ink-2);font-style:italic}
+.definicion{padding:14px 18px;border-left:3px solid var(--accent);background:var(--paper);border-radius:0 14px 14px 0}
+.article-body p.definicion{font-size:16px;line-height:1.6;color:var(--ink-2);margin:0 0 28px}
+.definicion strong{color:var(--ink)}
+.article-body table{width:100%;border-collapse:collapse;font-size:14.5px;margin:24px 0}
+.article-body th,.article-body td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5;color:var(--ink-2)}
+.article-body th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+@media (max-width:640px){
+  .article-body table,.article-body thead,.article-body tbody,.article-body th,.article-body td,.article-body tr{display:block}
+  .article-body thead{display:none}
+  .article-body tr{margin-bottom:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .article-body td{border-bottom:1px solid var(--line)}
 }
-
-#cursor {
-  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
-  width:7px; height:7px; border-radius:50%;
-  background:var(--accent); box-shadow:0 0 10px var(--accent);
-  transform:translate(-50%,-50%); mix-blend-mode:screen;
-  transition:width .12s, height .12s;
+.callout{padding:22px 24px;border-radius:20px;border:1.5px solid var(--line);background:#FFFFFF;margin:18px 0 24px}
+.callout p:last-child,.callout ul:last-child,.callout ol:last-child{margin-bottom:0}
+.article-cta{margin:40px 0 0;border-radius:24px;background:var(--ink);color:#fff;padding:28px;display:grid;gap:10px;justify-items:start}
+.article-cta-label{margin:0;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-light)}
+.article-cta-title{margin:0;font-size:22px;font-weight:700;letter-spacing:-.01em;line-height:1.25;color:#FFFFFF}
+.article-cta-text{margin:0;font-size:15px;color:rgba(255,255,255,.82);line-height:1.55}
+.article-cta a{margin-top:6px;background:#fff;color:var(--ink);padding:13px 20px;border-radius:999px;font-weight:700;font-size:14px}
+.article-cta a:hover{background:var(--accent);color:#fff}
+.autor-articulo{margin:44px 0 0;padding:24px 0 0;border-top:1px solid var(--line);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.autor-avatar{width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:16px;font-weight:700;flex-shrink:0}
+.autor-nombre{font-size:15px;font-weight:700;color:var(--ink)}
+.autor-nombre a:hover{color:var(--accent)}
+.autor-bio{font-size:14px;color:var(--ink-2);line-height:1.4}
+.faq{margin-top:48px}
+.faq-label{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.faq-title{margin:0 0 24px;font-family:var(--font-d);font-weight:400;font-size:clamp(26px,3vw,36px);color:var(--ink);letter-spacing:-.02em;line-height:1.14}
+.faq details{border:1.5px solid var(--line);border-radius:18px;padding:16px 20px;margin:0 0 10px}
+.faq summary{cursor:pointer;list-style:none;font-weight:700;font-size:16px;color:var(--ink);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--accent);font-size:20px;font-weight:400;line-height:1}
+.faq details[open] summary::after{content:'\2212'}
+.faq details p{margin:10px 0 0;font-size:15.5px;line-height:1.6;color:var(--ink-2)}
+.faq details a{color:var(--accent);text-decoration:underline}
+.disclaimer{margin:32px 0 0;font-size:13px;line-height:1.55;color:var(--ink-3)}
+.related-articles{max-width:1240px;margin:0 auto;padding:40px clamp(20px,4vw,40px) clamp(56px,8vw,96px);border-top:1px solid var(--line-soft)}
+.related-articles-label{margin:0 0 24px;font-family:var(--font-d);font-weight:400;font-size:clamp(26px,3.2vw,40px);line-height:1.1;color:var(--ink);letter-spacing:-.02em}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.related-card{display:grid;gap:10px;padding:22px;border-radius:22px;background:var(--paper);align-content:start;transition:background .2s,transform .2s}
+.related-card:hover{background:var(--accent-tint);transform:translateY(-2px)}
+.related-card-cat{display:block;font-size:12px;font-weight:700;color:var(--accent)}
+.related-card-title{display:block;margin:0;font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.2;color:var(--ink)}
+.related-card-excerpt{display:block;margin:0;font-size:14px;line-height:1.5;color:var(--ink-2)}
+.related-card-readtime{display:block;font-size:13px;color:var(--ink-3);font-weight:600}
+@media (max-width:560px){.related-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
 }
-body:has(a:hover) #cursor,
-body:has(button:hover) #cursor { width:12px; height:12px; }
-
-/* ── Nav ── */
-nav {
-  position:fixed; top:0; left:0; right:0; z-index:100;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:26px var(--col-pad); transition:background .4s, padding .4s;
-}
-nav.scrolled {
-  background:rgba(2,6,18,0.86);
-  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
-  padding:16px var(--col-pad);
-}
-.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
-.nav-logo .logo-icon { width:auto; height:22px; opacity:.85; }
-.nav-logo .logo-text { height:22px; mix-blend-mode:screen; filter:brightness(1.1); }
-.nav-links { display:flex; gap:36px; list-style:none; }
-.nav-links a {
-  color:var(--text-secondary); text-decoration:none;
-  font-family:var(--font-d); font-size:13px; letter-spacing:.04em; transition:color .2s;
-}
-.nav-links a:hover { color:var(--text-primary); }
-.nav-links a.active { color:var(--accent); }
-.nav-cta {
-  background:transparent; border:1px solid var(--border); color:var(--accent);
-  font-family:var(--font-d); font-size:13px; letter-spacing:.05em;
-  padding:9px 22px; border-radius:50px; cursor:none; text-decoration:none;
-  transition:background .2s, border-color .2s;
-}
-.nav-cta:hover { background:var(--accent-soft); border-color:rgba(74,179,255,.4); }
-.hamburger {
-  display:none; flex-direction:column; gap:5px; cursor:none;
-  background:none; border:none; padding:4px;
-}
-.hamburger span {
-  display:block; width:22px; height:1.5px;
-  background:var(--text-secondary); border-radius:2px;
-  transition:transform .3s, opacity .3s;
-}
-.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); background:var(--accent); }
-.hamburger.open span:nth-child(2){ opacity:0; }
-.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); background:var(--accent); }
-#mobile-menu {
-  position:fixed; top:0; left:0; right:0; bottom:0; z-index:99;
-  background:rgba(2,6,18,0.97); backdrop-filter:blur(24px);
-  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
-  padding:80px 32px 48px; pointer-events:none;
-  opacity:0; transform:translateY(-10px); transition:opacity .3s, transform .3s;
-}
-#mobile-menu.open { opacity:1; transform:translateY(0); pointer-events:auto; }
-.mob-links { list-style:none; display:flex; flex-direction:column; gap:4px; margin-bottom:40px; }
-.mob-links a {
-  font-family:var(--font-d); font-size:clamp(26px,9vw,44px); font-weight:300;
-  color:var(--text-secondary); text-decoration:none; padding:6px 0; display:block; transition:color .2s;
-}
-.mob-links a:hover, .mob-links a.active { color:var(--text-primary); }
-.mob-cta {
-  background:var(--accent); color:#010c1e; font-family:var(--font-d);
-  font-size:14px; font-weight:500; padding:14px 30px; border-radius:50px;
-  border:none; text-decoration:none; display:inline-block; margin-bottom:36px;
-}
-
-/* ── Progress bar ── */
-#progress-bar {
-  position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
-  background:linear-gradient(to right, rgba(74,179,255,0.4), rgba(74,179,255,0.9), rgba(140,220,255,1));
-  transition:width .08s linear; box-shadow:0 0 8px rgba(74,179,255,0.4);
-}
-
-/* ── Artículo ── */
-.article-wrap {
-  padding:140px var(--col-pad) 100px;
-  display:flex; flex-direction:column; align-items:center;
-}
-
-
-.article-header {
-  width:var(--article-w); max-width:100%; margin-bottom:56px;
-  opacity:0; animation:fadeUp .9s ease .2s forwards;
-}
-.article-meta {
-  display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;
-}
-.article-category {
-  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--accent); opacity:.75;
-}
-.article-date, .article-readtime {
-  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
-}
-.article-author {
-  font-size:11px; color:var(--text-dim); letter-spacing:.04em;
-  text-decoration:none; transition:color .2s;
-}
-.article-author:hover { color:var(--accent); }
-.meta-dot { width:2px; height:2px; border-radius:50%; background:var(--text-dim); }
-
-.article-title {
-  font-family:var(--font-d); font-size:clamp(28px,3.8vw,52px);
-  font-weight:300; line-height:1.1; letter-spacing:-.025em;
-  color:var(--text-primary); margin-bottom:20px;
-}
-.article-title em { font-style:normal; color:var(--accent); }
-
-.article-lead {
-  font-size:clamp(15px,1.5vw,18px); color:var(--text-secondary);
-  line-height:1.75; border-left:2px solid rgba(74,179,255,.3);
-  padding-left:20px; margin-top:8px;
-}
-
-.article-body {
-  width:var(--article-w); max-width:100%;
-  opacity:0; animation:fadeUp .9s ease .4s forwards;
-}
-
-.article-body h2 {
-  font-family:var(--font-d); font-size:clamp(19px,2vw,26px);
-  font-weight:300; line-height:1.25; letter-spacing:-.02em;
-  color:var(--text-primary); margin:48px 0 16px;
-}
-.article-body h2:first-child { margin-top:0; }
-.article-body h3 {
-  font-family:var(--font-d); font-size:clamp(14px,1.5vw,18px);
-  font-weight:400; color:var(--text-primary); margin:32px 0 12px;
-  letter-spacing:-.01em;
-}
-.article-body p {
-  font-size:clamp(14px,1.3vw,16px); line-height:1.85;
-  color:var(--text-secondary); margin-bottom:20px;
-}
-.article-body p strong { color:var(--text-primary); font-weight:400; }
-.article-body p em { color:var(--accent); font-style:normal; }
-.article-body a { color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(74,179,255,.3); transition:border-color .2s; }
-.article-body a:hover { border-color:var(--accent); }
-
-.callout {
-  background:rgba(74,179,255,0.05); border:1px solid rgba(74,179,255,.15);
-  border-radius:var(--radius-sm); padding:24px 28px; margin:32px 0;
-}
-.callout p { margin-bottom:0; }
-.callout p strong { color:var(--accent); }
-
-.article-body ul, .article-body ol {
-  padding-left:0; margin-bottom:20px; list-style:none;
-}
-.article-body ul li, .article-body ol li {
-  font-size:clamp(14px,1.3vw,16px); line-height:1.8;
-  color:var(--text-secondary); padding:6px 0 6px 22px; position:relative;
-}
-.article-body ul li::before {
-  content:''; position:absolute; left:0; top:15px;
-  width:6px; height:6px; border-radius:50%;
-  background:var(--accent); opacity:.5;
-}
-.article-body ol { counter-reset:ol-count; }
-.article-body ol li { counter-increment:ol-count; }
-.article-body ol li::before {
-  content:counter(ol-count);
-  position:absolute; left:0; top:6px;
-  font-family:var(--font-d); font-size:10px; letter-spacing:.1em;
-  color:var(--accent); opacity:.6;
-}
-
-.article-body hr {
-  border:none; border-top:1px solid var(--border-soft); margin:40px 0;
-}
-
-.article-cta {
-  width:var(--article-w); max-width:100%; margin-top:64px;
-  background:var(--glass-bg); backdrop-filter:blur(24px);
-  border:1px solid var(--border-soft); border-radius:var(--radius-md);
-  padding:36px 40px;
-  opacity:0; animation:fadeUp .9s ease .6s forwards;
-}
-.article-cta-label {
-  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:12px;
-}
-.article-cta-title {
-  font-family:var(--font-d); font-size:clamp(18px,2vw,26px);
-  font-weight:300; line-height:1.25; letter-spacing:-.02em;
-  margin-bottom:12px; color:var(--text-primary);
-}
-.article-cta-text {
-  font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;
-}
-.btn-primary {
-  background:var(--accent); color:#010c1e; font-family:var(--font-d);
-  font-size:13px; font-weight:500; letter-spacing:.04em;
-  padding:14px 30px; border-radius:50px; border:none; cursor:none;
-  text-decoration:none; display:inline-block; transition:opacity .2s, transform .2s;
-}
-.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
-
-.back-link {
-  display:inline-flex; align-items:center; gap:8px; margin-bottom:32px;
-  font-family:var(--font-d); font-size:12px; letter-spacing:.06em;
-  text-transform:uppercase; color:var(--text-dim); text-decoration:none;
-  transition:color .2s, gap .2s;
-  opacity:0; animation:fadeUp .7s ease .1s forwards;
-}
-.back-link:hover { color:var(--accent); gap:4px; }
-.back-link svg { width:14px; height:14px; stroke:currentColor; stroke-width:2; fill:none; }
-
-/* ── Footer ── */
-footer {
-  position:relative; z-index:1;
-  border-top:1px solid var(--border-soft); padding:28px var(--col-pad);
-  display:flex; align-items:center; justify-content:space-between;
-  flex-wrap:wrap; gap:16px 24px;
-}
-.footer-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
-.footer-logo .logo-icon { width:auto; height:16px; opacity:.35; }
-.footer-logo .logo-text { height:16px; mix-blend-mode:screen; opacity:.55; filter:brightness(1.1); }
-.footer-copy { font-size:11px; color:var(--text-dim); letter-spacing:.04em; }
-.footer-links { display:flex; gap:20px; flex-wrap:wrap; }
-.footer-links a { font-size:11px; color:var(--text-dim); text-decoration:none; transition:color .2s; }
-.footer-links a:hover { color:var(--text-secondary); }
-.footer-social { display:flex; gap:16px; align-items:center; }
-.footer-social a { color:var(--text-dim); transition:color .2s; display:flex; }
-.footer-social a:hover { color:var(--accent); }
-.footer-social svg { width:15px; height:15px; fill:currentColor; }
-
-@keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
-
-@media (max-width:1000px) { :root { --article-w:88vw; } }
-@media (max-width:560px) {
-  :root { --article-w:100%; --col-pad:24px; }
-  nav { padding:20px 24px; }
-  .nav-links { display:none; }
-  .nav-cta { display:none; }
-  .hamburger { display:flex; }
-  .article-cta { padding:24px 22px; }
-  footer { flex-direction:column; gap:20px; text-align:center; }
-  .footer-links { flex-wrap:wrap; justify-content:center; }
-  .footer-social { justify-content:center; }
-}
-
-/* ── Hero image ── */
-.article-hero {
-  position:relative;
-  width:var(--article-w); max-width:100%; margin-bottom:40px;
-  border-radius:var(--radius-sm); overflow:hidden;
-  opacity:0; animation:fadeUp .9s ease .15s forwards;
-}
-/* Distintivo UE: contenido generado con IA (overlay, no altera la imagen) */
-.article-hero::after {
-  content:"";
-  position:absolute; bottom:12px; left:12px;
-  width:90px; height:auto; aspect-ratio:1/1;
-  background-image:url('/img/eu-ai-generado.png');
-  background-size:contain; background-repeat:no-repeat; background-position:bottom left;
-  pointer-events:none; z-index:10;
-}
-.article-hero img {
-  width:100%; height:auto; display:block;
-  aspect-ratio:16/9; object-fit:cover;
-}
-
-/* ── Artículos relacionados ── */
-.related-articles {
-  width:var(--article-w); max-width:100%; margin-top:48px;
-  opacity:0; animation:fadeUp .9s ease .7s forwards;
-}
-.related-articles-label {
-  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--accent); opacity:.6; margin-bottom:20px;
-}
-.related-grid {
-  display:grid; grid-template-columns:1fr 1fr; gap:16px;
-}
-.related-card {
-  background:var(--glass-bg); backdrop-filter:blur(24px);
-  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
-  padding:24px; text-decoration:none; display:flex; flex-direction:column; gap:8px;
-  transition:border-color .2s, background .2s;
-}
-.related-card:hover {
-  border-color:rgba(74,179,255,.25); background:rgba(74,179,255,.04);
-}
-.related-card-cat {
-  font-family:var(--font-d); font-size:9px; letter-spacing:.2em;
-  text-transform:uppercase; color:var(--accent); opacity:.7;
-}
-.related-card-title {
-  font-family:var(--font-d); font-size:clamp(13px,1.3vw,15px);
-  font-weight:300; line-height:1.35; letter-spacing:-.01em;
-  color:var(--text-primary);
-}
-.related-card-excerpt {
-  font-size:12px; color:var(--text-secondary); line-height:1.65; flex:1;
-}
-.related-card-readtime {
-  font-size:11px; color:var(--text-dim); letter-spacing:.04em; margin-top:4px;
-}
-@media (max-width:560px) {
-  .related-grid { grid-template-columns:1fr; }
-}
-
-/* GEO:TLDR */
-.tldr {
-  width:var(--article-w); max-width:100%;
-  margin:32px 0 8px;
-  background:rgba(74,179,255,0.07);
-  border:1px solid rgba(74,179,255,.22);
-  border-left:3px solid var(--accent);
-  border-radius:var(--radius-sm);
-  padding:22px 26px;
-  opacity:0; animation:fadeUp .9s ease .25s forwards;
-}
-.tldr-label {
-  font-family:var(--font-d); font-size:9px; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--accent);
-  opacity:.75; margin-bottom:10px;
-}
-.tldr-text {
-  font-size:clamp(15px,1.5vw,18px); color:var(--text-primary);
-  line-height:1.65; font-weight:300;
-}
-@media (max-width:560px) {
-  .tldr { padding:18px 20px; margin:24px 0 4px; }
-}
-
-/* GEO:FAQ */
-.faq {
-  width:var(--article-w); max-width:100%; margin-top:48px;
-}
-.faq-title {
-  font-family:var(--font-d); font-weight:400;
-  font-size:clamp(22px, 2.4vw, 28px); color:var(--text-primary);
-  margin-bottom:24px; letter-spacing:-.005em;
-}
-.faq-list { display:flex; flex-direction:column; gap:12px; }
-.faq-item {
-  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
-  background:var(--glass-bg); padding:18px 22px; transition:border-color .2s;
-}
-.faq-item[open] { border-color:var(--border); }
-.faq-item summary {
-  cursor:none; list-style:none; font-family:var(--font-d); font-weight:400;
-  font-size:clamp(15px, 1.6vw, 17px); color:var(--text-primary);
-  display:flex; justify-content:space-between; align-items:center; gap:16px;
-}
-.faq-item summary::-webkit-details-marker { display:none; }
-.faq-item summary::after {
-  content:'+'; color:var(--accent); font-size:20px; font-weight:300;
-  transition:transform .2s;
-}
-.faq-item[open] summary::after { content:'−'; }
-.faq-item p {
-  margin-top:12px; color:var(--text-secondary); font-size:15px; line-height:1.65;
-}
-
-.disclaimer {
-  width:var(--article-w); max-width:100%; margin-top:48px;
-  font-size:12px; color:var(--text-dim); line-height:1.6;
-  border-top:1px solid var(--border-soft); padding-top:20px;
-  font-style:italic;
-}
-
 </style>
 </head>
 <body>
 
-<div id="cursor"></div>
-<div id="progress-bar"></div>
-
-<nav id="navbar" role="navigation" aria-label="Navegación principal">
-  <a class="nav-logo" href="../">
-    <img class="logo-icon" src="../icon.png" alt="">
-    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
-  </a>
-  <ul class="nav-links">
-    <li><a href="../#manifesto">Filosofía</a></li>
-    <li><a href="../#metodo">Método</a></li>
-    <li><a href="../#valor">Valor</a></li>
-    <li><a href="../#equipo">Equipo</a></li>
-    <li><a href="./" class="active">Blog</a></li>
-  </ul>
-  <a href="../#contacto" class="nav-cta">Conectar</a>
-  <button class="hamburger" id="hamburger" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div id="mobile-menu">
-  <ul class="mob-links">
-    <li><a href="../#manifesto" onclick="closeMobileMenu()">Filosofía</a></li>
-    <li><a href="../#metodo" onclick="closeMobileMenu()">Método</a></li>
-    <li><a href="../#valor" onclick="closeMobileMenu()">Valor</a></li>
-    <li><a href="../#equipo" onclick="closeMobileMenu()">Equipo</a></li>
-    <li><a href="./" class="active" onclick="closeMobileMenu()">Blog</a></li>
-  </ul>
-  <a href="../#contacto" class="mob-cta" onclick="closeMobileMenu()">Conectar</a>
+<header data-cabecera="comun" style="position: sticky; top: 0px; z-index: 50; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgb(238, 240, 243);">
+<nav aria-label="Principal" style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 40px); height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+<a href="/" style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: -0.02em;"><img alt="" src="/img/icono-ailitica-dark.webp" style="height: clamp(26px, 2.6vw, 34px); width: auto; display: block;"/><img alt="Ailitica" src="/img/logo-ailitica-dark.webp" style="height: clamp(22px, 2.2vw, 30px); width: auto; display: block;"/></a>
+<div class="nav-d" style="display: flex; gap: 6px; align-items: center; font-size: 14px; font-weight: 600; color: rgb(74, 79, 90); background: rgb(244, 243, 239); border-radius: 999px; padding: 4px;">
+<a class="cab-l" href="/#sectores" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Sectores</a>
+<a class="cab-l" href="/#areas" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Áreas</a>
+<a class="cab-l" href="/casos-de-uso/" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Casos de uso</a>
+<a aria-current="page" href="/blog/" style="color: rgb(27, 29, 34); padding: 8px 14px; border-radius: 999px; background: rgb(255, 255, 255);">Blog</a>
 </div>
+<div style="display: flex; gap: 10px; align-items: center;">
+<a class="cab-roi" href="/calculadora-roi.html" style="font-size: 14px; font-weight: 700; padding: 11px 18px; border-radius: 999px; background: rgb(31, 111, 235); color: rgb(255, 255, 255); white-space: nowrap; flex-shrink: 0;">Calcula ROI</a>
+<button type="button" aria-label="Menú" aria-controls="menu-movil" aria-expanded="false" class="nav-b" data-nav-burger="1" style="display: none; background: rgb(244, 243, 239); border: none; border-radius: 999px; width: 42px; height: 42px; cursor: pointer; color: rgb(27, 29, 34); font-size: 18px; place-items: center;">≡</button>
+</div>
+</nav><div hidden="" id="menu-movil" style="padding: 8px clamp(20px, 4vw, 40px) 24px; display: grid; gap: 12px; font-size: 20px; font-weight: 600;"><a href="/#sectores">Sectores</a><a href="/#areas">Áreas</a><a href="/casos-de-uso/">Casos de uso</a><a href="/blog/">Blog</a></div>
+<div style="height: 3px; background: rgb(238, 240, 243);"><div data-barra-progreso style="height: 100%; width: 0%; background: rgb(31, 111, 235); transition: width 0.15s linear;"></div></div></header>
 
+<main>
 <article class="article-wrap" aria-label="Artículo">
 
-  <figure class="article-hero">
-    <img src="img/como-controlar-agente-ia-empresa.webp" alt="Panel de control sobrio con tres palancas claramente identificadas, ilustrando los tres mecanismos prácticos para controlar un agente de inteligencia artificial en una empresa" width="1200" height="630" loading="eager">
-  </figure>
+  <nav class="migas" aria-label="Migas"><a href="/blog/">Blog</a><span>/</span><a href="/blog/categoria/gobernanza-y-control/">Gobernanza y control</a></nav>
 
   <header class="article-header">
     <div class="article-meta">
@@ -577,16 +286,49 @@ footer {
       <span class="article-readtime">8 min lectura</span>
     </div>
     <h1 class="article-title">Cómo controlar un agente de IA en tu empresa: <em>3 mecanismos prácticos</em></h1>
-    <!-- GEO:TLDR -->
-    <aside class="tldr" aria-label="Resumen del artículo">
+  </header>
+
+  <figure class="article-hero">
+    <div class="article-hero-caja">
+      <img src="img/como-controlar-agente-ia-empresa.webp" alt="Panel de control sobrio con tres palancas claramente identificadas, ilustrando los tres mecanismos prácticos para controlar un agente de inteligencia artificial en una empresa" width="1200" height="630" loading="eager" srcset="/blog/img/como-controlar-agente-ia-empresa-800.webp 800w, /blog/img/como-controlar-agente-ia-empresa.webp 1200w" sizes="(max-width: 1240px) 100vw, 1160px" fetchpriority="high">
+    </div>
+  </figure>
+
+  <div class="article-grid">
+    <aside class="toc-lateral" aria-label="En este artículo">
+      <span class="toc-kicker">En este artículo</span>
+      <a data-toc-link href="#que-es-de-verdad-controlar-un-agente-de-ia-no-es-lo-que-el-m">¿Qué es de verdad controlar un agente de IA? No es lo que el mercado te vende</a>
+      <a data-toc-link href="#mecanismo-1-como-aplicar-aprobacion-humana-en-los-pasos-que">Mecanismo 1: ¿cómo aplicar aprobación humana en los pasos que no se pueden deshacer?</a>
+      <a data-toc-link href="#mecanismo-2-que-es-un-sandbox-por-defecto-con-whitelist-expl">Mecanismo 2: ¿qué es un sandbox por defecto con whitelist explícita?</a>
+      <a data-toc-link href="#mecanismo-3-que-es-un-registro-estructurado-minimo-y-acciona">Mecanismo 3: ¿qué es un registro estructurado mínimo y accionable?</a>
+      <a data-toc-link href="#como-encajan-los-tres-mecanismos-de-control">¿Cómo encajan los tres mecanismos de control?</a>
+      <a data-toc-link href="#que-conviene-tener-decidido-antes-de-arrancar">¿Qué conviene tener decidido antes de arrancar?</a>
+      <a data-toc-link href="#cual-es-el-criterio-que-aplica-ailitica">¿Cuál es el criterio que aplica Ailitica?</a>
+      <div class="toc-roi">
+        <strong>Calculadora de ROI</strong>
+        <span>Estima en dos minutos lo que un agente liberaría en tu proceso.</span>
+        <a href="/calculadora-roi.html">Abrir la calculadora →</a>
+      </div>
+    </aside>
+
+    <div class="article-col">
+
+      <aside class="tldr" aria-label="Resumen del artículo">
       <p class="tldr-label">TL;DR</p>
       <p class="tldr-text">Controlar un agente de IA en una pyme no es comprar una plataforma de gobernanza. Son tres decisiones de diseño: <strong>aprobación humana</strong> en los pasos que no se pueden deshacer, <strong>sandbox con whitelist</strong> que define qué tiene permitido tocar y <strong>registro estructurado mínimo</strong> que deja por escrito qué ha hecho. Con estos tres mecanismos, una empresa pequeña tiene control real sin proceso pesado.</p>
     </aside>
-  </header>
 
-  <div class="article-body">
+      <dl class="ficha-articulo">
+        <div><dt>Para quién</dt><dd>Pymes que quieren control real sobre sus agentes de IA sin procesos pesados.</dd></div>
+        <div><dt>Qué resuelve</dt><dd>Explica tres mecanismos de diseño: aprobación humana en lo irreversible, sandbox con whitelist y registro estructurado.</dd></div>
+        <div><dt>Fuentes</dt><dd><a href="https://artificialintelligenceact.eu/article/14/" target="_blank" rel="noopener">Artículo 14 del AI Act</a></dd></div>
+        <div><dt>Actualizado</dt><dd><time datetime="2026-09-19">19 de septiembre de 2026</time></dd></div>
+      </dl>
 
-    <h2>¿Qué es de verdad controlar un agente de IA? No es lo que el mercado te vende</h2>
+      <div class="article-body">
+      <p class="definicion"><strong>Definición.</strong> Controlar un agente de IA es tomar tres decisiones de diseño: aprobación humana en los pasos que no se pueden deshacer, un sandbox con whitelist de lo que puede tocar y un registro estructurado de lo que ha hecho.</p>
+
+    <h2 id="que-es-de-verdad-controlar-un-agente-de-ia-no-es-lo-que-el-m">¿Qué es de verdad controlar un agente de IA? No es lo que el mercado te vende</h2>
 
     <p>Cuando un directivo de una empresa pequeña pregunta cómo controla a un agente de IA, lo más habitual es que le respondan con un catálogo: RBAC, audit logs centralizados, alertas en tiempo real, dashboards de gobernanza, comités de revisión, certificaciones. Todo eso existe, todo eso vale en empresas grandes, y casi nada de eso aplica a una pyme de cinco a treinta personas.</p>
 
@@ -596,7 +338,7 @@ footer {
 
     <p>Antes incluso de diseñar estos tres mecanismos, conviene saber <a href="/blog/como-evaluar-agente-ia-antes-de-confiar.html">cómo evaluar si el agente funciona de verdad antes de dejarle decidir</a>: controlar un agente que no acierta no es controlar, es delegar el error con supervisión.</p>
 
-    <h2>Mecanismo 1: ¿cómo aplicar aprobación humana en los pasos que no se pueden deshacer?</h2>
+    <h2 id="mecanismo-1-como-aplicar-aprobacion-humana-en-los-pasos-que">Mecanismo 1: ¿cómo aplicar aprobación humana en los pasos que no se pueden deshacer?</h2>
 
     <p>El primer mecanismo es el más simple de explicar y el que más gente se salta. Antes de dejar al agente en producción, se identifican los pasos del flujo que son <strong>irreversibles o costosos</strong> y se decide que en esos pasos el agente <em>propone</em>, pero un humano <em>aprueba</em>. Es la misma lógica que exige el <a href="https://artificialintelligenceact.eu/article/14/" target="_blank" rel="noopener">artículo 14 del AI Act</a> para los sistemas de alto riesgo: que una persona pueda decidir no usar el sistema, o anular y revertir su resultado, antes de que produzca un efecto irreversible.</p>
 
@@ -610,7 +352,7 @@ footer {
       <p><strong>El error más común.</strong> Pedir aprobación humana para <em>todo</em>. Si el humano tiene que aprobar cada paso, el agente no libera tiempo, lo consume. La gracia del mecanismo es que el 90% de los pasos van solos y el 10% crítico va con freno. Confundir prudencia con desconfianza convierte al agente en un formulario lento, y entonces nadie lo usa.</p>
     </div>
 
-    <h2>Mecanismo 2: ¿qué es un sandbox por defecto con whitelist explícita?</h2>
+    <h2 id="mecanismo-2-que-es-un-sandbox-por-defecto-con-whitelist-expl">Mecanismo 2: ¿qué es un sandbox por defecto con whitelist explícita?</h2>
 
     <p>El segundo mecanismo responde a una pregunta distinta. La aprobación humana decide quién <em>autoriza</em> una acción. El sandbox decide qué tiene permitido <em>tocar</em> el agente en primer lugar. Son capas complementarias, no sustitutas.</p>
 
@@ -637,7 +379,7 @@ footer {
 
     <p>El agente no tenía acceso al resto del correo, ni a la contabilidad, ni a la lista de clientes histórica, ni a la mensajería interna del equipo, ni a la red social corporativa. La pregunta que cierra la decisión: ¿qué pasaría si el agente se equivocase con cualquier cosa fuera de la whitelist? Respuesta: nada, porque no puede llegar ahí. Eso es control real.</p>
 
-    <h2>Mecanismo 3: ¿qué es un registro estructurado mínimo y accionable?</h2>
+    <h2 id="mecanismo-3-que-es-un-registro-estructurado-minimo-y-acciona">Mecanismo 3: ¿qué es un registro estructurado mínimo y accionable?</h2>
 
     <p>El tercer mecanismo es el que más se subestima en pyme, y el que más se agradece el día que algo no sale bien. Un agente que actúa sin dejar rastro es un agente sobre el que no se puede auditar nada después. El registro estructurado es el cuaderno de bitácora que convierte una pregunta difícil ("¿qué hizo el agente la semana pasada?") en una consulta de cinco minutos.</p>
 
@@ -655,7 +397,7 @@ footer {
 
     <p>Lo que se registra: cada acción que toca el mundo (escribir en una hoja, enviar un borrador, modificar un registro), cada aprobación humana solicitada y resuelta, cada error o salida inesperada del agente. Lo que no se registra: los pasos intermedios de razonamiento del agente, las consultas internas que no tocan datos, las repeticiones de la misma acción dentro de un mismo lote. Si se registra de todo, el registro deja de ser útil porque no se lee. Si se registra lo que importa, el registro se mantiene y se consulta.</p>
 
-    <h2>¿Cómo encajan los tres mecanismos de control?</h2>
+    <h2 id="como-encajan-los-tres-mecanismos-de-control">¿Cómo encajan los tres mecanismos de control?</h2>
 
     <p>Los tres mecanismos no son tres opciones entre las que elegir. Son tres capas que se aplican a la vez, cada una resolviendo un problema distinto.</p>
 
@@ -667,7 +409,7 @@ footer {
 
     <p>Una empresa que aplica los tres tiene control real. Una empresa que aplica solo uno tiene una sensación de control que se evapora la primera vez que algo va mal. Y lo que va mal con un agente de IA, va mal de forma silenciosa hasta que alguien lo encuentra: por eso conviene conocer de antemano las <a href="/blog/senales-agente-ia-fuera-de-control.html">señales tempranas de que un agente de IA se sale del guion</a>. Aquí enlazo también con <a href="/blog/cuando-no-usar-ia-empresa.html">cuándo no usar IA en tu empresa</a>, donde aparece el caso opuesto, el del proceso que no debería automatizarse de entrada.</p>
 
-    <h2>¿Qué conviene tener decidido antes de arrancar?</h2>
+    <h2 id="que-conviene-tener-decidido-antes-de-arrancar">¿Qué conviene tener decidido antes de arrancar?</h2>
 
     <p>Antes de poner el primer agente en producción, una pyme tendría que poder responder a estas preguntas. Si no puede responder a alguna, es señal de que falta diseño, no de que falten herramientas:</p>
 
@@ -682,7 +424,7 @@ footer {
 
     <p>Si las seis respuestas existen, la empresa está lista para arrancar con control. Si tres o más respuestas faltan, conviene parar y resolverlas antes de poner al agente a hacer trabajo real. Es una conversación de una mañana con el responsable interno y el proveedor; cuesta menos que reconstruir un desastre después.</p>
 
-    <h2>¿Cuál es el criterio que aplica Ailitica?</h2>
+    <h2 id="cual-es-el-criterio-que-aplica-ailitica">¿Cuál es el criterio que aplica Ailitica?</h2>
 
     <p>Cuando ponemos en marcha un agente para un cliente, los tres mecanismos están definidos antes de escribir una sola línea de configuración. No es opcional, no es una buena práctica que se añade al final, es parte del diseño desde el primer día. La whitelist se acuerda con el cliente antes del arranque. La lista de pasos críticos se acuerda con el cliente antes del arranque. El registro se acuerda con el cliente antes del arranque.</p>
 
@@ -696,7 +438,22 @@ footer {
 
   </div>
 
-  <section class="faq" aria-label="Preguntas frecuentes">
+      <div class="article-cta">
+    <p class="article-cta-label">Siguiente paso</p>
+    <h2 class="article-cta-title">Revisa si tu agente está listo para producción con control real</h2>
+    <p class="article-cta-text">Te ayudamos a definir la whitelist, identificar los pasos críticos y dejar el registro montado antes de que el agente toque nada importante. Sin compromiso y sin venderte una plataforma que no necesitas.</p>
+    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+  </div>
+
+      <div class="autor-articulo">
+        <span class="autor-avatar" aria-hidden="true">AA</span>
+        <div>
+          <div class="autor-nombre"><a href="https://www.linkedin.com/in/arriza/" target="_blank" rel="noopener">Andoni Arrizabalaga</a></div>
+          <div class="autor-bio">Fundador de Ailitica y Claude Certified Architect. Diseña agentes de IA para empresas donde una persona sigue decidiendo.</div>
+        </div>
+      </div>
+
+      <section class="faq" aria-label="Preguntas frecuentes">
     <h2 class="faq-title">Preguntas frecuentes</h2>
     <div class="faq-list">
       <details class="faq-item">
@@ -718,11 +475,9 @@ footer {
     </div>
   </section>
 
-  <div class="article-cta">
-    <p class="article-cta-label">Siguiente paso</p>
-    <h2 class="article-cta-title">Revisa si tu agente está listo para producción con control real</h2>
-    <p class="article-cta-text">Te ayudamos a definir la whitelist, identificar los pasos críticos y dejar el registro montado antes de que el agente toque nada importante. Sin compromiso y sin venderte una plataforma que no necesitas.</p>
-    <a href="mailto:hola@ailitica.com" class="btn-primary">Cuéntanos tu caso</a>
+      <p class="disclaimer">Este artículo describe un enfoque general de control aplicable a la mayoría de pymes. No constituye asesoramiento técnico, legal ni regulatorio. Cada caso real requiere un análisis específico del flujo, los sistemas implicados y el contexto del equipo.</p>
+
+    </div>
   </div>
 
   <section class="related-articles" aria-label="Artículos relacionados">
@@ -743,71 +498,48 @@ footer {
     </div>
   </section>
 
-  <p class="disclaimer">Este artículo describe un enfoque general de control aplicable a la mayoría de pymes. No constituye asesoramiento técnico, legal ni regulatorio. Cada caso real requiere un análisis específico del flujo, los sistemas implicados y el contexto del equipo.</p>
-
 </article>
+</main>
 
-<footer role="contentinfo">
-  <a class="footer-logo" href="../">
-    <img class="logo-icon" src="../icon.png" alt="">
-    <img class="logo-text" src="../ailitica.webp" alt="Ailitica">
-  </a>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/ailitica" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-    </a>
-    <a href="https://x.com/ailitica" target="_blank" rel="noopener" aria-label="X / Twitter">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-    </a>
-  </div>
-  <p class="footer-copy">&copy; <span class="cy"></span> Ailitica. Todos los derechos reservados.</p>
-  <div class="footer-links">
-    <a href="./">Blog</a>
-    <a href="../">Inicio</a>
-    <a href="/terminos.html">Términos y condiciones</a>
-    <a href="/cookies.html">Política de cookies</a>
-    <a href="/privacidad.html">Política de privacidad</a>
-    <a href="/politica-ia.html">Política de IA</a>
-    <a href="mailto:hola@ailitica.com">hola@ailitica.com</a>
-  </div>
-</footer>
+<footer style="border-top: 1px solid rgb(238, 240, 243); background: rgb(255, 255, 255);">
+<div style="max-width: 1240px; margin: 0px auto; padding: 44px clamp(20px, 4vw, 40px) 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px; font-size: 13.5px;">
+<div style="display: grid; gap: 12px; align-content: start;"><a href="/" style="display: flex; align-items: center; gap: 10px;"><img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height: 26px; width: auto; display: block;"/><img width="1182" height="198" srcset="/img/logo-ailitica-dark-600.webp 600w, /img/logo-ailitica-dark.webp 1182w" sizes="180px" alt="Ailitica" src="/img/logo-ailitica-dark.webp" style="height: 22px; width: auto; display: block;"/></a><p style="margin: 0px; color: rgb(138, 143, 153); line-height: 1.5; max-width: 260px;">Agentes de IA a medida para tu empresa. El humano decide.</p></div>
+<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Sectores</span><a href="/casos-de-uso/#sector-inmobiliario" style="color: rgb(74, 79, 90);">Inmobiliario</a><a href="/casos-de-uso/#sector-construccion-e-ingenieria" style="color: rgb(74, 79, 90);">Construcción e ingeniería</a><a href="/casos-de-uso/#sector-farmaceutico" style="color: rgb(74, 79, 90);">Farmacéutico</a><a href="/casos-de-uso/#sector-salud-y-clinicas" style="color: rgb(74, 79, 90);">Salud y clínicas</a><a href="/casos-de-uso/#sector-legal-y-despachos" style="color: rgb(74, 79, 90);">Legal y despachos</a><a href="/casos-de-uso/#sector-logistica" style="color: rgb(74, 79, 90);">Logística</a></div>
+<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Áreas</span><a href="/casos-de-uso/#area-atencion-al-cliente" style="color: rgb(74, 79, 90);">Atención al cliente</a><a href="/casos-de-uso/#area-operaciones" style="color: rgb(74, 79, 90);">Operaciones</a><a href="/casos-de-uso/#area-back-office" style="color: rgb(74, 79, 90);">Back-office</a><a href="/casos-de-uso/#area-ventas" style="color: rgb(74, 79, 90);">Ventas</a></div>
+<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Ailitica</span><a href="/casos-de-uso/" style="color: rgb(74, 79, 90);">Casos de uso</a><a href="/calculadora-roi.html" style="color: rgb(74, 79, 90);">Calculadora ROI</a><a href="/blog/" style="color: rgb(74, 79, 90);">Blog</a><a href="/contacto.html" style="color: rgb(74, 79, 90);">Contacto</a></div><div data-col="blog" style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Blog</span><a href="/blog/categoria/fundamentos/" style="color: rgb(74, 79, 90);">Fundamentos</a><a href="/blog/categoria/automatizacion/" style="color: rgb(74, 79, 90);">Automatización y procesos</a><a href="/blog/categoria/gobernanza-y-control/" style="color: rgb(74, 79, 90);">Gobernanza y control</a><a href="/blog/categoria/normativa-ia/" style="color: rgb(74, 79, 90);">Normativa IA</a><a href="/blog/categoria/estrategia/" style="color: rgb(74, 79, 90);">Estrategia y decisión</a><a href="/blog/por-que-fallan-pilotos-agentes-ia.html" style="color: rgb(74, 79, 90);">Por qué fallan los pilotos</a></div>
+</div>
+<div style="border-top: 1px solid rgb(238, 240, 243);">
+<div style="max-width: 1240px; margin: 0px auto; padding: 18px clamp(20px, 4vw, 40px); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; font-size: 12px; color: rgb(138, 143, 153);">
+<span>© 2026 Ailitica. Todos los derechos reservados.</span>
+<img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height: 18px; width: auto; opacity: 0.6;"/>
+<div style="display: flex; gap: 14px; justify-content: end; align-items: center;"><a aria-label="LinkedIn" class="hv6" href="https://www.linkedin.com/company/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg></a><a aria-label="Instagram" class="hv6" href="https://www.instagram.com/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.75a3.05 3.05 0 1 1 0-6.1 3.05 3.05 0 0 1 0 6.1zM17.9 7.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 3.9c2.64 0 2.95.01 3.99.06 2.68.12 3.93 1.39 4.05 4.05.05 1.04.06 1.35.06 3.99s-.01 2.95-.06 3.99c-.12 2.66-1.37 3.93-4.05 4.05-1.04.05-1.35.06-3.99.06s-2.95-.01-3.99-.06c-2.69-.12-3.93-1.4-4.05-4.05C3.91 14.95 3.9 14.64 3.9 12s.01-2.95.06-3.99C4.08 5.33 5.33 4.08 8.01 3.96 9.05 3.91 9.36 3.9 12 3.9zM12 2.2c-2.69 0-3.02.01-4.08.06C4.3 2.43 2.43 4.3 2.26 7.92 2.21 8.98 2.2 9.31 2.2 12s.01 3.02.06 4.08c.17 3.62 2.04 5.49 5.66 5.66 1.06.05 1.39.06 4.08.06s3.02-.01 4.08-.06c3.61-.17 5.49-2.04 5.66-5.66.05-1.06.06-1.39.06-4.08s-.01-3.02-.06-4.08c-.17-3.61-2.04-5.49-5.66-5.66C15.02 2.21 14.69 2.2 12 2.2z"></path></svg></a><a aria-label="X" class="hv6" href="https://x.com/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-7.2L4.5 22H1.4l8.1-9.3L0.9 2h7.2l5 6.6L18.9 2zm-1.2 18.2h1.7L7.2 3.7H5.3l12.4 16.5z"></path></svg></a></div>
+</div>
+<div class="footer-links" style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 40px) 22px; display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; font-size: 12px;">
+<a href="/terminos.html" style="color: rgb(138, 143, 153);">Términos y condiciones</a><a href="/cookies.html" style="color: rgb(138, 143, 153);">Política de cookies</a><a href="/privacidad.html" style="color: rgb(138, 143, 153);">Política de privacidad</a><a href="/politica-ia.html" style="color: rgb(138, 143, 153);">Política de IA</a>
+<a href="mailto:hola@ailitica.com" style="color: rgb(138, 143, 153);">hola@ailitica.com</a>
+</div>
+</div></footer>
 
 <script>
-// Cursor
-const cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top  = e.clientY + 'px';
-});
-
-// Nav scroll
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-}, { passive:true });
-
-// Progress bar
-const progressBar = document.getElementById('progress-bar');
-window.addEventListener('scroll', () => {
-  const d = document.documentElement.scrollHeight - window.innerHeight;
-  progressBar.style.width = (d > 0 ? window.scrollY / d * 100 : 0) + '%';
-}, { passive:true });
-
-// Mobile menu
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-hamburger.addEventListener('click', () => {
-  const o = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open', o);
-  document.body.style.overflow = o ? 'hidden' : '';
-});
-function closeMobileMenu() {
-  mobileMenu.classList.remove('open');
-  hamburger.classList.remove('open');
-  document.body.style.overflow = '';
-}
+(function(){
+  var barra = document.querySelector('[data-barra-progreso]');
+  var enlaces = Array.prototype.slice.call(document.querySelectorAll('[data-toc-link]'));
+  var titulos = Array.prototype.slice.call(document.querySelectorAll('.article-body h2[id]'));
+  var pendiente = false;
+  function pintar(){
+    pendiente = false;
+    var alto = document.documentElement.scrollHeight - window.innerHeight;
+    if (barra) barra.style.width = (alto > 0 ? Math.min(100, Math.max(0, window.scrollY / alto * 100)) : 0) + '%';
+    if (!enlaces.length) return;
+    var actual = '';
+    titulos.forEach(function(h){ if (h.getBoundingClientRect().top < 140) actual = h.id; });
+    enlaces.forEach(function(a){ a.classList.toggle('activo', a.getAttribute('href') === '#' + actual); });
+  }
+  window.addEventListener('scroll', function(){ if (!pendiente) { pendiente = true; requestAnimationFrame(pintar); } }, { passive: true });
+  pintar();
+})();
 </script>
-
-<script>document.querySelectorAll('.cy').forEach(function(el){el.textContent=new Date().getFullYear();});</script>
+<script src="/menu.js" defer></script>
 <script src="/consent.js" defer></script>
 </body>
 </html>
