@@ -25,11 +25,74 @@ El blog cubre cinco pilares temáticos:
 
 40 artículos publicados. Índice completo en `/blog/`.
 
+## Casos de uso
+
+Catálogo de 30 casos de uso reales de agentes de IA (`/casos-de-uso/`), organizados por área transversal y por sector: qué hace el agente, qué sistemas usa y qué tareas quedan siempre para las personas.
+
+**Transversales** (atención al cliente, operaciones, back-office, ventas):
+
+- Resolver tickets de principio a fin: `/casos-de-uso/resolver-tickets-de-principio-a-fin.html`
+- Responder consultas de estado: `/casos-de-uso/responder-consultas-de-estado.html`
+- Clasificar y derivar contactos: `/casos-de-uso/clasificar-y-derivar-contactos.html`
+- Seguir el trabajo en tiempo real: `/casos-de-uso/seguir-el-trabajo-en-tiempo-real.html`
+- Gestionar la comunicación con proveedores: `/casos-de-uso/gestionar-la-comunicacion-con-proveedores.html`
+- Resolver excepciones: `/casos-de-uso/resolver-excepciones.html`
+- Conciliar facturas: `/casos-de-uso/conciliar-facturas.html`
+- Procesar documentos: `/casos-de-uso/procesar-documentos.html`
+- Reclamar y cobrar facturas pendientes: `/casos-de-uso/reclamar-y-cobrar-facturas-pendientes.html`
+- Cualificar y enriquecer cada lead: `/casos-de-uso/cualificar-y-enriquecer-cada-lead.html`
+- Hacer seguimiento hasta que respondan: `/casos-de-uso/hacer-seguimiento-hasta-que-respondan.html`
+- Mantener el CRM al día: `/casos-de-uso/mantener-el-crm-al-dia.html`
+
+**Inmobiliario:**
+
+- Cualificar leads de portales inmobiliarios: `/casos-de-uso/cualificar-leads-de-portales.html`
+- Preparar documentación de compraventa y alquiler: `/casos-de-uso/preparar-documentacion-de-operaciones.html`
+- Gestionar incidencias de alquiler: `/casos-de-uso/gestionar-incidencias-de-alquiler.html`
+
+**Construcción e ingeniería:**
+
+- Comparar ofertas de compra de obra: `/casos-de-uso/comparar-ofertas-de-compra-de-obra.html`
+- Controlar albaranes contra pedidos en obra: `/casos-de-uso/controlar-albaranes-contra-pedidos.html`
+- Preparar certificaciones de obra: `/casos-de-uso/preparar-certificaciones-de-obra.html`
+
+**Farmacéutico:**
+
+- Gestionar documentación regulatoria: `/casos-de-uso/gestionar-documentacion-regulatoria.html`
+- Registrar casos de farmacovigilancia: `/casos-de-uso/registrar-casos-de-farmacovigilancia.html`
+- Controlar la documentación de lotes: `/casos-de-uso/controlar-calidad-documental-de-lotes.html`
+
+**Salud y clínicas:**
+
+- Agendar y confirmar pacientes: `/casos-de-uso/agendar-y-confirmar-pacientes.html`
+- Gestionar la admisión de pacientes: `/casos-de-uso/gestionar-la-admision-de-pacientes.html`
+- Facturar a aseguradoras: `/casos-de-uso/facturar-a-aseguradoras.html`
+
+**Legal y despachos:**
+
+- Abrir y organizar expedientes: `/casos-de-uso/abrir-y-organizar-expedientes.html`
+- Controlar plazos procesales: `/casos-de-uso/controlar-plazos-procesales.html`
+- Preparar borradores de contratos: `/casos-de-uso/preparar-borradores-de-contratos.html`
+
+**Logística:**
+
+- Seguir envíos y gestionar incidencias: `/casos-de-uso/seguir-envios-y-gestionar-incidencias.html`
+- Auditar facturas de transporte: `/casos-de-uso/auditar-facturas-de-transporte.html`
+- Generar cotizaciones de transporte: `/casos-de-uso/generar-cotizaciones-de-transporte.html`
+
+Índice completo con filtro por sector y por área: `/casos-de-uso/`.
+
+## Calculadora de ROI
+
+`/calculadora-roi.html`: calcula el retorno a 12 meses de un agente de IA a partir de tres datos (horas humanas del proceso, reducción que asume el agente y coste de operarlo). Sin registro.
+
 ## Páginas principales
 
 - Inicio: `https://ailitica.com/`
 - Blog: `https://ailitica.com/blog/`
-- Contacto: `https://ailitica.com/#contacto` (formulario de contacto, en la página de inicio)
+- Casos de uso: `https://ailitica.com/casos-de-uso/`
+- Calculadora de ROI: `https://ailitica.com/calculadora-roi.html`
+- Contacto: `https://ailitica.com/#contacto` (formulario en la página de inicio) y `https://ailitica.com/contacto.html` (página dedicada, mismo formulario)
 
 ## Contacto
 

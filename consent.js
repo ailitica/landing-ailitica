@@ -228,6 +228,12 @@
       });
     });
 
+    // calculator_complete: lo avisa calculadora.js cuando la persona deja de
+    // tocar datos. El evento no lleva ningún valor introducido.
+    document.addEventListener('ailitica:calculadora-completada', function () {
+      enviarEvento('calculator_complete', {});
+    });
+
     document.addEventListener('click', function (e) {
       var enlace = e.target && e.target.closest ? e.target.closest('a[href]') : null;
       if (!enlace) return;
