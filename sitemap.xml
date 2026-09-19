@@ -230,6 +230,12 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://ailitica.com/blog/business-case-inversion-ia-pyme-socios.html</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ailitica.com/blog/necesito-responsable-de-ia-en-mi-empresa.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
