@@ -27,7 +27,7 @@ El blog cubre cinco pilares temáticos:
 
 ## Casos de uso
 
-Catálogo de 30 casos de uso reales de agentes de IA (`/casos-de-uso/`), organizados por área transversal y por sector: qué hace el agente, qué sistemas usa y qué tareas quedan siempre para las personas.
+Catálogo de 27 casos de uso reales de agentes de IA (`/casos-de-uso/`), organizados por área transversal y por sector: qué hace el agente, qué sistemas usa y qué tareas quedan siempre para las personas.
 
 **Transversales** (atención al cliente, operaciones, back-office, ventas):
 
@@ -38,10 +38,9 @@ Catálogo de 30 casos de uso reales de agentes de IA (`/casos-de-uso/`), organiz
 - Gestionar la comunicación con proveedores: `/casos-de-uso/gestionar-la-comunicacion-con-proveedores.html`
 - Resolver excepciones: `/casos-de-uso/resolver-excepciones.html`
 - Conciliar facturas: `/casos-de-uso/conciliar-facturas.html`
-- Procesar documentos: `/casos-de-uso/procesar-documentos.html`
+- Grabar en el ERP los pedidos de clientes: `/casos-de-uso/grabar-pedidos-de-clientes.html`
 - Reclamar y cobrar facturas pendientes: `/casos-de-uso/reclamar-y-cobrar-facturas-pendientes.html`
 - Cualificar y enriquecer cada lead: `/casos-de-uso/cualificar-y-enriquecer-cada-lead.html`
-- Hacer seguimiento hasta que respondan: `/casos-de-uso/hacer-seguimiento-hasta-que-respondan.html`
 - Mantener el CRM al día: `/casos-de-uso/mantener-el-crm-al-dia.html`
 
 **Inmobiliario:**
@@ -54,17 +53,15 @@ Catálogo de 30 casos de uso reales de agentes de IA (`/casos-de-uso/`), organiz
 
 - Comparar ofertas de compra de obra: `/casos-de-uso/comparar-ofertas-de-compra-de-obra.html`
 - Controlar albaranes contra pedidos en obra: `/casos-de-uso/controlar-albaranes-contra-pedidos.html`
-- Preparar certificaciones de obra: `/casos-de-uso/preparar-certificaciones-de-obra.html`
+- Revisar certificaciones de subcontratas: `/casos-de-uso/revisar-certificaciones-de-subcontratas.html`
 
 **Farmacéutico:**
 
-- Gestionar documentación regulatoria: `/casos-de-uso/gestionar-documentacion-regulatoria.html`
 - Registrar casos de farmacovigilancia: `/casos-de-uso/registrar-casos-de-farmacovigilancia.html`
 - Controlar la documentación de lotes: `/casos-de-uso/controlar-calidad-documental-de-lotes.html`
 
 **Salud y clínicas:**
 
-- Agendar y confirmar pacientes: `/casos-de-uso/agendar-y-confirmar-pacientes.html`
 - Gestionar la admisión de pacientes: `/casos-de-uso/gestionar-la-admision-de-pacientes.html`
 - Facturar a aseguradoras: `/casos-de-uso/facturar-a-aseguradoras.html`
 

@@ -31,7 +31,7 @@
   <!-- Rediseño f1: páginas nuevas -->
   <url>
     <loc>https://ailitica.com/casos-de-uso/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -49,13 +49,7 @@
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/abrir-y-organizar-expedientes.html</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ailitica.com/casos-de-uso/agendar-y-confirmar-pacientes.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -67,37 +61,37 @@
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/clasificar-y-derivar-contactos.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/comparar-ofertas-de-compra-de-obra.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/conciliar-facturas.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/controlar-albaranes-contra-pedidos.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/controlar-calidad-documental-de-lotes.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/controlar-plazos-procesales.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -115,7 +109,7 @@
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/facturar-a-aseguradoras.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,62 +120,50 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ailitica.com/casos-de-uso/gestionar-documentacion-regulatoria.html</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://ailitica.com/casos-de-uso/gestionar-incidencias-de-alquiler.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/gestionar-la-admision-de-pacientes.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/gestionar-la-comunicacion-con-proveedores.html</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ailitica.com/casos-de-uso/hacer-seguimiento-hasta-que-respondan.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/mantener-el-crm-al-dia.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/preparar-borradores-de-contratos.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ailitica.com/casos-de-uso/preparar-certificaciones-de-obra.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://ailitica.com/casos-de-uso/revisar-certificaciones-de-subcontratas.html</loc>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/preparar-documentacion-de-operaciones.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ailitica.com/casos-de-uso/procesar-documentos.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://ailitica.com/casos-de-uso/grabar-pedidos-de-clientes.html</loc>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -193,25 +175,25 @@
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/registrar-casos-de-farmacovigilancia.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/resolver-excepciones.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/resolver-tickets-de-principio-a-fin.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/responder-consultas-de-estado.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -223,7 +205,7 @@
   </url>
   <url>
     <loc>https://ailitica.com/casos-de-uso/seguir-envios-y-gestionar-incidencias.html</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

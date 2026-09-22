@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Conciliar facturas: agente de IA — Ailitica</title>
-<meta content="El cruce entre factura, pedido y albarán que se come los últimos días del mes. Agente de IA para back-office: qué hace y qué queda para las personas." name="description"/>
+<title>Conciliación de facturas: agente de IA — Ailitica</title>
+<meta content="Agente de IA que casa cada factura de proveedor con su pedido y sus albaranes, al precio pactado, y marca lo que no cuadra. El pago lo aprueba una persona." name="description"/>
 <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
 <link href="https://ailitica.com/casos-de-uso/conciliar-facturas.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="https://ailitica.com/casos-de-uso/conciliar-facturas.html" property="og:url"/>
-<meta content="Conciliar facturas" property="og:title"/>
-<meta content="El cruce entre factura, pedido y albarán que se come los últimos días del mes. Agente de IA para back-office: qué hace y qué queda para las personas." property="og:description"/>
+<meta content="Conciliación de facturas: agente de IA" property="og:title"/>
+<meta content="Agente de IA que casa cada factura de proveedor con su pedido y sus albaranes, al precio pactado, y marca lo que no cuadra. El pago lo aprueba una persona." property="og:description"/>
 <meta content="https://ailitica.com/og-image.png" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
@@ -19,9 +18,13 @@
 <meta content="Ailitica" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@ailitica" name="twitter:site"/>
-<meta content="Conciliar facturas" name="twitter:title"/>
-<meta content="El cruce entre factura, pedido y albarán que se come los últimos días del mes. Agente de IA para back-office: qué hace y qué queda para las personas." name="twitter:description"/>
+<meta content="Conciliación de facturas: agente de IA" name="twitter:title"/>
+<meta content="Agente de IA que casa cada factura de proveedor con su pedido y sus albaranes, al precio pactado, y marca lo que no cuadra. El pago lo aprueba una persona." name="twitter:description"/>
 <meta content="https://ailitica.com/og-image.png" name="twitter:image"/>
+<link href="/favicon.ico" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,246 +56,853 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Qué hace exactamente el agente para conciliar facturas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Extrae los datos de la factura y los cruza con pedido y albarán. Contabiliza las que cuadran dentro de la tolerancia. Prepara las discrepancias con el detalle línea a línea. Termina la tarea dentro de tus sistemas (ERP / contabilidad, Correo, OCR, Banco) y deja registro de cada paso."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué queda para las personas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Aprobar las discrepancias y hablar con el proveedor cuando hace falta. Ninguna factura con diferencia se paga sin aprobación humana. Proveedores nuevos → verificación de datos bancarios por una persona. Cada corrección humana se convierte en regla para la siguiente vez."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo puede liberar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Estimación prudente: unas 160 horas al mes dedicadas a esta tarea y una reducción del 70 %, es decir, unas 112 horas liberadas al mes. Puedes ajustar cada cifra en la calculadora de ROI."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es un chatbot?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Un chatbot responde preguntas; este agente recibe una entrada (factura INV-78421 recibida), decide según tus protocolos, actúa en tus sistemas y entrega un resultado: factura contabilizada o discrepancia documentada."
-      }
-    }
-  ]
+    {"@type":"Question","name":"¿En qué se diferencia de un programa de captura de facturas o de un BUSCARV contra el pedido?","acceptedAnswer":{"@type":"Answer","text":"Un programa de captura saca los datos de la factura, y un BUSCARV la cruza con el pedido si las dos dicen lo mismo. El agente hace lo de en medio: entiende que «torn. M8 galv.» es tu tornillo M8 galvanizado, reparte entre tres albaranes la factura que los junta y compara cada línea con la tarifa pactada."}},
+    {"@type":"Question","name":"¿Mis proveedores tienen que mandar la factura de otra forma, o tengo que cambiar de ERP?","acceptedAnswer":{"@type":"Answer","text":"No. Tus proveedores siguen facturando como hoy, en PDF, escaneada o en formato electrónico, al buzón donde ya os llega. El agente lee ahí cada factura, busca el pedido, los albaranes y la tarifa en el ERP que ya usáis, y en ese mismo ERP la deja casada."}},
+    {"@type":"Question","name":"¿Qué cambia cuando la factura electrónica entre empresas sea obligatoria?","acceptedAnswer":{"@type":"Answer","text":"Para el agente, poco: lleva cada dato al mismo campo del ERP, venga la factura en PDF, escaneada o en formato electrónico. La Ley 18/2022 hace obligatoria la factura electrónica entre empresas, pero sus efectos llegan al año o a los dos años de aprobarse el reglamento que la desarrolla, según la facturación de cada empresa, y la ley los supedita además a una autorización comunitaria sobre el IVA."}},
+    {"@type":"Question","name":"¿El agente accede a datos personales de las facturas que recibo?","acceptedAnswer":{"@type":"Answer","text":"Sí. Para conciliar las facturas, el agente lee los documentos que necesita, y pueden contener datos personales: la factura de un proveedor autónomo lleva su nombre, su NIF y su domicilio. Tu empresa sigue siendo la responsable de esos datos y Ailitica los trata como encargada, con un contrato de encargo que fija por escrito, antes de empezar, dónde se guardan, qué proveedores intervienen y qué se hace con ellos al terminar."}},
+    {"@type":"Question","name":"¿Qué hace con un abono del proveedor que no dice a qué factura corrige?","acceptedAnswer":{"@type":"Answer","text":"Lo busca por importe, material y fechas entre las facturas y devoluciones de ese proveedor. Si solo encaja con una, lo propone enlazado a ella y deja escrito por qué. Si encaja con varias, o con ninguna, no lo aplica: lo marca y, si hace falta, pregunta al proveedor desde la cuenta de administración."}},
+    {"@type":"Question","name":"¿Se da cuenta si la misma entrega viene facturada dos veces?","acceptedAnswer":{"@type":"Answer","text":"Sí: cada albarán de recepción queda casado con la factura que lo cobra, así que si otra factura trae las líneas de un albarán ya casado, la marca como posible duplicada y enseña las dos. No la rechaza por su cuenta: puede ser una entrega parecida en otra fecha, y eso lo comprueba administración."}},
+    {"@type":"Question","name":"¿Qué hace con la factura que llega cuando el mes ya está cerrado en contabilidad?","acceptedAnswer":{"@type":"Answer","text":"La casa igual que las demás, con su pedido y sus albaranes, y deja a la vista la fecha de recepción de la mercancía y la de la factura. En qué periodo se contabiliza lo decide administración; el agente se ocupa de que no se quede en el buzón esperando al cierre siguiente."}}
+    ]
 }
 </script>
-<link href="/favicon.ico" rel="icon"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;display=swap" rel="stylesheet"/>
 <style>
 html,body{margin:0;padding:0;background:#FFFFFF;color:#1B1D22;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#1B1D22;text-decoration:none}a:hover{color:#1F6FEB}
 *{box-sizing:border-box}
-@keyframes wordIn{from{opacity:0;transform:translateY(.4em)}to{opacity:1;transform:none}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 [hidden]{display:none !important}
-/* hover */
-.hv0:hover { background: rgb(255, 255, 255) !important; }
-.hv1:hover { background: rgb(27, 29, 34) !important; }
-.hv2:hover { background: rgb(31, 111, 235) !important; }
-.hv3:hover { border-color: rgb(27, 29, 34) !important; }
-.hv4:hover { background: rgb(238, 244, 255) !important; }
-.hv5:hover { background: rgb(31, 111, 235) !important; color: rgb(255, 255, 255) !important; }
-.hv6:hover { color: rgb(31, 111, 235) !important; }
-/* responsive */
-@media (max-width:859px){
-.r1{display:none !important}
-}
-@media (max-width:759px){
-.r1{display:none !important}
-.r2{display:none !important}
-.r3{cursor:pointer !important}
-.r4{display:inline !important}
-.r5{cursor:pointer !important}
-.r6{display:inline !important}
-.r7{display:none !important}
-.r8{cursor:pointer !important}
-.r9{display:inline !important}
-.r10{display:none !important}
-.r11{cursor:pointer !important}
-.r12{display:inline !important}
-.r13{display:none !important}
-}
-/*s2-comun*/
-[hidden]{display:none !important}
 .cab-l:hover{background:#FFFFFF !important}
-.cab-roi:hover{background:rgb(27, 29, 34) !important}
+.cab-roi:hover{background:#1B1D22 !important}
 #menu-movil a{color:#1B1D22}
 #menu-movil a:hover{color:#1F6FEB}
-footer .footer-links a{color:rgb(138, 143, 153)}
+footer .footer-links a{color:#8A8F99}
 footer .footer-links a:hover{color:#1F6FEB}
-[id^="sector-"],[id^="area-"]{scroll-margin-top:96px}
+.hv1:hover{background:#1B1D22 !important}
+.hv2:hover{background:#1F6FEB !important}
+.hv3:hover{border-color:#1B1D22 !important}
+.hv5:hover{background:#1F6FEB !important;color:#fff !important}
 @media (max-width:859px){.nav-d{display:none !important}.nav-b{display:inline-grid !important}}
-/*fin-s2-comun*/
-/*s4-anim*/
-@media (prefers-reduced-motion: reduce){
-[style*="running ticker"],[style*="running kenburns"],[style*="running wordIn"],[style*="running blink"]{animation:none !important}
-#areas > div:last-child{overflow-x:auto !important}
-*{transition-duration:0s !important}
+
+/* ---- Envoltura de sección, más apretada que en la v2 ---- */
+.sec{max-width:1240px;margin:0 auto;padding:clamp(30px,3.8vw,48px) clamp(20px,4vw,40px)}
+.kicker{margin:0 0 10px;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F6FEB}
+.h2{margin:0 0 clamp(18px,2.2vw,26px);font-family:'Newsreader',serif;font-weight:400;font-size:clamp(28px,3.3vw,42px);line-height:1.06;letter-spacing:-.025em;text-wrap:balance;max-width:760px}
+
+/* ---- Desplegables: el resumen fuera, el detalle dentro ---- */
+details{border-top:1px solid #EEF0F3;margin-top:10px;padding-top:9px}
+details summary{cursor:pointer;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#1F6FEB;list-style:none;display:flex;align-items:center;gap:7px}
+details summary::-webkit-details-marker{display:none}
+details summary .mas{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:#EEF4FF;font-size:12px;line-height:1;transition:transform .2s}
+details[open] summary .mas{transform:rotate(45deg)}
+details .dd{margin:9px 0 2px;font-size:13.5px;line-height:1.55;color:#4A4F5A}
+details .dd em{font-style:normal;color:#1B1D22;font-weight:600}
+
+/* ---- Rejilla de excepciones ---- */
+.rej{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:12px}
+.card{border:1.5px solid #E2E0D9;border-radius:20px;padding:18px 20px;background:#fff;display:grid;align-content:start}
+.card h3{margin:0 0 10px;font-size:15.5px;font-weight:700;line-height:1.28;letter-spacing:-.015em}
+.par{display:grid;grid-template-columns:54px minmax(0,1fr);gap:9px;font-size:13px;line-height:1.45;padding:4px 0}
+.par > span:first-child{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A8F99;padding-top:2px}
+.par .mal{color:#4A4F5A}
+.par .bien{color:#1B1D22;font-weight:600}
+
+/* ---- Dos pistas: la misma notificación, sin agente y con agente ---- */
+.pi{
+  --t-hum:#6E7480;--t-ag:#1F6FEB;--t-dec:#F5B14C;--t-par:#C2BDAE;--t-par2:#EFEEE9;
+  --t-via:#F4F3EF;--t-via-ag:#EEF4FF;
+  --t-sup:#FFFFFF;--t-bor:#E2E0D9;--t-txt:#1B1D22;--t-ap:#8A8F99;
+  --paso:27px;--filas:6;
+  border:1.5px solid var(--t-bor);border-radius:22px;background:var(--t-sup);
+  padding:clamp(18px,2.3vw,26px) clamp(18px,2.4vw,28px) clamp(15px,1.9vw,20px);
+  display:grid;gap:clamp(20px,2.6vw,30px)
 }
-/*fin-s4-anim*/
+.pi-esc{position:relative;height:23px}
+.pi-esc span{position:absolute;left:var(--x);top:0;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--t-ap);white-space:nowrap}
+.pi-esc span::after{content:"";position:absolute;left:0;top:16px;width:1.5px;height:7px;background:var(--t-bor)}
+.pi-esc span.d{transform:translateX(-50%)}
+.pi-esc span.d::after{left:50%}
+.pi-esc .sm{display:none}
+
+.pi-fila{display:grid;gap:9px}
+.pi-cab{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.pi-quien{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;letter-spacing:-.012em;color:var(--t-txt);min-width:0}
+.pi-quien svg{flex:none}
+.pi-quien .par2{display:inline-flex;margin-right:-5px}
+.pi-quien .par2 svg:last-child{margin-left:-7px}
+.pi-reloj{font-size:17px;font-weight:800;letter-spacing:-.015em;font-variant-numeric:tabular-nums;color:var(--t-hum);white-space:nowrap}
+.pi-fila.ag .pi-reloj{color:var(--t-ag)}
+
+/* La escalera: una fila por tarea, anclada al minuto en que esa tarea termina.
+   En la persona sola las anclas se reparten por toda la linea; en el agente
+   caen todas juntas contra el margen izquierdo. Esa diferencia de forma es el grafico. */
+.pi-pasos{position:relative;height:calc(var(--filas) * var(--paso))}
+.pi-paso{position:absolute;left:var(--x);top:calc(var(--f) * var(--paso));
+  display:flex;align-items:center;gap:7px;
+  background:var(--t-sup);border:1.5px solid var(--t-bor);border-radius:12px;
+  padding:3px 10px 3px 4px;font-size:12.5px;font-weight:700;line-height:1.3;letter-spacing:-.01em;
+  color:var(--t-txt);white-space:nowrap;box-shadow:0 5px 14px rgba(27,29,34,.06);
+  transform:translateX(-14px);transition:opacity .3s ease}
+.pi-paso b{flex:none;width:17px;height:17px;border-radius:50%;background:var(--t-via);
+  display:grid;place-items:center;font-size:9.5px;font-weight:800;color:var(--t-ap);font-variant-numeric:tabular-nums}
+.pi-fila.ag .pi-paso b{background:var(--t-via-ag);color:var(--t-ag)}
+.pi-paso.fin b{background:#FFF3DF;color:#96660E}
+.pi-paso i{font-style:normal;font-size:11px;font-weight:800;color:var(--t-ap);font-variant-numeric:tabular-nums}
+.pi-paso::after{content:"";position:absolute;left:14px;top:100%;width:1.5px;
+  height:calc((var(--filas) - 1 - var(--f)) * var(--paso) + 10px);
+  background-image:repeating-linear-gradient(to bottom,var(--t-bor) 0 3px,transparent 3px 6px)}
+.pi-paso.der{transform:translateX(calc(-100% + 14px))}
+.pi-paso.der::after{left:auto;right:14px}
+
+/* Las vias */
+.pi-barra{position:relative;height:14px;border-radius:999px;background:var(--t-via)}
+.pi-fila.ag .pi-barra{background:var(--t-via-ag)}
+.pi-relleno{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:var(--t-hum);overflow:hidden}
+.pi-fila.ag .pi-relleno{background:var(--t-ag)}
+.pi-relleno u{position:absolute;top:0;bottom:0;left:var(--x);width:var(--w);text-decoration:none}
+.pi-relleno u.par{background-image:repeating-linear-gradient(135deg,var(--t-par) 0 3.5px,var(--t-par2) 3.5px 8px)}
+.pi-relleno u.ret{background:var(--t-par)}
+/* Puntos sin numero: el numero vive en su etiqueta. En el agente se amontonan a proposito;
+   el borde del color del papel es lo que deja ver que son ocho y no una mancha. */
+.pi-hito{position:absolute;left:var(--x);top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;
+  border-radius:50%;background:var(--t-hum);border:2px solid var(--t-sup);
+  transition:opacity .3s ease}
+.pi-fila.ag .pi-hito{background:var(--t-ag)}
+.pi-hito.dec{background:var(--t-dec);width:14px;height:14px;margin:-7px 0 0 -7px}
+
+/* Las paradas: debajo de la barra de la persona, porque encima esta su escalera */
+.pi-pausas{position:relative;height:50px;margin-top:2px}
+.pi-pausa{position:absolute;left:var(--x);top:11px;transform:translateX(-50%);width:max-content;max-width:230px;
+  display:grid;gap:1px;justify-items:center;text-align:center;
+  background:var(--t-sup);border:1.5px dashed var(--t-par);border-radius:13px;padding:5px 12px;
+  font-size:12.5px;font-weight:700;line-height:1.25;letter-spacing:-.01em;color:var(--t-txt);
+  transition:opacity .3s ease}
+.pi-pausa i{font-style:normal;font-size:11px;font-weight:700;color:var(--t-ap);line-height:1.3;text-wrap:balance}
+.pi-pausa b{display:flex;align-items:center;gap:6px;font-weight:700}
+.pi-pausa svg{flex:none;color:var(--t-par)}
+.pi-pausa::after{content:"";position:absolute;left:50%;top:-11px;width:1.5px;height:11px;
+  background-image:repeating-linear-gradient(to bottom,var(--t-par) 0 3px,transparent 3px 6px)}
+
+/* El corte: donde acaba el carril de abajo, arriba todavia se esta leyendo */
+.pi-corte{margin:10px 0 0;font-size:0}
+.pi-corte span{position:relative;display:inline-block;margin-left:var(--x);max-width:min(620px,100%);
+  padding-left:12px;font-size:12.5px;font-weight:700;line-height:1.35;letter-spacing:-.01em;color:var(--t-txt);text-wrap:pretty}
+.pi-corte span::before{content:"";position:absolute;left:0;top:-16px;bottom:2px;width:1.5px;
+  background-image:repeating-linear-gradient(to bottom,var(--t-ag) 0 3px,transparent 3px 6px)}
+
+.pi[data-anim="1"] .pi-hito:not(.on),.pi[data-anim="1"] .pi-paso:not(.on),.pi[data-anim="1"] .pi-pausa:not(.on){opacity:0}
+
+.pi-btn{justify-self:end;display:inline-flex;align-items:center;gap:7px;background:none;border:1.5px solid var(--t-bor);
+  border-radius:999px;padding:8px 15px;font-family:inherit;font-size:12.5px;font-weight:700;color:var(--t-txt);cursor:pointer;transition:border-color .18s,color .18s}
+.pi-btn:hover{border-color:var(--t-ag);color:var(--t-ag)}
+.pi-pie{margin:9px 2px 0;font-size:11.5px;line-height:1.5;color:#8A8F99;font-weight:600}
+
+@media (max-width:860px){
+  .pi-esc .sm{display:inline}
+  .pi-esc .lg{display:none}
+  .pi-quien{font-size:13.5px}
+  .pi-reloj{font-size:15.5px}
+  /* La escalera pasa a lista: el contraste lo siguen contando las dos barras */
+  /* Orden en columna: barra, el corte que la comenta, los pasos y por ultimo las paradas */
+  .pi-pasos{position:static;height:auto;display:grid;gap:5px;order:3;margin-top:12px}
+  .pi-paso,.pi-paso.der{position:static;transform:none;white-space:normal;box-shadow:none;
+    font-size:12.5px;justify-content:flex-start}
+  .pi-paso::after{display:none}
+  .pi-paso i{margin-left:auto;padding-left:8px;white-space:nowrap}
+  .pi-barra{order:1}
+  .pi-pausas{position:static;height:auto;display:grid;gap:6px;order:4;margin-top:11px}
+  .pi-pausa{position:static;transform:none;width:auto;max-width:none;justify-items:stretch;text-align:left;padding:6px 11px}
+  .pi-pausa b{justify-content:flex-start}
+  .pi-pausa::after{display:none}
+  .pi-corte{order:2;margin-top:11px}
+  .pi-corte span{margin-left:0;padding-left:11px}
+  .pi-corte span::before{top:2px;background-image:repeating-linear-gradient(to bottom,var(--t-ag) 0 3px,transparent 3px 6px)}
+  .pi-hito{width:10px;height:10px;margin:-5px 0 0 -5px;border-width:1.5px}
+  .pi-hito.dec{width:12px;height:12px;margin:-6px 0 0 -6px}
+}
+@media (prefers-reduced-motion:reduce){.pi-btn{display:none}}
+:root[data-theme="dark"] .pi{--t-sup:#181B20;--t-bor:#2E333B;--t-txt:#F2F1EC;--t-via:#22262D;--t-via-ag:#16243C;--t-ag:#5C9BFF;--t-hum:#7C838F;--t-par:#454B55;--t-par2:#2A2F37}
+:root[data-theme="dark"] .pi-paso{box-shadow:0 5px 14px rgba(0,0,0,.35)}
+:root[data-theme="dark"] .pi-paso.fin b{background:#3A2C10;color:#F5B14C}
+
+/* ---- Cifras ---- */
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px}
+.cifra{border:1.5px solid #E2E0D9;border-radius:18px;padding:18px 20px;display:grid;gap:7px;align-content:start}
+.cifra .n{font-family:'Newsreader',serif;font-size:clamp(30px,3vw,38px);line-height:1;color:#1F6FEB;letter-spacing:-.02em}
+.cifra .q{margin:0;font-size:13.5px;line-height:1.45;color:#4A4F5A}
+.cifra a{font-size:12px;font-weight:700;color:#1F6FEB;line-height:1.35;margin-top:auto;padding-top:8px;border-top:1px solid #EEF0F3}
+
+/* ---- Reglas del cómputo, plegadas ---- */
+.reg{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:8px;align-content:start;align-items:start}
+.reg details{border:1.5px solid #E2E0D9;border-radius:14px;border-top:1.5px solid #E2E0D9;padding:12px 16px;margin-top:0;background:#fff}
+.reg details summary{font-size:14.5px;font-weight:700;color:#1B1D22;letter-spacing:-.01em;justify-content:space-between;gap:12px}
+.reg details summary .mas{color:#1F6FEB;flex:none}
+.reg details .dd{font-size:13.5px;margin-top:4px}
+.reg details .dd b{display:block;font-weight:800;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#8A8F99;margin-top:9px;margin-bottom:1px}
+
+/* ---- FAQ ---- */
+.faq details{border:1.5px solid #E2E0D9;border-radius:16px;border-top:1.5px solid #E2E0D9;padding:14px 20px;margin-top:0}
+.faq details summary{font-size:15.5px;font-weight:700;color:#1B1D22;letter-spacing:-.01em;justify-content:space-between}
+.faq details summary .mas{color:#1F6FEB}
+.faq details .dd{font-size:14.5px;margin-top:11px}
+
+/* ---- Gráficos ---- */
+.graf{border:1.5px solid #E2E0D9;border-radius:22px;background:#fff;padding:20px 22px 18px;display:grid;align-content:start}
+.graf h3{margin:0 0 4px;font-size:16.5px;font-weight:700;letter-spacing:-.015em;line-height:1.25}
+.graf .res{margin:0 0 14px;font-size:13.5px;line-height:1.45;color:#4A4F5A}
+.graf svg{width:100%;height:auto;display:block}
+.leyenda{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;font-size:12px;font-weight:600;color:#4A4F5A}
+.leyenda i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;vertical-align:0}
+
+/* ==== v7 · bloques nuevos de la plantilla ==== */
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+
+/* 2 · Qué sabe */
+.sabe{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:14px;align-items:start}
+.sabe-col{border:1.5px solid #E2E0D9;border-radius:22px;background:#fff;padding:20px clamp(16px,2vw,22px);display:grid;gap:14px;align-content:start}
+.sabe-cab{display:flex;align-items:flex-start;gap:12px}
+.sabe-cab h3{margin:0;font-size:17px;font-weight:700;letter-spacing:-.015em;line-height:1.25}
+.sabe-cab p{margin:3px 0 0;font-size:13px;color:#8A8F99;font-weight:600;line-height:1.4}
+.ic{flex:none;width:36px;height:36px;border-radius:11px;background:#EEF4FF;color:#1F6FEB;display:grid;place-items:center}
+.sabe-col .reg{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.sabe-col .reg details{background:#FBFAF7}
+.dato{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;padding-top:13px;border-top:1px solid #EEF0F3}
+.dato strong{display:block;font-size:14.5px;line-height:1.3;letter-spacing:-.01em;margin-bottom:3px}
+.dato span:not(.ic){font-size:13.5px;line-height:1.45;color:#4A4F5A}
+@media (max-width:900px){.sabe{grid-template-columns:1fr}}
+
+/* 2b · Ficha del asunto: un asunto concreto, como lo ve el agente */
+.as{border:1.5px solid #E2E0D9;border-radius:18px;overflow:hidden;background:#fff}
+.as-top{background:#1B1D22;color:#fff;padding:13px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.as-top small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#7FB0FF;margin-bottom:3px}
+.as-top strong{display:block;font-size:15px;line-height:1.3;letter-spacing:-.01em}
+.as-fic{flex:none;font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#1B1D22;background:#F4F3EF;border-radius:999px;padding:4px 9px}
+.as-kv{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #EEF0F3}
+.as-kv > div{padding:11px 16px;display:grid;gap:2px;align-content:start}
+.as-kv > div:nth-child(odd){border-right:1px solid #EEF0F3}
+.as-kv > div:nth-child(-n+2){border-bottom:1px solid #EEF0F3}
+.as-et{font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#8A8F99}
+.as-kv strong{font-size:14px;line-height:1.3;letter-spacing:-.01em}
+.as-kv span:last-child{font-size:12.5px;line-height:1.4;color:#4A4F5A}
+.as-bl{padding:13px 16px;border-bottom:1px solid #EEF0F3;display:grid;gap:10px}
+.as-proc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));position:relative}
+.as-proc::before{content:"";position:absolute;left:6px;right:calc(100% / 6);top:6px;height:2px;background:#1F6FEB}
+.as-proc li{position:relative;padding-top:20px;font-size:11.5px;font-weight:700;line-height:1.25;color:#4A4F5A;padding-right:4px}
+.as-proc li::before{content:"";position:absolute;left:0;top:0;width:10px;height:10px;border-radius:50%;background:#1F6FEB;border:2px solid #fff;box-shadow:0 0 0 1.5px #1F6FEB}
+.as-proc li i{display:block;font-style:normal;font-size:10.5px;font-weight:600;color:#8A8F99;margin-top:2px}
+.as-proc li.hoy{color:#1B1D22}
+.as-proc li.hoy::before{background:#fff;box-shadow:0 0 0 2px #1F6FEB,0 0 0 6px rgba(31,111,235,.16)}
+.as-proc li.hoy i{color:#1F6FEB;font-weight:700}
+.as-proc li.cor{color:#96660E}
+.as-proc li.cor::before{background:#F5B14C;box-shadow:0 0 0 1.5px #F5B14C}
+.as-proc li.cor i{color:#96660E}
+.as-hist{display:grid;gap:8px}
+.as-h{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;font-size:13px;line-height:1.45;color:#4A4F5A}
+.as-h b{font-size:11.5px;font-weight:800;color:#8A8F99;font-variant-numeric:tabular-nums;padding-top:1px}
+.as-h em{font-style:normal;font-weight:700;color:#1B1D22}
+.as-h.nuevo b{color:#1F6FEB}
+.as-av{margin:13px 16px;border-radius:14px;background:#FFF3DF;border:1.5px solid #F5B14C;padding:12px 14px;display:grid;gap:4px}
+.as-av small{font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#96660E;display:flex;align-items:center;gap:6px}
+.as-av strong{font-size:14.5px;line-height:1.3;letter-spacing:-.01em;color:#1B1D22}
+.as-av span{font-size:13px;line-height:1.45;color:#4A4F5A}
+.as-pie{padding:0 16px 14px;display:grid;gap:6px}
+.as-pie p{margin:0;font-size:13px;line-height:1.45;color:#1B1D22;font-weight:600}
+.as-pie p.as-nota{font-size:11.5px;color:#8A8F99}
+@media (max-width:560px){
+  .as-kv{grid-template-columns:1fr}
+  .as-kv > div:nth-child(odd){border-right:0}
+  .as-kv > div:not(:last-child){border-bottom:1px solid #EEF0F3}
+  .as-proc{grid-template-columns:1fr;gap:7px}
+  .as-proc::before{left:5px;right:auto;top:6px;bottom:14px;width:2px;height:auto}
+  .as-proc li{padding:0 0 0 22px}
+  .as-proc li i{display:inline;margin:0 0 0 6px}
+  .as-h{grid-template-columns:54px minmax(0,1fr)}
+}
+
+/* 4 · Dónde se conecta */
+.con{display:grid;grid-template-columns:minmax(0,1fr) 56px minmax(170px,210px) 56px minmax(0,1fr);align-items:center;gap:0}
+.con-lado{display:grid;gap:8px}
+.con-et{font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#8A8F99;padding-left:2px}
+.sis{border:1.5px solid #E2E0D9;border-radius:16px;padding:12px 16px;display:grid;gap:2px;background:#fff}
+.sis strong{font-size:15px;letter-spacing:-.01em}
+.sis span{font-size:13px;line-height:1.4;color:#4A4F5A}
+.con-ag{border-radius:22px;background:#1F6FEB;color:#fff;padding:22px 18px;display:grid;justify-items:center;text-align:center;gap:4px;box-shadow:0 20px 44px rgba(31,111,235,.22)}
+.con-ag strong{font-size:17px;letter-spacing:-.015em}
+.con-ag span{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.82)}
+.con-fl{position:relative;height:2px;margin:0 8px;background:#1F6FEB}
+.con-fl::after{content:"";position:absolute;right:-2px;top:-5px;border-left:9px solid #1F6FEB;border-top:6px solid transparent;border-bottom:6px solid transparent}
+@media (max-width:860px){
+  .con{grid-template-columns:1fr;justify-items:stretch}
+  .con-fl{width:2px;height:30px;margin:8px auto}
+  .con-fl::after{right:auto;left:-5px;top:auto;bottom:-2px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:9px solid #1F6FEB;border-bottom:0}
+  .con-ag{padding:16px}
+}
+
+/* 5 · Dónde se detiene */
+.det{border-radius:28px;background:#1B1D22;color:#fff;padding:clamp(24px,3.4vw,44px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,3vw,40px);align-items:start}
+.det-k{margin:0 0 12px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.det-h{margin:0 0 14px;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(28px,3.2vw,42px);line-height:1.06;letter-spacing:-.025em;text-wrap:balance}
+.det-p{margin:0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.86);text-wrap:pretty}
+.det-l{border-left:3px solid var(--c);padding-left:18px}
+.det-l ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.det-l li{position:relative;padding-left:18px;font-size:15px;line-height:1.45;font-weight:600;color:#fff}
+.det-l li::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;border-radius:50%;background:var(--c)}
+.det-fin{margin:14px 0 0;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.86)}
+@media (max-width:900px){.det{grid-template-columns:1fr}}
+
+/* 6 · Por qué aporta valor */
+.valor{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:14px;align-items:start}
+.v-col{justify-self:start;margin-bottom:9px;font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#1F6FEB;background:#EEF4FF;border-radius:999px;padding:4px 10px}
+.num{display:grid;gap:12px}
+.num-f{display:grid;gap:4px;padding-top:12px;border-top:1px solid #EEF0F3}
+.num-f:first-child{border-top:0;padding-top:0}
+.num .n{font-family:'Newsreader',serif;font-size:clamp(30px,3vw,38px);line-height:1;color:#1F6FEB;letter-spacing:-.02em}
+.num p{margin:0;font-size:13.5px;line-height:1.45;color:#4A4F5A}
+.num a{font-size:12px;font-weight:700;color:#1F6FEB;line-height:1.35}
+.num-2{grid-template-columns:1fr 1fr;gap:4px 14px}
+.num-2 .n{font-size:clamp(22px,2.1vw,26px)}
+.num-2 a{grid-column:1/-1;margin-top:2px}
+
+/* 8 · Valor del tiempo liberado (nunca precio del agente ni ROI) */
+.val{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.08fr);gap:14px;align-items:stretch}
+.val-datos{display:grid;gap:6px;align-content:start}
+.val-c{border:1.5px solid #E2E0D9;border-radius:22px;background:#fff;padding:18px 20px;display:grid;gap:5px;align-content:start}
+.val-datos .val-c{grid-template-columns:112px minmax(0,1fr);grid-template-areas:"n tipo" "n t" "n s";column-gap:18px;row-gap:3px;align-items:center;padding:14px 20px;border-radius:18px}
+.val-datos .val-c .tipo{grid-area:tipo;margin-bottom:2px}
+.val-datos .val-c .val-n{grid-area:n}
+.val-datos .val-c .val-t{grid-area:t}
+.val-datos .val-c .val-s{grid-area:s}
+.val-n{font-family:'Newsreader',serif;font-size:clamp(34px,3.2vw,42px);line-height:1;letter-spacing:-.025em;color:#1B1D22}
+.val-n small{font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0;color:#8A8F99;margin-left:4px}
+.val-t{font-size:14.5px;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.val-s{font-size:12.5px;font-weight:600;color:#8A8F99;line-height:1.45}
+.val-s a{color:#1F6FEB;font-weight:700}
+.tipo{justify-self:start;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:3px 9px;margin-bottom:6px;border:1.5px dashed #B9BDC7;color:#6E7480}
+.val-op{align-self:center;font-family:'Newsreader',serif;font-size:34px;line-height:1;color:#8A8F99;text-align:center}
+.val-datos .val-op{font-size:24px;line-height:.8;padding:0}
+.val-res{background:#1B1D22;border-color:#1B1D22;color:#fff;padding:clamp(26px,3.4vw,48px);gap:14px;align-content:center;border-radius:28px}
+.val-res .val-n{font-size:clamp(64px,8.4vw,124px);line-height:.95;letter-spacing:-.04em;color:#7FB0FF;white-space:nowrap}
+.val-res .val-t{font-size:clamp(18px,1.7vw,23px);line-height:1.3;max-width:420px}
+.val-res .val-s{font-size:14px;color:rgba(255,255,255,.66);max-width:440px}
+.val-suelo{margin-top:8px;border-radius:18px;background:#fff;border:1.5px solid #E2E0D9;border-left:4px solid #1F6FEB;padding:15px 20px;display:grid;gap:5px}
+.val-suelo p{margin:0;font-size:15px;line-height:1.5;color:#1B1D22;font-weight:600;text-wrap:pretty}
+.val-suelo p.val-s{font-size:12.5px;color:#8A8F99}
+.roi-pie{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.roi-pie p{margin:0;font-size:14px;line-height:1.5;color:#4A4F5A;max-width:560px}
+@media (max-width:1000px){.val{grid-template-columns:1fr;gap:8px}.val-op.fl{transform:rotate(90deg);font-size:28px;line-height:1;padding:0}}
+@media (max-width:480px){.val-datos .val-c{grid-template-columns:96px minmax(0,1fr);column-gap:14px;padding:13px 16px}.val-res{padding:32px 24px 28px}.val-res .val-n{font-size:clamp(58px,17vw,76px);line-height:1}}
+@media (max-width:760px){section.faq{grid-template-columns:1fr !important}.faq > div:last-child{grid-template-columns:1fr !important}.val-c{padding:16px 18px}}
+
 </style>
-<noscript id="capas-noscript"><style>
-article[data-layer] > div{display:grid !important}
-</style></noscript>
 </head>
 <body>
-<div style="min-height: 100vh; display: flex; flex-direction: column; overflow-x: clip;"><header data-cabecera="comun" style="position: sticky; top: 0px; z-index: 50; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgb(238, 240, 243);">
-<nav aria-label="Principal" style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 40px); height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
-<a href="/" style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: -0.02em;"><img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height: clamp(26px, 2.6vw, 34px); width: auto; display: block;"/><img width="1182" height="198" srcset="/img/logo-ailitica-dark-600.webp 600w, /img/logo-ailitica-dark.webp 1182w" sizes="180px" alt="Ailitica" src="/img/logo-ailitica-dark.webp" style="height: clamp(22px, 2.2vw, 30px); width: auto; display: block;"/></a>
-<div class="nav-d" style="display: flex; gap: 6px; align-items: center; font-size: 14px; font-weight: 600; color: rgb(74, 79, 90); background: rgb(244, 243, 239); border-radius: 999px; padding: 4px;">
-<a class="cab-l" href="/#sectores" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Sectores</a>
-<a class="cab-l" href="/#areas" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Áreas</a>
-<a aria-current="page" href="/casos-de-uso/" style="color: rgb(27, 29, 34); padding: 8px 14px; border-radius: 999px; background: rgb(255, 255, 255);">Casos de uso</a>
-<a class="cab-l" href="/blog/" style="color: inherit; padding: 8px 14px; border-radius: 999px;">Blog</a>
+<div style="min-height:100vh;display:flex;flex-direction:column;overflow-x:clip">
+
+<header data-cabecera="comun" style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid #EEF0F3">
+<nav aria-label="Principal" style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px);height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+<a href="/" style="display:flex;align-items:center;gap:10px"><img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height:clamp(26px,2.6vw,34px);width:auto;display:block"/><img width="1182" height="198" alt="Ailitica" src="/img/logo-ailitica-dark.webp" style="height:clamp(22px,2.2vw,30px);width:auto;display:block"/></a>
+<div class="nav-d" style="display:flex;gap:6px;align-items:center;font-size:14px;font-weight:600;color:#4A4F5A;background:#F4F3EF;border-radius:999px;padding:4px">
+<a class="cab-l" href="/#sectores" style="color:inherit;padding:8px 14px;border-radius:999px">Sectores</a>
+<a class="cab-l" href="/#areas" style="color:inherit;padding:8px 14px;border-radius:999px">Áreas</a>
+<a aria-current="page" href="/casos-de-uso/" style="color:#1B1D22;padding:8px 14px;border-radius:999px;background:#fff">Casos de uso</a>
+<a class="cab-l" href="/blog/" style="color:inherit;padding:8px 14px;border-radius:999px">Blog</a>
 </div>
-<div style="display: flex; gap: 10px; align-items: center;">
-<a class="cab-roi" href="/calculadora-roi.html" style="font-size: 14px; font-weight: 700; padding: 11px 18px; border-radius: 999px; background: rgb(31, 111, 235); color: rgb(255, 255, 255); white-space: nowrap; flex-shrink: 0;">Calcula ROI</a>
-<button type="button" aria-label="Menú" aria-controls="menu-movil" aria-expanded="false" class="nav-b" data-nav-burger="1" style="display: none; background: rgb(244, 243, 239); border: none; border-radius: 999px; width: 42px; height: 42px; cursor: pointer; color: rgb(27, 29, 34); font-size: 18px; place-items: center;">≡</button>
+<div style="display:flex;gap:10px;align-items:center">
+<a class="cab-roi" href="#roi" style="font-size:14px;font-weight:700;padding:11px 18px;border-radius:999px;background:#1F6FEB;color:#fff;white-space:nowrap;flex-shrink:0">Calcula ROI</a>
+<button type="button" aria-label="Menú" aria-controls="menu-movil" aria-expanded="false" class="nav-b" data-nav-burger="1" style="display:none;background:#F4F3EF;border:none;border-radius:999px;width:42px;height:42px;cursor:pointer;color:#1B1D22;font-size:18px;place-items:center">≡</button>
 </div>
-</nav><div hidden="" id="menu-movil" style="padding: 8px clamp(20px, 4vw, 40px) 24px; display: grid; gap: 12px; font-size: 20px; font-weight: 600;"><a href="/#sectores">Sectores</a><a href="/#areas">Áreas</a><a href="/casos-de-uso/">Casos de uso</a><a href="/blog/">Blog</a></div>
-<div style="height: 3px; background: rgb(238, 240, 243);"><div style="height: 100%; width: 0%; background: rgb(31, 111, 235); transition: width 0.15s linear;"></div></div></header><main style="flex: 1 1 0%;"><section style="max-width: 1240px; margin: 0px auto; padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 40px) clamp(32px, 4vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: center;">
-<div style="display: grid; gap: 22px;">
-<nav aria-label="Migas" style="display: flex; gap: 8px; font-size: 13px; font-weight: 600; color: rgb(138, 143, 153); flex-wrap: wrap;"><a href="/casos-de-uso/" style="color: rgb(138, 143, 153);">Casos de uso</a><span>/</span><a href="/casos-de-uso/#area-back-office" style="color: rgb(138, 143, 153);">Back-office</a><span>/</span><span style="color: rgb(27, 29, 34);">Todos los sectores</span></nav>
-<h1 style="margin: 0px; font-family: Newsreader, serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 72px); line-height: 1; letter-spacing: -0.03em; text-wrap: balance;">Conciliar facturas</h1>
-<p style="margin: 0px; font-family: Newsreader, serif; font-style: italic; font-size: clamp(20px, 2vw, 26px); line-height: 1.3; color: rgb(74, 79, 90); text-wrap: pretty;">El cruce entre factura, pedido y albarán que se come los últimos días del mes.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px;"><a href="/casos-de-uso/#area-back-office" style="font-size: 13px; font-weight: 700; padding: 7px 12px; border-radius: 999px; background: rgb(238, 244, 255); color: rgb(31, 111, 235);">Back-office</a><a href="/casos-de-uso/" style="font-size: 13px; font-weight: 700; padding: 7px 12px; border-radius: 999px; background: rgb(244, 243, 239); color: rgb(74, 79, 90);">Todos los sectores</a></div>
-<p style="margin: 0px; font-size: 16.5px; line-height: 1.6; color: rgb(74, 79, 90); text-wrap: pretty; max-width: 560px;">Cada factura de proveedor debe coincidir con un pedido y una entrega. Cuando coincide, es trabajo mecánico; cuando no, es una investigación. Un agente hace el cruce al recibir la factura, contabiliza las que cuadran y prepara las que no con toda la información para que una persona decida.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;"><a class="hv2" href="/contacto.html" style="background: rgb(27, 29, 34); color: rgb(255, 255, 255); padding: 15px 26px; border-radius: 999px; font-weight: 700; font-size: 15px;">Quiero este agente</a><a class="hv3" href="/calculadora-roi.html" style="padding: 15px 22px; border-radius: 999px; font-weight: 700; font-size: 15px; border: 1.5px solid rgb(226, 224, 217);">Calcular el ROI →</a></div>
+</nav>
+<div hidden="" id="menu-movil" style="padding:8px clamp(20px,4vw,40px) 24px;display:grid;gap:12px;font-size:20px;font-weight:600"><a href="/#sectores">Sectores</a><a href="/#areas">Áreas</a><a href="/casos-de-uso/">Casos de uso</a><a href="/blog/">Blog</a></div>
+<div style="height:3px;background:#EEF0F3"><div style="height:100%;width:0%;background:#1F6FEB;transition:width .15s linear"></div></div>
+</header>
+
+<main style="flex:1 1 0%">
+
+
+<section style="max-width:1240px;margin:0 auto;padding:clamp(28px,4vw,52px) clamp(20px,4vw,40px) clamp(24px,3vw,36px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(28px,4vw,60px);align-items:center">
+<div style="display:grid;gap:18px">
+<nav aria-label="Migas" style="display:flex;gap:8px;font-size:13px;font-weight:600;color:#8A8F99;flex-wrap:wrap"><a href="/casos-de-uso/" style="color:#8A8F99">Casos de uso</a><span>/</span><a href="/casos-de-uso/#area-back-office" style="color:#8A8F99">Back-office</a><span>/</span><span style="color:#1B1D22">Todos los sectores</span></nav>
+<h1 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(38px,4.8vw,64px);line-height:1;letter-spacing:-.03em;text-wrap:balance">Conciliar facturas</h1>
+<p style="margin:0;font-family:'Newsreader',serif;font-style:italic;font-size:clamp(19px,1.9vw,25px);line-height:1.3;color:#4A4F5A;text-wrap:pretty">«torn. M8 galv.» es tu tornillo M8 galvanizado. Ningún BUSCARV lo encuentra.</p>
+<p style="margin:0;font-size:16.5px;line-height:1.6;color:#4A4F5A;text-wrap:pretty;max-width:520px">Agente de IA que concilia las facturas de proveedor: lee cada factura, venga con el formato que venga, casa cada línea con su pedido y su albarán al precio pactado, y deja lista para contabilizar la que cuadra. En un fabricante de estructuras metálicas, por ejemplo, una sola factura puede juntar tres albaranes y cobrar por kilo lo que se pidió por barra.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><a class="hv2" href="#cta" style="background:#1B1D22;color:#fff;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px">Quiero este agente</a><a class="hv3" href="#roi" style="padding:14px 20px;border-radius:999px;font-weight:700;font-size:15px;border:1.5px solid #E2E0D9">Lo que vale el tiempo →</a></div>
 </div>
-<div style="border-radius: 28px; background: rgb(27, 29, 34); color: rgb(255, 255, 255); padding: clamp(22px, 3vw, 32px); display: grid; gap: 18px; align-content: start; min-height: 380px; box-shadow: rgba(27, 29, 34, 0.18) 0px 30px 60px;">
-<div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(127, 176, 255);"><span style="display: flex; gap: 8px; align-items: center;"><span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(127, 176, 255); animation: 1.4s ease-in-out 0s infinite normal none running blink;"></span>Agente trabajando</span><span style="color: rgb(138, 143, 153);">09:10</span></div>
-<div style="display: grid; gap: 10px;">
-<div style="display: grid; grid-template-columns: 22px minmax(0px, 1fr); gap: 12px; align-items: start; opacity: 1; transform: none; transition: opacity 0.5s, transform 0.5s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; font-weight: 800; border: 1.5px solid rgb(255, 255, 255); background: transparent; color: rgb(255, 255, 255); transition: 0.4s;"></span>
-<div style="display: grid; gap: 2px;"><span style="font-size: 14.5px; font-weight: 600; line-height: 1.35; color: rgb(255, 255, 255);">Factura INV-78421 recibida</span><span style="font-size: 11.5px; color: rgb(138, 143, 153); font-weight: 600;">09:10</span></div>
+
+<div style="display:grid;gap:9px">
+<div style="border-radius:26px;background:#1B1D22;color:#fff;padding:clamp(20px,2.6vw,28px);display:grid;gap:15px;align-content:start;box-shadow:0 30px 60px rgba(27,29,34,.18)">
+<div style="display:flex;justify-content:space-between;align-items:center;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7FB0FF"><span style="display:flex;gap:8px;align-items:center"><span style="width:8px;height:8px;border-radius:50%;background:#7FB0FF;animation:blink 1.4s ease-in-out infinite"></span>Agente trabajando</span><span style="color:#8A8F99">09:18</span></div>
+
+<div style="display:grid;gap:9px">
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:2px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Factura detectada en el buzón de facturas: un PDF de Almacén de Hierros Muestra</span><span style="font-size:11.5px;color:#7FB0FF;font-weight:600;line-height:1.35">sin número de albarán en ninguna línea</span><span style="font-size:11px;color:#8A8F99;font-weight:600">09:13</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:2px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Leída la factura: tres albaranes en una, catorce líneas</span><span style="font-size:11.5px;color:#7FB0FF;font-weight:600;line-height:1.35">«torn. M8 galv.» es el tornillo M8 galvanizado del pedido</span><span style="font-size:11px;color:#8A8F99;font-weight:600">09:14</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:2px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Pedido, tres albaranes de recepción y tarifa pactada reunidos</span><span style="font-size:11.5px;color:#7FB0FF;font-weight:600;line-height:1.35">entregas del 5, el 12 y el 19 de septiembre, firmadas en la nave 2</span><span style="font-size:11px;color:#8A8F99;font-weight:600">09:15</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:1px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:rgba(255,255,255,.72)">Líneas casadas con su albarán y su precio · 12 de 14</span><span style="font-size:11px;color:#8A8F99;font-weight:600">09:17</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:1px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Lo que cuadra, listo para contabilizar; consulta al proveedor y aviso a Inés</span><span style="font-size:11px;color:#8A8F99;font-weight:600">09:18</span></div></div>
 </div>
-<div style="display: grid; grid-template-columns: 22px minmax(0px, 1fr); gap: 12px; align-items: start; opacity: 0.3; transform: translateY(4px); transition: opacity 0.5s, transform 0.5s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; font-weight: 800; border: 1.5px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255); transition: 0.4s;"></span>
-<div style="display: grid; gap: 2px;"><span style="font-size: 14.5px; font-weight: 600; line-height: 1.35; color: rgb(185, 189, 199);">Datos extraídos · 12 líneas</span><span style="font-size: 11.5px; color: rgb(138, 143, 153); font-weight: 600;">09:12</span></div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid rgba(255,255,255,.12);padding-top:14px">
+<div style="background:rgba(255,255,255,.06);border-radius:13px;padding:11px 13px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A8F99">Casadas</span><strong style="font-size:14px;line-height:1.3;color:#fff">12 de 14 líneas, listas para contabilizar</strong></div>
+<div style="background:rgba(255,255,255,.06);border-radius:13px;padding:11px 13px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A8F99">Sin casar</span><strong style="font-size:14px;line-height:1.3;color:#fff">El tubo, cobrado por kilo, y unos portes</strong></div>
 </div>
-<div style="display: grid; grid-template-columns: 22px minmax(0px, 1fr); gap: 12px; align-items: start; opacity: 0.3; transform: translateY(4px); transition: opacity 0.5s, transform 0.5s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; font-weight: 800; border: 1.5px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255); transition: 0.4s;"></span>
-<div style="display: grid; gap: 2px;"><span style="font-size: 14.5px; font-weight: 600; line-height: 1.35; color: rgb(185, 189, 199);">Cruce con pedido OC-2290 y albarán</span><span style="font-size: 11.5px; color: rgb(138, 143, 153); font-weight: 600;">09:14</span></div>
+
+<div style="background:#F5B14C;color:#1B1D22;border-radius:15px;padding:13px 15px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase">Aquí se detiene el agente</span><strong style="font-size:15px;line-height:1.3">Aceptar las dos diferencias o pedir la rectificativa, y aprobar el pago</strong></div>
 </div>
-<div style="display: grid; grid-template-columns: 22px minmax(0px, 1fr); gap: 12px; align-items: start; opacity: 0.3; transform: translateY(4px); transition: opacity 0.5s, transform 0.5s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; font-weight: 800; border: 1.5px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255); transition: 0.4s;"></span>
-<div style="display: grid; gap: 2px;"><span style="font-size: 14.5px; font-weight: 600; line-height: 1.35; color: rgb(185, 189, 199);">Todo cuadra → contabilizada</span><span style="font-size: 11.5px; color: rgb(138, 143, 153); font-weight: 600;">09:16</span></div>
+<p style="margin:0;padding:0 6px;font-size:11.5px;line-height:1.45;color:#8A8F99;font-weight:600">Ejemplo ilustrativo, construido para enseñar cómo trabaja con una factura de proveedor que junta tres albaranes.</p>
 </div>
-<div style="display: grid; grid-template-columns: 22px minmax(0px, 1fr); gap: 12px; align-items: start; opacity: 0.3; transform: translateY(4px); transition: opacity 0.5s, transform 0.5s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; font-weight: 800; border: 1.5px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255); transition: 0.4s;"></span>
-<div style="display: grid; gap: 2px;"><span style="font-size: 14.5px; font-weight: 600; line-height: 1.35; color: rgb(185, 189, 199);">Diferencia de 340 € → a revisión con detalle</span><span style="font-size: 11.5px; color: rgb(138, 143, 153); font-weight: 600;">09:18</span></div>
-</div>
-</div>
-<div style="margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 14px; display: grid; gap: 4px; font-size: 13px; color: rgb(185, 189, 199);"><span>Persona al mando</span><strong style="color: rgb(255, 255, 255); line-height: 1.4;">Aprobar las discrepancias y hablar con el proveedor cuando hace falta</strong></div>
-</div></section><section aria-labelledby="ficha-h" style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 40px) clamp(40px, 6vw, 64px);">
-<div style="border: 1.5px solid rgb(226, 224, 217); border-radius: 24px; padding: clamp(20px, 3vw, 32px); display: grid; gap: 18px;">
-<h2 id="ficha-h" style="margin: 0px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Ficha del agente en 20 segundos</h2>
-<dl style="margin: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px 24px;">
-<div style="display: grid; gap: 4px;"><dt style="font-size: 12px; font-weight: 700; color: rgb(138, 143, 153);">Tarea</dt><dd style="margin: 0px; font-size: 15px; font-weight: 600; line-height: 1.4;">Conciliar facturas</dd></div>
-<div style="display: grid; gap: 4px;"><dt style="font-size: 12px; font-weight: 700; color: rgb(138, 143, 153);">Área · Sector</dt><dd style="margin: 0px; font-size: 15px; font-weight: 600; line-height: 1.4;">Back-office · Todos los sectores</dd></div>
-<div style="display: grid; gap: 4px;"><dt style="font-size: 12px; font-weight: 700; color: rgb(138, 143, 153);">Entrada</dt><dd style="margin: 0px; font-size: 15px; line-height: 1.4; color: rgb(74, 79, 90);">Factura INV-78421 recibida</dd></div>
-<div style="display: grid; gap: 4px;"><dt style="font-size: 12px; font-weight: 700; color: rgb(138, 143, 153);">Salida</dt><dd style="margin: 0px; font-size: 15px; line-height: 1.4; color: rgb(74, 79, 90);">Factura contabilizada o discrepancia documentada</dd></div>
-<div style="display: grid; gap: 4px;"><dt style="font-size: 12px; font-weight: 700; color: rgb(138, 143, 153);">Sistemas</dt><dd style="margin: 0px; font-size: 15px; line-height: 1.4; color: rgb(74, 79, 90);">ERP / contabilidad · Correo · OCR · Banco</dd></div>
-<div style="display: grid; gap: 4px;"><dt style="font-size: 12px; font-weight: 700; color: rgb(138, 143, 153);">Supervisión humana</dt><dd style="margin: 0px; font-size: 15px; line-height: 1.4; color: rgb(74, 79, 90);">Aprobar las discrepancias y hablar con el proveedor cuando hace falta.</dd></div>
-<div style="display: grid; gap: 4px;"><dt style="font-size: 12px; font-weight: 700; color: rgb(138, 143, 153);">Tiempo liberado (estimación)</dt><dd style="margin: 0px; font-size: 15px; line-height: 1.4; color: rgb(74, 79, 90);">≈ 112 h / mes (estimación prudente)</dd></div>
-</dl>
-</div></section><section aria-labelledby="anatomia-h" style="background: rgb(244, 243, 239);">
-<div style="max-width: 1240px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(20px, 4vw, 40px); display: grid; gap: 40px;">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: end;">
-<div><p style="margin: 0px 0px 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(31, 111, 235);">Anatomía del agente</p><h2 id="anatomia-h" style="margin: 0px; font-family: Newsreader, serif; font-weight: 400; font-size: clamp(32px, 4vw, 54px); line-height: 1.05; letter-spacing: -0.025em; text-wrap: balance;">Cuatro capas. Lo que sabe, lo que hace, dónde actúa y dónde se detiene.</h2></div>
-<p style="margin: 0px; color: rgb(74, 79, 90); line-height: 1.55; font-size: 16px; max-width: 440px; justify-self: end;">Así diseñamos cada agente en Ailitica. Las cuatro capas se definen contigo antes de escribir una línea de código.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: start;">
-<div aria-hidden="true" class="r2" style="position: sticky; top: 96px; display: grid; gap: 8px;">
-<button style="text-align: left; font: inherit; border: none; cursor: pointer; border-radius: 18px; padding: 18px 20px; display: grid; grid-template-columns: 44px minmax(0px, 1fr) auto; gap: 14px; align-items: center; background: rgb(31, 111, 235); color: rgb(255, 255, 255); box-shadow: rgba(31, 111, 235, 0.22) 0px 14px 34px; transform: translateX(6px); transition: 0.45s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-family: Newsreader, serif; font-size: 22px; background: rgba(255, 255, 255, 0.16); color: rgb(255, 255, 255); transition: 0.45s;">01</span>
-<span style="display: grid; gap: 2px;"><strong style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Contexto</strong><span style="font-size: 13px; opacity: 0.75;">Lo que sabe de tu negocio</span></span>
-<span style="font-size: 12px; font-weight: 700; opacity: 1; transition: opacity 0.3s;">→</span>
-</button>
-<button style="text-align: left; font: inherit; border: none; cursor: pointer; border-radius: 18px; padding: 18px 20px; display: grid; grid-template-columns: 44px minmax(0px, 1fr) auto; gap: 14px; align-items: center; background: rgb(255, 255, 255); color: rgb(27, 29, 34); box-shadow: none; transform: none; transition: 0.45s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-family: Newsreader, serif; font-size: 22px; background: rgb(244, 243, 239); color: rgb(31, 111, 235); transition: 0.45s;">02</span>
-<span style="display: grid; gap: 2px;"><strong style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Acción</strong><span style="font-size: 13px; opacity: 0.75;">Lo que hace solo, paso a paso</span></span>
-<span style="font-size: 12px; font-weight: 700; opacity: 0; transition: opacity 0.3s;">→</span>
-</button>
-<button style="text-align: left; font: inherit; border: none; cursor: pointer; border-radius: 18px; padding: 18px 20px; display: grid; grid-template-columns: 44px minmax(0px, 1fr) auto; gap: 14px; align-items: center; background: rgb(255, 255, 255); color: rgb(27, 29, 34); box-shadow: none; transform: none; transition: 0.45s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-family: Newsreader, serif; font-size: 22px; background: rgb(244, 243, 239); color: rgb(31, 111, 235); transition: 0.45s;">03</span>
-<span style="display: grid; gap: 2px;"><strong style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Conexión</strong><span style="font-size: 13px; opacity: 0.75;">Dónde lee y escribe</span></span>
-<span style="font-size: 12px; font-weight: 700; opacity: 0; transition: opacity 0.3s;">→</span>
-</button>
-<button style="text-align: left; font: inherit; border: none; cursor: pointer; border-radius: 18px; padding: 18px 20px; display: grid; grid-template-columns: 44px minmax(0px, 1fr) auto; gap: 14px; align-items: center; background: rgb(255, 255, 255); color: rgb(27, 29, 34); box-shadow: none; transform: none; transition: 0.45s cubic-bezier(0.22, 0.8, 0.3, 1);">
-<span style="width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-family: Newsreader, serif; font-size: 22px; background: rgb(244, 243, 239); color: rgb(31, 111, 235); transition: 0.45s;">04</span>
-<span style="display: grid; gap: 2px;"><strong style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Gobierno</strong><span style="font-size: 13px; opacity: 0.75;">Dónde se detiene y quién decide</span></span>
-<span style="font-size: 12px; font-weight: 700; opacity: 0; transition: opacity 0.3s;">→</span>
-</button>
-<div style="display: flex; gap: 8px; align-items: center; padding: 10px 20px 0px; font-size: 12.5px; color: rgb(138, 143, 153); font-weight: 600;"><span style="width: 8px; height: 8px; border-radius: 50%; background: rgb(31, 111, 235); animation: 1.4s ease-in-out 0s infinite normal none running blink;"></span><span data-capa-leyenda="">El agente parte de tu contexto, no de cero</span><span data-capa-leyenda="" hidden>Ejecuta la tarea completa dentro de tus sistemas</span><span data-capa-leyenda="" hidden>Actúa donde ya trabaja tu equipo</span><span data-capa-leyenda="" hidden>Sabe cuándo parar y a quién preguntar</span></div>
-</div>
-<div style="display: grid; gap: 12px;">
-<article class="r3" data-layer="0" style="background: rgb(255, 255, 255); border-radius: 22px; padding: 26px; display: grid; gap: 14px; border: 1.5px solid rgb(31, 111, 235); transition: border-color 0.4s; cursor: default;"><h3 style="margin: 0px; display: flex; gap: 10px; align-items: baseline; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;"><span style="font-family: Newsreader, serif; color: rgb(31, 111, 235);">01</span>Contexto · lo que sabe<span class="r4" style="margin-left: auto; font-size: 14px; display: none; opacity: 0.6;">−</span></h3><div style="display: grid; gap: 14px;"><ul style="margin: 0px; padding: 0px; list-style: none; display: grid; gap: 8px;"><li style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: rgb(74, 79, 90);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(31, 111, 235); flex-shrink: 0; margin-top: 9px;"></span>Tu plan contable y cómo se imputa cada tipo de gasto</li><li style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: rgb(74, 79, 90);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(31, 111, 235); flex-shrink: 0; margin-top: 9px;"></span>Tolerancias de importe y cantidad que aceptas</li><li style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: rgb(74, 79, 90);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(31, 111, 235); flex-shrink: 0; margin-top: 9px;"></span>Qué proveedores suelen facturar con diferencias</li></ul></div></article>
-<article class="r5" data-layer="1" style="background: rgb(255, 255, 255); border-radius: 22px; padding: 26px; display: grid; gap: 14px; border: 1.5px solid rgb(255, 255, 255); transition: border-color 0.4s; cursor: default;"><h3 style="margin: 0px; display: flex; gap: 10px; align-items: baseline; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;"><span style="font-family: Newsreader, serif; color: rgb(31, 111, 235);">02</span>Acción · lo que hace solo<span class="r6" style="margin-left: auto; font-size: 14px; display: none; opacity: 0.6;">+</span></h3><div class="r7" style="display: grid; gap: 14px;"><ol style="margin: 0px; padding: 0px; list-style: none; display: grid; gap: 8px;"><li style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: rgb(74, 79, 90);"><span style="width: 20px; height: 20px; border-radius: 50%; background: rgb(238, 244, 255); color: rgb(31, 111, 235); font-size: 11px; font-weight: 800; display: grid; place-items: center; flex-shrink: 0; margin-top: 2px;">1</span>Extrae los datos de la factura y los cruza con pedido y albarán</li><li style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: rgb(74, 79, 90);"><span style="width: 20px; height: 20px; border-radius: 50%; background: rgb(238, 244, 255); color: rgb(31, 111, 235); font-size: 11px; font-weight: 800; display: grid; place-items: center; flex-shrink: 0; margin-top: 2px;">2</span>Contabiliza las que cuadran dentro de la tolerancia</li><li style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: rgb(74, 79, 90);"><span style="width: 20px; height: 20px; border-radius: 50%; background: rgb(238, 244, 255); color: rgb(31, 111, 235); font-size: 11px; font-weight: 800; display: grid; place-items: center; flex-shrink: 0; margin-top: 2px;">3</span>Prepara las discrepancias con el detalle línea a línea</li></ol></div></article>
-<article class="r8" data-layer="2" style="background: rgb(255, 255, 255); border-radius: 22px; padding: 26px; display: grid; gap: 14px; border: 1.5px solid rgb(255, 255, 255); transition: border-color 0.4s; cursor: default;"><h3 style="margin: 0px; display: flex; gap: 10px; align-items: baseline; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;"><span style="font-family: Newsreader, serif; color: rgb(31, 111, 235);">03</span>Conexión · dónde actúa<span class="r9" style="margin-left: auto; font-size: 14px; display: none; opacity: 0.6;">+</span></h3><div class="r10" style="display: grid; gap: 14px;"><div style="display: flex; flex-wrap: wrap; gap: 8px;"><span style="font-size: 13.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; background: rgb(244, 243, 239);">ERP / contabilidad</span><span style="font-size: 13.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; background: rgb(244, 243, 239);">Correo</span><span style="font-size: 13.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; background: rgb(244, 243, 239);">OCR</span><span style="font-size: 13.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; background: rgb(244, 243, 239);">Banco</span></div><p style="margin: 0px; font-size: 14.5px; line-height: 1.5; color: rgb(74, 79, 90);">Sin sistema paralelo: el agente lee y escribe en las herramientas que ya usa tu equipo. Integrar significa actuar, no solo consultar.</p></div></article>
-<article class="r11" data-layer="3" style="background: rgb(27, 29, 34); color: rgb(255, 255, 255); border-radius: 22px; padding: 26px; display: grid; gap: 14px; border: 1.5px solid rgb(27, 29, 34); transition: border-color 0.4s; cursor: default;"><h3 style="margin: 0px; display: flex; gap: 10px; align-items: baseline; font-size: 20px; font-weight: 700; letter-spacing: -0.02em;"><span style="font-family: Newsreader, serif; color: rgb(127, 176, 255);">04</span>Gobierno · dónde se detiene<span class="r12" style="margin-left: auto; font-size: 14px; display: none; opacity: 0.6;">+</span></h3><div class="r13" style="display: grid; gap: 14px;"><ul style="margin: 0px; padding: 0px; list-style: none; display: grid; gap: 8px;"><li style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: rgba(255, 255, 255, 0.88);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(245, 177, 76); flex-shrink: 0; margin-top: 9px;"></span>Ninguna factura con diferencia se paga sin aprobación humana</li><li style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: rgba(255, 255, 255, 0.88);"><span style="width: 6px; height: 6px; border-radius: 50%; background: rgb(245, 177, 76); flex-shrink: 0; margin-top: 9px;"></span>Proveedores nuevos → verificación de datos bancarios por una persona</li></ul><p style="margin: 0px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.12); font-size: 14.5px; line-height: 1.5; color: rgba(255, 255, 255, 0.88);"><strong style="color: rgb(255, 255, 255);">Queda para las personas:</strong> Aprobar las discrepancias y hablar con el proveedor cuando hace falta. Cada corrección se convierte en regla para la siguiente vez.</p></div></article>
+</section>
+
+<section style="background:#F4F3EF">
+<div class="sec">
+<p class="kicker">Qué sabe</p>
+<h2 class="h2">Rectificativa, abono en la factura siguiente <em style="color:#1F6FEB">o factura que no vale</em></h2>
+<div class="sabe">
+
+<div class="sabe-col">
+<div class="sabe-cab"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0z"/><path d="M19 7l-3 7a3 3 0 0 0 6 0z"/><path d="M8 21h8"/></svg></span><div><h3>Cuándo se corrige una factura, y cómo</h3><p>Tres reglas del Reglamento de facturación que se miran con una factura que no cuadra.</p></div></div>
+<div class="reg">
+
+<details><summary><span>La diferencia que el proveedor reconoce se corrige con una rectificativa, no de palabra</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>La diferencia se compensa a ojo, con un descuento de palabra en la factura siguiente, y la contabilidad y el IVA quedan descuadrados.<b>Con el agente</b>Cuando el proveedor acepta la diferencia, deja anotado que corresponde una rectificativa y la enlaza a la factura original en cuanto llega.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2012-14696#a15" target="_blank" rel="noopener"><em>Art. 15.2 del RD 1619/2012.</em></a> «[...] será obligatoria la expedición de una factura rectificativa en los casos en que las cuotas impositivas repercutidas se hubiesen determinado incorrectamente o se hubieran producido las circunstancias que, según lo dispuesto en el artículo 80 de la Ley del Impuesto, dan lugar a la modificación de la base imponible».</p></details>
+<details><summary><span>Si se devuelve material y hay un suministro posterior al mismo cliente, con el mismo tipo de IVA, el abono puede ir en esa factura</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>Llega un abono que no dice a qué factura corrige, se aplica a la que parece, y el saldo con el proveedor deja de cuadrar.<b>Con el agente</b>Enlaza el abono a la devolución y a la factura que corrige; si no lo ve claro, lo marca y no lo aplica.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2012-14696#a15" target="_blank" rel="noopener"><em>Art. 15.2 del RD 1619/2012.</em></a> «No obstante, cuando la modificación de la base imponible sea consecuencia de la devolución de mercancías o de envases y embalajes que se realicen con ocasión de un posterior suministro que tenga el mismo destinatario y por la operación en la que se entregaron se hubiese expedido factura, no será necesaria la expedición de una factura rectificativa, sino que se podrá practicar la rectificación en la factura que se expida por dicho suministro [...]».</p></details>
+<details><summary><span>A la factura que le falta un dato obligatorio se le pide la rectificativa</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>Se contabiliza y se paga una factura sin el NIF completo o sin la base imponible desglosada, y queda en los libros una factura que no cumple los requisitos.<b>Con el agente</b>Antes de darla por casada, comprueba que trae los datos que exige la ley, y si falta alguno, la marca para pedir la rectificativa.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2012-14696#a15" target="_blank" rel="noopener"><em>Art. 15.1 del RD 1619/2012.</em></a> «Deberá expedirse una factura rectificativa en los casos en que la factura original no cumpla alguno de los requisitos que se establecen en los artículos 6 ó 7 [...]».</p></details>
+
+<p style="margin:2px 2px 0;font-size:11.5px;line-height:1.5;color:#8A8F99;font-weight:600">Textos legales consultados en el BOE el 22 de septiembre de 2026.</p>
+
 </div>
 </div>
-</div></section><section aria-labelledby="faq-h" style="max-width: 1240px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(20px, 4vw, 40px) 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: start;">
-<div><p style="margin: 0px 0px 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(31, 111, 235);">Preguntas frecuentes</p><h2 id="faq-h" style="margin: 0px; font-family: Newsreader, serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -0.025em; text-wrap: balance;">Lo que nos preguntan sobre este agente</h2></div>
-<div style="display: grid; gap: 10px;">
-<details style="border: 1.5px solid rgb(226, 224, 217); border-radius: 18px; padding: 18px 22px;"><summary style="cursor: pointer; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; list-style: none; display: flex; justify-content: space-between; gap: 12px;"><span>¿Qué hace exactamente el agente para conciliar facturas?</span><span style="color: rgb(31, 111, 235);">+</span></summary><p style="margin: 12px 0px 0px; font-size: 15px; line-height: 1.55; color: rgb(74, 79, 90);">Extrae los datos de la factura y los cruza con pedido y albarán. Contabiliza las que cuadran dentro de la tolerancia. Prepara las discrepancias con el detalle línea a línea. Termina la tarea dentro de tus sistemas (ERP / contabilidad, Correo, OCR, Banco) y deja registro de cada paso.</p></details>
-<details style="border: 1.5px solid rgb(226, 224, 217); border-radius: 18px; padding: 18px 22px;"><summary style="cursor: pointer; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; list-style: none; display: flex; justify-content: space-between; gap: 12px;"><span>¿Qué queda para las personas?</span><span style="color: rgb(31, 111, 235);">+</span></summary><p style="margin: 12px 0px 0px; font-size: 15px; line-height: 1.55; color: rgb(74, 79, 90);">Aprobar las discrepancias y hablar con el proveedor cuando hace falta. Ninguna factura con diferencia se paga sin aprobación humana. Proveedores nuevos → verificación de datos bancarios por una persona. Cada corrección humana se convierte en regla para la siguiente vez.</p></details>
-<details style="border: 1.5px solid rgb(226, 224, 217); border-radius: 18px; padding: 18px 22px;"><summary style="cursor: pointer; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; list-style: none; display: flex; justify-content: space-between; gap: 12px;"><span>¿Cuánto tiempo puede liberar?</span><span style="color: rgb(31, 111, 235);">+</span></summary><p style="margin: 12px 0px 0px; font-size: 15px; line-height: 1.55; color: rgb(74, 79, 90);">Estimación prudente: unas 160 horas al mes dedicadas a esta tarea y una reducción del 70 %, es decir, unas 112 horas liberadas al mes. Puedes ajustar cada cifra en la calculadora de ROI.</p></details>
-<details style="border: 1.5px solid rgb(226, 224, 217); border-radius: 18px; padding: 18px 22px;"><summary style="cursor: pointer; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; list-style: none; display: flex; justify-content: space-between; gap: 12px;"><span>¿Es un chatbot?</span><span style="color: rgb(31, 111, 235);">+</span></summary><p style="margin: 12px 0px 0px; font-size: 15px; line-height: 1.55; color: rgb(74, 79, 90);">No. Un chatbot responde preguntas; este agente recibe una entrada (factura INV-78421 recibida), decide según tus protocolos, actúa en tus sistemas y entrega un resultado: factura contabilizada o discrepancia documentada.</p></details>
-</div></section><section style="max-width: 1240px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(20px, 4vw, 40px);">
-<div style="border-radius: 32px; background: rgb(238, 244, 255); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; padding: clamp(28px, 4vw, 56px); align-items: center;">
-<div style="display: grid; gap: 18px;"><p style="margin: 0px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(31, 111, 235);">Retorno estimado</p><h2 style="margin: 0px; font-family: Newsreader, serif; font-weight: 400; font-size: clamp(30px, 3.8vw, 50px); line-height: 1.05; letter-spacing: -0.025em; text-wrap: balance;">Un ejemplo prudente. Ajústalo a tus números.</h2><p style="margin: 0px; color: rgb(74, 79, 90); line-height: 1.55; font-size: 16px; max-width: 520px;">Partimos de rangos conservadores. La calculadora te deja cambiar cada cifra.</p><a class="hv1" href="/calculadora-roi.html" style="justify-self: start; background: rgb(31, 111, 235); color: rgb(255, 255, 255); padding: 15px 26px; border-radius: 999px; font-weight: 700; font-size: 15px;">Calcular con mis datos</a></div>
-<div style="background: rgb(255, 255, 255); border-radius: 24px; padding: 28px; display: grid; gap: 14px; box-shadow: rgba(31, 111, 235, 0.1) 0px 20px 50px;">
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: rgb(74, 79, 90); border-bottom: 1px solid rgb(238, 240, 243); padding-bottom: 10px;"><span>Horas humanas en esta tarea / mes</span><strong style="color: rgb(27, 29, 34);">160 h</strong></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: rgb(74, 79, 90); border-bottom: 1px solid rgb(238, 240, 243); padding-bottom: 10px;"><span>Reducción que asume el agente</span><strong style="color: rgb(27, 29, 34);">70 %</strong></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: rgb(74, 79, 90); border-bottom: 1px solid rgb(238, 240, 243); padding-bottom: 10px;"><span>Horas liberadas / mes</span><strong style="color: rgb(27, 29, 34);">112 h</strong></div>
-<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; padding-top: 4px;"><span style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(138, 143, 153); flex: 1 1 120px; min-width: 0px;">Valor anual · a 35 €/h</span><span style="font-family: Newsreader, serif; font-size: clamp(34px, 3.4vw, 44px); line-height: 1; color: rgb(31, 111, 235); white-space: nowrap;">47.040 €</span></div>
+
+<div class="sabe-col">
+<div class="sabe-cab"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10l6 6v10H4z"/><path d="M14 4v6h6"/><path d="M8 14h8"/><path d="M8 18h5"/></svg></span><div><h3>La factura 26/1187, casada línea a línea</h3><p>Tres entregas de septiembre en un solo PDF</p></div></div>
+<article class="as" aria-label="Ficha de un asunto de ejemplo, con datos inventados">
+<div class="as-top"><div><small>Factura 26/1187 · Correo, en PDF</small><strong>Perfiles y tornillería · tres entregas de septiembre</strong></div><span class="as-fic">Ficticio</span></div>
+<div class="as-kv">
+<div><span class="as-et">Proveedor</span><strong>Almacén de Hierros Muestra, S.L.</strong><span>Perfiles, tubo y tornillería, con tarifa pactada en enero</span></div>
+<div><span class="as-et">Recepción</span><strong>Nave 2 de Estructuras Ejemplo</strong><span>Donde se firmaron los tres albaranes</span></div>
+<div><span class="as-et">Lleva la factura</span><strong>Inés, cuentas a pagar</strong><span>Recibe lo casado y las líneas marcadas</span></div>
+<div><span class="as-et">Si no contesta, se escala a</span><strong>Gloria, jefa de administración</strong><span>Con la factura, los albaranes y la tarifa al lado</span></div>
 </div>
-</div></section><section style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 40px) clamp(56px, 8vw, 96px); display: grid; gap: 24px;">
-<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px;"><h2 style="margin: 0px; font-family: Newsreader, serif; font-weight: 400; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.05; letter-spacing: -0.025em;">Casos relacionados</h2><a href="/casos-de-uso/" style="font-size: 14px; font-weight: 700; color: rgb(31, 111, 235);">Ver toda la biblioteca →</a></div>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px;">
-<a class="hv4" href="/casos-de-uso/resolver-tickets-de-principio-a-fin.html" style="display: grid; gap: 12px; padding: 22px; border-radius: 22px; background: rgb(244, 243, 239); color: inherit; align-content: start;"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px; font-weight: 700;"><span style="color: rgb(31, 111, 235);">Atención al cliente</span><span style="color: rgb(138, 143, 153);">Todos los sectores</span></div><h3 style="margin: 0px; font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15;">Resolver tickets de principio a fin</h3><p style="margin: 0px; font-size: 14px; line-height: 1.5; color: rgb(74, 79, 90);">La mayoría repetitiva que impide que la cola llegue a cero.</p></a>
-<a class="hv4" href="/casos-de-uso/responder-consultas-de-estado.html" style="display: grid; gap: 12px; padding: 22px; border-radius: 22px; background: rgb(244, 243, 239); color: inherit; align-content: start;"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px; font-weight: 700;"><span style="color: rgb(31, 111, 235);">Atención al cliente</span><span style="color: rgb(138, 143, 153);">Todos los sectores</span></div><h3 style="margin: 0px; font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15;">Responder consultas de estado</h3><p style="margin: 0px; font-size: 14px; line-height: 1.5; color: rgb(74, 79, 90);">El "¿dónde está mi pedido / expediente / solicitud?" preguntado cien veces al día.</p></a>
-<a class="hv4" href="/casos-de-uso/clasificar-y-derivar-contactos.html" style="display: grid; gap: 12px; padding: 22px; border-radius: 22px; background: rgb(244, 243, 239); color: inherit; align-content: start;"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px; font-weight: 700;"><span style="color: rgb(31, 111, 235);">Atención al cliente</span><span style="color: rgb(138, 143, 153);">Todos los sectores</span></div><h3 style="margin: 0px; font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15;">Clasificar y derivar contactos</h3><p style="margin: 0px; font-size: 14px; line-height: 1.5; color: rgb(74, 79, 90);">Los correos y llamadas que caen en el buzón equivocado y pierden días.</p></a>
-</div></section><section id="contacto" style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(12px, 2vw, 24px) 24px;">
-<div style="position: relative; border-radius: 32px; overflow: hidden; background: rgb(27, 29, 34); color: rgb(255, 255, 255); padding: clamp(28px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; align-items: center;">
-<div style="display: grid; gap: 16px;"><p style="margin: 0px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(127, 176, 255);">Siguiente paso</p><h2 style="margin: 0px; font-family: Newsreader, serif; font-weight: 400; font-size: clamp(30px, 3.8vw, 50px); line-height: 1.05; letter-spacing: -0.025em;">Empieza por esta tarea. <em style="color: rgb(127, 176, 255);">Una persona te responde.</em></h2><p style="margin: 0px; color: rgba(255, 255, 255, 0.85); line-height: 1.55; font-size: 16px; max-width: 460px;">En 48 horas te enseñamos cómo funcionaría este agente en tu empresa y qué retorno puedes esperar. Sin compromiso.</p></div>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: end;"><a class="hv5" href="/contacto.html" style="background: rgb(255, 255, 255); color: rgb(27, 29, 34); padding: 15px 26px; border-radius: 999px; font-weight: 700; font-size: 15px;">Hablemos de tu proceso</a></div>
-</div></section></main><footer style="border-top: 1px solid rgb(238, 240, 243); background: rgb(255, 255, 255);">
-<div style="max-width: 1240px; margin: 0px auto; padding: 44px clamp(20px, 4vw, 40px) 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px; font-size: 13.5px;">
-<div style="display: grid; gap: 12px; align-content: start;"><a href="/" style="display: flex; align-items: center; gap: 10px;"><img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height: 26px; width: auto; display: block;"/><img width="1182" height="198" srcset="/img/logo-ailitica-dark-600.webp 600w, /img/logo-ailitica-dark.webp 1182w" sizes="180px" alt="Ailitica" src="/img/logo-ailitica-dark.webp" style="height: 22px; width: auto; display: block;"/></a><p style="margin: 0px; color: rgb(138, 143, 153); line-height: 1.5; max-width: 260px;">Agentes de IA a medida para tu empresa. El humano decide.</p></div>
-<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Sectores</span><a href="/casos-de-uso/#sector-inmobiliario" style="color: rgb(74, 79, 90);">Inmobiliario</a><a href="/casos-de-uso/#sector-construccion-e-ingenieria" style="color: rgb(74, 79, 90);">Construcción e ingeniería</a><a href="/casos-de-uso/#sector-farmaceutico" style="color: rgb(74, 79, 90);">Farmacéutico</a><a href="/casos-de-uso/#sector-salud-y-clinicas" style="color: rgb(74, 79, 90);">Salud y clínicas</a><a href="/casos-de-uso/#sector-legal-y-despachos" style="color: rgb(74, 79, 90);">Legal y despachos</a><a href="/casos-de-uso/#sector-logistica" style="color: rgb(74, 79, 90);">Logística</a></div>
-<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Áreas</span><a href="/casos-de-uso/#area-atencion-al-cliente" style="color: rgb(74, 79, 90);">Atención al cliente</a><a href="/casos-de-uso/#area-operaciones" style="color: rgb(74, 79, 90);">Operaciones</a><a href="/casos-de-uso/#area-back-office" style="color: rgb(74, 79, 90);">Back-office</a><a href="/casos-de-uso/#area-ventas" style="color: rgb(74, 79, 90);">Ventas</a></div>
-<div style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Ailitica</span><a href="/casos-de-uso/" style="color: rgb(74, 79, 90);">Casos de uso</a><a href="/calculadora-roi.html" style="color: rgb(74, 79, 90);">Calculadora ROI</a><a href="/blog/" style="color: rgb(74, 79, 90);">Blog</a><a href="/contacto.html" style="color: rgb(74, 79, 90);">Contacto</a></div><div data-col="blog" style="display: grid; gap: 8px; align-content: start;"><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138, 143, 153);">Blog</span><a href="/blog/categoria/fundamentos/" style="color: rgb(74, 79, 90);">Fundamentos</a><a href="/blog/categoria/automatizacion/" style="color: rgb(74, 79, 90);">Automatización y procesos</a><a href="/blog/categoria/gobernanza-y-control/" style="color: rgb(74, 79, 90);">Gobernanza y control</a><a href="/blog/categoria/normativa-ia/" style="color: rgb(74, 79, 90);">Normativa IA</a><a href="/blog/categoria/estrategia/" style="color: rgb(74, 79, 90);">Estrategia y decisión</a><a href="/blog/por-que-fallan-pilotos-agentes-ia.html" style="color: rgb(74, 79, 90);">Por qué fallan los pilotos</a></div>
+<div class="as-bl">
+<span class="as-et">En qué punto está</span>
+<ol class="as-proc">
+<li>Pedido<i>1 sep</i></li>
+<li>Albaranes<i>5, 12 y 19 sep</i></li>
+<li class="hoy">Factura casada<i>hoy, 09:18 · 12 de 14 líneas</i></li>
+<li class="cor">Contabilizar y pagar<i>lo decide Inés</i></li>
+</ol>
 </div>
-<div style="border-top: 1px solid rgb(238, 240, 243);">
-<div style="max-width: 1240px; margin: 0px auto; padding: 18px clamp(20px, 4vw, 40px); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; font-size: 12px; color: rgb(138, 143, 153);">
+<div class="as-bl">
+<span class="as-et">Lo hablado con el proveedor</span>
+<div class="as-hist">
+<div class="as-h"><b>8 ene</b><span><em>Correo.</em> Compras cierra la tarifa del año con el proveedor: el tubo, por barra, y los portes, incluidos.</span></div>
+<div class="as-h"><b>19 sep</b><span><em>Albarán.</em> Tercera entrega del pedido, firmada en la nave 2.</span></div>
+<div class="as-h nuevo"><b>Hoy</b><span><em>Factura por correo.</em> Una sola factura para las tres entregas, con el tubo por kilo y una línea de portes.</span></div>
+</div>
+</div>
+<div class="as-av" role="note"><small><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Algo no cuadra</small><strong>El tubo, por kilo, y unos portes que no se pactaron</strong><span>La tarifa de enero fija el tubo por barra y los portes incluidos. La factura cobra el tubo por kilo, y pasado a barras sale por encima de lo pactado; además, añade una línea de portes. El agente deja las dos líneas sin casar, con la tarifa y los albaranes al lado, y se las pone delante a Inés.</span></div>
+<div class="as-pie">
+<p>Si Inés apunta que con este proveedor la chapa sí se pactó por kilo, el agente deja de marcarla en las facturas siguientes.</p>
+<p class="as-nota">Factura de ejemplo: el proveedor, las personas y las fechas son inventados.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="sec">
+<p class="kicker">Cómo habla</p>
+<h2 class="h2">Una consulta al proveedor, <em style="color:#1F6FEB">con la línea, el albarán y la tarifa adjuntos</em></h2>
+<div class="rej">
+<div class="card"><h3>Tono</h3><p style="margin:0;font-size:13.5px;line-height:1.5;color:#4A4F5A">El de administración con un proveedor de siempre: el dato primero y sin reproche. Pregunta, no acusa ni rechaza. Siempre desde la cuenta de administración, con copia a quien lleva la factura, y con la línea de la factura, el albarán y la tarifa pactada adjuntos.</p></div>
+<div class="card"><h3>Mensaje de ejemplo</h3><p style="margin:0;font-size:13.5px;line-height:1.5;color:#4A4F5A;font-style:italic">«Buenos días:
+
+En vuestra factura 26/1187, que junta los albaranes del 5, el 12 y el 19 de septiembre, hay dos líneas que no nos cuadran con lo pactado:
+
+1. El tubo viene facturado por kilo. En la tarifa de enero lo tenemos por barra.
+2. Hay una línea de portes, y en esa tarifa los portes van incluidos.
+
+¿Nos lo podéis revisar? Os adjunto las dos líneas, los albaranes y la tarifa. Inés, de cuentas a pagar, os contestará en cuanto lo veamos.
+
+Un saludo,
+Administración · Estructuras Ejemplo»</p></div>
+<div class="card"><h3>Nunca dice</h3><ul style="margin:0;padding-left:18px;display:grid;gap:4px;font-size:13px;line-height:1.4;color:#4A4F5A"><li>Nunca dice que la factura se retiene o que no se va a pagar.</li><li>Nunca acepta una diferencia, un abono ni un descuento.</li><li>Nunca pide por su cuenta la rectificativa: eso lo decide administración.</li><li>Nunca da una fecha de pago ni un importe.</li><li>Nunca discute nada que no esté en la factura, el pedido, el albarán o la tarifa.</li></ul></div>
+</div>
+</section>
+
+<section class="sec">
+<p class="kicker">Dónde se conecta</p>
+<h2 class="h2">Lee la factura en el buzón <em style="color:#1F6FEB">y la deja casada en el ERP</em></h2>
+<div class="con">
+<div class="con-lado">
+<span class="con-et">Lee de</span>
+<div class="sis"><strong>Buzón de facturas</strong><span>La factura de cada proveedor, en PDF, escaneada o en formato electrónico</span></div>
+<div class="sis"><strong>ERP</strong><span>El pedido, los albaranes de recepción y la tarifa pactada con cada proveedor</span></div>
+<div class="sis"><strong>Programa de captura de facturas</strong><span>Si ya lo tenéis, lo que ha sacado de cada factura</span></div>
+</div>
+<div class="con-fl" aria-hidden="true"></div>
+<div class="con-ag"><svg viewBox="0 0 34 34" width="44" height="44" aria-hidden="true" style="color:#1F6FEB"><circle cx="17" cy="17" r="16" fill="#fff"/><circle cx="17" cy="6.8" r="1.7" fill="currentColor"/><path d="M 17 8.2 V 10.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="10.2" y="10.6" width="13.6" height="12.8" rx="3.6" fill="currentColor"/><circle cx="14.3" cy="16.2" r="1.6" fill="#fff"/><circle cx="19.7" cy="16.2" r="1.6" fill="#fff"/></svg><strong>El agente</strong><span>Lee, casa y pregunta</span></div>
+<div class="con-fl" aria-hidden="true"></div>
+<div class="con-lado">
+<span class="con-et">Escribe y avisa en</span>
+<div class="sis"><strong>ERP</strong><span>La factura casada con su pedido y sus albaranes, lista para contabilizar, o con la línea que no cuadra marcada y su porqué</span></div>
+<div class="sis"><strong>Correo a administración</strong><span>El aviso a quien lleva la factura, con lo casado y lo pendiente</span></div>
+<div class="sis"><strong>Correo al proveedor</strong><span>La consulta sobre lo que no cuadra, desde la cuenta de administración</span></div>
+</div>
+</div>
+<p style="margin:16px 2px 0;font-size:14px;line-height:1.55;color:#4A4F5A;max-width:760px">Tus proveedores no tienen que dar acceso a nada: el agente trabaja desde tu lado. Hace falta el buzón donde llegan las facturas, un usuario en el ERP que vea pedidos, albaranes de recepción y tarifas y pueda dejar la factura casada sin contabilizarla, y permiso para escribir desde la cuenta de administración. Si ya tenéis un programa de captura de facturas, también acceso a lo que saca de cada una.</p>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(30px,3.8vw,48px)">
+<div class="det">
+<div class="det-c">
+<p class="det-k" style="color:#7FB0FF">Dónde se detiene</p>
+<h2 class="det-h">El pago y las diferencias <em style="color:#7FB0FF">son cosa de administración</em></h2>
+<p class="det-p">No aprueba el pago, no da por buena una diferencia y no hace el asiento: comprometer el dinero de la empresa y responder de la contabilidad es de administración. Entrega cada factura casada con su pedido y sus albaranes, y la que no cuadra, marcada línea a línea con su porqué, para que decidas: aquí explicamos <a href="/blog/ia-con-criterio-humano.html" style="color:#fff;text-decoration:underline;text-underline-offset:3px">por qué en una empresa el que decide es una persona</a>.</p>
+</div>
+<div class="det-c det-l" style="--c:#F5B14C">
+<p class="det-k" style="color:#F5B14C">Decide siempre la persona</p>
+<ul>
+<li>Aprobar el pago de la factura, o retenerlo</li>
+<li>Aceptar una diferencia de precio, de cantidad o de portes</li>
+<li>Pedir la rectificativa o dar por bueno un abono</li>
+<li>El asiento contable</li>
+</ul>
+</div>
+<div class="det-c det-l" style="--c:#7FB0FF">
+<p class="det-k" style="color:#7FB0FF">Cuándo deja una línea sin casar</p>
+<ul>
+<li>Una línea no casa con ningún albarán recibido</li>
+<li>El precio no es el de la tarifa pactada</li>
+<li>La factura va en otra unidad y la conversión deja dudas</li>
+<li>Un abono no dice a qué factura corrige</li>
+<li>La misma entrega aparece ya en otra factura</li>
+</ul>
+<p class="det-fin">No cuadra a ojo: deja la línea sin casar, con lo que dice la factura, lo que dicen el albarán y la tarifa, y por qué duda, y espera.</p>
+</div>
+</div>
+</section>
+
+<section style="background:#F4F3EF">
+<div class="sec">
+<p class="kicker">Dónde aporta valor</p>
+<h2 class="h2">Catorce líneas, tres albaranes <em style="color:#1F6FEB">y dos diferencias que no se escapan</em></h2>
+<div class="valor">
+
+<div class="graf">
+<span class="v-col">Lo que no hace un programa</span>
+<h3>Casa líneas que no se llaman igual</h3>
+<p class="res">Cada proveedor factura con sus palabras, sus abreviaturas y su formato. «torn. M8 galv.» no es el texto de tu pedido, y un BUSCARV no lo encuentra. El agente entiende qué material es cada línea y en qué unidad viene, antes de comparar nada.</p>
+<svg viewBox="0 0 440 200" role="img" aria-label="Tres líneas de una factura de proveedor frente a las líneas del pedido. «torn. M8 galv.» queda casada con el tornillo M8 galvanizado. El tubo facturado por kilo queda marcado porque el pedido va por barra. Una línea de portes queda marcada porque no está en el pedido">
+  <g font-family="Manrope,sans-serif" font-size="10" font-weight="800" letter-spacing="0.8" fill="#8A8F99" text-anchor="middle">
+    <text x="90" y="18">LA FACTURA</text>
+    <text x="350" y="18">EL PEDIDO</text>
+  </g>
+  <rect x="2" y="30" width="176" height="36" rx="10" fill="#FBF6EC" stroke="#E2E0D9" stroke-width="1.5"/>
+  <rect x="2" y="80" width="176" height="36" rx="10" fill="#FBF6EC" stroke="#E2E0D9" stroke-width="1.5"/>
+  <rect x="2" y="130" width="176" height="36" rx="10" fill="#FBF6EC" stroke="#E2E0D9" stroke-width="1.5"/>
+  <rect x="262" y="30" width="176" height="36" rx="10" fill="#EEF4FF" stroke="#1F6FEB" stroke-width="1.5"/>
+  <rect x="262" y="80" width="176" height="36" rx="10" fill="#FFF3DF" stroke="#F5B14C" stroke-width="1.5"/>
+  <rect x="262" y="130" width="176" height="36" rx="10" fill="#FFFFFF" stroke="#F5B14C" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <g font-family="Newsreader,serif" font-style="italic" font-size="15" fill="#1B1D22">
+    <text x="16" y="53">«torn. M8 galv.»</text>
+    <text x="16" y="103">«Tubo 40x40 · kg»</text>
+    <text x="16" y="153">«Portes»</text>
+  </g>
+  <g font-family="Manrope,sans-serif" font-size="11.5" font-weight="700" fill="#1B1D22">
+    <text x="274" y="53">Tornillo M8 galvanizado</text>
+    <text x="274" y="103">Tubo 40x40 · por barra</text>
+    <text x="274" y="153" fill="#96660E">No está en el pedido</text>
+  </g>
+  <line x1="178" y1="48" x2="262" y2="48" stroke="#1F6FEB" stroke-width="2"/>
+  <line x1="178" y1="98" x2="262" y2="98" stroke="#F5B14C" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="178" y1="148" x2="262" y2="148" stroke="#F5B14C" stroke-width="2" stroke-dasharray="5 4"/>
+  <g font-family="Manrope,sans-serif" font-size="10" font-weight="800" text-anchor="middle">
+    <text x="220" y="42" fill="#1F6FEB">casada</text>
+    <text x="220" y="92" fill="#96660E">otra unidad</text>
+    <text x="220" y="142" fill="#96660E">sin pactar</text>
+  </g>
+  <text x="438" y="192" text-anchor="end" font-family="Manrope,sans-serif" font-size="11" font-weight="600" fill="#8A8F99">Tres líneas de una factura ilustrativa.</text>
+</svg>
+<details>
+<summary><span class="mas">+</span>Por qué casar no es un BUSCARV</summary>
+<p class="dd">Porque un BUSCARV necesita que la factura y el pedido digan lo mismo, y casi nunca lo dicen. Sacar los datos de la factura ya lo hacen los programas de captura de facturas. Donde se atasca el trabajo es después: saber qué material es cada línea, de qué albarán sale y a qué precio se pactó. <em>El agente hace esa lectura, y deja la línea de la factura y la del pedido una al lado de la otra.</em> Es la diferencia que explicamos entre <a href="/blog/automatizacion-ia-vs-rpa.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">automatizar con IA y automatizar con RPA</a>.</p>
+</details>
+</div>
+
+<div class="graf">
+<span class="v-col">Lo que no hace un programa</span>
+<h3>Reparte la factura entre los albaranes que junta</h3>
+<p class="res">Una factura por tres entregas no dice de qué albarán es cada línea. El agente reparte las líneas entre los albaranes firmados en la nave, casa lo que cuadra y para en lo que nadie previó: la unidad cambiada, los portes que no tocaban. Lo que se acepta, lo decide administración.</p>
+<svg viewBox="0 0 440 204" role="img" aria-label="Una factura de catorce líneas que junta tres albaranes, sin decir de cuál es cada línea. El agente reparte las líneas: cinco casadas con el albarán del 5 de septiembre, cuatro con el del 12 y tres con el del 19. Dos quedan sin casar: el tubo cobrado por kilo y unos portes sin pactar">
+  <rect x="110" y="4" width="220" height="44" rx="12" fill="#FBF6EC" stroke="#E2E0D9" stroke-width="1.5"/>
+  <text x="220" y="22" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="800" letter-spacing="0.8" fill="#8A8F99">UNA FACTURA · 14 LÍNEAS</text>
+  <text x="220" y="39" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11.5" font-weight="600" fill="#4A4F5A">sin decir de qué albarán es cada una</text>
+  <path d="M220 48 L72 76 M220 48 L220 76 M220 48 L368 76" fill="none" stroke="#1F6FEB" stroke-width="2"/>
+  <rect x="2" y="76" width="140" height="52" rx="12" fill="#EEF4FF" stroke="#1F6FEB" stroke-width="1.5"/>
+  <rect x="150" y="76" width="140" height="52" rx="12" fill="#EEF4FF" stroke="#1F6FEB" stroke-width="1.5"/>
+  <rect x="298" y="76" width="140" height="52" rx="12" fill="#EEF4FF" stroke="#1F6FEB" stroke-width="1.5"/>
+  <g font-family="Manrope,sans-serif" font-size="10" font-weight="800" letter-spacing="0.8" fill="#1F6FEB" text-anchor="middle">
+    <text x="72" y="96">ALBARÁN 5 SEP</text>
+    <text x="220" y="96">ALBARÁN 12 SEP</text>
+    <text x="368" y="96">ALBARÁN 19 SEP</text>
+  </g>
+  <g font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="#1B1D22" text-anchor="middle">
+    <text x="72" y="116">5 líneas casadas</text>
+    <text x="220" y="116">4 líneas casadas</text>
+    <text x="368" y="116">3 líneas casadas</text>
+  </g>
+  <rect x="2" y="140" width="436" height="40" rx="12" fill="#FFF3DF" stroke="#F5B14C" stroke-width="1.5"/>
+  <text x="16" y="165" font-family="Manrope,sans-serif" font-size="11.5" font-weight="800" fill="#96660E">2 sin casar: el tubo cobrado por kilo y unos portes sin pactar</text>
+  <text x="438" y="198" text-anchor="end" font-family="Manrope,sans-serif" font-size="11" font-weight="600" fill="#8A8F99">Factura ilustrativa. Lo que se acepta, lo decide administración.</text>
+</svg>
+<details>
+<summary><span class="mas">+</span>Qué hace con lo que ninguna regla previó</summary>
+<p class="dd">Una factura que junta entregas, un abono que no dice a qué factura corrige, la misma entrega facturada dos veces, un precio de tarifa general que no es el pactado. Ninguna regla escrita de antemano los cubre todos. El agente casa lo que encaja con un albarán y con la tarifa, y en lo demás no elige: marca la línea, enseña las opciones y devuelve la decisión. Es el principio con el que explicamos <a href="/blog/como-evaluar-agente-ia-antes-de-confiar.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">cómo evaluar un agente de IA antes de confiar en él</a>.</p>
+</details>
+</div>
+
+<div class="graf">
+<span class="v-col">Frente a una persona</span>
+<h3>La última factura del cierre se mira igual que la primera</h3>
+<p class="res">Las facturas se juntan en el cierre de mes, y es entonces cuando una diferencia de precio pasa entre cientos. El agente compara cada línea con su pedido, su albarán y la tarifa pactada, igual la primera factura del mes que la última, y deja escrito con qué la comparó.</p>
+<svg viewBox="0 0 440 176" role="img" aria-label="Una línea de un mes con las facturas de proveedor que llegan: pocas al principio y muchas juntas al acercarse el cierre. Debajo, la misma comprobación para cada línea, sea la primera factura del mes o la última: pedido, albarán y tarifa pactada">
+  <line x1="20" y1="60" x2="420" y2="60" stroke="#1B1D22" stroke-width="2"/>
+  <path d="M44 50 v20 M82 50 v20 M120 50 v20 M160 50 v20 M198 50 v20 M236 50 v20 M270 50 v20 M298 50 v20 M320 50 v20 M338 50 v20 M352 50 v20 M364 50 v20 M374 50 v20 M383 50 v20 M391 50 v20 M398 50 v20 M404 50 v20 M410 50 v20 M415 50 v20" stroke="#4A4F5A" stroke-width="2"/>
+  <path d="M330 38 h90" stroke="#C97A00" stroke-width="2"/>
+  <g font-family="Manrope,sans-serif" font-size="10.5" font-weight="800">
+    <text x="20" y="30" fill="#1B1D22">Día 1</text>
+    <text x="420" y="30" text-anchor="end" fill="#C97A00">Cierre de mes: se juntan</text>
+  </g>
+  <text x="20" y="88" font-family="Manrope,sans-serif" font-size="10" font-weight="600" fill="#8A8F99">Cada marca, una factura de proveedor</text>
+  <rect x="2" y="104" width="436" height="44" rx="12" fill="#EEF4FF" stroke="#1F6FEB" stroke-width="1.5"/>
+  <text x="220" y="122" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="800" letter-spacing="0.8" fill="#1F6FEB">LA PRIMERA Y LA ÚLTIMA, IGUAL</text>
+  <text x="220" y="139" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="#1B1D22">Cada línea: su pedido · su albarán · la tarifa pactada</text>
+  <text x="438" y="170" text-anchor="end" font-family="Manrope,sans-serif" font-size="11" font-weight="600" fill="#8A8F99">Reparto ilustrativo.</text>
+</svg>
+<details>
+<summary><span class="mas">+</span>Por qué se guarda el cruce y no solo el asiento</summary>
+<p class="dd">Porque cuando un proveedor discute un abono meses después, lo que sirve es saber qué decía la factura, qué decían el pedido y el albarán, qué no cuadraba y quién lo cerró. Con el agente, cada factura queda en el ERP con todo eso enlazado, y la que no cuadraba, con la respuesta del proveedor al lado. Es lo que contamos al explicar <a href="/blog/auditoria-agente-ia-cada-dia.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">cómo auditar lo que decide un agente de IA cada día</a>.</p>
+</details>
+</div>
+
+
+
+</div>
+
+</div>
+</section>
+
+<section class="sec">
+<p class="kicker">Persona sola frente a persona asistida</p>
+<h2 class="h2">Casar una factura de proveedor, <em style="color:#1F6FEB">línea a línea y con el reloj en marcha</em></h2>
+<div class="pi" id="pistas">
+
+<div class="pi-esc" aria-hidden="true">
+<span style="--x:0%"><b class="lg" style="font-weight:700">Entra la factura</b><b class="sm" style="font-weight:700">0</b></span>
+</div>
+
+<div class="pi-fila" data-tot="10.5">
+<div class="pi-cab">
+<span class="pi-quien"><svg class="f-hum" viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="color:#6E7480"><circle cx="17" cy="17" r="15.4" fill="none" stroke="currentColor" stroke-width="2.2"></circle><circle cx="17" cy="12.8" r="4.2" fill="currentColor"></circle><path d="M 9.4 24.7 a 7.6 8 0 0 1 15.2 0 Z" fill="currentColor"></path></svg>Una persona sola</span>
+<span class="pi-reloj">10 min</span>
+</div>
+<div class="pi-pasos">
+<span class="pi-paso on" data-min="1.5" style="--x:14.29%;--f:0"><b>1</b>Ve que ha entrado la factura<i>1,5 min</i></span>
+<span class="pi-paso on" data-min="3" style="--x:28.57%;--f:1"><b>2</b>Lee la factura y entiende cada línea<i>1,5 min</i></span>
+<span class="pi-paso on" data-min="5" style="--x:47.62%;--f:2"><b>3</b>Busca el pedido, los albaranes y la tarifa pactada<i>2 min</i></span>
+<span class="pi-paso on" data-min="7" style="--x:66.67%;--f:3"><b>4</b>Casa cada línea con su albarán y su precio<i>2 min</i></span>
+<span class="pi-paso on der" data-min="8.5" style="--x:80.95%;--f:4"><b>5</b>La deja lista para contabilizar y pregunta por lo que no cuadra<i>1,5 min</i></span>
+<span class="pi-paso on fin der" data-min="10.5" style="--x:100.00%;--f:5"><b>D</b>Decide si acepta las diferencias y aprueba el pago<i>2 min</i></span>
+</div>
+<div class="pi-barra">
+<i class="pi-relleno" data-span="10.5" style="width:100.00%"></i>
+<span class="pi-hito on" data-min="1.5" style="--x:14.29%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="3" style="--x:28.57%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="5" style="--x:47.62%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="7" style="--x:66.67%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="8.5" style="--x:80.95%" aria-hidden="true"></span>
+<span class="pi-hito on dec" data-min="10.5" style="--x:100.00%" aria-hidden="true"></span>
+</div>
+</div>
+
+<div class="pi-fila ag" data-tot="5">
+<div class="pi-cab">
+<span class="pi-quien"><span class="par2"><svg class="f-hum" viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="color:#6E7480"><circle cx="17" cy="17" r="15.4" fill="var(--t-sup)" stroke="currentColor" stroke-width="2.2"></circle><circle cx="17" cy="12.8" r="4.2" fill="currentColor"></circle><path d="M 9.4 24.7 a 7.6 8 0 0 1 15.2 0 Z" fill="currentColor"></path></svg><svg class="f-ag" viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="color:#1F6FEB"><circle cx="17" cy="17" r="15.4" fill="var(--t-sup)" stroke="currentColor" stroke-width="2.2"></circle><circle cx="17" cy="6.8" r="1.7" fill="currentColor"></circle><path d="M 17 8.2 V 10.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><rect x="10.2" y="10.6" width="13.6" height="12.8" rx="3.6" fill="currentColor"></rect><circle cx="14.3" cy="16.2" r="1.6" fill="var(--t-sup)"></circle><circle cx="19.7" cy="16.2" r="1.6" fill="var(--t-sup)"></circle></svg></span>La misma persona, con el agente</span>
+<span class="pi-reloj">5 min</span>
+</div>
+<div class="pi-pasos">
+<span class="pi-paso on" data-min="0.5" style="--x:4.76%;--f:0"><b>1</b>Ve que ha entrado la factura<i>&lt; 1 min</i></span>
+<span class="pi-paso on" data-min="1" style="--x:9.52%;--f:1"><b>2</b>Lee la factura y entiende cada línea<i>&lt; 1 min</i></span>
+<span class="pi-paso on" data-min="1.5" style="--x:14.29%;--f:2"><b>3</b>Busca el pedido, los albaranes y la tarifa pactada<i>&lt; 1 min</i></span>
+<span class="pi-paso on" data-min="2.5" style="--x:23.81%;--f:3"><b>4</b>Casa cada línea con su albarán y su precio<i>1 min</i></span>
+<span class="pi-paso on" data-min="3" style="--x:28.57%;--f:4"><b>5</b>La deja lista para contabilizar y pregunta por lo que no cuadra<i>&lt; 1 min</i></span>
+<span class="pi-paso on fin" data-min="5" style="--x:47.62%;--f:5"><b>D</b>Decide si acepta las diferencias y aprueba el pago<i>2 min</i></span>
+</div>
+<div class="pi-barra">
+<i class="pi-relleno" data-span="5" style="width:47.62%"></i>
+<span class="pi-hito on" data-min="0.5" style="--x:4.76%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="1" style="--x:9.52%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="1.5" style="--x:14.29%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="2.5" style="--x:23.81%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="3" style="--x:28.57%" aria-hidden="true"></span>
+<span class="pi-hito on dec" data-min="5" style="--x:47.62%" aria-hidden="true"></span>
+</div>
+<p class="pi-corte" style="--x:47.62%"><span>Con el agente, en el minuto 5 está todo hecho, decisión incluida. Sin él, en el minuto 5 la persona acaba de buscar el pedido, los albaranes y la tarifa pactada.</span></p>
+</div>
+
+<button class="pi-btn" type="button"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.7 4.6v5.6h-5.6"></path></svg>Volver a verlo</button>
+</div>
+<p class="pi-pie">Ejemplo ilustrativo. Las barras son una factura media, que mezcla la de un solo albarán que cuadra a la primera con la que junta entregas y trae diferencias; la traza de arriba es de las largas. Los minutos de la persona son nuestro supuesto. La decisión dura lo mismo en las dos barras. El reloj va acelerado.</p>
+</section>
+
+<section id="roi" style="background:#F4F3EF">
+<div class="sec">
+<p class="kicker">Previsión de retorno</p>
+<h2 class="h2">Un cierre de mes <em style="color:#1F6FEB">con menos punteo a mano</em></h2>
+<div class="val">
+<div class="val-datos">
+<div class="val-c"><span class="tipo">Supuesto</span><span class="val-n">400</span><span class="val-t">facturas de proveedor al mes</span><span class="val-s">Nuestro supuesto para un fabricante de estructuras metálicas, como el del ejemplo, que compra perfiles, tubo y tornillería a sus proveedores.</span></div>
+<span class="val-op" aria-hidden="true">×</span>
+<div class="val-c"><span class="tipo">Las barras de arriba</span><span class="val-n">5,5<small>min</small></span><span class="val-t">ahorrados en cada una</span><span class="val-s">10,5 min a mano frente a 5 min con el agente, en una factura media</span></div>
+<span class="val-op" aria-hidden="true">=</span>
+<div class="val-c"><span class="tipo">Resultado</span><span class="val-n">36<small>h</small></span><span class="val-t">liberadas al mes</span><span class="val-s">70 h de trabajo al mes, con un 52 % menos</span></div>
+<div class="val-suelo">
+<p>Calculado con el coste laboral medio por hora del sector, según el INE (industria manufacturera, 2025T3 a 2026T2): 27,34 € la hora, cotizaciones incluidas. Pon el de tu empresa en la calculadora.</p>
+<p class="val-s">INE, Encuesta Trimestral de Coste Laboral, sección C (industria manufacturera), media de 2025T3 a 2026T2. <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=6036" target="_blank" rel="noopener" style="color:#1F6FEB;font-weight:700">INE · ETCL · 17-sep-2026 (2T 2026 definitivo) →</a></p>
+</div>
+<p class="val-s" style="margin:2px 2px 0">También libera 8.359 € al año en tiempo del equipo que queda libre.</p>
+</div>
+<span class="val-op fl" aria-hidden="true">→</span>
+<div class="val-c val-res"><span class="val-n">50<small>%</small></span><span class="val-t">menos tiempo por tarea</span><span class="val-s">De 10 a 5 minutos en cada tarea.</span></div>
+</div>
+<div class="roi-pie">
+<a class="hv2" href="/calculadora-roi.html" style="background:#1B1D22;color:#fff;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px">Calcúlalo con las facturas de tu empresa →</a>
+<p>Pon las facturas de proveedor que te llegan al mes y lo que te cuesta de verdad la hora de quien las concilia.</p>
+</div>
+</div>
+</section>
+
+
+<section aria-labelledby="faq-h" class="faq" style="max-width:1240px;margin:0 auto;padding:clamp(30px,3.8vw,48px) clamp(20px,4vw,40px);display:grid;grid-template-columns:minmax(240px,320px) minmax(0,1fr);gap:clamp(18px,2.6vw,32px);align-items:start">
+<div><p class="kicker">Preguntas frecuentes</p><h2 id="faq-h" class="h2" style="margin-bottom:0">Lo que nos preguntan <em style="color:#1F6FEB">sobre este agente</em></h2></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px;align-content:start">
+<details><summary><span>¿En qué se diferencia de un programa de captura de facturas o de un BUSCARV contra el pedido?</span><span class="mas">+</span></summary><p class="dd">Un programa de captura saca los datos de la factura, y un BUSCARV la cruza con el pedido si las dos dicen lo mismo. El agente hace lo de en medio: entiende que «torn. M8 galv.» es tu tornillo M8 galvanizado, reparte entre tres albaranes la factura que los junta y compara cada línea con la tarifa pactada.</p></details>
+<details><summary><span>¿Mis proveedores tienen que mandar la factura de otra forma, o tengo que cambiar de ERP?</span><span class="mas">+</span></summary><p class="dd">No. Tus proveedores siguen facturando como hoy, en PDF, escaneada o en formato electrónico, al buzón donde ya os llega. El agente lee ahí cada factura, busca el pedido, los albaranes y la tarifa en el ERP que ya usáis, y en ese mismo ERP la deja casada.</p></details>
+<details><summary><span>¿Qué cambia cuando la factura electrónica entre empresas sea obligatoria?</span><span class="mas">+</span></summary><p class="dd">Para el agente, poco: lleva cada dato al mismo campo del ERP, venga la factura en PDF, escaneada o en formato electrónico. La Ley 18/2022 hace obligatoria la factura electrónica entre empresas, pero sus efectos llegan al año o a los dos años de aprobarse el reglamento que la desarrolla, según la facturación de cada empresa, y la ley los supedita además a una autorización comunitaria sobre el IVA.</p></details>
+<details><summary><span>¿El agente accede a datos personales de las facturas que recibo?</span><span class="mas">+</span></summary><p class="dd">Sí. Para conciliar las facturas, el agente lee los documentos que necesita, y pueden contener datos personales: la factura de un proveedor autónomo lleva su nombre, su NIF y su domicilio. Tu empresa sigue siendo la responsable de esos datos y Ailitica los trata como encargada, con un contrato de encargo que fija por escrito, antes de empezar, dónde se guardan, qué proveedores intervienen y qué se hace con ellos al terminar.</p></details>
+<details><summary><span>¿Qué hace con un abono del proveedor que no dice a qué factura corrige?</span><span class="mas">+</span></summary><p class="dd">Lo busca por importe, material y fechas entre las facturas y devoluciones de ese proveedor. Si solo encaja con una, lo propone enlazado a ella y deja escrito por qué. Si encaja con varias, o con ninguna, no lo aplica: lo marca y, si hace falta, pregunta al proveedor desde la cuenta de administración.</p></details>
+<details><summary><span>¿Se da cuenta si la misma entrega viene facturada dos veces?</span><span class="mas">+</span></summary><p class="dd">Sí: cada albarán de recepción queda casado con la factura que lo cobra, así que si otra factura trae las líneas de un albarán ya casado, la marca como posible duplicada y enseña las dos. No la rechaza por su cuenta: puede ser una entrega parecida en otra fecha, y eso lo comprueba administración.</p></details>
+<details><summary><span>¿Qué hace con la factura que llega cuando el mes ya está cerrado en contabilidad?</span><span class="mas">+</span></summary><p class="dd">La casa igual que las demás, con su pedido y sus albaranes, y deja a la vista la fecha de recepción de la mercancía y la de la factura. En qué periodo se contabiliza lo decide administración; el agente se ocupa de que no se quede en el buzón esperando al cierre siguiente.</p></details>
+
+</div>
+</section>
+
+<section id="cta" style="max-width:1240px;margin:0 auto;padding:0 clamp(12px,2vw,24px) 20px">
+<div style="border-radius:32px;background:#1B1D22;color:#fff;padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;align-items:center">
+<div style="display:grid;gap:14px"><p style="margin:0;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7FB0FF">Siguiente paso</p><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.06;letter-spacing:-.025em">Empieza por esta tarea. <em style="color:#7FB0FF">Una persona te responde.</em></h2><p style="margin:0;color:rgba(255,255,255,.85);line-height:1.55;font-size:16px;max-width:460px">Háblanos de cómo os llegan hoy las facturas de proveedor y del ERP donde las contabilizáis, y vemos juntos qué casaría el agente a la primera y dónde se pararía a preguntar.</p></div>
+<div style="display:grid;gap:10px;justify-items:end;align-content:center"><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:end"><a class="hv5" href="/contacto.html" style="background:#fff;color:#1B1D22;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px">Hablemos de tu proceso →</a><a class="hv1" href="/calculadora-roi.html" style="background:#1F6FEB;color:#fff;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px">Calcular con mis datos →</a></div><span style="font-size:13px;color:#8A8F99;font-weight:600">En la calculadora, los números son los tuyos, no los nuestros.</span></div>
+</div>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:clamp(18px,2.2vw,26px) clamp(20px,4vw,40px) clamp(24px,3vw,36px);display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;justify-content:space-between">
+<div style="display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-size:14px"><span style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#8A8F99;margin-right:4px">Casos relacionados</span><a href="/casos-de-uso/controlar-albaranes-contra-pedidos.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Controlar albaranes contra pedidos</a><a href="/casos-de-uso/grabar-pedidos-de-clientes.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Grabar en el ERP los pedidos de clientes</a><a href="/casos-de-uso/gestionar-la-comunicacion-con-proveedores.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Gestionar la comunicación con proveedores</a></div>
+<a href="/casos-de-uso/" style="font-size:14px;font-weight:700;color:#1F6FEB">Ver toda la biblioteca →</a>
+</section>
+
+</main>
+
+<footer style="border-top:1px solid #EEF0F3;background:#fff">
+<div style="max-width:1240px;margin:0 auto;padding:44px clamp(20px,4vw,40px) 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;font-size:13.5px">
+<div style="display:grid;gap:12px;align-content:start"><a href="/" style="display:flex;align-items:center;gap:10px"><img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height:26px;width:auto;display:block"/><img width="1182" height="198" alt="Ailitica" src="/img/logo-ailitica-dark.webp" style="height:22px;width:auto;display:block"/></a><p style="margin:0;color:#8A8F99;line-height:1.5;max-width:260px">Agentes de IA a medida para tu empresa. El humano decide.</p></div>
+<div style="display:grid;gap:8px;align-content:start"><span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8F99">Sectores</span><a href="/casos-de-uso/#sector-inmobiliario" style="color:#4A4F5A">Inmobiliario</a><a href="/casos-de-uso/#sector-construccion-e-ingenieria" style="color:#4A4F5A">Construcción e ingeniería</a><a href="/casos-de-uso/#sector-farmaceutico" style="color:#4A4F5A">Farmacéutico</a><a href="/casos-de-uso/#sector-salud-y-clinicas" style="color:#4A4F5A">Salud y clínicas</a><a href="/casos-de-uso/#sector-legal-y-despachos" style="color:#4A4F5A">Legal y despachos</a><a href="/casos-de-uso/#sector-logistica" style="color:#4A4F5A">Logística</a></div>
+<div style="display:grid;gap:8px;align-content:start"><span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8F99">Áreas</span><a href="/casos-de-uso/#area-atencion-al-cliente" style="color:#4A4F5A">Atención al cliente</a><a href="/casos-de-uso/#area-operaciones" style="color:#4A4F5A">Operaciones</a><a href="/casos-de-uso/#area-back-office" style="color:#4A4F5A">Back-office</a><a href="/casos-de-uso/#area-ventas" style="color:#4A4F5A">Ventas</a></div>
+<div style="display:grid;gap:8px;align-content:start"><span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8F99">Ailitica</span><a href="/casos-de-uso/" style="color:#4A4F5A">Casos de uso</a><a href="/calculadora-roi.html" style="color:#4A4F5A">Calculadora ROI</a><a href="/blog/" style="color:#4A4F5A">Blog</a><a href="/contacto.html" style="color:#4A4F5A">Contacto</a></div>
+<div style="display:grid;gap:8px;align-content:start"><span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8F99">Blog</span><a href="/blog/categoria/fundamentos/" style="color:#4A4F5A">Fundamentos</a><a href="/blog/categoria/automatizacion/" style="color:#4A4F5A">Automatización y procesos</a><a href="/blog/categoria/gobernanza-y-control/" style="color:#4A4F5A">Gobernanza y control</a><a href="/blog/categoria/normativa-ia/" style="color:#4A4F5A">Normativa IA</a><a href="/blog/categoria/estrategia/" style="color:#4A4F5A">Estrategia y decisión</a></div>
+</div>
+<div style="border-top:1px solid #EEF0F3">
+<div style="max-width:1240px;margin:0 auto;padding:18px clamp(20px,4vw,40px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;font-size:12px;color:#8A8F99">
 <span>© 2026 Ailitica. Todos los derechos reservados.</span>
-<img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height: 18px; width: auto; opacity: 0.6;"/>
-<div style="display: flex; gap: 14px; justify-content: end; align-items: center;"><a aria-label="LinkedIn" class="hv6" href="https://www.linkedin.com/company/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg></a><a aria-label="Instagram" class="hv6" href="https://www.instagram.com/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.75a3.05 3.05 0 1 1 0-6.1 3.05 3.05 0 0 1 0 6.1zM17.9 7.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 3.9c2.64 0 2.95.01 3.99.06 2.68.12 3.93 1.39 4.05 4.05.05 1.04.06 1.35.06 3.99s-.01 2.95-.06 3.99c-.12 2.66-1.37 3.93-4.05 4.05-1.04.05-1.35.06-3.99.06s-2.95-.01-3.99-.06c-2.69-.12-3.93-1.4-4.05-4.05C3.91 14.95 3.9 14.64 3.9 12s.01-2.95.06-3.99C4.08 5.33 5.33 4.08 8.01 3.96 9.05 3.91 9.36 3.9 12 3.9zM12 2.2c-2.69 0-3.02.01-4.08.06C4.3 2.43 2.43 4.3 2.26 7.92 2.21 8.98 2.2 9.31 2.2 12s.01 3.02.06 4.08c.17 3.62 2.04 5.49 5.66 5.66 1.06.05 1.39.06 4.08.06s3.02-.01 4.08-.06c3.61-.17 5.49-2.04 5.66-5.66.05-1.06.06-1.39.06-4.08s-.01-3.02-.06-4.08c-.17-3.61-2.04-5.49-5.66-5.66C15.02 2.21 14.69 2.2 12 2.2z"></path></svg></a><a aria-label="X" class="hv6" href="https://x.com/ailitica" style="color: rgb(74, 79, 90); display: grid;"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-7.2L4.5 22H1.4l8.1-9.3L0.9 2h7.2l5 6.6L18.9 2zm-1.2 18.2h1.7L7.2 3.7H5.3l12.4 16.5z"></path></svg></a></div>
+<img width="256" height="162" alt="" src="/img/icono-ailitica-dark.webp" style="height:18px;width:auto;opacity:.6"/>
+<div style="display:flex;gap:14px;justify-content:end;align-items:center"><a aria-label="LinkedIn" href="https://www.linkedin.com/company/ailitica" style="color:#4A4F5A;display:grid"><svg aria-hidden="true" fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg></a><a aria-label="Instagram" href="https://www.instagram.com/ailitica" style="color:#4A4F5A;display:grid"><svg aria-hidden="true" fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.75a3.05 3.05 0 1 1 0-6.1 3.05 3.05 0 0 1 0 6.1zM17.9 7.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 3.9c2.64 0 2.95.01 3.99.06 2.68.12 3.93 1.39 4.05 4.05.05 1.04.06 1.35.06 3.99s-.01 2.95-.06 3.99c-.12 2.66-1.37 3.93-4.05 4.05-1.04.05-1.35.06-3.99.06s-2.95-.01-3.99-.06c-2.69-.12-3.93-1.4-4.05-4.05C3.91 14.95 3.9 14.64 3.9 12s.01-2.95.06-3.99C4.08 5.33 5.33 4.08 8.01 3.96 9.05 3.91 9.36 3.9 12 3.9zM12 2.2c-2.69 0-3.02.01-4.08.06C4.3 2.43 2.43 4.3 2.26 7.92 2.21 8.98 2.2 9.31 2.2 12s.01 3.02.06 4.08c.17 3.62 2.04 5.49 5.66 5.66 1.06.05 1.39.06 4.08.06s3.02-.01 4.08-.06c3.61-.17 5.49-2.04 5.66-5.66.05-1.06.06-1.39.06-4.08s-.01-3.02-.06-4.08c-.17-3.61-2.04-5.49-5.66-5.66C15.02 2.21 14.69 2.2 12 2.2z"></path></svg></a><a aria-label="X" href="https://x.com/ailitica" style="color:#4A4F5A;display:grid"><svg aria-hidden="true" fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-7.2L4.5 22H1.4l8.1-9.3L0.9 2h7.2l5 6.6L18.9 2zm-1.2 18.2h1.7L7.2 3.7H5.3l12.4 16.5z"></path></svg></a></div>
 </div>
-<div class="footer-links" style="max-width: 1240px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 40px) 22px; display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; font-size: 12px;">
-<a href="/terminos.html" style="color: rgb(138, 143, 153);">Términos y condiciones</a><a href="/cookies.html" style="color: rgb(138, 143, 153);">Política de cookies</a><a href="/privacidad.html" style="color: rgb(138, 143, 153);">Política de privacidad</a><a href="/politica-ia.html" style="color: rgb(138, 143, 153);">Política de IA</a>
-<a href="mailto:hola@ailitica.com" style="color: rgb(138, 143, 153);">hola@ailitica.com</a>
+<div class="footer-links" style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px) 22px;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;font-size:12px">
+<a href="/terminos.html" style="color:#8A8F99">Términos y condiciones</a><a href="/cookies.html" style="color:#8A8F99">Política de cookies</a><a href="/privacidad.html" style="color:#8A8F99">Política de privacidad</a><a href="/politica-ia.html" style="color:#8A8F99">Política de IA</a><a href="mailto:hola@ailitica.com" style="color:#8A8F99">hola@ailitica.com</a>
 </div>
-</div></footer></div>
+</div>
+</footer>
+</div>
+
+<script>
+// Menú móvil y barra de progreso, equivalentes a menu.js/animaciones.js del sitio.
+(function(){
+  var b=document.querySelector('[data-nav-burger]'), m=document.getElementById('menu-movil');
+  if(b&&m){b.addEventListener('click',function(){var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});}
+  var barra=document.querySelector('header > div:last-child > div');
+  function p(){var h=document.documentElement;var t=h.scrollHeight-h.clientHeight;barra.style.width=(t>0?(h.scrollTop/t*100):0)+'%';}
+  document.addEventListener('scroll',p,{passive:true});p();
+})();
+
+// Dos pistas: el estado final ya esta en el HTML; esto solo lo rebobina y lo vuelve a contar.
+(function(){
+  var pi=document.getElementById('pistas'); if(!pi) return;
+  var TOT=10.5, VEL=476.1905; // ms por minuto simulado: la barra de la persona sola dura siempre 5000ms, calculado en el generador
+  var filas=[].slice.call(pi.querySelectorAll('.pi-fila')).map(function(f){
+    return {tot:parseFloat(f.getAttribute('data-tot')),
+            vias:[].slice.call(f.querySelectorAll('[data-span]')),
+            reloj:f.querySelector('.pi-reloj'),
+            marcas:[].slice.call(f.querySelectorAll('[data-min]'))};
+  });
+  function fmt(m){m=Math.round(m);if(m<60)return m+' min';var h=Math.floor(m/60),r=m%60;return h+' h'+(r?' '+(r<10?'0':'')+r+' min':'');}
+  function pinta(f,c){
+    f.vias.forEach(function(v){
+      var s=parseFloat(v.getAttribute('data-span'));
+      var q=Math.max(0,Math.min(1,c/s));
+      v.style.clipPath='inset(0 '+((1-q)*100).toFixed(2)+'% 0 0 round 999px)';
+    });
+    f.reloj.textContent=fmt(c);
+    f.marcas.forEach(function(m){
+      if(parseFloat(m.getAttribute('data-min'))<=c+0.001)m.classList.add('on');else m.classList.remove('on');
+    });
+  }
+  var raf=null, red=null;
+  // Red de seguridad: si el navegador congela requestAnimationFrame (pestana sin foco,
+  // ventana en segundo plano), el bloque se quedaria con todo apagado. Pasado el tiempo
+  // total mas un margen, se hornea el final pase lo que pase.
+  function fin(){
+    raf=null; if(red){clearTimeout(red); red=null;} pi.removeAttribute('data-anim');
+    filas.forEach(function(f){
+      f.vias.forEach(function(v){v.style.clipPath='';});
+      f.reloj.textContent=fmt(f.tot);
+      f.marcas.forEach(function(m){m.classList.add('on');});
+    });
+  }
+  function play(){
+    if(raf){cancelAnimationFrame(raf);raf=null;}
+    if(red){clearTimeout(red);}
+    red=setTimeout(fin, TOT*VEL + 1500);
+    pi.setAttribute('data-anim','1');
+    filas.forEach(function(f){pinta(f,0);});
+    var t0=null;
+    function paso(ts){
+      if(t0===null)t0=ts;
+      var min=(ts-t0)/VEL;
+      filas.forEach(function(f){pinta(f,Math.min(min,f.tot));});
+      if(min<TOT){raf=requestAnimationFrame(paso);}else{fin();}
+    }
+    raf=requestAnimationFrame(paso);
+  }
+  var b=pi.querySelector('.pi-btn'); if(b) b.addEventListener('click',play);
+  var quieto=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(quieto) return;
+  if(window.IntersectionObserver){
+    var visto=false;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting&&!visto){visto=true;play();}});
+    },{threshold:.3});
+    io.observe(pi);
+  } else { play(); }
+})();
+</script>
 <script src="/consent.js" defer></script>
-<script src="/menu.js" defer></script>
-<script src="/animaciones.js" defer></script>
 </body>
 </html>

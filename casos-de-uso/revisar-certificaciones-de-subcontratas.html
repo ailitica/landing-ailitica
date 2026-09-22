@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Documentación de compra y alquiler: agente de IA — Ailitica</title>
-<meta content="Agente de IA que pide y persigue los documentos de una compraventa o un alquiler, lee la nota simple y avisa de lo que no cuadra antes de la firma." name="description"/>
+<title>Certificaciones de subcontratas: agente de IA — Ailitica</title>
+<meta content="Agente de IA que lee la certificación de cada subcontrata, la casa con su contrato y avisa al jefe de obra de lo que no cuadra antes de pagarla." name="description"/>
 <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
-<link href="https://ailitica.com/casos-de-uso/preparar-documentacion-de-operaciones.html" rel="canonical"/>
+<link href="https://ailitica.com/casos-de-uso/revisar-certificaciones-de-subcontratas.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
-<meta content="https://ailitica.com/casos-de-uso/preparar-documentacion-de-operaciones.html" property="og:url"/>
-<meta content="Documentación de compra y alquiler: agente de IA" property="og:title"/>
-<meta content="Agente de IA que pide y persigue los documentos de una compraventa o un alquiler, lee la nota simple y avisa de lo que no cuadra antes de la firma." property="og:description"/>
+<meta content="https://ailitica.com/casos-de-uso/revisar-certificaciones-de-subcontratas.html" property="og:url"/>
+<meta content="Certificaciones de subcontratas: agente de IA" property="og:title"/>
+<meta content="Agente de IA que lee la certificación de cada subcontrata, la casa con su contrato y avisa al jefe de obra de lo que no cuadra antes de pagarla." property="og:description"/>
 <meta content="https://ailitica.com/og-image.png" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
@@ -18,8 +18,8 @@
 <meta content="Ailitica" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@ailitica" name="twitter:site"/>
-<meta content="Documentación de compra y alquiler: agente de IA" name="twitter:title"/>
-<meta content="Agente de IA que pide y persigue los documentos de una compraventa o un alquiler, lee la nota simple y avisa de lo que no cuadra antes de la firma." name="twitter:description"/>
+<meta content="Certificaciones de subcontratas: agente de IA" name="twitter:title"/>
+<meta content="Agente de IA que lee la certificación de cada subcontrata, la casa con su contrato y avisa al jefe de obra de lo que no cuadra antes de pagarla." name="twitter:description"/>
 <meta content="https://ailitica.com/og-image.png" name="twitter:image"/>
 <link href="/favicon.ico" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -45,8 +45,8 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Preparar documentación de compraventa y alquiler",
-      "item": "https://ailitica.com/casos-de-uso/preparar-documentacion-de-operaciones.html"
+      "name": "Revisar certificaciones de subcontratas",
+      "item": "https://ailitica.com/casos-de-uso/revisar-certificaciones-de-subcontratas.html"
     }
   ]
 }
@@ -56,13 +56,12 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"¿En qué se diferencia de la lista de documentos pendientes de mi programa inmobiliario?","acceptedAnswer":{"@type":"Answer","text":"La lista te dice qué documento falta, no si lo que dice cuadra. El agente pide y persigue lo que falta, lee la nota simple, el certificado energético y la escritura, y te avisa cuando el titular, las cargas o la superficie no cuentan lo mismo que el propietario."}},
-    {"@type":"Question","name":"¿Tengo que cambiar de programa inmobiliario para usarlo?","acceptedAnswer":{"@type":"Answer","text":"No. El agente lee la ficha del inmueble y los documentos en el programa de gestión que ya usa la agencia, y lo que llega por correo o por WhatsApp, y escribe ahí mismo: el estado de la operación, lo que falta y los avisos a quien la lleva."}},
-    {"@type":"Question","name":"¿Quién pide la nota simple al Registro, y quién la paga?","acceptedAnswer":{"@type":"Answer","text":"La sigue pidiendo la agencia, como hoy, y tiene su coste según el arancel de los registradores. El agente no la solicita por su cuenta: la lee en cuanto llega y la pone al lado de lo que ya hay en la operación."}},
-    {"@type":"Question","name":"¿El agente accede a datos de mis compradores, inquilinos y propietarios?","acceptedAnswer":{"@type":"Answer","text":"Sí. Para preparar la documentación, el agente lee lo que mandan propietarios, compradores e inquilinos, y ahí hay datos personales: de identidad y, a veces, económicos. Tu agencia sigue siendo la responsable de esos datos y Ailitica los trata como encargada, con un contrato de encargo que fija por escrito, antes de empezar, dónde se guardan, qué proveedores intervienen y qué se hace con ellos al terminar."}},
-    {"@type":"Question","name":"¿Cuánto tiempo vale un certificado de eficiencia energética?","acceptedAnswer":{"@type":"Answer","text":"Diez años, según el art. 13.1 del Real Decreto 390/2021 (cinco si la calificación es G). Por eso el agente mira la fecha de emisión en cuanto llega y no el día antes de la firma: si el propietario tiene uno de hace más de una década, le da tiempo a encargar otro."}},
-    {"@type":"Question","name":"¿Qué pasa si la superficie de la escritura no coincide con la del Catastro?","acceptedAnswer":{"@type":"Answer","text":"Que el comprador paga unos metros que luego no figuran igual en ningún organismo oficial, y eso puede complicar una hipoteca o una futura reventa. El agente coteja las dos superficies y deja anotado de dónde ha sacado cada cifra, el principio con el que explicamos cómo auditar lo que decide un agente de IA cada día."}},
-    {"@type":"Question","name":"¿Pide también la cédula de habitabilidad?","acceptedAnswer":{"@type":"Answer","text":"Solo donde la comunidad autónoma la exige: es un documento autonómico, no estatal, y cada comunidad tiene su norma. Si la vivienda está en una de esas comunidades, entra en la lista de la operación como un papel más."}}
+    {"@type":"Question","name":"¿En qué se diferencia del módulo de certificaciones de subcontratas de mi programa de obra?","acceptedAnswer":{"@type":"Answer","text":"Ese módulo registra una certificación cuando alguien ya la ha revisado y tecleado. El agente hace la revisión: lee el PDF de cada subcontrata con su formato, casa cada línea con una partida del contrato aunque se llame distinto, mira la fecha de los certificados y pide lo que falta, todo antes de que la certificación llegue a administración."}},
+    {"@type":"Question","name":"¿Tengo que cambiar de programa de obra o pedir a las subcontratas otro formato de certificación?","acceptedAnswer":{"@type":"Answer","text":"No. Cada subcontrata sigue certificando como hasta ahora, en PDF, en hoja de cálculo o escaneada, y por correo. El agente toma el contrato y las certificaciones anteriores del programa de gestión de obra que ya usáis, y deja allí mismo la revisión con cada diferencia anotada."}},
+    {"@type":"Question","name":"¿Sirve si cada contrato de subcontrata pacta su propia retención y sus propios descuentos?","acceptedAnswer":{"@type":"Answer","text":"Sí, porque aplica los de cada contrato. En obra privada la retención de garantía no tiene un porcentaje fijado por ley: es la que se pacta con cada subcontrata, igual que los descuentos por limpieza o por medios auxiliares. El agente lee lo pactado y marca la certificación que aplica otro criterio."}},
+    {"@type":"Question","name":"¿El agente accede a datos de mis subcontratas y de sus certificaciones?","acceptedAnswer":{"@type":"Answer","text":"Sí. Para revisar certificaciones de subcontratas, el agente lee los documentos que necesita, y pueden contener datos personales. Tu constructora sigue siendo la responsable de esos datos y Ailitica los trata como encargada, con un contrato de encargo que fija por escrito, antes de empezar, dónde se guardan, qué proveedores intervienen y qué se hace con ellos al terminar."}},
+    {"@type":"Question","name":"¿Detecta una unidad que ya se pagó el mes pasado y vuelve a aparecer en la certificación a origen?","acceptedAnswer":{"@type":"Answer","text":"Sí. La certificación a origen acumula todo lo hecho desde el inicio de la obra, y lo que se paga cada mes es la diferencia con la del mes anterior. El agente compara las dos partida a partida, marca lo que se repite o crece sin explicación y deja escrito qué comparó con qué."}},
+    {"@type":"Question","name":"¿Qué hace con un acopio que la subcontrata certifica antes de colocarlo?","acceptedAnswer":{"@type":"Answer","text":"Lo separa del resto y lo marca como acopio, con su importe: material que está en la obra y todavía no se ha colocado. Si el contrato de subcontrata dice cómo se pagan los acopios, pone esa cláusula al lado; si no dice nada, no lo da por bueno ni por malo. Si se paga, y cuánto, lo decide Daniel."}}
     ]
 }
 </script>
@@ -421,89 +420,86 @@ details .dd em{font-style:normal;color:#1B1D22;font-weight:600}
 
 <section style="max-width:1240px;margin:0 auto;padding:clamp(28px,4vw,52px) clamp(20px,4vw,40px) clamp(24px,3vw,36px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(28px,4vw,60px);align-items:center">
 <div style="display:grid;gap:18px">
-<nav aria-label="Migas" style="display:flex;gap:8px;font-size:13px;font-weight:600;color:#8A8F99;flex-wrap:wrap"><a href="/casos-de-uso/" style="color:#8A8F99">Casos de uso</a><span>/</span><a href="/casos-de-uso/#area-back-office" style="color:#8A8F99">Back-office</a><span>/</span><span style="color:#1B1D22">Inmobiliario</span></nav>
-<h1 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(38px,4.8vw,64px);line-height:1;letter-spacing:-.03em;text-wrap:balance">Preparar documentación de compraventa y alquiler</h1>
-<p style="margin:0;font-family:'Newsreader',serif;font-style:italic;font-size:clamp(19px,1.9vw,25px);line-height:1.3;color:#4A4F5A;text-wrap:pretty">La vendedora dice que el piso es suyo. La nota simple dice que es de su madre.</p>
-<p style="margin:0;font-size:16.5px;line-height:1.6;color:#4A4F5A;text-wrap:pretty;max-width:520px">Agente de IA que prepara la documentación de compraventas y alquileres: pide y persigue lo que falta, lee la nota simple, el certificado energético y lo que manda el propietario, y avisa al agente comercial de lo que no cuenta lo mismo. Una herencia sin inscribir basta para que la nota simple no diga lo que cuenta la vendedora, y para que la firma se caiga en notaría.</p>
+<nav aria-label="Migas" style="display:flex;gap:8px;font-size:13px;font-weight:600;color:#8A8F99;flex-wrap:wrap"><a href="/casos-de-uso/" style="color:#8A8F99">Casos de uso</a><span>/</span><a href="/casos-de-uso/#area-back-office" style="color:#8A8F99">Back-office</a><span>/</span><span style="color:#1B1D22">Construcción e ingeniería</span></nav>
+<h1 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(38px,4.8vw,64px);line-height:1;letter-spacing:-.03em;text-wrap:balance">Revisar certificaciones de subcontratas</h1>
+<p style="margin:0;font-family:'Newsreader',serif;font-style:italic;font-size:clamp(19px,1.9vw,25px);line-height:1.3;color:#4A4F5A;text-wrap:pretty">«Remates varios», 3.840 €. En el contrato de Tabiquería Ejemplo no hay ninguna partida que se llame así.</p>
+<p style="margin:0;font-size:16.5px;line-height:1.6;color:#4A4F5A;text-wrap:pretty;max-width:520px">Agente de IA que revisa las certificaciones de subcontratas: lee el PDF de cada subcontrata tal como llega, entiende qué partidas certifica y cuáles no están en su contrato, y avisa al jefe de obra antes de pagar, después de pedir a la subcontrata lo que falta. Y mira también los papeles: si su certificado de estar al corriente con Hacienda es de más de 12 meses antes del pago, la constructora puede responder de lo que la subcontrata retenga o repercuta por esa obra y no ingrese.</p>
 <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><a class="hv2" href="#cta" style="background:#1B1D22;color:#fff;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px">Quiero este agente</a><a class="hv3" href="#roi" style="padding:14px 20px;border-radius:999px;font-weight:700;font-size:15px;border:1.5px solid #E2E0D9">Lo que vale el tiempo →</a></div>
 </div>
 
 <div style="display:grid;gap:9px">
 <div style="border-radius:26px;background:#1B1D22;color:#fff;padding:clamp(20px,2.6vw,28px);display:grid;gap:15px;align-content:start;box-shadow:0 30px 60px rgba(27,29,34,.18)">
-<div style="display:flex;justify-content:space-between;align-items:center;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7FB0FF"><span style="display:flex;gap:8px;align-items:center"><span style="width:8px;height:8px;border-radius:50%;background:#7FB0FF;animation:blink 1.4s ease-in-out infinite"></span>Agente trabajando</span><span style="color:#8A8F99">10:08</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7FB0FF"><span style="display:flex;gap:8px;align-items:center"><span style="width:8px;height:8px;border-radius:50%;background:#7FB0FF;animation:blink 1.4s ease-in-out infinite"></span>Agente trabajando</span><span style="color:#8A8F99">08:23</span></div>
 
 <div style="display:grid;gap:9px">
-<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:1px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Nota simple detectada en el correo de la operación</span><span style="font-size:11px;color:#8A8F99;font-weight:600">10:02</span></div></div>
-<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:2px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Nota simple leída: la finca figura a nombre de la madre de la vendedora</span><span style="font-size:11.5px;color:#7FB0FF;font-weight:600;line-height:1.35">quién es el titular y qué cargas tiene</span><span style="font-size:11px;color:#8A8F99;font-weight:600">10:04</span></div></div>
-<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:2px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Operación reunida: escritura, certificado energético y lo hablado con Begoña</span><span style="font-size:11.5px;color:#7FB0FF;font-weight:600;line-height:1.35">en junio contó que el piso era suyo y estaba libre de cargas</span><span style="font-size:11px;color:#8A8F99;font-weight:600">10:05</span></div></div>
-<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:1px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:rgba(255,255,255,.72)">Cotejo: titular distinto y una hipoteca inscrita · superficie igual que en el Catastro, certificado en vigor</span><span style="font-size:11px;color:#8A8F99;font-weight:600">10:06</span></div></div>
-<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:1px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Aviso a Silvia con la nota simple, y recordatorio a Begoña de lo que falta</span><span style="font-size:11px;color:#8A8F99;font-weight:600">10:08</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:2px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Certificación n.º 5 de Tabiquería Ejemplo detectada en el correo</span><span style="font-size:11.5px;color:#7FB0FF;font-weight:600;line-height:1.35">PDF escaneado, a origen y con su propio formato</span><span style="font-size:11px;color:#8A8F99;font-weight:600">08:15</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:2px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Certificación leída: tres partidas, y una de «remates varios» por 3.840 €</span><span style="font-size:11.5px;color:#7FB0FF;font-weight:600;line-height:1.35">qué unidades certifica, cuánto de cada una y qué es de este mes</span><span style="font-size:11px;color:#8A8F99;font-weight:600">08:18</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:2px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Contrato, certificación de agosto y documentación de la subcontrata reunidos</span><span style="font-size:11.5px;color:#7FB0FF;font-weight:600;line-height:1.35">el certificado de Hacienda es de agosto de 2025</span><span style="font-size:11px;color:#8A8F99;font-weight:600">08:20</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:1px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:rgba(255,255,255,.72)">Diferencias: remates sin partida en el contrato · certificado de Hacienda de hace 13 meses</span><span style="font-size:11px;color:#8A8F99;font-weight:600">08:21</span></div></div>
+<div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:11px;align-items:start"><span style="width:20px;height:20px;border-radius:50%;background:#1F6FEB;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff">✓</span><div style="display:grid;gap:1px"><span style="font-size:14px;font-weight:600;line-height:1.35;color:#fff">Aviso a Daniel con lo marcado, y a la subcontrata: desglose de los remates y certificado nuevo</span><span style="font-size:11px;color:#8A8F99;font-weight:600">08:23</span></div></div>
 </div>
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid rgba(255,255,255,.12);padding-top:14px">
-<div style="background:rgba(255,255,255,.06);border-radius:13px;padding:11px 13px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A8F99">No cuadra</span><strong style="font-size:14px;line-height:1.3;color:#fff">Titular y cargas</strong></div>
-<div style="background:rgba(255,255,255,.06);border-radius:13px;padding:11px 13px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A8F99">Falta</span><strong style="font-size:14px;line-height:1.3;color:#fff">Recibo del IBI y certificado de comunidad</strong></div>
+<div style="background:rgba(255,255,255,.06);border-radius:13px;padding:11px 13px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A8F99">Sin partida en el contrato</span><strong style="font-size:14px;line-height:1.3;color:#fff">Remates varios, 3.840 €</strong></div>
+<div style="background:rgba(255,255,255,.06);border-radius:13px;padding:11px 13px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A8F99">Certificado de Hacienda</span><strong style="font-size:14px;line-height:1.3;color:#fff">De agosto de 2025: pedido uno nuevo</strong></div>
 </div>
 
-<div style="background:#F5B14C;color:#1B1D22;border-radius:15px;padding:13px 15px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase">Aquí se detiene el agente</span><strong style="font-size:15px;line-height:1.3">Decidir qué se hace con la herencia y la hipoteca antes de las arras</strong></div>
+<div style="background:#F5B14C;color:#1B1D22;border-radius:15px;padding:13px 15px;display:grid;gap:3px"><span style="font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase">Aquí se detiene el agente</span><strong style="font-size:15px;line-height:1.3">Dar conforme la certificación, rechazarla o pactar un precio</strong></div>
 </div>
-<p style="margin:0;padding:0 6px;font-size:11.5px;line-height:1.45;color:#8A8F99;font-weight:600">Ejemplo ilustrativo, construido para enseñar cómo trabaja con una nota simple.</p>
+<p style="margin:0;padding:0 6px;font-size:11.5px;line-height:1.45;color:#8A8F99;font-weight:600">Ejemplo ilustrativo, construido para enseñar cómo trabaja con la certificación de una subcontrata.</p>
 </div>
 </section>
 
 <section style="background:#F4F3EF">
 <div class="sec">
 <p class="kicker">Qué sabe</p>
-<h2 class="h2">Lo que dice el Registro <em style="color:#1F6FEB">frente a lo que contó la vendedora</em></h2>
+<h2 class="h2">Trece meses tiene ya el certificado de Hacienda, <em style="color:#1F6FEB">y el contrato no conoce los remates</em></h2>
 <div class="sabe">
 
 <div class="sabe-col">
-<div class="sabe-cab"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0z"/><path d="M19 7l-3 7a3 3 0 0 0 6 0z"/><path d="M8 21h8"/></svg></span><div><h3>Cinco papeles que pueden parar una firma</h3><p>Cada uno con la norma que lo pide.</p></div></div>
+<div class="sabe-cab"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0z"/><path d="M19 7l-3 7a3 3 0 0 0 6 0z"/><path d="M8 21h8"/></svg></span><div><h3>Lo que se mira antes de pagar</h3><p>Tres reglas que deciden si una certificación se paga tal cual.</p></div></div>
 <div class="reg">
 
-<details><summary><span>La nota simple informa del titular y las cargas, pero no da fe</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>Se prepara todo sobre alguien que no figura como titular, o sin ver una carga inscrita, y la operación se cae en notaría el día de la firma.<b>Con el agente</b>Lee la nota simple en cuanto llega y pone al lado a quien firma como vendedor y lo que contó de las cargas.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1946-2453" target="_blank" rel="noopener"><em>Arts. 221 y 222.5 de la Ley Hipotecaria.</em></a> «Los Registros serán públicos para quienes tengan interés conocido en averiguar el estado de los bienes inmuebles o derechos reales inscritos» (art. 221). Y: «la nota simple informativa tiene valor puramente informativo y no da fe del contenido de los asientos, sin perjuicio de la responsabilidad del registrador, por los daños ocasionados por los errores y omisiones padecidos en su expedición» (art. 222.5).</p></details>
-<details><summary><span>Vender o alquilar pide certificado energético: en la compraventa se anexa al contrato, y en el alquiler se anexa la etiqueta</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>La operación llega a la firma sin un documento que la norma exige, o con uno caducado.<b>Con el agente</b>Lo pide al empezar, mira su fecha y avisa si está caducado, con tiempo para pedir uno nuevo.<b>La norma</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176" target="_blank" rel="noopener"><em>Arts. 3.1.b) y 17.2 del Real Decreto 390/2021.</em></a> Se aplica a «edificios o partes de edificios existentes que se vendan o alquilen a un nuevo arrendatario» (art. 3.1.b)). Y: «Cuando el edificio existente sea objeto de contrato de compraventa [...] una copia del certificado de eficiencia energética debidamente registrado [...] se anexará al contrato de compraventa» (art. 17.2).</p></details>
-<details><summary><span>Antes de pagar nada a cuenta, el comprador o el inquilino puede pedir la información completa</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>Se firma o se cobra una señal sin la información que la ley permite exigir antes de pagar, y eso abre una reclamación.<b>Con el agente</b>Deja reunida la documentación de la vivienda antes de que se hable de arras o de fianza.<b>La norma</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203" target="_blank" rel="noopener"><em>Arts. 30.1.b) y 31.1 de la Ley 12/2023, por el derecho a la vivienda.</em></a> El derecho a recibir información «completa, objetiva, veraz, clara, comprensible y accesible» sobre las condiciones jurídicas y económicas de la vivienda (art. 30.1.b)), que la persona interesada en la compra o arrendamiento de una vivienda en oferta puede exigir «antes de la formalización de la operación y de la entrega de cualquier cantidad a cuenta» (art. 31.1).</p></details>
-<details><summary><span>La fianza del alquiler de vivienda es una mensualidad, en metálico</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>El contrato sale con otro importe, y se complica su devolución o su depósito donde la comunidad autónoma lo exige.<b>Con el agente</b>Comprueba que la fianza del borrador coincide con la renta pactada y avisa si no.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003#a36" target="_blank" rel="noopener"><em>Art. 36.1 de la Ley de Arrendamientos Urbanos.</em></a> «A la celebración del contrato será obligatoria la exigencia y prestación de fianza en metálico en cantidad equivalente a una mensualidad de renta en el arrendamiento de viviendas [...]».</p></details>
-<details><summary><span>La agencia que intermedia en una compraventa, o en un alquiler grande, está obligada a prevenir el blanqueo</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>La agencia no identifica ni conserva la documentación del cliente que la ley le exige, y queda expuesta a su régimen sancionador.<b>Con el agente</b>Marca las operaciones que entran en el supuesto y deja reunida la documentación que pide el procedimiento de la agencia.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2010-6737#a2" target="_blank" rel="noopener"><em>Art. 2.1.l) de la Ley 10/2010.</em></a> Son sujetos obligados «[...] quienes ejerzan profesionalmente actividades de agencia, comisión o intermediación en la compraventa de bienes inmuebles o en arrendamientos de bienes inmuebles que impliquen una transacción por una renta total anual igual o superior a 120.000 euros o una renta mensual igual o superior a 10.000 euros».</p></details>
+<details><summary><span>Para no responder de lo que la subcontrata deja a deber a Hacienda, su certificado tiene que ser de los 12 meses anteriores a cada pago</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>Se paga con el certificado que se entregó al firmar, de hace más de un año, y si la subcontrata no ingresa lo que retiene o repercute por esa obra, la constructora responde subsidiariamente.<b>Con el agente</b>Mira la fecha del certificado en cada certificación y, si ya no cubre el pago, lo pide a la subcontrata antes de que llegue a administración.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186#a43" target="_blank" rel="noopener"><em>Art. 43.1.f) de la Ley 58/2003, General Tributaria.</em></a> «La responsabilidad prevista en el párrafo anterior no será exigible cuando el contratista o subcontratista haya aportado al pagador un certificado específico de encontrarse al corriente de sus obligaciones tributarias emitido a estos efectos por la Administración tributaria durante los 12 meses anteriores al pago de cada factura correspondiente a la contratación o subcontratación». Ley 58/2003, General Tributaria.</p></details>
+<details><summary><span>Hay que comprobar que la subcontrata está al corriente con la Seguridad Social</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>Se siguen pagando certificaciones a una subcontrata que debe cuotas, y esa deuda acaba alcanzando a la constructora.<b>Con el agente</b>Comprueba en cada certificación que consta la acreditación de estar al corriente y de cuándo es, y si falta, la pide antes del pago.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430#a42" target="_blank" rel="noopener"><em>Art. 42.1 del Estatuto de los Trabajadores (Real Decreto Legislativo 2/2015).</em></a> «Las empresas que contraten o subcontraten con otras la realización de obras o servicios correspondientes a la propia actividad de aquellas deberán comprobar que dichas contratistas están al corriente en el pago de las cuotas de la Seguridad Social». Estatuto de los Trabajadores.</p></details>
+<details><summary><span>Las deudas con la Seguridad Social de la subcontrata te alcanzan hasta tres años después de que acabe; las salariales, un año</span><span class="mas">+</span></summary><p class="dd"><b>Si se ignora</b>La subcontrata termina, se liquida su contrato y la reclamación llega después: de lo que no pagó a la Seguridad Social y de los salarios que debe a su gente.<b>Con el agente</b>Deja escrito, certificación a certificación, qué documentación se comprobó y de qué fecha era.<b>El artículo</b><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430#a42" target="_blank" rel="noopener"><em>Art. 42.2 del Estatuto de los Trabajadores (Real Decreto Legislativo 2/2015).</em></a> La empresa principal, «salvo el transcurso del plazo antes señalado respecto a la Seguridad Social, y durante los tres años siguientes a la terminación de su encargo, responderá solidariamente de las obligaciones referidas a la Seguridad Social contraídas por los contratistas y subcontratistas durante el periodo de vigencia de la contrata. De las obligaciones de naturaleza salarial contraídas por las contratistas y subcontratistas con las personas trabajadoras a su servicio responderá solidariamente durante el año siguiente a la finalización del encargo». Estatuto de los Trabajadores.</p></details>
 
-<p style="margin:2px 2px 0;font-size:11.5px;line-height:1.5;color:#8A8F99;font-weight:600">Textos legales consultados en el BOE el 22 de septiembre de 2026.</p>
+<p style="margin:2px 2px 0;font-size:11.5px;line-height:1.5;color:#8A8F99;font-weight:600">Textos legales consultados en el BOE, en su versión consolidada, el 22 de septiembre de 2026.</p>
 
 </div>
 </div>
 
 <div class="sabe-col">
-<div class="sabe-cab"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10l6 6v10H4z"/><path d="M14 4v6h6"/><path d="M8 14h8"/><path d="M8 18h5"/></svg></span><div><h3>Un piso heredado, y una nota simple que no lo dice</h3><p>La operación 2026/0312 el día que llega la nota simple</p></div></div>
+<div class="sabe-cab"><span class="ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10l6 6v10H4z"/><path d="M14 4v6h6"/><path d="M8 14h8"/><path d="M8 18h5"/></svg></span><div><h3>La certificación n.º 5, sobre la mesa de Daniel</h3><p>Esta mañana, con el PDF recién leído</p></div></div>
 <article class="as" aria-label="Ficha de un asunto de ejemplo, con datos inventados">
-<div class="as-top"><div><small>Operación 2026/0312 · Compraventa</small><strong>Piso de tres dormitorios · segunda mano</strong></div><span class="as-fic">Ficticio</span></div>
+<div class="as-top"><div><small>Certificación n.º 5 · Residencial Los Almendros</small><strong>Subcontrata de tabiquería · certificación a origen de septiembre</strong></div><span class="as-fic">Ficticio</span></div>
 <div class="as-kv">
-<div><span class="as-et">Cliente</span><strong>Begoña, vendedora</strong><span>Encarga la venta y manda los documentos por WhatsApp</span></div>
-<div><span class="as-et">Inmueble</span><strong>Piso en Ciudad Ejemplo</strong><span>Escritura y certificado energético ya en la operación</span></div>
-<div><span class="as-et">Lleva la operación</span><strong>Silvia, agente comercial</strong><span>Recibe a su nombre el aviso de lo que no cuadra</span></div>
-<div><span class="as-et">Si no contesta, se escala a</span><strong>Marcos, gerente de la agencia</strong><span>Con el mismo aviso y la nota simple a la vista</span></div>
+<div><span class="as-et">Subcontrata</span><strong>Tabiquería Ejemplo, S.L.</strong><span>Tabiques y trasdosados de placa. Certifica en PDF escaneado, con su propio formato</span></div>
+<div><span class="as-et">Obra</span><strong>Residencial Los Almendros</strong><span>Promoción privada de viviendas, en tabiquería</span></div>
+<div><span class="as-et">Lleva la certificación</span><strong>Daniel, jefe de obra</strong><span>Recibe lo marcado y da o no la conformidad</span></div>
+<div><span class="as-et">Si no contesta, se escala a</span><strong>Laura, jefa de compras de obra</strong><span>Firmó el contrato de subcontrata y sabe qué se pactó</span></div>
 </div>
 <div class="as-bl">
 <span class="as-et">En qué punto está</span>
 <ol class="as-proc">
-<li>Encargo de venta<i>junio</i></li>
-<li>Visitas<i>julio y agosto</i></li>
-<li>Oferta aceptada<i>15 sep</i></li>
-<li class="hoy">Documentación<i>hoy, 10:08</i></li>
-<li class="cor">Arras<i>el comprador espera fecha</i></li>
+<li>Contrato<i>abril, a precios cerrados</i></li>
+<li>Certificaciones 1 a 4<i>conformes y pagadas</i></li>
+<li class="hoy">Certificación n.º 5<i>hoy, 08:14</i></li>
+<li class="cor">Conformidad y pago<i>cuando decida Daniel</i></li>
 </ol>
 </div>
 <div class="as-bl">
-<span class="as-et">Lo hablado con el cliente</span>
+<span class="as-et">Lo hablado con la subcontrata</span>
 <div class="as-hist">
-<div class="as-h"><b>18 jun</b><span><em>Llamada.</em> Begoña: «El piso es mío, lo heredé de mi madre, y está libre de cargas».</span></div>
-<div class="as-h"><b>16 sep</b><span><em>WhatsApp.</em> Manda la escritura y el certificado energético. El recibo del IBI, «esta semana».</span></div>
-<div class="as-h nuevo"><b>Hoy</b><span><em>Nota simple del Registro.</em> Titular: su madre. Una hipoteca inscrita.</span></div>
+<div class="as-h"><b>3 sep</b><span><em>Reunión de obra.</em> Daniel: «Los remates del portal 2 los hace nuestra cuadrilla».</span></div>
+<div class="as-h"><b>18 sep</b><span><em>Correo.</em> La subcontrata: «Este mes os certificamos también los remates».</span></div>
+<div class="as-h nuevo"><b>Hoy</b><span><em>Certificación n.º 5, en PDF.</em> Incluye «remates varios» por 3.840 €, sin partida en el contrato.</span></div>
 </div>
 </div>
-<div class="as-av" role="note"><small><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Algo no cuadra</small><strong>La nota simple no dice lo que contó Begoña</strong><span>El piso sigue a nombre de su madre y tiene una hipoteca inscrita, y Begoña dijo que era suyo y estaba libre. El agente se lo pone delante a Silvia junto a la nota simple.</span></div>
+<div class="as-av" role="note"><small><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Algo no cuadra</small><strong>Certifica unos remates que la obra dijo que hacía su cuadrilla</strong><span>«Remates varios» no está en el contrato ni tiene un precio contradictorio pactado, y el 3 de septiembre Daniel dijo que los remates del portal 2 los hacía la cuadrilla propia. Pueden ser otros remates, o no tocar. El agente se lo pone delante a Daniel con el PDF, el contrato y la nota de la reunión.</span></div>
 <div class="as-pie">
-<p>Si Silvia apunta que Begoña prefiere el correo al WhatsApp, los recordatorios siguientes ya le llegan por correo.</p>
-<p class="as-nota">Operación de ejemplo: el cliente, las personas y las fechas son inventados.</p>
+<p>Si Daniel apunta que esos remates se pactaron por teléfono, y a qué precio, el agente los casa con ese precio en la certificación siguiente.</p>
+<p class="as-nota">Asunto de ejemplo: la obra, las empresas, las personas y las fechas son inventados.</p>
 </div>
 </article>
 </div>
@@ -514,64 +510,73 @@ details .dd em{font-style:normal;color:#1B1D22;font-weight:600}
 
 <section class="sec">
 <p class="kicker">Cómo habla</p>
-<h2 class="h2">A Begoña le pide dos papeles, <em style="color:#1F6FEB">y de la herencia no le dice nada</em></h2>
+<h2 class="h2">Escribe a la subcontrata <em style="color:#1F6FEB">como lo haría administración de obra</em></h2>
 <div class="rej">
-<div class="card"><h3>Tono</h3><p style="margin:0;font-size:13.5px;line-height:1.5;color:#4A4F5A">Cercano, claro y concreto, como escribe un buen gestor de la agencia: pide una cosa cada vez, dice para qué sirve y cómo mandarla, y agradece lo que ya ha llegado. Al comprador o al inquilino, con el mismo cuidado y sin contarle nada que no le toque. De cargas, precio o fechas de firma no habla: eso lo cuenta la persona.</p></div>
-<div class="card"><h3>Mensaje de ejemplo</h3><p style="margin:0;font-size:13.5px;line-height:1.5;color:#4A4F5A;font-style:italic">«Buenos días, Begoña. Soy el asistente de documentación de Inmobiliaria Ejemplo. Gracias por la escritura y el certificado energético, ya están en tu operación. Para dejar la documentación lista nos faltan dos cosas: el último recibo del IBI y el certificado de la comunidad de que estáis al corriente, que te lo da vuestro administrador de fincas. Con una foto por aquí nos vale. Si tienes cualquier duda, contéstanos y se lo pasamos a Silvia.»</p></div>
-<div class="card"><h3>Nunca dice</h3><ul style="margin:0;padding-left:18px;display:grid;gap:4px;font-size:13px;line-height:1.4;color:#4A4F5A"><li>Que la operación está bien o que ya se puede firmar</li><li>Nada sobre una carga, una hipoteca o una herencia: eso lo habla la persona</li><li>Una opinión sobre el precio</li><li>Una fecha de arras o de notaría que no esté fijada</li><li>Que un documento es correcto: solo que lo ha recibido</li><li>Al comprador o al inquilino, lo que ha leído en los documentos del propietario</li></ul></div>
+<div class="card"><h3>Tono</h3><p style="margin:0;font-size:13.5px;line-height:1.5;color:#4A4F5A">El de administración con una subcontrata con la que se sigue trabajando: de tú, corto, con la obra, el número de certificación y la partida a la vista. Pide, no discute. Siempre desde la cuenta de la obra, con copia al jefe de obra, y con la línea de la certificación adjunta.</p></div>
+<div class="card"><h3>Mensaje de ejemplo</h3><p style="margin:0;font-size:13.5px;line-height:1.5;color:#4A4F5A;font-style:italic">«Hola:
+
+Te escribimos de administración de Construcciones Ejemplo por la certificación n.º 5 de Residencial Los Almendros, que nos ha llegado esta mañana. Para pasársela a Daniel nos faltan dos cosas:
+
+1. El desglose de «remates varios»: qué trabajos son, en qué portal y con qué medición. En vuestro contrato no aparece esa partida.
+2. Un certificado específico de estar al corriente con Hacienda más reciente. El que tenemos es de agosto de 2025.
+
+Podéis mandarlo contestando a este correo.
+
+Gracias,
+Administración de obra · Construcciones Ejemplo»</p></div>
+<div class="card"><h3>Nunca dice</h3><ul style="margin:0;padding-left:18px;display:grid;gap:4px;font-size:13px;line-height:1.4;color:#4A4F5A"><li>Que la certificación está aprobada o rechazada</li><li>Que se acepta un precio nuevo o una partida que no está en el contrato</li><li>Una retención o un descuento que no haya decidido el jefe de obra</li><li>Una fecha de pago, ni que el pago queda parado</li><li>Nada firmado con el nombre de una persona que no lo ha visto</li></ul></div>
 </div>
 </section>
 
 <section class="sec">
 <p class="kicker">Dónde se conecta</p>
-<h2 class="h2">Documentos que llegan por cuatro sitios, <em style="color:#1F6FEB">un solo estado de la operación</em></h2>
+<h2 class="h2">El buzón de las certificaciones <em style="color:#1F6FEB">y el programa donde viven los contratos</em></h2>
 <div class="con">
 <div class="con-lado">
 <span class="con-et">Lee de</span>
-<div class="sis"><strong>Programa de gestión inmobiliaria</strong><span>La ficha del inmueble, del propietario y del comprador o inquilino, y los documentos ya subidos</span></div>
-<div class="sis"><strong>Correo y WhatsApp</strong><span>Lo que mandan el propietario y el comprador o inquilino: PDF, fotos y recibos</span></div>
-<div class="sis"><strong>Nota simple del Registro</strong><span>La que la agencia ya pide, en cuanto llega al correo o al programa</span></div>
-<div class="sis"><strong>Datos del Catastro</strong><span>La referencia catastral y la superficie de la finca</span></div>
+<div class="sis"><strong>Correo</strong><span>La certificación, tal como la manda cada subcontrata: PDF, hoja de cálculo o escaneo</span></div>
+<div class="sis"><strong>Programa de gestión de obra</strong><span>El contrato de subcontrata, las certificaciones anteriores y los certificados que ha entregado</span></div>
+<div class="sis"><strong>Medición de la obra</strong><span>La que el jefe de obra da por hecha, en el archivo en que ya la sacáis de Presto, Arquímedes o TCQ</span></div>
 </div>
 <div class="con-fl" aria-hidden="true"></div>
-<div class="con-ag"><svg viewBox="0 0 34 34" width="44" height="44" aria-hidden="true" style="color:#1F6FEB"><circle cx="17" cy="17" r="16" fill="#fff"/><circle cx="17" cy="6.8" r="1.7" fill="currentColor"/><path d="M 17 8.2 V 10.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="10.2" y="10.6" width="13.6" height="12.8" rx="3.6" fill="currentColor"/><circle cx="14.3" cy="16.2" r="1.6" fill="#fff"/><circle cx="19.7" cy="16.2" r="1.6" fill="#fff"/></svg><strong>El agente</strong><span>Pide, lee, coteja y avisa</span></div>
+<div class="con-ag"><svg viewBox="0 0 34 34" width="44" height="44" aria-hidden="true" style="color:#1F6FEB"><circle cx="17" cy="17" r="16" fill="#fff"/><circle cx="17" cy="6.8" r="1.7" fill="currentColor"/><path d="M 17 8.2 V 10.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="10.2" y="10.6" width="13.6" height="12.8" rx="3.6" fill="currentColor"/><circle cx="14.3" cy="16.2" r="1.6" fill="#fff"/><circle cx="19.7" cy="16.2" r="1.6" fill="#fff"/></svg><strong>El agente</strong><span>Lee, casa y avisa</span></div>
 <div class="con-fl" aria-hidden="true"></div>
 <div class="con-lado">
 <span class="con-et">Escribe y avisa en</span>
-<div class="sis"><strong>Programa de gestión inmobiliaria</strong><span>El estado de la operación y la lista de lo que falta</span></div>
-<div class="sis"><strong>Correo y WhatsApp</strong><span>Al propietario y al comprador o inquilino, lo que falta; al agente comercial, lo que no cuadra</span></div>
-<div class="sis"><strong>Firma electrónica</strong><span>El borrador y sus anexos, listos para que la persona los mande a firmar</span></div>
+<div class="sis"><strong>Programa de gestión de obra</strong><span>La certificación revisada, con cada diferencia anotada, y lo conforme listo para administración</span></div>
+<div class="sis"><strong>Correo a la obra</strong><span>El aviso al jefe de obra, con el PDF, el contrato y lo marcado</span></div>
+<div class="sis"><strong>Correo a la subcontrata</strong><span>La petición del desglose o del certificado que falta, desde la cuenta de la obra</span></div>
 </div>
 </div>
-<p style="margin:16px 2px 0;font-size:14px;line-height:1.55;color:#4A4F5A;max-width:760px">El agente no pide la nota simple al Registro ni entra en el Catastro por su cuenta: lee la nota que la agencia ya solicita y los datos catastrales de la consulta que haga la agencia o de la certificación que aporte el propietario. Lo que tiene que dar la agencia: un usuario del programa de gestión inmobiliaria con acceso a las operaciones, el WhatsApp y el correo por los que llegan los documentos, y acceso a la plataforma de firma electrónica para dejar el borrador y sus anexos preparados.</p>
+<p style="margin:16px 2px 0;font-size:14px;line-height:1.55;color:#4A4F5A;max-width:760px">Entra por dos sitios: el buzón al que las subcontratas mandan las certificaciones y el programa de gestión de obra. De tu constructora hace falta acceso a ese buzón, un usuario del programa que vea los contratos de subcontrata, las certificaciones anteriores y los certificados entregados, y la medición de cada obra en el archivo en que ya la sacáis del programa de mediciones. Ese usuario lo da quien administre el programa en tu empresa.</p>
 </section>
 
 <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(30px,3.8vw,48px)">
 <div class="det">
 <div class="det-c">
 <p class="det-k" style="color:#7FB0FF">Dónde se detiene</p>
-<h2 class="det-h">Que la operación está lista <em style="color:#7FB0FF">lo dice una persona</em></h2>
-<p class="det-p">No revisa las cláusulas de las arras ni del contrato, ni decide qué se hace con una carga o con un titular que no es quien vende: eso tiene consecuencias para el comprador y para la agencia, y lo firma una persona. Entrega la operación con lo que dice cada documento y lo que no cuadra, para que decidas con todo delante: aquí explicamos <a href="/blog/human-in-the-loop-cuando-aplicarlo.html" style="color:#fff;text-decoration:underline;text-underline-offset:3px">por qué la última palabra sobre una operación la tiene una persona</a>.</p>
+<h2 class="det-h">La conformidad <em style="color:#7FB0FF">es de quien lleva la obra</em></h2>
+<p class="det-p">No da la conformidad, no acepta un precio nuevo, no negocia con la subcontrata y no aplica retenciones ni descuentos que no haya decidido el jefe de obra: certificar compromete dinero de la obra, y la conformidad es de quien la lleva. Entrega cada certificación leída y casada con su contrato, con cada diferencia y cada certificado que falta a la vista, para que decidas: aquí explicamos <a href="/blog/human-in-the-loop-cuando-aplicarlo.html" style="color:#fff;text-decoration:underline;text-underline-offset:3px">por qué la conformidad la tiene que dar una persona</a>.</p>
 </div>
 <div class="det-c det-l" style="--c:#F5B14C">
 <p class="det-k" style="color:#F5B14C">Decide siempre la persona</p>
 <ul>
-<li>Qué se hace con una carga inscrita o con un titular que no es quien vende</li>
-<li>Revisar las cláusulas de las arras y del contrato</li>
-<li>Si la operación sigue o se aplaza la firma</li>
-<li>Qué se le cuenta al comprador o al inquilino, y cuándo</li>
-<li>Identificar al cliente, cuando la operación entra en la ley de blanqueo</li>
+<li>Dar conforme la certificación o rechazarla</li>
+<li>Aceptar un precio nuevo o pactar un contradictorio</li>
+<li>Aplicar una retención o un descuento</li>
+<li>Negociar con la subcontrata</li>
+<li>Parar un pago mientras falta un certificado</li>
 </ul>
 </div>
 <div class="det-c det-l" style="--c:#7FB0FF">
-<p class="det-k" style="color:#7FB0FF">Cuándo te pasa los dos papeles</p>
+<p class="det-k" style="color:#7FB0FF">Qué le hace dejar una certificación a un lado</p>
 <ul>
-<li>La nota simple y la escritura describen la finca de forma distinta</li>
-<li>Hay una herencia, un divorcio o un poder de por medio</li>
-<li>Un documento llega ilegible o incompleto</li>
-<li>El propietario dice una cosa y el documento otra</li>
+<li>Una partida no casa con ninguna del contrato ni con un contradictorio pactado</li>
+<li>La medición de la subcontrata no cuadra con la que da por hecha el jefe de obra</li>
+<li>La certificación aplica una retención o un descuento distinto del pactado</li>
+<li>Falta un certificado, o no se lee de qué fecha es</li>
 </ul>
-<p class="det-fin">No elige: te pasa los dos documentos, lo que dice cada uno y lo que falta.</p>
+<p class="det-fin">No aprueba ni descuenta: te enseña la partida, lo que dice el contrato y lo que falta, y te pasa la decisión.</p>
 </div>
 </div>
 </section>
@@ -579,79 +584,83 @@ details .dd em{font-style:normal;color:#1B1D22;font-weight:600}
 <section style="background:#F4F3EF">
 <div class="sec">
 <p class="kicker">Dónde aporta valor</p>
-<h2 class="h2">Una nota simple leída de verdad <em style="color:#1F6FEB">y ningún papel que falte el día de la firma</em></h2>
+<h2 class="h2">Cada certificación, casada con su contrato <em style="color:#1F6FEB">y con sus papeles al día</em></h2>
 <div class="valor">
 
 <div class="graf">
 <span class="v-col">Lo que no hace un programa</span>
-<h3>Lee lo que dice la nota simple, no si ha llegado</h3>
-<p class="res">La lista de pendientes marca la nota simple como recibida. Saber que el titular es otra persona, y que hay una hipoteca que nadie mencionó, exige leerla y ponerla al lado de lo que contó el propietario.</p>
-<svg viewBox="0 0 440 176" role="img" aria-label="La nota simple dice que la finca está a nombre de la madre de la vendedora y tiene una hipoteca inscrita; el WhatsApp de la vendedora dice que el piso es suyo y está libre de cargas. El agente lo marca: no cuadra">
-  <rect x="2" y="8" width="258" height="66" rx="14" fill="#EEF4FF" stroke="#1F6FEB" stroke-width="2"/>
-  <text x="14" y="28" font-family="Manrope,sans-serif" font-size="10.5" font-weight="800" letter-spacing="0.6" fill="#1F6FEB">NOTA SIMPLE · REGISTRO</text>
-  <g font-family="Manrope,sans-serif" font-size="11.5" font-weight="600" fill="#1B1D22">
-    <text x="14" y="48">Titular: la madre de la vendedora</text>
-    <text x="14" y="64">Cargas: una hipoteca inscrita</text>
+<h3>Lee la certificación como la escribe cada subcontrata</h3>
+<p class="res">Cada subcontrata certifica con su formato y llama a las partidas a su manera. Ver que «remates varios» no es ninguna partida del contrato no es buscar una referencia: es leer el PDF y entender qué certifica. Restar después lo hace cualquier programa.</p>
+<svg viewBox="0 0 440 184" role="img" aria-label="A la izquierda, la certificacion numero 5 de la subcontrata, en PDF, con tres partidas: tabique de placa, trasdosado y remates varios por 3.840 euros. A la derecha, el contrato de tabiqueria, con tabique y trasdosado, sin remates varios. Entre los dos, una flecha rotulada leida y entendida">
+  <g transform="rotate(-2 97 66)">
+    <rect x="6" y="10" width="186" height="112" rx="10" fill="#FBF6EC" stroke="#E2E0D9" stroke-width="2"/>
+    <text x="18" y="31" font-family="Manrope,sans-serif" font-size="10" font-weight="800" letter-spacing="0.8" fill="#8A8F99">CERTIFICACIÓN N.º 5</text>
+    <g font-family="Manrope,sans-serif" font-size="11.5" font-weight="600" fill="#4A4F5A">
+      <text x="18" y="56">Tabique de placa</text>
+      <text x="18" y="76">Trasdosado</text>
+    </g>
+    <rect x="12" y="88" width="174" height="24" rx="6" fill="#FFF3DF"/>
+    <text x="18" y="104" font-family="Manrope,sans-serif" font-size="11.5" font-weight="800" fill="#96660E">Remates varios · 3.840 €</text>
   </g>
-  <rect x="2" y="86" width="258" height="66" rx="14" fill="#F4F3EF"/>
-  <text x="14" y="106" font-family="Manrope,sans-serif" font-size="10.5" font-weight="800" letter-spacing="0.6" fill="#4A4F5A">WHATSAPP DE LA VENDEDORA</text>
-  <g font-family="Manrope,sans-serif" font-size="11.5" font-weight="600" fill="#1B1D22">
-    <text x="14" y="126">«El piso es mío, lo heredé,</text>
-    <text x="14" y="142">y está libre de cargas»</text>
+  <line x1="198" y1="66" x2="240" y2="66" stroke="#1F6FEB" stroke-width="2.5"/>
+  <path d="M240 60 l9 6 l-9 6 z" fill="#1F6FEB"/>
+  <text x="222" y="52" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="800" fill="#1F6FEB">leída y</text>
+  <text x="222" y="88" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="800" fill="#1F6FEB">entendida</text>
+  <rect x="252" y="10" width="186" height="112" rx="10" fill="#EEF4FF" stroke="#1F6FEB" stroke-width="2"/>
+  <text x="264" y="31" font-family="Manrope,sans-serif" font-size="10" font-weight="800" letter-spacing="0.8" fill="#1F6FEB">CONTRATO · TABIQUERÍA</text>
+  <g font-family="Manrope,sans-serif" font-size="11.5" font-weight="700" fill="#1B1D22">
+    <text x="264" y="56">Tabique de placa · m²</text>
+    <text x="264" y="76">Trasdosado · m²</text>
   </g>
-  <line x1="260" y1="41" x2="300" y2="80" stroke="#8A8F99" stroke-width="1.5"/>
-  <line x1="260" y1="119" x2="300" y2="80" stroke="#8A8F99" stroke-width="1.5"/>
-  <rect x="300" y="52" width="138" height="56" rx="14" fill="#FFF3DF" stroke="#F5B14C" stroke-width="1.5"/>
-  <text x="369" y="77" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="800" fill="#96660E">NO CUADRA</text>
-  <text x="369" y="95" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10.5" font-weight="600" fill="#96660E">titular y cargas</text>
-  <text x="2" y="170" font-family="Manrope,sans-serif" font-size="11" font-weight="600" fill="#8A8F99">Dos versiones de la misma finca. Operación ilustrativa.</text>
+  <rect x="258" y="88" width="174" height="24" rx="6" fill="none" stroke="#F5B14C" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="264" y="104" font-family="Manrope,sans-serif" font-size="11.5" font-weight="800" fill="#96660E">Remates varios: no está</text>
+  <text x="220" y="152" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="800" fill="#1B1D22">El PDF no dice qué son. El contrato no los tiene.</text>
+  <text x="220" y="172" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11.5" font-weight="600" fill="#8A8F99">Verlo no sale de una fórmula: se lee. Certificación ilustrativa.</text>
 </svg>
 <details>
-<summary><span class="mas">+</span>Por qué no vale con marcar «recibido»</summary>
-<p class="dd">Porque cada documento llega de un emisor distinto y con su propio formato: la nota simple del Registro, el certificado del técnico, la escritura del notario, una foto del recibo por WhatsApp. Un programa puede decir que están todos; no puede decir que cuentan lo mismo. Es lo que explicamos al contar <a href="/blog/documentos-que-aguanta-agente-ia.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">qué documentos puede leer bien un agente de IA</a>, y en cuáles se equivoca.</p>
+<summary><span class="mas">+</span>En qué se queda corto el programa de obra</summary>
+<p class="dd">Los programas de gestión de obra registran la certificación de la subcontrata cuando alguien ya la ha tecleado. <em>El agente no compite con tu programa: hace el trabajo de antes.</em> Lee el PDF, la hoja de cálculo o el escaneo como lo mande cada subcontrata, a origen o del mes, y entiende qué partida es cada línea aunque no se llame como en el contrato. Conviene saber <a href="/blog/documentos-que-aguanta-agente-ia.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">qué documentos lee bien un agente de IA y en cuáles duda</a>.</p>
 </details>
 </div>
 
 <div class="graf">
 <span class="v-col">Lo que no hace un programa</span>
-<h3>Pide, insiste, lee y avisa, sin que nadie tenga que acordarse</h3>
-<p class="res">Un recordatorio sale solo; lo que no sale solo es leer lo que llega después, ver si es lo que se pidió y avisar a la persona que toca. Si falta un documento el día antes, la notaría puede retrasar o suspender una firma ya agendada.</p>
-<svg viewBox="0 0 440 170" role="img" aria-label="Una semana antes de las arras: el lunes el agente pide la nota simple, el certificado energético, el IBI y el certificado de comunidad; el miércoles recuerda el IBI por WhatsApp; el viernes lee, coteja y avisa de lo que no cuadra. Las arras llegan con todo delante">
-  <line x1="24" y1="56" x2="420" y2="56" stroke="#E2E0D9" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="30" cy="56" r="8" fill="#1F6FEB"/>
-  <circle cx="180" cy="56" r="8" fill="#1F6FEB"/>
-  <circle cx="300" cy="56" r="8" fill="#1F6FEB"/>
-  <circle cx="420" cy="56" r="9" fill="#F5B14C"/>
-  <g font-family="Manrope,sans-serif" font-size="11" font-weight="800" fill="#8A8F99" letter-spacing="0.8">
-    <text x="22" y="34">LUN</text>
-    <text x="180" y="34" text-anchor="middle">MIÉ</text>
-    <text x="300" y="34" text-anchor="middle">VIE</text>
-    <text x="432" y="34" text-anchor="end" fill="#96660E">ARRAS</text>
+<h3>Pide el certificado que falta antes de pagar, no después</h3>
+<p class="res">Ver que un certificado tiene más de 12 meses es una resta. Lo que no hace un programa es encontrarlo entre los papeles de la subcontrata, escribirle para pedir uno nuevo, avisar al jefe de obra y volver a pedirlo si no llega antes del pago.</p>
+<svg viewBox="0 0 440 184" role="img" aria-label="Una linea de meses. El certificado de Hacienda de la subcontrata se emitio en agosto de 2025 y cubre los pagos de los doce meses siguientes, hasta agosto de 2026. La certificacion numero 5 entra hoy y su pago queda fuera. Con el agente, el certificado nuevo se pide ese mismo dia; si nadie mira la fecha, se paga sin el">
+  <rect x="20" y="40" width="260" height="16" rx="4" fill="#EEF4FF"/>
+  <text x="150" y="52" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="800" letter-spacing="0.6" fill="#1F6FEB">12 MESES QUE CUBRE EL CERTIFICADO</text>
+  <line x1="20" y1="48" x2="424" y2="48" stroke="#1B1D22" stroke-width="2"/>
+  <g fill="#1B1D22"><circle cx="20" cy="48" r="5"/><circle cx="280" cy="48" r="5"/><circle cx="340" cy="48" r="5"/><circle cx="400" cy="48" r="5" fill="#C97A00"/></g>
+  <g font-family="Manrope,sans-serif" font-size="10.5" font-weight="800" fill="#1B1D22" text-anchor="middle">
+    <text x="30" y="28">Ago 2025</text><text x="280" y="28">Ago 2026</text><text x="340" y="28">Hoy</text><text x="400" y="28" fill="#C97A00">Pago</text>
   </g>
-  <g font-family="Manrope,sans-serif" font-size="11" font-weight="600" fill="#4A4F5A">
-    <text x="22" y="86">Pide nota simple,</text>
-    <text x="22" y="102">CEE, IBI, comunidad</text>
-    <text x="180" y="86" text-anchor="middle">Recuerda el IBI</text>
-    <text x="180" y="102" text-anchor="middle">por WhatsApp</text>
-    <text x="300" y="86" text-anchor="middle">Lee, coteja</text>
-    <text x="300" y="102" text-anchor="middle">y avisa</text>
-    <text x="432" y="86" text-anchor="end">Con todo</text>
-    <text x="432" y="102" text-anchor="end">delante</text>
+  <g font-family="Manrope,sans-serif" font-size="10" font-weight="600" fill="#4A4F5A">
+    <text x="20" y="72">Certificado emitido</text>
+    <text x="340" y="72" text-anchor="middle">Entra la n.º 5</text>
+    <text x="424" y="88" text-anchor="end" fill="#C97A00" font-weight="800">El pago queda fuera</text>
   </g>
-  <text x="2" y="150" font-family="Manrope,sans-serif" font-size="11" font-weight="600" fill="#8A8F99">Semana ilustrativa, antes de fijar las arras.</text>
+  <rect x="20" y="100" width="404" height="30" rx="8" fill="#EEF4FF"/>
+  <circle cx="340" cy="115" r="7" fill="#1F6FEB"/>
+  <text x="326" y="119" text-anchor="end" font-family="Manrope,sans-serif" font-size="11.5" font-weight="800" fill="#1F6FEB">Con el agente: certificado nuevo pedido ese día</text>
+  <rect x="20" y="138" width="404" height="30" rx="8" fill="#EFEEE9"/>
+  <circle cx="400" cy="153" r="7" fill="#8A8F99"/>
+  <text x="386" y="157" text-anchor="end" font-family="Manrope,sans-serif" font-size="11.5" font-weight="700" fill="#4A4F5A">Si nadie mira la fecha, se paga sin él</text>
+  <text x="424" y="182" text-anchor="end" font-family="Manrope,sans-serif" font-size="10.5" font-weight="600" fill="#8A8F99">Escala ilustrativa.</text>
 </svg>
 <details>
-<summary><span class="mas">+</span>Por qué no basta con un recordatorio automático</summary>
-<p class="dd">Porque el recordatorio no sabe si lo que llega es lo que se pidió: un recibo del IBI de otro año, un certificado de comunidad sin firmar o una foto cortada pasan igual por «recibido». El agente lee cada documento al llegar, vuelve a pedir lo que falta y avisa a la persona que lleva la operación solo de lo que necesita su criterio. Por eso aquí hablamos de <a href="/blog/agente-vertical-vs-chatbot-horizontal.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">un agente vertical, no de un programa genérico</a>: entiende el oficio antes de avisar.</p>
+<summary><span class="mas">+</span>Por qué el certificado se mira antes de cada pago</summary>
+<p class="dd">El que la subcontrata entregó al firmar deja de cubrir los pagos a los doce meses, y en una obra larga eso pasa a mitad de camino. El agente lo mira en cada certificación y, si ya no cubre el pago, lo pide, avisa al jefe de obra y lo vuelve a pedir si no llega. Cada paso queda anotado: es una forma concreta de <a href="/blog/como-controlar-agente-ia-empresa.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">controlar lo que hace un agente de IA en una empresa</a>.</p>
 </details>
 </div>
 
 <div class="graf">
 <span class="v-col">Frente a una persona</span>
-<h3>Nota simple, certificado, IBI y comunidad, en cada operación</h3>
-<p class="res">La misma lista se repasa entera en cada operación, la lleve quien la lleve y caiga en la semana que caiga. Y si es alquiler, también la fianza.</p>
+<h3>Los plazos que siguen corriendo después de pagar</h3>
+<p class="res">El día de cierre entran todas a la vez, y cada una pasa las mismas comprobaciones, también la última: partidas contra contrato, lo ya certificado, la retención pactada y los dos certificados.</p>
 <div class="num">
-<div class="num-f"><span class="n">59.288</span><p>Compraventas de vivienda inscritas en España en junio de 2026. Dato provisional.</p><a href="https://www.ine.es/dyngs/Prensa/ETDP0626.htm" target="_blank" rel="noopener">INE · 7-ago-2026 →</a></div>
+<div class="num-f"><span class="n">12 meses</span><p>Lo que puede tener, como mucho, el certificado de Hacienda de la subcontrata al pagar cada factura, para que no respondas tú.</p><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186#a43" target="_blank" rel="noopener">BOE · Ley 58/2003, art. 43.1.f) · consultada 22-sep-2026 →</a></div>
+<div class="num-f num-2"><div><span class="n">3 años</span><p>Lo que la empresa principal responde de las deudas con la Seguridad Social de la subcontrata, desde que acaba su encargo.</p></div><div><span class="n">1 año</span><p>Lo que responde de los salarios que la subcontrata deba a sus trabajadores.</p></div><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430#a42" target="_blank" rel="noopener">BOE · Estatuto de los Trabajadores, art. 42.2 · consultada 22-sep-2026 →</a></div>
 </div>
 </div>
 
@@ -664,92 +673,92 @@ details .dd em{font-style:normal;color:#1B1D22;font-weight:600}
 
 <section class="sec">
 <p class="kicker">Persona sola frente a persona asistida</p>
-<h2 class="h2">Lo que tarda en quedar lista <em style="color:#1F6FEB">una operación media, con ayuda y sin ella</em></h2>
+<h2 class="h2">Cuánto tarda una certificación en llegar revisada <em style="color:#1F6FEB">a quien da la conformidad</em></h2>
 <div class="pi" id="pistas">
 
 <div class="pi-esc" aria-hidden="true">
-<span style="--x:0%"><b class="lg" style="font-weight:700">Llega un documento a la operación</b><b class="sm" style="font-weight:700">0</b></span>
-<span class="d" style="--x:37.74%">20 min</span>
-<span class="d" style="--x:75.47%">40 min</span>
+<span style="--x:0%"><b class="lg" style="font-weight:700">Entra el PDF de la certificación</b><b class="sm" style="font-weight:700">0</b></span>
+<span class="d" style="--x:46.88%">15 min</span>
+<span class="d" style="--x:93.75%">30 min</span>
 </div>
 
-<div class="pi-fila" data-tot="53">
+<div class="pi-fila" data-tot="32">
 <div class="pi-cab">
 <span class="pi-quien"><svg class="f-hum" viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="color:#6E7480"><circle cx="17" cy="17" r="15.4" fill="none" stroke="currentColor" stroke-width="2.2"></circle><circle cx="17" cy="12.8" r="4.2" fill="currentColor"></circle><path d="M 9.4 24.7 a 7.6 8 0 0 1 15.2 0 Z" fill="currentColor"></path></svg>Una persona sola</span>
-<span class="pi-reloj">53 min</span>
+<span class="pi-reloj">32 min</span>
 </div>
 <div class="pi-pasos">
-<span class="pi-paso on" data-min="2.5" style="--x:4.72%;--f:0"><b>1</b>Ve qué ha llegado a la operación<i>2,5 min</i></span>
-<span class="pi-paso on" data-min="11.5" style="--x:21.70%;--f:1"><b>2</b>Lee la nota simple y cada documento<i>9 min</i></span>
-<span class="pi-paso on" data-min="25.5" style="--x:48.11%;--f:2"><b>3</b>Junta la escritura, el certificado, el IBI y lo hablado<i>14 min</i></span>
-<span class="pi-paso on" data-min="35.5" style="--x:66.98%;--f:3"><b>4</b>Coteja titular, cargas, superficie y certificado<i>10 min</i></span>
-<span class="pi-paso on der" data-min="45" style="--x:84.91%;--f:4"><b>5</b>Lo anota, avisa al comercial y reclama lo que falta<i>9,5 min</i></span>
-<span class="pi-paso on fin der" data-min="53" style="--x:100.00%;--f:5"><b>D</b>Decide si la operación sigue hacia las arras<i>8 min</i></span>
+<span class="pi-paso on" data-min="2.5" style="--x:7.81%;--f:0"><b>1</b>Ve que ha llegado la certificación<i>2,5 min</i></span>
+<span class="pi-paso on" data-min="9" style="--x:28.12%;--f:1"><b>2</b>Lee la certificación y entiende qué partidas y cuánto<i>6,5 min</i></span>
+<span class="pi-paso on" data-min="16.5" style="--x:51.56%;--f:2"><b>3</b>Junta el contrato, la certificación anterior y los certificados<i>7,5 min</i></span>
+<span class="pi-paso on" data-min="21" style="--x:65.62%;--f:3"><b>4</b>Casa cada partida con el contrato y resta lo ya certificado<i>4,5 min</i></span>
+<span class="pi-paso on der" data-min="26.5" style="--x:82.81%;--f:4"><b>5</b>Anota las diferencias, avisa y pide lo que falta<i>5,5 min</i></span>
+<span class="pi-paso on fin der" data-min="32" style="--x:100.00%;--f:5"><b>D</b>Decide si da conforme la certificación<i>5,5 min</i></span>
 </div>
 <div class="pi-barra">
-<i class="pi-relleno" data-span="53" style="width:100.00%"></i>
-<span class="pi-hito on" data-min="2.5" style="--x:4.72%" aria-hidden="true"></span>
-<span class="pi-hito on" data-min="11.5" style="--x:21.70%" aria-hidden="true"></span>
-<span class="pi-hito on" data-min="25.5" style="--x:48.11%" aria-hidden="true"></span>
-<span class="pi-hito on" data-min="35.5" style="--x:66.98%" aria-hidden="true"></span>
-<span class="pi-hito on" data-min="45" style="--x:84.91%" aria-hidden="true"></span>
-<span class="pi-hito on dec" data-min="53" style="--x:100.00%" aria-hidden="true"></span>
+<i class="pi-relleno" data-span="32" style="width:100.00%"></i>
+<span class="pi-hito on" data-min="2.5" style="--x:7.81%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="9" style="--x:28.12%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="16.5" style="--x:51.56%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="21" style="--x:65.62%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="26.5" style="--x:82.81%" aria-hidden="true"></span>
+<span class="pi-hito on dec" data-min="32" style="--x:100.00%" aria-hidden="true"></span>
 </div>
 </div>
 
-<div class="pi-fila ag" data-tot="14">
+<div class="pi-fila ag" data-tot="12">
 <div class="pi-cab">
 <span class="pi-quien"><span class="par2"><svg class="f-hum" viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="color:#6E7480"><circle cx="17" cy="17" r="15.4" fill="var(--t-sup)" stroke="currentColor" stroke-width="2.2"></circle><circle cx="17" cy="12.8" r="4.2" fill="currentColor"></circle><path d="M 9.4 24.7 a 7.6 8 0 0 1 15.2 0 Z" fill="currentColor"></path></svg><svg class="f-ag" viewBox="0 0 34 34" width="22" height="22" aria-hidden="true" style="color:#1F6FEB"><circle cx="17" cy="17" r="15.4" fill="var(--t-sup)" stroke="currentColor" stroke-width="2.2"></circle><circle cx="17" cy="6.8" r="1.7" fill="currentColor"></circle><path d="M 17 8.2 V 10.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><rect x="10.2" y="10.6" width="13.6" height="12.8" rx="3.6" fill="currentColor"></rect><circle cx="14.3" cy="16.2" r="1.6" fill="var(--t-sup)"></circle><circle cx="19.7" cy="16.2" r="1.6" fill="var(--t-sup)"></circle></svg></span>La misma persona, con el agente</span>
-<span class="pi-reloj">14 min</span>
+<span class="pi-reloj">12 min</span>
 </div>
 <div class="pi-pasos">
-<span class="pi-paso on" data-min="1" style="--x:1.89%;--f:0"><b>1</b>Ve qué ha llegado a la operación<i>1 min</i></span>
-<span class="pi-paso on" data-min="2.5" style="--x:4.72%;--f:1"><b>2</b>Lee la nota simple y cada documento<i>1,5 min</i></span>
-<span class="pi-paso on" data-min="3.5" style="--x:6.60%;--f:2"><b>3</b>Junta la escritura, el certificado, el IBI y lo hablado<i>1 min</i></span>
-<span class="pi-paso on" data-min="4.5" style="--x:8.49%;--f:3"><b>4</b>Coteja titular, cargas, superficie y certificado<i>1 min</i></span>
-<span class="pi-paso on" data-min="6" style="--x:11.32%;--f:4"><b>5</b>Lo anota, avisa al comercial y reclama lo que falta<i>1,5 min</i></span>
-<span class="pi-paso on fin" data-min="14" style="--x:26.42%;--f:5"><b>D</b>Decide si la operación sigue hacia las arras<i>8 min</i></span>
+<span class="pi-paso on" data-min="1" style="--x:3.12%;--f:0"><b>1</b>Ve que ha llegado la certificación<i>1 min</i></span>
+<span class="pi-paso on" data-min="2.5" style="--x:7.81%;--f:1"><b>2</b>Lee la certificación y entiende qué partidas y cuánto<i>1,5 min</i></span>
+<span class="pi-paso on" data-min="4" style="--x:12.50%;--f:2"><b>3</b>Junta el contrato, la certificación anterior y los certificados<i>1,5 min</i></span>
+<span class="pi-paso on" data-min="5" style="--x:15.62%;--f:3"><b>4</b>Casa cada partida con el contrato y resta lo ya certificado<i>1 min</i></span>
+<span class="pi-paso on" data-min="6.5" style="--x:20.31%;--f:4"><b>5</b>Anota las diferencias, avisa y pide lo que falta<i>1,5 min</i></span>
+<span class="pi-paso on fin" data-min="12" style="--x:37.50%;--f:5"><b>D</b>Decide si da conforme la certificación<i>5,5 min</i></span>
 </div>
 <div class="pi-barra">
-<i class="pi-relleno" data-span="14" style="width:26.42%"></i>
-<span class="pi-hito on" data-min="1" style="--x:1.89%" aria-hidden="true"></span>
-<span class="pi-hito on" data-min="2.5" style="--x:4.72%" aria-hidden="true"></span>
-<span class="pi-hito on" data-min="3.5" style="--x:6.60%" aria-hidden="true"></span>
-<span class="pi-hito on" data-min="4.5" style="--x:8.49%" aria-hidden="true"></span>
-<span class="pi-hito on" data-min="6" style="--x:11.32%" aria-hidden="true"></span>
-<span class="pi-hito on dec" data-min="14" style="--x:26.42%" aria-hidden="true"></span>
+<i class="pi-relleno" data-span="12" style="width:37.50%"></i>
+<span class="pi-hito on" data-min="1" style="--x:3.12%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="2.5" style="--x:7.81%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="4" style="--x:12.50%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="5" style="--x:15.62%" aria-hidden="true"></span>
+<span class="pi-hito on" data-min="6.5" style="--x:20.31%" aria-hidden="true"></span>
+<span class="pi-hito on dec" data-min="12" style="--x:37.50%" aria-hidden="true"></span>
 </div>
-<p class="pi-corte" style="--x:26.42%"><span>Con el agente, en el minuto 14 está todo hecho, decisión incluida. Sin él, en el minuto 25.5 la persona todavía está juntando la escritura, el certificado y lo hablado.</span></p>
+<p class="pi-corte" style="--x:37.50%"><span>Con el agente, en el minuto 12 está todo hecho, decisión incluida. Sin él, en el minuto 16.5 la persona acaba de juntar el contrato y los certificados.</span></p>
 </div>
 
 <button class="pi-btn" type="button"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"></path><path d="M20.7 4.6v5.6h-5.6"></path></svg>Volver a verlo</button>
 </div>
-<p class="pi-pie">Ejemplo ilustrativo. Las barras son una operación media, que mezcla las que llegan con todos los papeles en regla con las que obligan a reclamar alguno o traen una discrepancia de titular o cargas; la traza de arriba es de estas últimas, las largas. Los minutos de la persona son nuestro supuesto. La decisión dura lo mismo en las dos barras. El reloj va acelerado.</p>
+<p class="pi-pie">Ejemplo ilustrativo. Las barras son una certificación media, que mezcla las que casan a la primera con su contrato con las que traen una partida sin precio o un certificado caducado; la traza de arriba es de las largas. Los minutos de la persona son nuestro supuesto. La conformidad dura lo mismo en las dos barras. El reloj va acelerado.</p>
 </section>
 
 <section id="roi" style="background:#F4F3EF">
 <div class="sec">
 <p class="kicker">Previsión de retorno</p>
-<h2 class="h2">Menos rato persiguiendo papeles, <em style="color:#1F6FEB">más rato con compradores y propietarios</em></h2>
+<h2 class="h2">Lo que recupera administración de obra <em style="color:#1F6FEB">en cada cierre de mes</em></h2>
 <div class="val">
 <div class="val-datos">
-<div class="val-c"><span class="tipo">Supuesto</span><span class="val-n">12</span><span class="val-t">operaciones al mes</span><span class="val-s">Nuestro supuesto para una gestora inmobiliaria mediana, con 1.500 viviendas en alquiler y 12 operaciones nuevas al mes entre compraventas y alquileres. Es una parte muy pequeña de las compraventas de vivienda que se inscriben en España cada mes. <a href="https://www.ine.es/dyngs/Prensa/ETDP0626.htm" target="_blank" rel="noopener">INE · 7-ago-2026 →</a></span></div>
+<div class="val-c"><span class="tipo">Supuesto</span><span class="val-n">40</span><span class="val-t">certificaciones de subcontratas al mes</span><span class="val-s">Nuestro supuesto para Construcciones Ejemplo, una constructora mediana con cuatro obras a la vez y unas diez subcontratas activas en cada una, cada subcontrata con su certificación al mes.</span></div>
 <span class="val-op" aria-hidden="true">×</span>
-<div class="val-c"><span class="tipo">Las barras de arriba</span><span class="val-n">39<small>min</small></span><span class="val-t">ahorrados en cada una</span><span class="val-s">53 min a mano frente a 14 min con el agente, en una operación media</span></div>
+<div class="val-c"><span class="tipo">Las barras de arriba</span><span class="val-n">20<small>min</small></span><span class="val-t">ahorrados en cada una</span><span class="val-s">32 min a mano frente a 12 min con el agente, en una certificación media</span></div>
 <span class="val-op" aria-hidden="true">=</span>
-<div class="val-c"><span class="tipo">Resultado</span><span class="val-n">8<small>h</small></span><span class="val-t">liberadas al mes</span><span class="val-s">11 h de trabajo al mes, con un 74 % menos</span></div>
+<div class="val-c"><span class="tipo">Resultado</span><span class="val-n">13,02<small>h</small></span><span class="val-t">liberadas al mes</span><span class="val-s">21 h de trabajo al mes, con un 62 % menos</span></div>
 <div class="val-suelo">
-<p>Calculado con el coste laboral medio por hora de las actividades inmobiliarias, según el INE (media del tercer trimestre de 2025 al segundo de 2026): 25,21 € la hora, cotizaciones incluidas. Pon el de tu agencia en la calculadora.</p>
-<p class="val-s">INE, Encuesta Trimestral de Coste Laboral, tabla 6036, sección L · Actividades inmobiliarias: coste laboral por hora efectiva, media de 2025T3 a 2026T2 (publicación del 17-sep-2026). <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=6036" target="_blank" rel="noopener" style="color:#1F6FEB;font-weight:700">INE · ETCL, tabla 6036 →</a></p>
+<p>Calculado con el coste laboral medio por hora de la construcción, según el INE (media del tercer trimestre de 2025 al segundo de 2026): 23,17 € la hora, cotizaciones incluidas. Pon el de tu constructora en la calculadora.</p>
+<p class="val-s">INE, Encuesta Trimestral de Coste Laboral, tabla 6036, sección F · Construcción: coste laboral por hora efectiva, media de 2025T3 a 2026T2 (publicación del 17-sep-2026). <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=6036" target="_blank" rel="noopener" style="color:#1F6FEB;font-weight:700">INE · ETCL, tabla 6036 →</a></p>
 </div>
-<p class="val-s" style="margin:2px 2px 0">También libera 1.724 € al año en tiempo del equipo que queda libre.</p>
+<p class="val-s" style="margin:2px 2px 0">También libera 2.534 € al año en tiempo del equipo que queda libre.</p>
 </div>
 <span class="val-op fl" aria-hidden="true">→</span>
-<div class="val-c val-res"><span class="val-n">74<small>%</small></span><span class="val-t">menos tiempo por tarea</span><span class="val-s">De 53 a 14 minutos en cada tarea.</span></div>
+<div class="val-c val-res"><span class="val-n">62<small>%</small></span><span class="val-t">menos tiempo por tarea</span><span class="val-s">De 32 a 12 minutos en cada tarea.</span></div>
 </div>
 <div class="roi-pie">
-<a class="hv2" href="/calculadora-roi.html" style="background:#1B1D22;color:#fff;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px">Calcúlalo con los números de tu agencia →</a>
-<p>Pon tus operaciones al mes y lo que te cuesta de verdad la hora de tu equipo.</p>
+<a class="hv2" href="/calculadora-roi.html" style="background:#1B1D22;color:#fff;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px">Calcúlalo con los números de tu constructora →</a>
+<p>Pon las certificaciones que revisas al mes y lo que te cuesta de verdad la hora de quien las revisa.</p>
 </div>
 </div>
 </section>
@@ -758,26 +767,25 @@ details .dd em{font-style:normal;color:#1B1D22;font-weight:600}
 <section aria-labelledby="faq-h" class="faq" style="max-width:1240px;margin:0 auto;padding:clamp(30px,3.8vw,48px) clamp(20px,4vw,40px);display:grid;grid-template-columns:minmax(240px,320px) minmax(0,1fr);gap:clamp(18px,2.6vw,32px);align-items:start">
 <div><p class="kicker">Preguntas frecuentes</p><h2 id="faq-h" class="h2" style="margin-bottom:0">Lo que nos preguntan <em style="color:#1F6FEB">sobre este agente</em></h2></div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px;align-content:start">
-<details><summary><span>¿En qué se diferencia de la lista de documentos pendientes de mi programa inmobiliario?</span><span class="mas">+</span></summary><p class="dd">La lista te dice qué documento falta, no si lo que dice cuadra. El agente pide y persigue lo que falta, lee la nota simple, el certificado energético y la escritura, y te avisa cuando el titular, las cargas o la superficie no cuentan lo mismo que el propietario.</p></details>
-<details><summary><span>¿Tengo que cambiar de programa inmobiliario para usarlo?</span><span class="mas">+</span></summary><p class="dd">No. El agente lee la ficha del inmueble y los documentos en el programa de gestión que ya usa la agencia, y lo que llega por correo o por WhatsApp, y escribe ahí mismo: el estado de la operación, lo que falta y los avisos a quien la lleva.</p></details>
-<details><summary><span>¿Quién pide la nota simple al Registro, y quién la paga?</span><span class="mas">+</span></summary><p class="dd">La sigue pidiendo la agencia, como hoy, y tiene su coste según el arancel de los registradores. El agente no la solicita por su cuenta: la lee en cuanto llega y la pone al lado de lo que ya hay en la operación.</p></details>
-<details><summary><span>¿El agente accede a datos de mis compradores, inquilinos y propietarios?</span><span class="mas">+</span></summary><p class="dd">Sí. Para preparar la documentación, el agente lee lo que mandan propietarios, compradores e inquilinos, y ahí hay datos personales: de identidad y, a veces, económicos. Tu agencia sigue siendo la responsable de esos datos y Ailitica los trata como encargada, con un contrato de encargo que fija por escrito, antes de empezar, dónde se guardan, qué proveedores intervienen y qué se hace con ellos al terminar.</p></details>
-<details><summary><span>¿Cuánto tiempo vale un certificado de eficiencia energética?</span><span class="mas">+</span></summary><p class="dd">Diez años, según el art. 13.1 del Real Decreto 390/2021 (cinco si la calificación es G). Por eso el agente mira la fecha de emisión en cuanto llega y no el día antes de la firma: si el propietario tiene uno de hace más de una década, le da tiempo a encargar otro.</p></details>
-<details><summary><span>¿Qué pasa si la superficie de la escritura no coincide con la del Catastro?</span><span class="mas">+</span></summary><p class="dd">Que el comprador paga unos metros que luego no figuran igual en ningún organismo oficial, y eso puede complicar una hipoteca o una futura reventa. El agente coteja las dos superficies y deja anotado de dónde ha sacado cada cifra, el principio con el que explicamos <a href="/blog/auditoria-agente-ia-cada-dia.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">cómo auditar lo que decide un agente de IA cada día</a>.</p></details>
-<details><summary><span>¿Pide también la cédula de habitabilidad?</span><span class="mas">+</span></summary><p class="dd">Solo donde la comunidad autónoma la exige: es un documento autonómico, no estatal, y cada comunidad tiene su norma. Si la vivienda está en una de esas comunidades, entra en la lista de la operación como un papel más.</p></details>
+<details><summary><span>¿En qué se diferencia del módulo de certificaciones de subcontratas de mi programa de obra?</span><span class="mas">+</span></summary><p class="dd">Ese módulo registra una certificación cuando alguien ya la ha revisado y tecleado. El agente hace la revisión: lee el PDF de cada subcontrata con su formato, casa cada línea con una partida del contrato aunque se llame distinto, mira la fecha de los certificados y pide lo que falta, todo antes de que la certificación llegue a administración.</p></details>
+<details><summary><span>¿Tengo que cambiar de programa de obra o pedir a las subcontratas otro formato de certificación?</span><span class="mas">+</span></summary><p class="dd">No. Cada subcontrata sigue certificando como hasta ahora, en PDF, en hoja de cálculo o escaneada, y por correo. El agente toma el contrato y las certificaciones anteriores del programa de gestión de obra que ya usáis, y deja allí mismo la revisión con cada diferencia anotada.</p></details>
+<details><summary><span>¿Sirve si cada contrato de subcontrata pacta su propia retención y sus propios descuentos?</span><span class="mas">+</span></summary><p class="dd">Sí, porque aplica los de cada contrato. En obra privada la retención de garantía no tiene un porcentaje fijado por ley: es la que se pacta con cada subcontrata, igual que los descuentos por limpieza o por medios auxiliares. El agente lee lo pactado y marca la certificación que aplica otro criterio.</p></details>
+<details><summary><span>¿El agente accede a datos de mis subcontratas y de sus certificaciones?</span><span class="mas">+</span></summary><p class="dd">Sí. Para revisar certificaciones de subcontratas, el agente lee los documentos que necesita, y pueden contener datos personales. Tu constructora sigue siendo la responsable de esos datos y Ailitica los trata como encargada, con un contrato de encargo que fija por escrito, antes de empezar, dónde se guardan, qué proveedores intervienen y qué se hace con ellos al terminar.</p></details>
+<details><summary><span>¿Detecta una unidad que ya se pagó el mes pasado y vuelve a aparecer en la certificación a origen?</span><span class="mas">+</span></summary><p class="dd">Sí. La certificación a origen acumula todo lo hecho desde el inicio de la obra, y lo que se paga cada mes es la diferencia con la del mes anterior. El agente compara las dos partida a partida, marca lo que se repite o crece sin explicación y <a href="/blog/auditoria-agente-ia-cada-dia.html" style="color:#1F6FEB;text-decoration:underline;text-underline-offset:2px">deja escrito qué comparó con qué</a>.</p></details>
+<details><summary><span>¿Qué hace con un acopio que la subcontrata certifica antes de colocarlo?</span><span class="mas">+</span></summary><p class="dd">Lo separa del resto y lo marca como acopio, con su importe: material que está en la obra y todavía no se ha colocado. Si el contrato de subcontrata dice cómo se pagan los acopios, pone esa cláusula al lado; si no dice nada, no lo da por bueno ni por malo. Si se paga, y cuánto, lo decide Daniel.</p></details>
 
 </div>
 </section>
 
 <section id="cta" style="max-width:1240px;margin:0 auto;padding:0 clamp(12px,2vw,24px) 20px">
 <div style="border-radius:32px;background:#1B1D22;color:#fff;padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;align-items:center">
-<div style="display:grid;gap:14px"><p style="margin:0;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7FB0FF">Siguiente paso</p><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.06;letter-spacing:-.025em">Empieza por esta tarea. <em style="color:#7FB0FF">Una persona te responde.</em></h2><p style="margin:0;color:rgba(255,255,255,.85);line-height:1.55;font-size:16px;max-width:460px">Dinos qué papeles pedís hoy en una compraventa y en un alquiler, y con qué programa lleváis las operaciones: con eso te enseñamos qué habría cotejado el agente en una operación como la de esta página.</p></div>
+<div style="display:grid;gap:14px"><p style="margin:0;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7FB0FF">Siguiente paso</p><h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.06;letter-spacing:-.025em">Empieza por esta tarea. <em style="color:#7FB0FF">Una persona te responde.</em></h2><p style="margin:0;color:rgba(255,255,255,.85);line-height:1.55;font-size:16px;max-width:460px">Háblanos de cómo certifican tus subcontratas y en qué programa de obra guardáis los contratos: con eso vemos juntos qué revisaría el agente en vuestras certificaciones.</p></div>
 <div style="display:grid;gap:10px;justify-items:end;align-content:center"><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:end"><a class="hv5" href="/contacto.html" style="background:#fff;color:#1B1D22;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px">Hablemos de tu proceso →</a><a class="hv1" href="/calculadora-roi.html" style="background:#1F6FEB;color:#fff;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px">Calcular con mis datos →</a></div><span style="font-size:13px;color:#8A8F99;font-weight:600">En la calculadora, los números son los tuyos, no los nuestros.</span></div>
 </div>
 </section>
 
 <section style="max-width:1240px;margin:0 auto;padding:clamp(18px,2.2vw,26px) clamp(20px,4vw,40px) clamp(24px,3vw,36px);display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;justify-content:space-between">
-<div style="display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-size:14px"><span style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#8A8F99;margin-right:4px">Casos relacionados</span><a href="/casos-de-uso/cualificar-leads-de-portales.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Cualificar leads de portales inmobiliarios</a><a href="/casos-de-uso/gestionar-incidencias-de-alquiler.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Gestionar incidencias de alquiler</a><a href="/casos-de-uso/preparar-borradores-de-contratos.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Preparar borradores de contratos</a></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-size:14px"><span style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#8A8F99;margin-right:4px">Casos relacionados</span><a href="/casos-de-uso/controlar-albaranes-contra-pedidos.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Controlar albaranes contra pedidos en obra</a><a href="/casos-de-uso/comparar-ofertas-de-compra-de-obra.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Comparar ofertas de compra de obra</a><a href="/casos-de-uso/conciliar-facturas.html" style="font-weight:700;background:#F4F3EF;padding:9px 15px;border-radius:999px">Conciliar facturas</a></div>
 <a href="/casos-de-uso/" style="font-size:14px;font-weight:700;color:#1F6FEB">Ver toda la biblioteca →</a>
 </section>
 
@@ -817,7 +825,7 @@ details .dd em{font-style:normal;color:#1B1D22;font-weight:600}
 // Dos pistas: el estado final ya esta en el HTML; esto solo lo rebobina y lo vuelve a contar.
 (function(){
   var pi=document.getElementById('pistas'); if(!pi) return;
-  var TOT=53, VEL=94.3396; // ms por minuto simulado: la barra de la persona sola dura siempre 5000ms, calculado en el generador
+  var TOT=32, VEL=156.2500; // ms por minuto simulado: la barra de la persona sola dura siempre 5000ms, calculado en el generador
   var filas=[].slice.call(pi.querySelectorAll('.pi-fila')).map(function(f){
     return {tot:parseFloat(f.getAttribute('data-tot')),
             vias:[].slice.call(f.querySelectorAll('[data-span]')),
