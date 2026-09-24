@@ -212,6 +212,12 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://ailitica.com/blog/ai-act-formacion-empleados-obligatoria-empresa.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ailitica.com/blog/articulo-50-ai-act-transparencia-ia-empresa.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
