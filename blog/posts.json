@@ -10,8 +10,8 @@
   },
   {
     "slug": "ai-act-formacion-empleados-obligatoria-empresa",
-    "title": "Qué dice el AI Act sobre la formación de tus empleados en IA (y por qué tu empresa lleva incumpliéndolo desde 2025)",
-    "excerpt": "El Art. 4 del AI Act obliga a formar a tus empleados en IA desde febrero de 2025, con la AESIA ya operativa. Qué exige, cómo documentarlo y cuánto cuesta.",
+    "title": "Qué dice el AI Act sobre la formación de tus empleados en IA (y qué cambió en julio de 2026)",
+    "excerpt": "El Art. 4 del AI Act obliga desde febrero de 2025, pero el Digital Omnibus lo reescribió en julio de 2026. Qué exige hoy, cómo documentarlo y cuánto cuesta.",
     "date": "2026-09-24",
     "category": "Normativa IA",
     "readtime": "8 min",
@@ -55,11 +55,11 @@
   },
   {
     "slug": "como-saber-que-ia-usa-tu-equipo",
-    "title": "Cómo saber qué IA está usando tu equipo, antes de escribir una política",
-    "excerpt": "Tres sitios donde mirar antes de redactar ninguna política de IA: tarjeta de empresa, extensiones del navegador y registros de acceso SSO/OAuth.",
+    "title": "¿Cómo saber qué IA usa tu equipo sin comprar una plataforma cara?",
+    "excerpt": "Seis comprobaciones para saber qué IA usa tu equipo (shadow IA): qué ve y qué no ve cada una, con los plazos de Google, Microsoft y Cloudflare, y cómo preparar la decisión sobre ChatGPT.",
     "date": "2026-08-13",
     "category": "Estrategia y decisión",
-    "readtime": "6 min",
+    "readtime": "8 min",
     "image": "img/como-saber-que-ia-usa-tu-equipo_blog-hero.jpg"
   },
   {
@@ -145,8 +145,8 @@
   },
   {
     "slug": "ley-ia-espana-aesia-sanciones",
-    "title": "España ya tiene su ley de IA: AESIA, multas de hasta 35 millones y qué te toca a ti",
-    "excerpt": "España aprobó el 26 de mayo de 2026 su proyecto de ley de IA: AESIA como autoridad central y multas de hasta 35 M€ o el 7%. Qué te toca como empresa, uses IA propia o de terceros.",
+    "title": "La ley de IA en España sigue sin existir: qué preveía el proyecto de AESIA y sus multas",
+    "excerpt": "España no tiene ley de IA: el proyecto que designaba a AESIA como autoridad y fijaba multas de hasta 35 M€ caducó en octubre de 2026. Qué preveía y qué sí te obliga ya desde Europa.",
     "date": "2026-07-02",
     "category": "Normativa IA",
     "readtime": "8 min",
