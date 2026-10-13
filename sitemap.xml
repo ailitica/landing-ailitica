@@ -212,6 +212,12 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://ailitica.com/blog/iso-42001-pyme-que-es-y-si-te-sirve.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ailitica.com/blog/shadow-ai-empresa-empleados-encauzar.html</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
